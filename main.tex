@@ -1,0 +1,181 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[margin=0.4in,footskip=0.1in]{geometry}
+
+\begin{document}
+
+\section*{Question 1}
+
+Consider a two-dimensional Cartesian coordinate system $(x, y)$ with the infinitesimal line element $ds^2 = dx^2 + dy^2$. We then introduce new coordinates $u$ and $v$, defined by $u = (x+y)/2$ and $v = (x-y)/2$. Find the components of the metric tensor in the new coordinates $(u, v)$ using the transformation rule for a $(0,2)$ tensor, which states that $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \frac{\partial x^\nu}{\partial x^{\nu'}} g_{\mu\nu}$. You should use this method exclusively, without relying on any alternative approaches.
+
+\emph{In this question, we are examining a coordinate change in a two-dimensional space. We start from a standard Cartesian coordinate system (x, y) and move to a new coordinate system (u, v) defined by a linear transformation. The goal is to find the components of the metric tensor in the new coordinate system (u, v) using the transformation rule for a (0,2) tensor, i.e., a rank-2 covariant tensor. The transformation rule is given by \(g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \frac{\partial x^\nu}{\partial x^{\nu'}} g_{\mu\nu}\), where \(g_{\mu\nu}\) are the components of the metric tensor in the original coordinates (x, y), and \(g_{\mu'\nu'}\) are the components of the metric tensor in the new coordinates (u, v). This formula tells us how the components of the metric tensor change when we change the coordinate system. It is important to note that we must exclusively use this formula for the solution, without using shortcuts or alternative methods.}
+
+\subsection*{Solution}
+\paragraph{(i) Metric tensor in the original Cartesian coordinates \((x, y)\).}
+
+In the \((x,y)\) coordinates, the line element is 
+\[
+ds^2 = dx^2 + dy^2.
+\]
+\emph{This formula represents the infinitesimal line element in two dimensions using the Cartesian coordinates x and y. In a flat (Euclidean) space, the infinitesimal distance squared, \(ds^2\), is given by the sum of the squares of the infinitesimal differences of the coordinates. Here, \(dx^2\) and \(dy^2\) represent the squares of the infinitesimal variations along the x and y axes, respectively. Essentially, this is the Pythagorean theorem applied to infinitesimal distances. The formula implies that the space is Euclidean and that the coordinates x and y are orthogonal, i.e., there is no cross term like \(dxdy\), which means there is no skew or tilt between the axes.}
+
+Hence, the metric tensor components \(g_{\mu \nu}\) in these coordinates are:
+\[
+g_{\mu\nu} 
+= 
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix},
+\]
+\emph{This is the metric tensor in Cartesian coordinates for a two-dimensional Euclidean space. The metric is diagonal with components \(g_{xx} = 1\) and \(g_{yy} = 1\), and off-diagonal components \(g_{xy} = g_{yx} = 0\). This metric tells us that the x and y coordinates are orthogonal (because the off-diagonal terms are zero) and that the scale along each axis is unity (because the diagonal terms are one). Geometrically, this means we are using a standard, undistorted, orthogonal coordinate system.}
+
+where
+\(\displaystyle g_{xx} = 1,\; g_{yy} = 1,\; g_{xy} = g_{yx} = 0.\)
+\emph{These are the specific components of the metric tensor \(g_{\mu\nu}\) in the Cartesian coordinates (x, y). \(g_{xx} = 1\) indicates that the “length” or “scale” along the x-axis is unit, and similarly, \(g_{yy} = 1\) indicates that the “length” or “scale” along the y-axis is unit. The terms \(g_{xy} = g_{yx} = 0\) indicate that there is no correlation or “mixing” between the x and y coordinates, which is consistent with the fact that the Cartesian axes are orthogonal. In simpler terms, this tells us that we are using a standard, undistorted, orthogonal coordinate system.}
+
+\paragraph{(ii) Coordinates transformation to \((u, v)\).}
+
+We define:
+\[
+u = \frac{x+y}{2},
+\quad
+v = \frac{x-y}{2}.
+\]
+\emph{Here we are defining the new coordinates u and v as linear combinations of the original coordinates x and y. The coordinate u is the average of x and y, while v is half the difference between x and y. This transformation corresponds to a 45-degree counterclockwise rotation, followed by a rescaling.}
+
+To apply the transformation rule for the metric, we need the inverse relations, which are:
+\[
+x = u + v,
+\quad
+y = u - v.
+\]
+\emph{These are the inverse transformations expressing the original coordinates x and y in terms of the new coordinates u and v. They were obtained by solving the previous system of equations for x and y. For example, adding the two equations gives \(u + v = x\), and subtracting them gives \(u - v = y\). These relations allow us to express the partial derivatives of x and y with respect to u and v, which are needed to apply the metric tensor transformation rule.}
+
+\paragraph{(iii) Calculating partial derivatives.}
+
+We compute the partial derivatives of \(x\) and \(y\) with respect to the new coordinates \((u, v)\):
+\[
+\frac{\partial x}{\partial u} = 1,
+\quad
+\frac{\partial x}{\partial v} = 1,
+\quad
+\frac{\partial y}{\partial u} = 1,
+\quad
+\frac{\partial y}{\partial v} = -1.
+\]
+\emph{These equations compute the partial derivatives of x and y with respect to the new coordinates u and v. For instance, \(\frac{\partial x}{\partial u} = 1\) means that x increases by 1 unit when u increases by 1 unit, keeping v constant. Similarly, \(\frac{\partial y}{\partial v} = -1\) means that y decreases by 1 unit when v increases by 1 unit, keeping u constant. These partial derivatives are constant because the transformation between (x, y) and (u, v) is linear.}
+
+\paragraph{(iv) Applying the \((0,2)\) tensor transformation rule.}
+
+Recall the rule:
+\[
+g_{\mu' \nu'}
+=
+\frac{\partial x^\mu}{\partial x^{\mu'}}
+\,
+\frac{\partial x^\nu}{\partial x^{\nu'}}
+\,
+g_{\mu \nu}.
+\]
+\emph{This is the transformation rule for a rank-2 covariant tensor, such as the metric tensor. It tells us how the components of the metric tensor transform when we move from one coordinate system to another. In this formula, \(g_{\mu'\nu'}\) are the components of the metric tensor in the new coordinate system, \(g_{\mu\nu}\) are the components in the old system, and \(\frac{\partial x^\mu}{\partial x^{\mu'}}\) are the partial derivatives of the old coordinates with respect to the new ones. In practice, we multiply the components of the old metric tensor by the appropriate partial derivatives to get the components in the new system.}
+
+Let \(\mu,\nu\) denote the old coordinates (\(x\) or \(y\)) and \(\mu',\nu'\) the new ones (\(u\) or \(v\)). Since the old metric components are \(g_{xx} = 1,\; g_{yy} = 1,\; g_{xy} = 0,\; g_{yx} = 0,\) each new metric component is computed as follows:
+
+\begin{itemize}
+\item \(\displaystyle g_{uu}\):
+\[
+g_{uu}
+=
+\left(\frac{\partial x}{\partial u}\right)^2
++
+\left(\frac{\partial y}{\partial u}\right)^2
+=
+1^2 + 1^2
+=
+2.
+\]
+\emph{This computes the \(g_{uu}\) component of the metric tensor in the new coordinates. Using the transformation rule, we sum the products of the partial derivatives multiplied by the corresponding components of the original metric tensor. Since \(g_{xy} = g_{yx} = 0\), the mixed terms vanish, leaving only the sum of the squares of the partial derivatives of x and y with respect to u, multiplied by \(g_{xx}\) and \(g_{yy}\) respectively. The result is \(g_{uu} = 1^2 \cdot 1 + 1^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the u-axis is 2.}
+
+\item \(\displaystyle g_{uv}\):
+\[
+g_{uv}
+=
+\left(\frac{\partial x}{\partial u}\right)\left(\frac{\partial x}{\partial v}\right)
++
+\left(\frac{\partial y}{\partial u}\right)\left(\frac{\partial y}{\partial v}\right) 
+=
+(1)(1) + (1)(-1)
+=
+0.
+\]
+\emph{This computes the \(g_{uv}\) component of the metric tensor. Again, we apply the transformation rule. The result is \(g_{uv} = (1)(1) \cdot 1 + (1)(-1) \cdot 1 = 0\). This means that the u and v coordinates are orthogonal.}
+
+\item \(\displaystyle g_{vu}\):
+\[
+g_{vu}
+=
+\left(\frac{\partial x}{\partial v}\right)\left(\frac{\partial x}{\partial u}\right)
++
+\left(\frac{\partial y}{\partial v}\right)\left(\frac{\partial y}{\partial u}\right) 
+=
+(1)(1) + (-1)(1)
+=
+0.
+\]
+\emph{This computes the \(g_{vu}\) component. It is equal to \(g_{uv}\) due to the symmetry of the metric tensor, so it is also 0.}
+
+\item \(\displaystyle g_{vv}\):
+\[
+g_{vv} 
+=
+\left(\frac{\partial x}{\partial v}\right)^2
++ 
+\left(\frac{\partial y}{\partial v}\right)^2 
+= 
+1^2 + (-1)^2 
+= 
+2.
+\]
+\emph{This computes the \(g_{vv}\) component. Similar to \(g_{uu}\), we find \(g_{vv} = (1)^2 \cdot 1 + (-1)^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the v-axis is 2.}
+\end{itemize}
+
+\textbf{(v) Final components of the metric in \((u,v)\).}
+
+Collecting these results, the new metric tensor is:
+\[
+g_{\mu' \nu'} 
+= 
+\begin{pmatrix}
+g_{uu} & g_{uv} \\
+g_{vu} & g_{vv}
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 0 \\
+0 & 2
+\end{pmatrix}.
+\]
+\emph{This is the metric tensor in the new coordinates (u, v). It is still diagonal, which means that u and v are orthogonal, but now it has diagonal components equal to 2. This indicates that the space in the (u, v) coordinates is still flat (Euclidean), but distances are rescaled by a factor of \(\sqrt{2}\) compared to the original Cartesian coordinates.}
+
+\textbf{Physical interpretation:} We see that the resulting metric is still diagonal (and represents the same flat space), but it is now scaled by a factor of 2 in both directions \(u\) and \(v\). Hence, the line element in the new coordinates can be written as
+\[
+ds^2 = 2\,du^2 + 2\,dv^2.
+\]
+\emph{This is the physical interpretation of the metric tensor we have calculated. The fact that the metric tensor is still diagonal means that the coordinates u and v are orthogonal to each other. The factor of 2 in the diagonal components \(g_{uu}\) and \(g_{vv}\) indicates that distances measured in the u and v coordinates are rescaled by a factor of \(\sqrt{2}\) relative to distances in the original Cartesian coordinates. This is consistent with the geometric interpretation of the coordinate transformation as a 45-degree rotation followed by a rescaling.}
+
+\textbf{Conclusion:}
+Using exclusively the tensor transformation rule, we have correctly derived the metric components in the \((u, v)\) coordinates:
+\[
+g_{uu} = 2, 
+\quad
+g_{uv} = 0, 
+\quad
+g_{vv} = 2.
+\]
+\emph{In conclusion, we have computed the components of the metric tensor in the new coordinates (u, v) by applying the tensor transformation rule. We found that \(g_{uu} = 2\), \(g_{uv} = g_{vu} = 0\), and \(g_{vv} = 2\). This result confirms that the u and v coordinates are orthogonal and that distances in this new coordinate system are scaled by a factor of \(\sqrt{2}\) with respect to the original Cartesian coordinate system (x, y).}
+
+\pagebreak
+
+
+\end{document}
