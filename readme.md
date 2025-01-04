@@ -8,7 +8,7 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
    - Start with the metric tensor $g_{\mu\nu}$ in the initial coordinates.  
    - *Example*: In Cartesian coordinates $(x, y)$:  
      
-     $g_{\mu\nu} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}.$
+     $g_{\mu\nu} = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix}.$
 
 2. **Define the Transformation**  
    - Express the new coordinates in terms of the original ones.  
@@ -34,7 +34,7 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
    - Determine the new metric tensor components.  
    - *Example*:
 
-     $g_{\mu'\nu'} = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}.$
+     $g_{\mu'\nu'} = \begin{pmatrix} 2 & 0 \\\ 0 & 2 \end{pmatrix}.$
 
 ---
 
@@ -50,10 +50,10 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 3. **Apply the Connection Formula**  
    - Compute using:
 
-     $\Gamma^\mu_{\nu\lambda} = \frac{1}{2} \, g^{\mu\rho} 
+     $\Gamma^\mu_{\nu\lambda} = \frac{1}{2} \, g^{\mu\rho}
      \bigl(
-       \partial_\nu g_{\lambda\rho} + 
-       \partial_\lambda g_{\nu\rho} - 
+       \partial_\nu g_{\lambda\rho} +
+       \partial_\lambda g_{\nu\rho} -
        \partial_\rho g_{\nu\lambda}
      \bigr).$
 
