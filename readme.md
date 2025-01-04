@@ -7,8 +7,7 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 1. **Identify the Original Metric**  
    - Start with the metric tensor $g_{\mu\nu}$ in the initial coordinates.  
    - In Cartesian coordinates $(x, y)$:
-
-     $ \left[ 1 \quad 0 \atop 0 \quad 1 \right] $
+   - $g_{\mu\nu} =  \left[ 1 \quad 0 \atop 0 \quad 1 \right]$
 
 2. **Define the Transformation**  
    - Express the new coordinates in terms of the original ones.  
