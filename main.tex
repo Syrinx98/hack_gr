@@ -1,4 +1,4 @@
-\documentclass{article}
+
 \usepackage{amsmath}
 \usepackage[margin=0.4in,footskip=0.1in]{geometry}
 
@@ -13,7 +13,7 @@ Consider a two-dimensional Cartesian coordinate system $(x, y)$ with the infinit
 \subsection*{Solution}
 \paragraph{(i) Metric tensor in the original Cartesian coordinates \((x, y)\).}
 
-In the \((x,y)\) coordinates, the line element is 
+In the \((x,y)\) coordinates, the line element is
 \[
 ds^2 = dx^2 + dy^2.
 \]
@@ -21,8 +21,8 @@ ds^2 = dx^2 + dy^2.
 
 Hence, the metric tensor components \(g_{\mu \nu}\) in these coordinates are:
 \[
-g_{\mu\nu} 
-= 
+g_{\mu\nu}
+=
 \begin{pmatrix}
 1 & 0 \\
 0 & 1
@@ -103,7 +103,7 @@ g_{uv}
 =
 \left(\frac{\partial x}{\partial u}\right)\left(\frac{\partial x}{\partial v}\right)
 +
-\left(\frac{\partial y}{\partial u}\right)\left(\frac{\partial y}{\partial v}\right) 
+\left(\frac{\partial y}{\partial u}\right)\left(\frac{\partial y}{\partial v}\right)
 =
 (1)(1) + (1)(-1)
 =
@@ -117,7 +117,7 @@ g_{vu}
 =
 \left(\frac{\partial x}{\partial v}\right)\left(\frac{\partial x}{\partial u}\right)
 +
-\left(\frac{\partial y}{\partial v}\right)\left(\frac{\partial y}{\partial u}\right) 
+\left(\frac{\partial y}{\partial v}\right)\left(\frac{\partial y}{\partial u}\right)
 =
 (1)(1) + (-1)(1)
 =
@@ -127,14 +127,14 @@ g_{vu}
 
 \item \(\displaystyle g_{vv}\):
 \[
-g_{vv} 
+g_{vv}
 =
 \left(\frac{\partial x}{\partial v}\right)^2
-+ 
-\left(\frac{\partial y}{\partial v}\right)^2 
-= 
-1^2 + (-1)^2 
-= 
++
+\left(\frac{\partial y}{\partial v}\right)^2
+=
+1^2 + (-1)^2
+=
 2.
 \]
 \emph{This computes the \(g_{vv}\) component. Similar to \(g_{uu}\), we find \(g_{vv} = (1)^2 \cdot 1 + (-1)^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the v-axis is 2.}
@@ -144,8 +144,8 @@ g_{vv} 
 
 Collecting these results, the new metric tensor is:
 \[
-g_{\mu' \nu'} 
-= 
+g_{\mu' \nu'}
+=
 \begin{pmatrix}
 g_{uu} & g_{uv} \\
 g_{vu} & g_{vv}
@@ -167,9 +167,9 @@ ds^2 = 2\,du^2 + 2\,dv^2.
 \textbf{Conclusion:}
 Using exclusively the tensor transformation rule, we have correctly derived the metric components in the \((u, v)\) coordinates:
 \[
-g_{uu} = 2, 
+g_{uu} = 2,
 \quad
-g_{uv} = 0, 
+g_{uv} = 0,
 \quad
 g_{vv} = 2.
 \]
@@ -179,26 +179,26 @@ g_{vv} = 2.
 
 \section*{Question 2}
 
-Consider a two-dimensional plane in polar coordinates, where the infinitesimal line element is given by 
+Consider a two-dimensional plane in polar coordinates, where the infinitesimal line element is given by
 \[
 ds^2 = dr^2 + r^2\,d\phi^2.
 \]
-(i) How many independent Christoffel symbols are there in total in two dimensions?  
-(ii) How many independent and non-vanishing Christoffel symbols are there for this particular case?  
+(i) How many independent Christoffel symbols are there in total in two dimensions?\\
+(ii) How many independent and non-vanishing Christoffel symbols are there for this particular case?\\
 (iii) Compute the explicit form of one non-vanishing Christoffel symbol at your choice.
 
-\emph{This exercise is about the Christoffel symbols in a two-dimensional plane described by polar coordinates. The infinitesimal line element, \(ds^2 = dr^2 + r^2\,d\phi^2\), defines the metric of the space. The exercise is divided into three parts: (i) determine the total number of independent Christoffel symbols in two dimensions; (ii) find how many of these symbols are independent and non-vanishing for the given polar coordinates; (iii) explicitly calculate one of the non-vanishing Christoffel symbols. In what follows, we will see how the symmetry properties of the connection coefficients reduce the total count of Christoffel symbols, and we will perform an explicit calculation to illustrate the procedure.}
+\emph{This exercise is about the Christoffel symbols in a two-dimensional plane described by polar coordinates. The infinitesimal line element, \(ds^2 = dr^2 + r^2\,d\phi^2\), defines the metric of the space. The exercise is divided into three parts: (i)~determine the total number of independent Christoffel symbols in two dimensions; (ii)~find how many of these symbols are independent and non-vanishing for the given polar coordinates; (iii)~explicitly calculate one of the non-vanishing Christoffel symbols. In what follows, we will see how the symmetry properties of the connection coefficients reduce the total count of Christoffel symbols, and we will perform an explicit calculation to illustrate the procedure.}
 
 \subsection*{Solution}
 
 \paragraph{(i) Total number of Christoffel symbols in 2D}
 In two dimensions, each index \(\mu, \nu, \lambda\) of \(\Gamma^\mu_{\;\nu\lambda}\) can take 2 values (which we may denote by \(r\) and \(\phi\)). Hence, if we consider all possible triplets \((\mu,\nu,\lambda)\) without any symmetry, we get \(2 \times 2 \times 2 = 8\) symbols.
 
-\emph{However, for the Levi-Civita connection, we use the symmetry
+\emph{However, for the Levi-Civita connection, we use the symmetry}
 \[
 \Gamma^\mu_{\;\nu\lambda} \;=\; \Gamma^\mu_{\;\lambda\nu},
 \]
-which tells us that interchanging the lower two indices does not produce a different Christoffel symbol. This reduces the total number of \emph{independent} symbols because \(\Gamma^\mu_{\;\nu\lambda}\) and \(\Gamma^\mu_{\;\lambda\nu}\) are identified. Let's elaborate on this point. The symmetry implies that the order of the lower indices \(\nu\) and \(\lambda\) does not matter. Therefore, we only need to consider the unique combinations of these indices. In two dimensions, \(\nu\) and \(\lambda\) form 3 unordered pairs: \((r,r)\), \((\phi,\phi)\), and \((r,\phi)\) (which is the same as \((\phi, r)\)). Since \(\mu\) can take 2 values (\(r\) or \(\phi\)), we get \(2 \times 3 = 6\) independent Christoffel symbols.}
+\emph{which tells us that interchanging the lower two indices does not produce a different Christoffel symbol. This reduces the total number of \emph{independent} symbols because \(\Gamma^\mu_{\;\nu\lambda}\) and \(\Gamma^\mu_{\;\lambda\nu}\) are identified. Let's elaborate on this point. The symmetry implies that the order of the lower indices \(\nu\) and \(\lambda\) does not matter. Therefore, we only need to consider the unique combinations of these indices. In two dimensions, \(\nu\) and \(\lambda\) form 3 unordered pairs: \((r,r)\), \((\phi,\phi)\), and \((r,\phi)\) (which is the same as \((\phi, r)\)). Since \(\mu\) can take 2 values (\(r\) or \(\phi\)), we get \(2 \times 3 = 6\) independent Christoffel symbols.}
 
 Hence, in 2D there are \(\boxed{6}\) independent Christoffel symbols in total.
 
@@ -206,47 +206,57 @@ Hence, in 2D there are \(\boxed{6}\) independent Christoffel symbols in total.
 
 \paragraph{(ii) Non-vanishing Christoffel symbols in polar coordinates \((r,\phi)\)}
 
-We consider the 2D plane in polar coordinates, where the line element is 
+We consider the 2D plane in polar coordinates, where the line element is
 \[
 ds^2 = dr^2 + r^2\,d\phi^2.
 \]
 This implies the following metric tensors:
 \[
-g_{\mu\nu} 
-= 
+g_{\mu\nu}
+=
 \begin{pmatrix}
 1 & 0 \\
 0 & r^2
 \end{pmatrix},
 \quad
-g^{\mu\nu} 
-= 
+g^{\mu\nu}
+=
 \begin{pmatrix}
 1 & 0 \\
 0 & \frac{1}{r^2}
 \end{pmatrix}.
 \]
 
-\emph{In order to find which Christoffel symbols are non-zero, we look at the partial derivatives of the metric components. Notably:
+\emph{In order to find which Christoffel symbols are non-zero, we look at the partial derivatives of the metric components. Notably:}
 \[
-\partial_r g_{\phi\phi} = 2\,r, 
+\partial_r g_{\phi\phi} = 2\,r,
 \]
-while \(\partial_\phi g_{\phi\phi}\), \(\partial_r g_{rr}\), \(\partial_\phi g_{rr}\), etc.\ are zero. This is because \(g_{rr}\) is a constant and \(g_{\phi\phi}\) does not depend on \(\phi\). Substituting these derivatives into the definition of the Levi-Civita connection,
+\emph{while \(\partial_\phi g_{\phi\phi}\), \(\partial_r g_{rr}\), \(\partial_\phi g_{rr}\), etc.\ are zero. This is because \(g_{rr}\) is constant and \(g_{\phi\phi}\) does not depend on \(\phi\). Substituting these derivatives into the definition of the Levi-Civita connection,}
 \[
-\Gamma^\mu_{\;\nu\lambda} 
-= 
-\frac12\, g^{\mu\rho} 
+\Gamma^\mu_{\;\nu\lambda}
+=
+\frac12\, g^{\mu\rho}
 \Bigl(
 \partial_\nu g_{\lambda\rho}
-+ 
++
 \partial_\lambda g_{\nu\rho}
-- 
+-
 \partial_\rho g_{\nu\lambda}
 \Bigr),
 \]
-we systematically evaluate each \(\Gamma^\mu_{\;\nu\lambda}\). This procedure shows that the only non-zero symbols are those related to the \(\partial_r g_{\phi\phi}\) term. In other words, a Christoffel symbol will be non-zero if and only if at least one of the terms \(\partial_\nu g_{\lambda\rho}\), \(\partial_\lambda g_{\nu\rho}\), or \(\partial_\rho g_{\nu\lambda}\) is non-zero. In our case, the only non-zero derivative of the metric is \(\partial_r g_{\phi\phi}\), so we will only have non-zero Christoffel symbols when this term is involved.}
+\emph{we systematically evaluate each \(\Gamma^\mu_{\;\nu\lambda}\).}
 
-As a result, the final non-zero Christoffel symbols turn out to be:
+\textbf{Quick way to see which symbols are non-vanishing:}
+\begin{itemize}
+    \item A Christoffel symbol \(\Gamma^\mu_{\;\nu\lambda}\) is non-zero only if \emph{at least one} of the terms
+    \(\partial_\nu g_{\lambda\rho}\), \(\partial_\lambda g_{\nu\rho}\), or \(\partial_\rho g_{\nu\lambda}\)
+    is non-zero in the sum.
+    \item In our polar coordinate case, the \emph{only} non-zero derivative of \(g_{\mu\nu}\) is
+    \(\partial_r g_{\phi\phi} = 2r\). Therefore, any Christoffel symbol not involving \(\partial_r g_{\phi\phi}\) must vanish.
+    \item By carefully checking all index combinations, one sees that only \(\Gamma^r_{\;\phi\phi}\) and \(\Gamma^\phi_{\;r\phi}\) (together with \(\Gamma^\phi_{\;\phi r}\) by symmetry) can pick up this non-zero derivative.
+\end{itemize}
+
+\emph{Hence, the final non-zero Christoffel symbols turn out to be:}
 \[
 \Gamma^r_{\;\phi\phi} = -\,r,
 \quad
@@ -254,13 +264,13 @@ As a result, the final non-zero Christoffel symbols turn out to be:
 \]
 All other Christoffel symbols vanish.
 
-\emph{To reiterate, the reason these particular symbols appear is due to the \(r^2\) dependence in the metric component \(g_{\phi\phi}\). This makes the space “flat” in the geometric sense (since a 2D plane is flat), but expressed in curvilinear (polar) coordinates, so certain connection coefficients are non-zero purely because of the coordinate choice. If we were to use Cartesian coordinates, where the metric is simply \(g_{\mu\nu} = \text{diag}(1, 1)\), all Christoffel symbols would be zero because all partial derivatives of the metric components would vanish.}
+\emph{To reiterate, the reason these particular symbols appear is due to the \(r^2\) dependence in the metric component \(g_{\phi\phi}\). This makes the space “flat” in the geometric sense (since a 2D plane is flat), but expressed in curvilinear (polar) coordinates, so certain connection coefficients are non-zero purely because of the coordinate choice. If we were to use Cartesian coordinates, where the metric is simply \(g_{\mu\nu} = \mathrm{diag}(1, 1)\), all Christoffel symbols would be zero because all partial derivatives of the metric components would vanish.}
 
 \bigskip
 
 \paragraph{(iii) Explicit calculation of one non-vanishing Christoffel symbol}
 
-\emph{As an example, let us explicitly compute \(\Gamma^r_{\;\phi\phi}\). We set \(\mu = r\), \(\nu = \phi\), and \(\lambda = \phi\) in the connection formula:
+\emph{As an example, let us explicitly compute \(\Gamma^r_{\;\phi\phi}\). We set \(\mu = r\), \(\nu = \phi\), and \(\lambda = \phi\) in the connection formula:}
 \[
 \Gamma^r_{\;\phi\phi}
 =
@@ -275,15 +285,15 @@ g^{r\rho}
 \partial_\rho g_{\phi\phi}
 \Bigr).
 \]
-We split the sum into two terms, corresponding to \(\rho = r\) and \(\rho = \phi\).}
+\emph{We split the sum into two terms, corresponding to \(\rho = r\) and \(\rho = \phi\).}
 
 \begin{enumerate}
 \item \textbf{Case \(\rho = r\):}
 
-\(g^{r r} = 1\). Also, \(g_{\phi r} = 0\), so its \(\phi\)-derivatives vanish. \emph{This is because the metric tensor is diagonal, so off-diagonal elements are zero. Consequently, any derivative of these zero elements is also zero.} The only relevant term is \(\partial_r g_{\phi\phi}\), which equals \(2r\). \emph{We compute this by taking the derivative of \(r^2\) with respect to \(r\).} Hence,
+\(g^{r r} = 1\). Also, \(g_{\phi r} = 0\), so its \(\phi\)-derivatives vanish. \emph{This is because the metric tensor is diagonal, so off-diagonal elements are zero. Consequently, any derivative of these zero elements is also zero.} The only relevant term is \(\partial_r g_{\phi\phi}\), which equals \(2r\). Hence,
 \[
 \bigl[\partial_\phi g_{\phi r} + \partial_\phi g_{\phi r} - \partial_r g_{\phi\phi}\bigr]
-= 
+=
 [\,0 + 0 - 2r\,]
 = -\,2r.
 \]
@@ -291,7 +301,7 @@ Multiplying by \(g^{rr} = 1\) still gives \(-\,2r\).
 
 \item \textbf{Case \(\rho = \phi\):}
 
-\(g^{r\phi} = 0\). \emph{Again, this is because the inverse metric is also diagonal.} Any term multiplied by zero gives zero, so there is no contribution from this part. \emph{Specifically, the expression inside the parenthesis would be multiplied by \(g^{r\phi}\), which is zero.}
+\(g^{r\phi} = 0\). \emph{Again, this is because the inverse metric is also diagonal.} Any term multiplied by zero gives zero, so there is no contribution from this part.
 \end{enumerate}
 
 \emph{Summing these two results and multiplying by the factor \(1/2\) in front, we get:}
@@ -302,7 +312,7 @@ Multiplying by \(g^{rr} = 1\) still gives \(-\,2r\).
 =
 -\,r.
 \]
-Hence, we confirm that 
+\emph{Hence, we confirm that}
 \(\boxed{\Gamma^r_{\;\phi\phi} = -\,r}.\)
 
 \bigskip
