@@ -6,19 +6,13 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 
 1. **Identify the Original Metric**  
    - Start with the metric tensor $g_{\mu\nu}$ in the initial coordinates.  
-   - In Cartesian coordinates $(x, y)$: 
-   - $g_{\mu\nu} = $
-   ```math
-    \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
-   ```
-   ```math
-   \begin{bmatrix}X\\Y\end{bmatrix}
-   ```
+   - In Cartesian coordinates `(x, y)`:
 
-
-
-
-     
+     $g_{\mu\nu} =$  
+     ```
+     ( 1   0 )
+     ( 0   1 )
+     ```
 
 2. **Define the Transformation**  
    - Express the new coordinates in terms of the original ones.  
@@ -33,11 +27,15 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 
 4. **Apply the Transformation Rule**  
    - Use the tensor transformation rule:
-   - $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \, \frac{\partial x^\nu}{\partial x^{\nu'}} \, g_{\mu\nu}.$
+     $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \, \frac{\partial x^\nu}{\partial x^{\nu'}} \, g_{\mu\nu}.$
 
 5. **Simplify the Results**  
-   - Determine the new metric tensor components.
-   - $g_{\mu'\nu'} = \begin{pmatrix} 2 & 0 \\\ 0 & 2 \end{pmatrix}.$
+   - Determine the new metric tensor components:
+     $g_{\mu'\nu'} =$  
+     ```
+     ( 2   0 )
+     ( 0   2 )
+     ```
 
 ---
 
@@ -61,6 +59,5 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 
 4. **List the Non-Zero Symbols**  
    - In polar coordinates:
-
      $\Gamma^r_{\phi\phi} = -r, \quad
       \Gamma^\phi_{r\phi} = \Gamma^\phi_{\phi r} = \frac{1}{r}.$
