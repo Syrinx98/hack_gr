@@ -9,8 +9,15 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
    - In Cartesian coordinates $(x, y)$: 
    - $g_{\mu\nu} = $
    ```math
-    \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+    \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
    ```
+   ```math
+   \begin{bmatrix}X\\Y\end{bmatrix}
+   ```
+
+
+
+
      
 
 2. **Define the Transformation**  
