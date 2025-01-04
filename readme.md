@@ -6,19 +6,19 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 
 1. **Identify the Original Metric**  
    - Start with the metric tensor $g_{\mu\nu}$ in the initial coordinates.  
-   - *Example*: In Cartesian coordinates $(x, y)$:  
+   - In Cartesian coordinates $(x, y)$:  
      
      $g_{\mu\nu} = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix}.$
 
 2. **Define the Transformation**  
    - Express the new coordinates in terms of the original ones.  
-   - *Example*:
+   - 
 
      $u = \frac{x + y}{2}, \quad v = \frac{x - y}{2}.$
 
 3. **Compute Partial Derivatives**  
    - Calculate $\frac{\partial x^\mu}{\partial x^{\mu'}}$ for all relevant indices.  
-   - *Example*:
+   - 
 
      $\frac{\partial x}{\partial u} = 1, \quad
       \frac{\partial x}{\partial v} = 1, \quad
@@ -32,7 +32,7 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 
 5. **Simplify the Results**  
    - Determine the new metric tensor components.  
-   - *Example*:
+   - 
 
      $g_{\mu'\nu'} = \begin{pmatrix} 2 & 0 \\\ 0 & 2 \end{pmatrix}.$
 
@@ -58,7 +58,7 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
      \bigr).$
 
 4. **List the Non-Zero Symbols**  
-   - *Example*: In polar coordinates:
+   - In polar coordinates:
 
      $\Gamma^r_{\phi\phi} = -r, \quad
       \Gamma^\phi_{r\phi} = \Gamma^\phi_{\phi r} = \frac{1}{r}.$
