@@ -7,34 +7,26 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 1. **Identify the Original Metric**  
    - Start with the metric tensor $g_{\mu\nu}$ in the initial coordinates.  
    - In Cartesian coordinates $(x, y)$:  
-     
      $g_{\mu\nu} = \begin{pmatrix} 1 & 0 \\\ 0 & 1 \end{pmatrix}.$
 
 2. **Define the Transformation**  
    - Express the new coordinates in terms of the original ones.  
-   - 
-
-     $u = \frac{x + y}{2}, \quad v = \frac{x - y}{2}.$
+   - $u = \frac{x + y}{2}, \quad v = \frac{x - y}{2}.$
 
 3. **Compute Partial Derivatives**  
    - Calculate $\frac{\partial x^\mu}{\partial x^{\mu'}}$ for all relevant indices.  
-   - 
-
-     $\frac{\partial x}{\partial u} = 1, \quad
+   - $\frac{\partial x}{\partial u} = 1, \quad
       \frac{\partial x}{\partial v} = 1, \quad
       \frac{\partial y}{\partial u} = 1, \quad
       \frac{\partial y}{\partial v} = -1.$
 
 4. **Apply the Transformation Rule**  
    - Use the tensor transformation rule:
-
-     $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \, \frac{\partial x^\nu}{\partial x^{\nu'}} \, g_{\mu\nu}.$
+   - $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \, \frac{\partial x^\nu}{\partial x^{\nu'}} \, g_{\mu\nu}.$
 
 5. **Simplify the Results**  
-   - Determine the new metric tensor components.  
-   - 
-
-     $g_{\mu'\nu'} = \begin{pmatrix} 2 & 0 \\\ 0 & 2 \end{pmatrix}.$
+   - Determine the new metric tensor components.
+   - $g_{\mu'\nu'} = \begin{pmatrix} 2 & 0 \\\ 0 & 2 \end{pmatrix}.$
 
 ---
 
@@ -49,7 +41,6 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 
 3. **Apply the Connection Formula**  
    - Compute using:
-
      $\Gamma^\mu_{\nu\lambda} = \frac{1}{2} \, g^{\mu\rho}
      \bigl(
        \partial_\nu g_{\lambda\rho} +
