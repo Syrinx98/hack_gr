@@ -6,15 +6,16 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 
 1. **Identify the Original Metric**  
    - Start with the metric tensor $g_{\mu\nu}$ in the initial coordinates.  
-   - In Cartesian coordinates $(x, y)$:  
-     $\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \end{pmatrix}$
+   - In Cartesian coordinates $(x, y)$:
+
+     $ \left[ 1 \quad 0 \atop 0 \quad 1 \right] $
 
 2. **Define the Transformation**  
    - Express the new coordinates in terms of the original ones.  
    - $u = \frac{x + y}{2}, \quad v = \frac{x - y}{2}.$
 
 3. **Compute Partial Derivatives**  
-   - Calculate $\frac{\partial x^\mu}{\partial x^{\mu'}}$ for all relevant indices.  
+   - Calculate $\frac{\partial x^\mu}{\partial x^{\mu'}}$ for all relevant indices:  
    - $\frac{\partial x}{\partial u} = 1, \quad
       \frac{\partial x}{\partial v} = 1, \quad
       \frac{\partial y}{\partial u} = 1, \quad
@@ -25,8 +26,8 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
    - $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \, \frac{\partial x^\nu}{\partial x^{\nu'}} \, g_{\mu\nu}.$
 
 5. **Simplify the Results**  
-   - Determine the new metric tensor components.
-   - $g_{\mu'\nu'} = \begin{pmatrix} 2 & 0 \\\ 0 & 2 \end{pmatrix}.$
+   - Determine the new metric tensor components:
+   - $g_{\mu'\nu'} = \left[ 2 \quad 0 \atop 0 \quad 2 \right]$
 
 ---
 
