@@ -7,8 +7,9 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 1. **Identify the Original Metric**  
    - Start with the metric tensor $g_{\mu\nu}$ in the initial coordinates.  
    - In Cartesian coordinates $(x, y)$: 
+   - $g_{\mu\nu} = $
    ```math
-    $g_{\mu\nu} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}.$
+    \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
    ```
      
 
