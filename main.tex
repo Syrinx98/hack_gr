@@ -12,7 +12,7 @@ Consider a two-dimensional Cartesian coordinate system $(x, y)$ with the infinit
 \subsection*{Solution}
 \paragraph{(i) Metric tensor in the original Cartesian coordinates \((x, y)\).}
 
-In the \((x,y)\) coordinates, the line element is
+In the \((x,y)\) coordinates, the line element is 
 \[
 ds^2 = dx^2 + dy^2.
 \]
@@ -20,8 +20,8 @@ ds^2 = dx^2 + dy^2.
 
 Hence, the metric tensor components \(g_{\mu \nu}\) in these coordinates are:
 \[
-g_{\mu\nu}
-=
+g_{\mu\nu} 
+= 
 \begin{pmatrix}
 1 & 0 \\
 0 & 1
@@ -86,11 +86,11 @@ Let \(\mu,\nu\) denote the old coordinates (\(x\) or \(y\)) and \(\mu',\nu'\) th
 \[
 g_{uu}
 =
-\left(\frac{\partial x}{\partial u}\right)^2
+\left(\frac{\partial x}{\partial u}\right)^2 g_{xx}
 +
-\left(\frac{\partial y}{\partial u}\right)^2
+\left(\frac{\partial y}{\partial u}\right)^2 g_{yy}
 =
-1^2 + 1^2
+1^3 + 1^3
 =
 2.
 \]
@@ -100,11 +100,11 @@ g_{uu}
 \[
 g_{uv}
 =
-\left(\frac{\partial x}{\partial u}\right)\left(\frac{\partial x}{\partial v}\right)
+\left(\frac{\partial x}{\partial u}\right)\left(\frac{\partial x}{\partial v}\right) g_{xx}
 +
-\left(\frac{\partial y}{\partial u}\right)\left(\frac{\partial y}{\partial v}\right)
+\left(\frac{\partial y}{\partial u}\right)\left(\frac{\partial y}{\partial v}\right) g_{yy}
 =
-(1)(1) + (1)(-1)
+(1)(1)(1) + (1)(-1)(1)
 =
 0.
 \]
@@ -114,11 +114,11 @@ g_{uv}
 \[
 g_{vu}
 =
-\left(\frac{\partial x}{\partial v}\right)\left(\frac{\partial x}{\partial u}\right)
+\left(\frac{\partial x}{\partial v}\right)\left(\frac{\partial x}{\partial u}\right) g_{xx}
 +
-\left(\frac{\partial y}{\partial v}\right)\left(\frac{\partial y}{\partial u}\right)
+\left(\frac{\partial y}{\partial v}\right)\left(\frac{\partial y}{\partial u}\right) g_{yy}
 =
-(1)(1) + (-1)(1)
+(1)(1)(1) + (-1)(1)(1)
 =
 0.
 \]
@@ -128,11 +128,11 @@ g_{vu}
 \[
 g_{vv}
 =
-\left(\frac{\partial x}{\partial v}\right)^2
+\left(\frac{\partial x}{\partial v}\right)^2 g_{xx}
 +
-\left(\frac{\partial y}{\partial v}\right)^2
+\left(\frac{\partial y}{\partial v}\right)^2 g_{yy}
 =
-1^2 + (-1)^2
+1^3 + (-1)^2 (1)
 =
 2.
 \]
@@ -143,8 +143,8 @@ g_{vv}
 
 Collecting these results, the new metric tensor is:
 \[
-g_{\mu' \nu'}
-=
+g_{\mu' \nu'} 
+= 
 \begin{pmatrix}
 g_{uu} & g_{uv} \\
 g_{vu} & g_{vv}
@@ -166,15 +166,16 @@ ds^2 = 2\,du^2 + 2\,dv^2.
 \textbf{Conclusion:}
 Using exclusively the tensor transformation rule, we have correctly derived the metric components in the \((u, v)\) coordinates:
 \[
-g_{uu} = 2,
+g_{uu} = 2, 
 \quad
-g_{uv} = 0,
+g_{uv} = 0, 
 \quad
 g_{vv} = 2.
 \]
 \emph{In conclusion, we have computed the components of the metric tensor in the new coordinates (u, v) by applying the tensor transformation rule. We found that \(g_{uu} = 2\), \(g_{uv} = g_{vu} = 0\), and \(g_{vv} = 2\). This result confirms that the u and v coordinates are orthogonal and that distances in this new coordinate system are scaled by a factor of \(\sqrt{2}\) with respect to the original Cartesian coordinate system (x, y).}
 
 \pagebreak
+
 
 \section*{Question 2}
 
