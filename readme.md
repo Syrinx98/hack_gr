@@ -111,7 +111,7 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
     *   Clock 2: $\tau_2 = \sqrt{1 - \frac{2GM_E}{R_E + h}} \times t$
 
 4.  **Proper Time Ratio:**
-    $\frac{\tau_2}{\tau_1} = \frac{\sqrt{1 - \frac{2GM_E}{R_E + h}}}{\sqrt{1 - \frac{2GM_E}{R_E}}}$
+    - $\frac{\tau_2}{\tau_1} = \frac{\sqrt{1 - \frac{2GM_E}{R_E + h}}}{\sqrt{1 - \frac{2GM_E}{R_E}}}$
 
 5.  **Approximation for $h \ll R_E$:**
     *   Using binomial expansion and weak field approximation:
