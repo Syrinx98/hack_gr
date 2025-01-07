@@ -117,3 +117,61 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
     *   Using binomial expansion and weak field approximation:
     *   $\frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E h}{R_E^2}$
     *   $\frac{\tau_2}{\tau_1} \approx 1 + \frac{gh}{c^2}$ (in SI units), where $g = \frac{GM_E}{R_E^2}$
+
+---
+
+## 6. Geodesics on a Sphere
+
+1.  **Identify the Metric**
+    *   $ds^2 = d\theta^2 + \sin^2\theta \, d\phi^2$
+
+2.  **Identify Non-Vanishing Christoffel Symbols**
+    *   $\Gamma^\theta_{\phi\phi} = -\sin\theta \cos\theta$
+    *   $\Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta} = \cot\theta$
+
+3.  **Write Down the Geodesic Equations**
+    *   $\frac{d^2 \theta}{d\lambda^2} - \sin\theta \cos\theta \left(\frac{d\phi}{d\lambda}\right)^2 = 0$
+    *   $\frac{d^2 \phi}{d\lambda^2} + 2 \cot\theta \frac{d\theta}{d\lambda} \frac{d\phi}{d\lambda} = 0$
+
+4.  **Lines of Constant Longitude ($\phi = \text{const.}$)**
+    *   Substitute $\frac{d\phi}{d\lambda} = 0$ and $\frac{d^2\phi}{d\lambda^2} = 0$ into the geodesic equations.
+    *   The equations are satisfied, confirming that lines of constant longitude are geodesics.
+
+5.  **Lines of Constant Latitude ($\theta = \text{const.}$)**
+    *   Substitute $\frac{d\theta}{d\lambda} = 0$ and $\frac{d^2\theta}{d\lambda^2} = 0$ into the geodesic equations.
+    *   The first equation reduces to $\sin\theta \cos\theta \left(\frac{d\phi}{d\lambda}\right)^2 = 0$.
+    *   This is satisfied if $\theta = \frac{\pi}{2}$ (equator) or if $\frac{d\phi}{d\lambda} = 0$ (meridian).
+    *   The second equation is satisfied, indicating that $\phi$ changes linearly with $\lambda$.
+    *   Therefore, the only line of constant latitude that is a geodesic is the equator.
+
+---
+
+## 7. Covariant Derivatives on a Sphere
+
+1.  **Identify the Metric and Coordinates**
+    *   $ds^2 = d\theta^2 + \sin^2\theta \, d\phi^2$
+    *   $x^\mu = (\theta, \phi)$
+
+2.  **Recall Non-Vanishing Christoffel Symbols**
+    *   $\Gamma^\theta_{\phi\phi} = -\sin\theta \cos\theta$
+    *   $\Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta} = \cot\theta$
+
+3.  **Compute Covariant Derivative of a Contravariant Vector**
+    *   $\nabla_\mu V^\nu = \partial_\mu V^\nu + \Gamma^\nu_{\mu\lambda} V^\lambda$
+    *   $\nabla_\theta V^\theta = \partial_\theta V^\theta$
+    *   $\nabla_\theta V^\phi = \partial_\theta V^\phi + \cot\theta V^\phi$
+    *   $\nabla_\phi V^\theta = \partial_\phi V^\theta - \sin\theta \cos\theta V^\phi$
+    *   $\nabla_\phi V^\phi = \partial_\phi V^\phi + \cot\theta V^\theta$
+
+4.  **Compute Covariant Derivative of a Covariant Vector**
+    *   $\nabla_\mu V_\nu = \partial_\mu V_\nu - \Gamma^\lambda_{\mu\nu} V_\lambda$
+    *   $\nabla_\theta V_\theta = \partial_\theta V_\theta$
+    *   $\nabla_\theta V_\phi = \partial_\theta V_\phi - \cot\theta V_\phi$
+    *   $\nabla_\phi V_\theta = \partial_\phi V_\theta - \cot\theta V_\phi$
+    *   $\nabla_\phi V_\phi = \partial_\phi V_\phi + \sin\theta \cos\theta V_\theta$
+
+5.  **Show $\nabla_\mu (V^\nu V_\nu) = \partial_\mu (V^\nu V_\nu)$**
+    *   Use the product rule: $\nabla_\mu (V^\nu V_\nu) = V^\nu \nabla_\mu V_\nu + V_\nu \nabla_\mu V^\nu$
+    *   Substitute the expressions for $\nabla_\mu V^\nu$ and $\nabla_\mu V_\nu$.
+    *   Show that the terms involving Christoffel symbols cancel out after renaming dummy indices.
+    *   The result follows: $\nabla_\mu (V^\nu V_\nu) = \partial_\mu (V^\nu V_\nu)$.
