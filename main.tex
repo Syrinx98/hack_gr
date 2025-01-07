@@ -5,825 +5,1326 @@
 
 \begin{document}
 
-    \section*{Question 1}
-
-    Consider a two-dimensional Cartesian coordinate system $(x, y)$ with the infinitesimal line element $ds^2 = dx^2 + dy^2$. We then introduce new coordinates $u$ and $v$, defined by $u = (x+y)/2$ and $v = (x-y)/2$. Find the components of the metric tensor in the new coordinates $(u, v)$ using the transformation rule for a $(0,2)$ tensor, which states that $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \frac{\partial x^\nu}{\partial x^{\nu'}} g_{\mu\nu}$. You should use this method exclusively, without relying on any alternative approaches.
-
-    \emph{In this question, we are examining a coordinate change in a two-dimensional space. We start from a standard Cartesian coordinate system (x, y) and move to a new coordinate system (u, v) defined by a linear transformation. The goal is to find the components of the metric tensor in the new coordinate system (u, v) using the transformation rule for a (0,2) tensor, i.e., a rank-2 covariant tensor. The transformation rule is given by \(g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \frac{\partial x^\nu}{\partial x^{\nu'}} g_{\mu\nu}\), where \(g_{\mu\nu}\) are the components of the metric tensor in the original coordinates (x, y), and \(g_{\mu'\nu'}\) are the components of the metric tensor in the new coordinates (u, v). This formula tells us how the components of the metric tensor change when we change the coordinate system. It is important to note that we must exclusively use this formula for the solution, without using shortcuts or alternative methods.}
-
-    \subsection*{Solution}
-
-    \paragraph{(i) Metric tensor in the original Cartesian coordinates \((x, y)\).}
-
-    In the \((x,y)\) coordinates, the line element is
-    \[
-        ds^2 = dx^2 + dy^2.
-    \]
-    \emph{This formula represents the infinitesimal line element in two dimensions using the Cartesian coordinates x and y. In a flat (Euclidean) space, the infinitesimal distance squared, \(ds^2\), is given by the sum of the squares of the infinitesimal differences of the coordinates. Here, \(dx^2\) and \(dy^2\) represent the squares of the infinitesimal variations along the x and y axes, respectively. Essentially, this is the Pythagorean theorem applied to infinitesimal distances. The formula implies that the space is Euclidean and that the coordinates x and y are orthogonal, i.e., there is no cross term like \(dxdy\), which means there is no skew or tilt between the axes.}
-
-    Hence, the metric tensor components \(g_{\mu \nu}\) in these coordinates are:
-    \[
-        g_{\mu\nu}
-        =
-        \begin{pmatrix}
-            1 & 0 \\
-            0 & 1
-        \end{pmatrix},
-    \]
-    \emph{This is the metric tensor in Cartesian coordinates for a two-dimensional Euclidean space. The metric is diagonal with components \(g_{xx} = 1\) and \(g_{yy} = 1\), and off-diagonal components \(g_{xy} = g_{yx} = 0\). This metric tells us that the x and y coordinates are orthogonal (because the off-diagonal terms are zero) and that the scale along each axis is unity (because the diagonal terms are one). Geometrically, this means we are using a standard, undistorted, orthogonal coordinate system.}
-
-    where
-    \(\displaystyle g_{xx} = 1,\; g_{yy} = 1,\; g_{xy} = g_{yx} = 0.\)
-    \emph{These are the specific components of the metric tensor \(g_{\mu\nu}\) in the Cartesian coordinates (x, y). \(g_{xx} = 1\) indicates that the “length” or “scale” along the x-axis is unit, and similarly, \(g_{yy} = 1\) indicates that the “length” or “scale” along the y-axis is unit. The terms \(g_{xy} = g_{yx} = 0\) indicate that there is no correlation or “mixing” between the x and y coordinates, which is consistent with the fact that the Cartesian axes are orthogonal. In simpler terms, this tells us that we are using a standard, undistorted, orthogonal coordinate system.}
-
-    \paragraph{(ii) Coordinates transformation to \((u, v)\).}
-
-    We define:
-    \[
-        u = \frac{x+y}{2},
-        \quad
-        v = \frac{x-y}{2}.
-    \]
-    \emph{Here we are defining the new coordinates u and v as linear combinations of the original coordinates x and y. The coordinate u is the average of x and y, while v is half the difference between x and y. This transformation corresponds to a 45-degree counterclockwise rotation, followed by a rescaling.}
-
-    To apply the transformation rule for the metric, we need the inverse relations, which are:
-    \[
-        x = u + v,
-        \quad
-        y = u - v.
-    \]
-    \emph{These are the inverse transformations expressing the original coordinates x and y in terms of the new coordinates u and v. They were obtained by solving the previous system of equations for x and y. For example, adding the two equations gives \(u + v = x\), and subtracting them gives \(u - v = y\). These relations allow us to express the partial derivatives of x and y with respect to u and v, which are needed to apply the metric tensor transformation rule.}
-
-    \paragraph{(iii) Calculating partial derivatives.}
-
-    We compute the partial derivatives of \(x\) and \(y\) with respect to the new coordinates \((u, v)\):
-    \[
-        \frac{\partial x}{\partial u} = 1,
-        \quad
-        \frac{\partial x}{\partial v} = 1,
-        \quad
-        \frac{\partial y}{\partial u} = 1,
-        \quad
-        \frac{\partial y}{\partial v} = -1.
-    \]
-    \emph{These equations compute the partial derivatives of x and y with respect to the new coordinates u and v. For instance, \(\frac{\partial x}{\partial u} = 1\) means that x increases by 1 unit when u increases by 1 unit, keeping v constant. Similarly, \(\frac{\partial y}{\partial v} = -1\) means that y decreases by 1 unit when v increases by 1 unit, keeping u constant. These partial derivatives are constant because the transformation between (x, y) and (u, v) is linear.}
-
-    \paragraph{(iv) Applying the \((0,2)\) tensor transformation rule.}
-
-    Recall the rule:
-    \[
-        g_{\mu' \nu'}
-        =
-        \frac{\partial x^\mu}{\partial x^{\mu'}}
-        \,
-        \frac{\partial x^\nu}{\partial x^{\nu'}}
-        \,
-        g_{\mu \nu}.
-    \]
-    \emph{This is the transformation rule for a rank-2 covariant tensor, such as the metric tensor. It tells us how the components of the metric tensor transform when we move from one coordinate system to another. In this formula, \(g_{\mu'\nu'}\) are the components of the metric tensor in the new coordinate system, \(g_{\mu\nu}\) are the components in the old system, and \(\frac{\partial x^\mu}{\partial x^{\mu'}}\) are the partial derivatives of the old coordinates with respect to the new ones. In practice, we multiply the components of the old metric tensor by the appropriate partial derivatives to get the components in the new system.}
-
-    Let \(\mu,\nu\) denote the old coordinates (\(x\) or \(y\)) and \(\mu',\nu'\) the new ones (\(u\) or \(v\)). Since the old metric components are \(g_{xx} = 1,\; g_{yy} = 1,\; g_{xy} = 0,\; g_{yx} = 0,\) each new metric component is computed as follows:
-
-    \begin{itemize}
-        \item \(\displaystyle g_{uu}\):
-        \[
-            g_{uu}
-            =
-            \left(\frac{\partial x}{\partial u}\right)^2 g_{xx}
-            +
-            \left(\frac{\partial y}{\partial u}\right)^2 g_{yy}
-            =
-            1^3 + 1^3
-            =
-            2.
-        \]
-        \emph{This computes the \(g_{uu}\) component of the metric tensor in the new coordinates. Using the transformation rule, we sum the products of the partial derivatives multiplied by the corresponding components of the original metric tensor. Since \(g_{xy} = g_{yx} = 0\), the mixed terms vanish, leaving only the sum of the squares of the partial derivatives of x and y with respect to u, multiplied by \(g_{xx}\) and \(g_{yy}\) respectively. The result is \(g_{uu} = 1^2 \cdot 1 + 1^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the u-axis is 2.}
-
-        \item \(\displaystyle g_{uv}\):
-        \[
-            g_{uv}
-            =
-            \left(\frac{\partial x}{\partial u}\right)\left(\frac{\partial x}{\partial v}\right) g_{xx}
-            +
-            \left(\frac{\partial y}{\partial u}\right)\left(\frac{\partial y}{\partial v}\right) g_{yy}
-            =
-            (1)(1)(1) + (1)(-1)(1)
-            =
-            0.
-        \]
-        \emph{This computes the \(g_{uv}\) component of the metric tensor. Again, we apply the transformation rule. The result is \(g_{uv} = (1)(1) \cdot 1 + (1)(-1) \cdot 1 = 0\). This means that the u and v coordinates are orthogonal.}
-
-        \item \(\displaystyle g_{vu}\):
-        \[
-            g_{vu}
-            =
-            \left(\frac{\partial x}{\partial v}\right)\left(\frac{\partial x}{\partial u}\right) g_{xx}
-            +
-            \left(\frac{\partial y}{\partial v}\right)\left(\frac{\partial y}{\partial u}\right) g_{yy}
-            =
-            (1)(1)(1) + (-1)(1)(1)
-            =
-            0.
-        \]
-        \emph{This computes the \(g_{vu}\) component. It is equal to \(g_{uv}\) due to the symmetry of the metric tensor, so it is also 0.}
-
-        \item \(\displaystyle g_{vv}\):
-        \[
-            g_{vv}
-            =
-            \left(\frac{\partial x}{\partial v}\right)^2 g_{xx}
-            +
-            \left(\frac{\partial y}{\partial v}\right)^2 g_{yy}
-            =
-            1^3 + (-1)^2 (1)
-            =
-            2.
-        \]
-        \emph{This computes the \(g_{vv}\) component. Similar to \(g_{uu}\), we find \(g_{vv} = (1)^2 \cdot 1 + (-1)^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the v-axis is 2.}
-    \end{itemize}
-
-    \textbf{(v) Final components of the metric in \((u,v)\).}
-
-    Collecting these results, the new metric tensor is:
-    \[
-        g_{\mu' \nu'}
-        =
-        \begin{pmatrix}
-            g_{uu} & g_{uv} \\
-            g_{vu} & g_{vv}
-        \end{pmatrix}
-        =
-        \begin{pmatrix}
-            2 & 0 \\
-            0 & 2
-        \end{pmatrix}.
-    \]
-    \emph{This is the metric tensor in the new coordinates (u, v). It is still diagonal, which means that u and v are orthogonal, but now it has diagonal components equal to 2. This indicates that the space in the (u, v) coordinates is still flat (Euclidean), but distances are rescaled by a factor of \(\sqrt{2}\) compared to the original Cartesian coordinates.}
-
-    \textbf{Physical interpretation:} We see that the resulting metric is still diagonal (and represents the same flat space), but it is now scaled by a factor of 2 in both directions \(u\) and \(v\). Hence, the line element in the new coordinates can be written as
-    \[
-        ds^2 = 2\,du^2 + 2\,dv^2.
-    \]
-    \emph{This is the physical interpretation of the metric tensor we have calculated. The fact that the metric tensor is still diagonal means that the coordinates u and v are orthogonal to each other. The factor of 2 in the diagonal components \(g_{uu}\) and \(g_{vv}\) indicates that distances measured in the u and v coordinates are rescaled by a factor of \(\sqrt{2}\) relative to distances in the original Cartesian coordinates. This is consistent with the geometric interpretation of the coordinate transformation as a 45-degree rotation followed by a rescaling.}
-
-    \textbf{Conclusion:}
-    Using exclusively the tensor transformation rule, we have correctly derived the metric components in the \((u, v)\) coordinates:
-    \[
-        g_{uu} = 2,
-        \quad
-        g_{uv} = 0,
-        \quad
-        g_{vv} = 2.
-    \]
-    \emph{In conclusion, we have computed the components of the metric tensor in the new coordinates (u, v) by applying the tensor transformation rule. We found that \(g_{uu} = 2\), \(g_{uv} = g_{vu} = 0\), and \(g_{vv} = 2\). This result confirms that the u and v coordinates are orthogonal and that distances in this new coordinate system are scaled by a factor of \(\sqrt{2}\) with respect to the original Cartesian coordinate system (x, y).}
-
-    \pagebreak
-
-    \section*{Question 2}
-
-    Consider a two-dimensional plane in polar coordinates, where the infinitesimal line element is given by
-    \[
-        ds^2 = dr^2 + r^2\,d\phi^2.
-    \]
-    (i) How many independent Christoffel symbols are there in total in two dimensions?\\
-    (ii) How many independent and non-vanishing Christoffel symbols are there in this particular case?\\
-    (iii) Compute the explicit form of one non-vanishing Christoffel symbol of your choice.
-
-    \emph{This exercise focuses on the Christoffel symbols in a two-dimensional plane described by polar coordinates \((r,\phi)\). Even though the plane itself is geometrically flat, the choice of polar coordinates introduces nontrivial metric components: \(g_{rr} = 1\) and \(g_{\phi\phi} = r^2\). We will explore how these affect the connection coefficients.}
-
-    \subsection*{Solution}
-
-    \paragraph{(i) Total number of Christoffel symbols in 2D.}
-
-    In two dimensions, each index \(\mu,\nu,\lambda\) of \(\Gamma^\mu_{\;\nu\lambda}\) can take 2 values (which we may denote by \(r\) and \(\phi\)). If we ignore any symmetries, there are \(2 \times 2 \times 2 = 8\) possible symbols.
-
-    \emph{However, for the Levi-Civita connection, we use the crucial symmetry}
-    \[
-        \Gamma^\mu_{\;\nu\lambda} \;=\; \Gamma^\mu_{\;\lambda\nu},
-    \]
-    \emph{which states that interchanging the lower two indices does not produce a new or different symbol. Thus, the \(\Gamma\) are symmetric under \(\nu \leftrightarrow \lambda\). Since we only consider distinct pairs \((\nu,\lambda)\) up to this symmetry, we effectively reduce the total count from 8 to 6. Hence, there are \(\boxed{6}\) independent Christoffel symbols in 2D.}
-
-    \paragraph{(ii) Non-vanishing Christoffel symbols in polar coordinates \((r,\phi)\).}
-
-    Given the 2D plane in polar coordinates:
-    \[
-        ds^2 = dr^2 + r^2\,d\phi^2,
-    \]
-    we read off the metric and its inverse:
-    \[
-        g_{\mu\nu}
-        =
-        \begin{pmatrix}
-            1 & 0   \\
-            0 & r^2
-        \end{pmatrix},
-        \quad
-        g^{\mu\nu}
-        =
-        \begin{pmatrix}
-            1 & 0             \\
-            0 & \frac{1}{r^2}
-        \end{pmatrix}.
-    \]
-    \emph{Note that the metric is diagonal. In the formula for the Christoffel symbols,}
-    \[
-        \Gamma^\mu_{\;\nu\lambda}
-        =
-        \frac{1}{2}\;g^{\mu\rho}
-        \Bigl(
-        \partial_\nu g_{\rho\lambda}
-        \;+\;
-        \partial_\lambda g_{\rho\nu}
-        \;-\;
-        \partial_\rho g_{\nu\lambda}
-        \Bigr),
-    \]
-    \emph{a diagonal metric means that many terms vanish unless \(\rho = \mu\). Concretely, if \(\mu\neq\rho\), then \(g^{\mu\rho}\) will be zero for a strictly diagonal metric. This helps eliminate many potential non-zero symbols.}
-
-    In polar coordinates, the only non-zero partial derivative of the metric is:
-    \[
-        \partial_r g_{\phi\phi} = 2\,r,
-    \]
-    while \(\partial_\phi g_{rr}\), \(\partial_r g_{rr}\), and \(\partial_\phi g_{\phi\phi}\) vanish. Consequently, any Christoffel symbol that does not involve \(\partial_r g_{\phi\phi}\) will be zero. Checking each possible combination systematically, one finds that the only non-zero symbols are:
-    \[
-        \Gamma^r_{\;\phi\phi} = -\,r,
-        \quad
-        \Gamma^\phi_{\;r\phi} = \Gamma^\phi_{\;\phi r} = \frac{1}{r}.
-    \]
-    All others vanish.
-
-    \emph{Even though the plane is flat, the curvilinear coordinates \((r,\phi)\) introduce these non-zero Christoffel symbols. If we switched to Cartesian coordinates, we would get zero for all Christoffel symbols because the metric becomes constant and diagonal with no dependence on \(x\) or \(y\).}
-
-    \paragraph{(iii) Explicit calculation of \(\Gamma^r_{\;\phi\phi}\).}
-
-    \emph{For illustration, let us compute \(\Gamma^r_{\;\phi\phi}\). Substitute \(\mu = r\), \(\nu = \phi\), and \(\lambda = \phi\) into the Levi-Civita connection formula:}
-    \[
-        \Gamma^r_{\;\phi\phi}
-        =
-        \frac{1}{2}
-        \;g^{r\rho}
-        \Bigl(
-        \partial_\phi g_{\rho\phi}
-        \;+\;
-        \partial_\phi g_{\rho\phi}
-        \;-\;
-        \partial_\rho g_{\phi\phi}
-        \Bigr).
-    \]
-    Since \(g^{rr} = 1\) and \(g^{r\phi} = 0\), the only relevant piece comes from \(\rho = r\). We use:
-    \[
-        \partial_r g_{\phi\phi} = 2\,r,
-        \quad
-        \partial_\phi g_{\phi r} = 0,
-    \]
-    thus
-    \[
-        \bigl(\,\partial_\phi g_{r\phi} + \partial_\phi g_{r\phi} - \partial_r g_{\phi\phi}\bigr)
-        =
-        (0 + 0 - 2r)
-        =
-        -\,2r.
-    \]
-    \emph{Multiplying by \(g^{rr} = 1\) and then by \(1/2\):}
-    \[
-        \Gamma^r_{\;\phi\phi}
-        =
-        \frac12 (-2r)
-        =
-        -\,r.
-    \]
-    \emph{Hence,}
-    \(\boxed{\Gamma^r_{\;\phi\phi} = -\,r}.\)
-
-    \emph{This coefficient tells us how the basis vector in the \(r\)-direction changes when we vary \(\phi\). In a curvilinear coordinate system, such as polar coordinates, this accounts for the “circular arcs” nature of \(\phi\).}
-
-    \pagebreak
-
-    \section*{Question 3}
-
-    Consider a two-dimensional spacetime where the infinitesimal line element is given by
-    \[
-        ds^2 = -(1+x)^2 \, dt^2 + dx^2.
-    \]
-    (i) How many independent Christoffel symbols are there in principle in two dimensions?\\
-    (ii) How many independent and non-vanishing Christoffel symbols are there for this example?\\
-    (iii) Compute the explicit form of \(\Gamma^{t}_{\;tx}\) for this example.
-
-    \emph{Here, we turn to a “(1+1)-dimensional” spacetime metric. The dependence of \(g_{tt} = -(1+x)^2\) on the spatial coordinate \(x\) leads to interesting non-zero connection coefficients. This scenario illustrates how time can “flow differently” at different positions \(x\).}
-
-    \subsection*{Solution}
-
-    \paragraph{(i) Number of independent Christoffel symbols in two dimensions.}
-
-    Just as in Question 2, we recognize that in 2D each index (\(\mu,\nu,\lambda\)) runs over \(\{t,x\}\). Naively, there would be \(2 \times 2 \times 2 = 8\) Christoffel symbols, but the symmetry
-    \[
-        \Gamma^\mu_{\;\nu\lambda} = \Gamma^\mu_{\;\lambda\nu}
-    \]
-    cuts this count down to \(6\). Thus there are \(\boxed{6}\) independent symbols.
-
-    \emph{The same logic applies: in 2D, for each upper index \(\mu\), there are 3 unique pairs \((\nu,\lambda)\) up to symmetry. Since \(\mu\) can be \(t\) or \(x\), we have \(3+3 = 6\).}
-
-    \paragraph{(ii) Number of independent and non-vanishing Christoffel symbols for this example.}
-
-    From
-    \[
-        ds^2 = -(1+x)^2 \, dt^2 + dx^2,
-    \]
-    we read off
-    \[
-        g_{\mu\nu} =
-        \begin{pmatrix}
-            -(1+x)^2 & 0 \\
-            0        & 1
-        \end{pmatrix},
-        \quad
-        g^{\mu\nu} =
-        \begin{pmatrix}
-            -\frac{1}{(1+x)^2} & 0 \\
-            0                  & 1
-        \end{pmatrix}.
-    \]
-    \emph{Again, the metric is diagonal. Therefore, in the Christoffel symbol formula, many off-diagonal terms disappear. Moreover, note that \(g_{tt} = -(1+x)^2\) depends on \(x\), while \(g_{xx} = 1\) is constant.}
-
-    Recall the connection formula:
-    \[
-        \Gamma^{\mu}_{\;\nu\lambda}
-        =
-        \frac{1}{2}\;g^{\mu\rho}
-        \Bigl(
-        \partial_\nu g_{\rho\lambda}
-        \;+\;
-        \partial_\lambda g_{\rho\nu}
-        \;-\;
-        \partial_\rho g_{\nu\lambda}
-        \Bigr).
-    \]
-    Since
-    \[
-        \partial_x g_{tt} = -2(1+x),
-        \quad
-        \partial_x g_{xx} = 0,
-        \quad
-        \partial_t g_{\mu\nu} = 0,
-    \]
-    \emph{the only non-zero derivative of the metric is \(\partial_x g_{tt}\). Hence, any Christoffel symbol that does not involve \(\partial_x g_{tt}\) in the sum will vanish. By matching indices in the connection formula, we find only three potential symbols could be non-zero: \(\Gamma^x_{\;tt}\), \(\Gamma^t_{\;tx} = \Gamma^t_{\;xt}\), and \(\Gamma^x_{\;xx}\). A direct check confirms \(\Gamma^x_{\;xx} = 0\). Thus the only non-zero Christoffel symbols are:}
-    \[
-        \Gamma^x_{\;tt}
-        \quad \text{and} \quad
-        \Gamma^t_{\;tx} = \Gamma^t_{\;xt}.
-    \]
-    \emph{This precisely reflects the \((1+x)\)-dependence in \(g_{tt}\). If \(g_{tt}\) were constant, these symbols would vanish, signifying a trivial geometry.}
-
-    \paragraph{(iii) Explicit form of \(\Gamma^{t}_{\;tx}\).}
-
-    We compute:
-    \[
-        \Gamma^{t}_{\;tx}
-        =
-        \frac{1}{2}\;g^{t\rho}
-        \Bigl(
-        \partial_t g_{x\rho}
-        +
-        \partial_x g_{t\rho}
-        -
-        \partial_\rho g_{tx}
-        \Bigr).
-    \]
-    \emph{Since \(g^{tx} = 0\) (diagonal inverse metric) and \(\partial_t g_{\alpha\beta} = 0\) (metric independent of \(t\)), the dominant term arises when \(\rho = t\). That term involves \(\partial_x g_{tt}\). Because the metric is diagonal, effectively we need \(\mu = \rho\) in many sums to get a non-zero result.}
-
-    Thus:
-    \[
-        \Gamma^{t}_{\;tx}
-        =
-        \frac{1}{2}\;g^{tt}\;\partial_x g_{tt}.
-    \]
-    \emph{We substitute:}
-    \[
-        g^{tt} = -\frac{1}{(1+x)^2},
-        \quad
-        \partial_x g_{tt} = -2(1+x).
-    \]
-    Hence:
-    \[
-        \Gamma^t_{\;tx}
-        =
-        \frac12
-        \Bigl(-\tfrac{1}{(1+x)^2}\Bigr)
-        \Bigl(-2(1+x)\Bigr)
-        =
-        \frac{1}{1+x}.
-    \]
-    \emph{Interpretation:}
-    \(\Gamma^{t}_{\;tx} = \frac{1}{1+x}\) shows how the time basis vector changes in the \(x\)-direction. Because \((1+x)\) appears in the time component of the metric, the rate of time flow depends on \(x\). Moving along \(x\) effectively shifts how clocks tick in this spacetime.
-
-    \bigskip
-
-    \textbf{Final Remarks for Question 3.}
-    \emph{One can check \(\Gamma^x_{\;tt} = 1 + x\) and verify \(\Gamma^x_{\;xx} = 0\). Together with \(\Gamma^t_{\;tx} = \Gamma^t_{\;xt} = \frac{1}{1+x}\), these are the only non-zero symbols. They reflect the coordinate dependence of the metric and thus a non-trivial connection. In a 2D “spacetime” context, it tells us that an observer’s notion of time changes with position \(x\).}
-
-
-    \section*{Question 4}
-
-    \noindent
-    Consider a two-dimensional space whose infinitesimal line element is given by
-    \[
-        ds^2 = (1 + x^2)\,dx^2 \;+\; (1 + y^2)\,dy^2.
-    \]
-    We want to compute the Christoffel symbols \(\Gamma^{x}_{\,xx}\) and \(\Gamma^{x}_{\,yy}\).
-
-    \emph{In this problem, we have a 2D space with metric:
-        \[
-            ds^2 = (1 + x^2)\,dx^2 + (1 + y^2)\,dy^2.
-        \]
-        The coordinates \((x, y)\) are orthogonal, since there is no mixed term \(dx\,dy\). Our goal is to compute two specific Christoffel symbols, \(\Gamma^x_{\;xx}\) and \(\Gamma^x_{\;yy}\).}
-
-    \subsection*{Solution (Question 4)}
-
-    \noindent
-    From the line element,
-    \[
-        ds^2 \;=\; (1 + x^2)\,dx^2 \;+\; (1 + y^2)\,dy^2,
-    \]
-    we identify the metric tensor in coordinates \((x,y)\):
-    \[
-        g_{\mu\nu} \;=\;
-        \begin{pmatrix}
-            1 + x^2 & 0       \\
-            0       & 1 + y^2
-        \end{pmatrix}.
-    \]
-    \emph{This is a diagonal metric, with \(g_{xx} = 1 + x^2\) and \(g_{yy} = 1 + y^2\). Hence \(g_{xy} = g_{yx} = 0\).}
-
-    Its inverse is then
-    \[
-        g^{\mu\nu} \;=\;
-        \begin{pmatrix}
-            \frac{1}{1 + x^2} & 0                 \\
-            0                 & \frac{1}{1 + y^2}
-        \end{pmatrix}.
-    \]
-    \emph{Because the metric is diagonal, we simply invert each diagonal element: \(g^{xx} = \tfrac{1}{1+x^2}\) and \(g^{yy} = \tfrac{1}{1+y^2}\).}
-
-    \medskip
-
-    \paragraph{Christoffel Symbols.}
-    Recall the connection formula:
-    \[
-        \Gamma^{\mu}_{\;\nu\lambda}
-        =
-        \frac{1}{2}\;g^{\mu\rho}
-        \Bigl(
-        \partial_\nu g_{\rho\lambda}
-        \;+\;
-        \partial_\lambda g_{\rho\nu}
-        \;-\;
-        \partial_\rho g_{\nu\lambda}
-        \Bigr).
-    \]
-    Only \(g_{xx} = 1 + x^2\) depends on \(x\), and only \(g_{yy} = 1 + y^2\) depends on \(y\). Therefore,
-    \[
-        \partial_x g_{xx} = 2x,
-        \quad
-        \partial_y g_{yy} = 2y,
-    \]
-    while all other partial derivatives of \(g_{\mu\nu}\) vanish (for example, \(\partial_x g_{yy} = 0\) and \(\partial_y g_{xx} = 0\)).
-
-    \bigskip
-
-    \paragraph{(i) Calculation of \(\Gamma^x_{\;xx}\).}
-
-    \noindent
-    We set \(\mu = x\), \(\nu = x\), \(\lambda = x\) in the formula. Hence,
-    \[
-        \Gamma^x_{\;xx}
-        =
-        \frac{1}{2}\;g^{x\rho}
-        \Bigl(
-        \partial_x g_{\rho x}
-        \;+\;
-        \partial_x g_{x \rho}
-        \;-\;
-        \partial_\rho g_{xx}
-        \Bigr).
-    \]
-    \emph{Since the metric is diagonal, \(g_{x\rho}\) is nonzero only if \(\rho = x\). Therefore, \(g^{x\rho}\) is also nonzero only for \(\rho = x\). This leaves us with:}
-    \[
-        \Gamma^x_{\;xx}
-        =
-        \frac12 \; g^{xx}
-        \Bigl(
-        \partial_x g_{xx}
-        + \partial_x g_{xx}
-        - \partial_x g_{xx}
-        \Bigr)
-        =
-        \frac12 \; g^{xx}
-        \bigl(\partial_x g_{xx}\bigr).
-    \]
-    Since \(\partial_x g_{xx} = 2x\) and \(g^{xx} = \tfrac{1}{1 + x^2}\), we obtain
-    \[
-        \Gamma^x_{\;xx}
-        =
-        \frac12 \cdot \frac{1}{1 + x^2} \cdot (2x)
-        =
-        \frac{x}{1 + x^2}.
-    \]
-
-    \bigskip
-
-    \paragraph{(ii) Calculation of \(\Gamma^x_{\;yy}\).}
-
-    \noindent
-    We now set \(\mu = x\), \(\nu = y\), \(\lambda = y\):
-    \[
-        \Gamma^x_{\;yy}
-        =
-        \frac{1}{2}\;g^{x\rho}
-        \Bigl(
-        \partial_y g_{\rho y}
-        \;+\;
-        \partial_y g_{y \rho}
-        \;-\;
-        \partial_\rho g_{yy}
-        \Bigr).
-    \]
-    \emph{Here, \(\partial_y g_{yy} = 2y\) is the only derivative that might contribute. However, it will appear with \(\rho = y\), in which case the factor outside becomes \(g^{xy}\). Since \(g^{xy} = 0\) (diagonal inverse), that term vanishes. Alternatively, if \(\rho = x\), then \(\partial_x g_{yy} = 0\).}
-
-    Hence,
-    \[
-        \Gamma^x_{\;yy} = 0.
-    \]
-
-    \bigskip
-
-    \noindent
-    \textbf{Final Results}
-    \[
-        \boxed{
-            \Gamma^x_{\;xx} = \frac{x}{1 + x^2}
-            \quad\text{and}\quad
-            \Gamma^x_{\;yy} = 0.
-        }
-    \]
-    \emph{Because \(g_{xx}\) depends on \(x\), \(\Gamma^x_{\;xx}\) is non-zero. Meanwhile, \(g_{yy}\) does not depend on \(x\), so \(\Gamma^x_{\;yy}\) vanishes.}
-
-    \bigskip
-
-    \subsection*{Unified Perspective and Key Observations}
-
-    \begin{itemize}
-        \item \emph{\textbf{Diagonal Metric Simplification:} As in other 2D examples, the metric is diagonal, so \(g^{\mu\nu}\) is also diagonal. This annihilates many terms in the Christoffel sum (since \(g^{xy} = 0\), etc.), making computations much simpler.}
-
-        \item \emph{\textbf{Coordinate Dependence vs.\ Curvature:} A non-zero \(\Gamma^x_{\;xx}\) can arise either from genuine curvature or simply from the coordinate dependence of the metric. Here, \(g_{xx} = 1 + x^2\) depends on \(x\), producing a nontrivial connection coefficient. Meanwhile, \(\Gamma^x_{\;yy}\) vanishes because \(g_{yy}\) has no \(x\)-dependence.}
-
-        \item \emph{\textbf{Symmetry in 2D:} The property \(\Gamma^\mu_{\;\nu\lambda} = \Gamma^\mu_{\;\lambda\nu}\) cuts the naive 8 symbols down to 6 independent ones. From there, only those involving non-zero derivatives of \(g_{\mu\nu}\) can survive.}
-
-        \item \emph{\textbf{Summation Index Matching:} For a diagonal metric, \(g^{\mu\rho}\) is nonzero only if \(\mu = \rho\). Thus, when we compute \(\Gamma^x_{\;xx}\), only the \(\rho = x\) term matters. Similarly, for \(\Gamma^x_{\;yy}\), the \(\rho = y\) term appears multiplied by \(g^{xy}\), which is zero, forcing the entire expression to vanish.}
-    \end{itemize}
-
-    \pagebreak
-
-
-    \section*{Question 5: Gravitational Time Dilation}
-
-    \textit{This exercise explores gravitational time dilation, a consequence of Einstein's General Relativity. We will determine the difference in proper time measured by two clocks positioned at varying altitudes on Earth. We approximate Earth's gravitational field using the Schwarzschild metric and utilize the weak field approximation, neglecting effects due to Earth's rotation.}
-
-    \textbf{Metric Approximation:}
-
-    A suitable approximation for the metric outside the Earth's surface (in a weak gravitational field) is:
-    \[
-        ds^2 = -\left(1+2\Phi\right)dt^2 + \left(1-2\Phi\right)dr^2 + r^2d\theta^2 + r^2\sin^2\theta d\phi^2,
-    \]
-    where $\Phi = -\frac{GM_E}{r}$ is the Newtonian gravitational potential. We use units where the speed of light $c=1$ unless otherwise specified.
-
-    \textit{Here, $ds^2$ is the spacetime interval, $dt$ the coordinate time interval, $dr$ the radial interval, and $d\theta$, $d\phi$ the angular intervals in spherical coordinates. $\Phi$ is the Newtonian gravitational potential, $G$ the universal gravitational constant, $M_E$ the Earth's mass, and $r$ the radial distance from the Earth's center. The negative sign in the definition of $\Phi$ indicates that work is needed to move an object away from Earth's gravity.}
-
-    \textbf{Scenario:}
-
-    Consider two clocks: one at the Earth's surface ($r = R_E$) and another atop a building of height $h$ ($r = R_E + h$). We aim to calculate the proper time elapsed on each clock as a function of coordinate time $t$ and then determine the ratio of these times in the limit $h \ll R_E$.
-
-    \textit{Proper time is the time measured by a clock along its path in spacetime, while coordinate time is the time measured by an observer at rest at infinity. We want to find the ratio of these proper times when the building's height $h$ is significantly smaller than the Earth's radius $R_E$.}
-
-    \subsection*{Solution}
-
-    \paragraph{(i) Setup and Physical Context}
-
-    We use spherical coordinates $(t, r, \theta, \phi)$. The provided metric is static, spherically symmetric, and valid outside the Earth, with $\Phi(r) = -\frac{GM_E}{r}$.
-
-    \textit{The metric is time-independent and spherically symmetric, a solution of Einstein's equations, applicable outside the Earth. $\Phi(r)$ is the Newtonian gravitational potential.}
-
-    Neglecting Earth's rotation and assuming stationary clocks ($dr = d\theta = d\phi = 0$), the relevant metric component is:
-    \[
-        ds^2 = -d\tau^2 = -\left(1 + 2\Phi(r)\right)dt^2.
-    \]
-    \textit{Since clocks are stationary relative to Earth, only the time component of the metric matters.}
-
-    \textit{In General Relativity, $ds^2 = -d\tau^2$ relates the spacetime interval between events to the proper time $d\tau$ measured by a clock moving between them. Here, the spacetime interval is purely temporal.}
-
-    Thus,
-    \[
-        d\tau = \sqrt{1 + 2\Phi(r)} dt.
-    \]
-    \textit{This relates proper time $d\tau$ to coordinate time $dt$. Gravitational potential $\Phi(r)$ affects proper time: a more negative potential (closer to Earth) means slower proper time.}
-
-    \paragraph{(ii) Proper Time Calculation}
-
-    Define:
-    \[
-        \Phi_1 = \Phi(R_E) = -\frac{GM_E}{R_E}, \quad \Phi_2 = \Phi(R_E + h) = -\frac{GM_E}{R_E + h}.
-    \]
-    \textit{We define gravitational potentials $\Phi_1$ and $\Phi_2$ at the Earth's surface and the building's top, respectively.}
-
-    \subparagraph{Clock 1 (Earth's Surface)}
-
-    At $r = R_E$:
-    \[
-        d\tau_1 = \sqrt{1 + 2\Phi_1} dt = \sqrt{1 - \frac{2GM_E}{R_E}} dt.
-    \]
-    \textit{Substituting $r = R_E$ into the proper time equation yields the relation between $d\tau_1$ (clock 1's proper time) and $dt$.}
-
-    Integrating over a coordinate time interval $t$:
-    \[
-        \tau_1 = \int d\tau_1 = \sqrt{1 - \frac{2GM_E}{R_E}} \times t.
-    \]
-    \textit{Integrating over a coordinate time interval $t$ (same for both clocks) gives the total proper time on clock 1.}
-
-    \subparagraph{Clock 2 (Building Top)}
-
-    At $r = R_E + h$:
-    \[
-        d\tau_2 = \sqrt{1 + 2\Phi_2} dt = \sqrt{1 - \frac{2GM_E}{R_E + h}} dt.
-    \]
-    \textit{Substituting $r = R_E + h$ into the proper time equation yields the relation between $d\tau_2$ (clock 2's proper time) and $dt$.}
-
-    Integrating:
-    \[
-        \tau_2 = \sqrt{1 - \frac{2GM_E}{R_E + h}} \times t.
-    \]
-    \textit{Integrating gives the total proper time on clock 2.}
-
-    \paragraph{(iii) Proper Time Ratio}
-
-    The ratio of proper times is:
-    \[
-        \frac{\tau_2}{\tau_1} = \frac{\sqrt{1 - \frac{2GM_E}{R_E + h}}}{\sqrt{1 - \frac{2GM_E}{R_E}}}.
-    \]
-    We're interested in the limit $h \ll R_E$.
-
-    \textit{We want the ratio when the building's height is much smaller than Earth's radius.}
-
-    \paragraph{(iv) Approximation for \(h \ll R_E\)}
-
-    We will use the binomial expansion to simplify the expression for the ratio of proper times, leveraging the fact that \(h\) is much smaller than \(R_E\) and we are in a weak gravitational field.
-
-    \textbf{Binomial Expansion:}
-
-    The binomial expansion states that for any real number \(n\) and \(|x| < 1\):
-
-    \[ (1+x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + ... \]
-
-    When \(x\) is very small (\(|x| \ll 1\)), we can approximate the expansion by neglecting higher-order terms:
-
-    \[ (1+x)^n \approx 1 + nx \]
-
-    \textbf{Applying the Binomial Expansion:}
-
-    We have two terms where we can apply the binomial expansion:
-
-    \textbf{1. First Application:}
-
-    The terms inside the square roots in our ratio can be written in the form \(\sqrt{1 - 2x}\), where \(x = \frac{GM_E}{R_E + h}\) or \(x = \frac{GM_E}{R_E}\). We can apply the binomial expansion because we are in a **weak gravitational field**, meaning \(x = \frac{GM_E}{r}\) is very small when \(r \geq R_E\). Specifically, for \(r = R_E\), we have \(x = \frac{GM_E}{R_E} \approx 6.957 \times 10^{-10}\) (as calculated later), which is much less than 1. Thus we can rewrite \(\sqrt{1 - 2x}\) as \((1 - 2x)^{\frac{1}{2}}\) and apply the binomial expansion with \(n = \frac{1}{2}\) and \(x\) replaced by \(-2x\):
-
-    \[
-        \sqrt{1 - 2x} = (1 - 2x)^{\frac{1}{2}} \approx 1 + \frac{1}{2}(-2x) = 1 - x
-    \]
-
-    Applying this to our ratio, we get:
-    \[
-        \frac{\tau_2}{\tau_1} \approx \frac{1 - \frac{GM_E}{R_E + h}}{1 - \frac{GM_E}{R_E}}
-    \]
-
-    \textbf{2. Second Application:}
-
-    We have the term \(\frac{1}{R_E + h}\) in the numerator. We can rewrite it as:
-
-    \[
-        \frac{1}{R_E + h} = \frac{1}{R_E(1 + \frac{h}{R_E})} = \frac{1}{R_E} \cdot \frac{1}{(1 + \frac{h}{R_E})}
-    \]
-
-    Here, we have a term of the form \(\frac{1}{1 + x}\), where \(x = \frac{h}{R_E}\). Since \(h \ll R_E\), we have \(x \ll 1\). We can rewrite this as \((1 + x)^{-1}\) and apply the binomial expansion with \(n = -1\):
-
-    \[
-        \frac{1}{(1 + \frac{h}{R_E})} = (1 + \frac{h}{R_E})^{-1} \approx 1 - \frac{h}{R_E}
-    \]
-
-    Therefore:
-
-    \[
-        \frac{1}{R_E + h} \approx \frac{1}{R_E}\left(1 - \frac{h}{R_E}\right)
-    \]
-
-    \textbf{Substituting and Simplifying:}
-
-    Substituting the second approximation into the first, we get:
-
-    \[
-        \frac{\tau_2}{\tau_1} \approx \frac{1 - \frac{GM_E}{R_E}\left(1 - \frac{h}{R_E}\right)}{1 - \frac{GM_E}{R_E}} = \frac{1 - \frac{GM_E}{R_E} + \frac{GM_Eh}{R_E^2}}{1 - \frac{GM_E}{R_E}}
-    \]
-
-    \textbf{Approximation in the Weak Field Limit}
-    Since we are in a weak gravitational field, the term \(\frac{GM_E}{R_E}\) is very small (approximately \(6.957 \times 10^{-10}\) as calculated below). Therefore, we can approximate the denominator as:
-    \[
-        1-\frac{GM_E}{R_E} \approx 1
-    \]
-    This simplifies our expression to:
-
-    \[
-        \frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E h}{R_E^2}
-    \]
-    We can further calculate \(\frac{\tau_2}{\tau_1}\) explicitly using SI units:
-    \[
-        G \approx 6.674 \times 10^{-11} \, \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}}
-    \]
-    \[
-        M_E \approx 5.972 \times 10^{24} \, \mathrm{kg}
-    \]
-    \[
-        R_E \approx 6.371 \times 10^6 \, \mathrm{m}
-    \]
-    \[
-        \frac{\tau_2}{\tau_1} \approx 1 + \frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{(6.371 \times 10^6)^2} h \approx 1 + (9.82 \frac{\mathrm{m}}{\mathrm{s^2}}) \frac{h}{c^2}
-    \]
-    In natural units, \(c=1\), thus:
-    \[
-        \frac{\tau_2}{\tau_1} \approx 1 + (9.82 \frac{\mathrm{m}}{\mathrm{s^2}})h
-    \]
-    \textbf{Geometrized Units - Explanation}
-    In the calculations above, we used geometrized units for simplification. Let's explain what that means:
-    To further simplify this expression, we introduce the concept of geometrized units (also known as natural units). In this system, we set fundamental constants like the speed of light \(c\) and the gravitational constant \(G\) to 1.
-
-    \textbf{Setting \(c = 1\)}: This implies that we are measuring distance and time in the same units. For example, we could measure distance in light-seconds or time in meters.
-
-    \textbf{Setting \(G = 1\)}: This implies that mass, length, and time are all measured in the same units.
-
-    When we set \(c=1\) and \(G=1\), the term \(\frac{GM_E}{R_E}\) becomes dimensionless. Let's see why:
-    In SI units, the dimensions of the terms are:
-
-    \[
-        [G] = \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}}
-    \]
-    \[
-        [M_E] = \mathrm{kg}
-    \]
-    \[
-        [R_E] = \mathrm{m}
-    \]
-
-    Therefore:
-
-    \[
-        \left[\frac{GM_E}{R_E}\right] = \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}} \cdot \frac{\mathrm{kg}}{\mathrm{m}} = \frac{\mathrm{m^2}}{\mathrm{s^2}}
-    \]
-
-    This is a velocity squared. In geometrized units, where \(c = 1\) and \(G = 1\), we have:
-
-    \[
-        [c^2] = 1
-    \]
-    \[
-        [G] = 1
-    \]
-
-    Since \(c=1\), then \(\left[\frac{m^2}{s^2}\right] = 1\). Thus, \(\frac{GM_E}{R_E}\) becomes dimensionless:
-
-    \[
-        \left[\frac{GM_E}{R_E}\right] = 1
-    \]
-
-    We can calculate its approximate numerical value in SI units and then convert it to geometrized units.
-
-    \[
-        \frac{GM_E}{R_E c^2} \approx \frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{6.371 \times 10^6 \cdot (2.998 \times 10^8)^2} \approx 6.957 \times 10^{-10}
-    \]
-
-    In natural units, \(c = 1\) and \(G = 1\). We can use the previous result to evaluate \(\frac{GM_E}{R_E}\) by dropping the \(c^2\) factor (since \(c = 1\)) in the denominator:
-
-    \[ \frac{GM_E}{R_E} \approx 6.957 \times 10^{-10} \]
-
-    This is why, in geometrized units, we were able to simplify the denominator \(1 - \frac{GM_E}{R_E}\) to just 1.
-
-    \textbf{Final Result}
-    We found that:
-    \[
-        \frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E}{R_E^2} h
-    \]
-    In geometrized units. Recognizing that \(\frac{GM_E}{R_E^2} = g\) (the acceleration due to gravity at the Earth's surface), and converting back to SI units by reintroducing \(c^2\), we get the final result:
-
-    \[
-        \frac{\tau_2}{\tau_1} \approx 1 + \frac{gh}{c^2}
-    \]
-
-    where \(g \approx 9.82 \, \mathrm{m/s^2}\) is the acceleration due to gravity in SI units. We can neglect the term of the gravitational potential because we are in a weak gravitational field.
-
+\section{Question 1}
+
+Consider a two-dimensional Cartesian coordinate system $(x, y)$ with the infinitesimal line element $ds^2 = dx^2 + dy^2$. We then introduce new coordinates $u$ and $v$, defined by $u = (x+y)/2$ and $v = (x-y)/2$. Find the components of the metric tensor in the new coordinates $(u, v)$ using the transformation rule for a $(0,2)$ tensor, which states that $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \frac{\partial x^\nu}{\partial x^{\nu'}} g_{\mu\nu}$. You should use this method exclusively, without relying on any alternative approaches.
+
+\emph{In this question, we are examining a coordinate change in a two-dimensional space. We start from a standard Cartesian coordinate system (x, y) and move to a new coordinate system (u, v) defined by a linear transformation. The goal is to find the components of the metric tensor in the new coordinate system (u, v) using the transformation rule for a (0,2) tensor, i.e., a rank-2 covariant tensor. The transformation rule is given by \(g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \frac{\partial x^\nu}{\partial x^{\nu'}} g_{\mu\nu}\), where \(g_{\mu\nu}\) are the components of the metric tensor in the original coordinates (x, y), and \(g_{\mu'\nu'}\) are the components of the metric tensor in the new coordinates (u, v). This formula tells us how the components of the metric tensor change when we change the coordinate system. It is important to note that we must exclusively use this formula for the solution, without using shortcuts or alternative methods.}
+
+\subsection*{Solution}
+\paragraph{(i) Metric tensor in the original Cartesian coordinates \((x, y)\).}
+
+In the \((x,y)\) coordinates, the line element is
+\[
+ds^2 = dx^2 + dy^2.
+\]
+\emph{This formula represents the infinitesimal line element in two dimensions using the Cartesian coordinates x and y. In a flat (Euclidean) space, the infinitesimal distance squared, \(ds^2\), is given by the sum of the squares of the infinitesimal differences of the coordinates. Here, \(dx^2\) and \(dy^2\) represent the squares of the infinitesimal variations along the x and y axes, respectively. Essentially, this is the Pythagorean theorem applied to infinitesimal distances. The formula implies that the space is Euclidean and that the coordinates x and y are orthogonal, i.e., there is no cross term like \(dxdy\), which means there is no skew or tilt between the axes.}
+
+Hence, the metric tensor components \(g_{\mu \nu}\) in these coordinates are:
+\[
+g_{\mu\nu}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix},
+\]
+\emph{This is the metric tensor in Cartesian coordinates for a two-dimensional Euclidean space. The metric is diagonal with components \(g_{xx} = 1\) and \(g_{yy} = 1\), and off-diagonal components \(g_{xy} = g_{yx} = 0\). This metric tells us that the x and y coordinates are orthogonal (because the off-diagonal terms are zero) and that the scale along each axis is unity (because the diagonal terms are one). Geometrically, this means we are using a standard, undistorted, orthogonal coordinate system.}
+
+where
+\(\displaystyle g_{xx} = 1,\; g_{yy} = 1,\; g_{xy} = g_{yx} = 0.\)
+\emph{These are the specific components of the metric tensor \(g_{\mu\nu}\) in the Cartesian coordinates (x, y). \(g_{xx} = 1\) indicates that the “length” or “scale” along the x-axis is unit, and similarly, \(g_{yy} = 1\) indicates that the “length” or “scale” along the y-axis is unit. The terms \(g_{xy} = g_{yx} = 0\) indicate that there is no correlation or “mixing” between the x and y coordinates, which is consistent with the fact that the Cartesian axes are orthogonal. In simpler terms, this tells us that we are using a standard, undistorted, orthogonal coordinate system.}
+
+\paragraph{(ii) Coordinates transformation to \((u, v)\).}
+
+We define:
+\[
+u = \frac{x+y}{2},
+\quad
+v = \frac{x-y}{2}.
+\]
+\emph{Here we are defining the new coordinates u and v as linear combinations of the original coordinates x and y. The coordinate u is the average of x and y, while v is half the difference between x and y. This transformation corresponds to a 45-degree counterclockwise rotation, followed by a rescaling.}
+
+To apply the transformation rule for the metric, we need the inverse relations, which are:
+\[
+x = u + v,
+\quad
+y = u - v.
+\]
+\emph{These are the inverse transformations expressing the original coordinates x and y in terms of the new coordinates u and v. They were obtained by solving the previous system of equations for x and y. For example, adding the two equations gives \(u + v = x\), and subtracting them gives \(u - v = y\). These relations allow us to express the partial derivatives of x and y with respect to u and v, which are needed to apply the metric tensor transformation rule.}
+
+\paragraph{(iii) Calculating partial derivatives.}
+
+We compute the partial derivatives of \(x\) and \(y\) with respect to the new coordinates \((u, v)\):
+\[
+\frac{\partial x}{\partial u} = 1,
+\quad
+\frac{\partial x}{\partial v} = 1,
+\quad
+\frac{\partial y}{\partial u} = 1,
+\quad
+\frac{\partial y}{\partial v} = -1.
+\]
+\emph{These equations compute the partial derivatives of x and y with respect to the new coordinates u and v. For instance, \(\frac{\partial x}{\partial u} = 1\) means that x increases by 1 unit when u increases by 1 unit, keeping v constant. Similarly, \(\frac{\partial y}{\partial v} = -1\) means that y decreases by 1 unit when v increases by 1 unit, keeping u constant. These partial derivatives are constant because the transformation between (x, y) and (u, v) is linear.}
+
+\paragraph{(iv) Applying the \((0,2)\) tensor transformation rule.}
+
+Recall the rule:
+\[
+g_{\mu' \nu'}
+=
+\frac{\partial x^\mu}{\partial x^{\mu'}}
+\,
+\frac{\partial x^\nu}{\partial x^{\nu'}}
+\,
+g_{\mu \nu}.
+\]
+\emph{This is the transformation rule for a rank-2 covariant tensor, such as the metric tensor. It tells us how the components of the metric tensor transform when we move from one coordinate system to another. In this formula, \(g_{\mu'\nu'}\) are the components of the metric tensor in the new coordinate system, \(g_{\mu\nu}\) are the components in the old system, and \(\frac{\partial x^\mu}{\partial x^{\mu'}}\) are the partial derivatives of the old coordinates with respect to the new ones. In practice, we multiply the components of the old metric tensor by the appropriate partial derivatives to get the components in the new system.}
+
+Let \(\mu,\nu\) denote the old coordinates (\(x\) or \(y\)) and \(\mu',\nu'\) the new ones (\(u\) or \(v\)). Since the old metric components are \(g_{xx} = 1,\; g_{yy} = 1,\; g_{xy} = 0,\; g_{yx} = 0,\) each new metric component is computed as follows:
+
+\begin{itemize}
+\item \(\displaystyle g_{uu}\):
+\[
+g_{uu}
+=
+\left(\frac{\partial x}{\partial u}\right)^2 g_{xx}
++
+\left(\frac{\partial y}{\partial u}\right)^2 g_{yy}
+=
+1^3 + 1^3
+=
+2.
+\]
+\emph{This computes the \(g_{uu}\) component of the metric tensor in the new coordinates. Using the transformation rule, we sum the products of the partial derivatives multiplied by the corresponding components of the original metric tensor. Since \(g_{xy} = g_{yx} = 0\), the mixed terms vanish, leaving only the sum of the squares of the partial derivatives of x and y with respect to u, multiplied by \(g_{xx}\) and \(g_{yy}\) respectively. The result is \(g_{uu} = 1^2 \cdot 1 + 1^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the u-axis is 2.}
+
+\item \(\displaystyle g_{uv}\):
+\[
+g_{uv}
+=
+\left(\frac{\partial x}{\partial u}\right)\left(\frac{\partial x}{\partial v}\right) g_{xx}
++
+\left(\frac{\partial y}{\partial u}\right)\left(\frac{\partial y}{\partial v}\right) g_{yy}
+=
+(1)(1)(1) + (1)(-1)(1)
+=
+0.
+\]
+\emph{This computes the \(g_{uv}\) component of the metric tensor. Again, we apply the transformation rule. The result is \(g_{uv} = (1)(1) \cdot 1 + (1)(-1) \cdot 1 = 0\). This means that the u and v coordinates are orthogonal.}
+
+\item \(\displaystyle g_{vu}\):
+\[
+g_{vu}
+=
+\left(\frac{\partial x}{\partial v}\right)\left(\frac{\partial x}{\partial u}\right) g_{xx}
++
+\left(\frac{\partial y}{\partial v}\right)\left(\frac{\partial y}{\partial u}\right) g_{yy}
+=
+(1)(1)(1) + (-1)(1)(1)
+=
+0.
+\]
+\emph{This computes the \(g_{vu}\) component. It is equal to \(g_{uv}\) due to the symmetry of the metric tensor, so it is also 0.}
+
+\item \(\displaystyle g_{vv}\):
+\[
+g_{vv}
+=
+\left(\frac{\partial x}{\partial v}\right)^2 g_{xx}
++
+\left(\frac{\partial y}{\partial v}\right)^2 g_{yy}
+=
+1^3 + (-1)^2 (1)
+=
+2.
+\]
+\emph{This computes the \(g_{vv}\) component. Similar to \(g_{uu}\), we find \(g_{vv} = (1)^2 \cdot 1 + (-1)^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the v-axis is 2.}
+\end{itemize}
+
+\textbf{(v) Final components of the metric in \((u,v)\).}
+
+Collecting these results, the new metric tensor is:
+\[
+g_{\mu' \nu'}
+=
+\begin{pmatrix}
+g_{uu} & g_{uv} \\
+g_{vu} & g_{vv}
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 0 \\
+0 & 2
+\end{pmatrix}.
+\]
+\emph{This is the metric tensor in the new coordinates (u, v). It is still diagonal, which means that u and v are orthogonal, but now it has diagonal components equal to 2. This indicates that the space in the (u, v) coordinates is still flat (Euclidean), but distances are rescaled by a factor of \(\sqrt{2}\) compared to the original Cartesian coordinates.}
+
+\textbf{Physical interpretation:} We see that the resulting metric is still diagonal (and represents the same flat space), but it is now scaled by a factor of 2 in both directions \(u\) and \(v\). Hence, the line element in the new coordinates can be written as
+\[
+ds^2 = 2\,du^2 + 2\,dv^2.
+\]
+\emph{This is the physical interpretation of the metric tensor we have calculated. The fact that the metric tensor is still diagonal means that the coordinates u and v are orthogonal to each other. The factor of 2 in the diagonal components \(g_{uu}\) and \(g_{vv}\) indicates that distances measured in the u and v coordinates are rescaled by a factor of \(\sqrt{2}\) relative to distances in the original Cartesian coordinates. This is consistent with the geometric interpretation of the coordinate transformation as a 45-degree rotation followed by a rescaling.}
+
+\textbf{Conclusion:}
+Using exclusively the tensor transformation rule, we have correctly derived the metric components in the \((u, v)\) coordinates:
+\[
+g_{uu} = 2,
+\quad
+g_{uv} = 0,
+\quad
+g_{vv} = 2.
+\]
+\emph{In conclusion, we have computed the components of the metric tensor in the new coordinates (u, v) by applying the tensor transformation rule. We found that \(g_{uu} = 2\), \(g_{uv} = g_{vu} = 0\), and \(g_{vv} = 2\). This result confirms that the u and v coordinates are orthogonal and that distances in this new coordinate system are scaled by a factor of \(\sqrt{2}\) with respect to the original Cartesian coordinate system (x, y).}
+
+\pagebreak
+
+\section*{Question 2}
+
+Consider a two-dimensional plane in polar coordinates, where the infinitesimal line element is given by
+\[
+ds^2 = dr^2 + r^2\,d\phi^2.
+\]
+(i) How many independent Christoffel symbols are there in total in two dimensions?\\
+(ii) How many independent and non-vanishing Christoffel symbols are there in this particular case?\\
+(iii) Compute the explicit form of one non-vanishing Christoffel symbol of your choice.
+
+\emph{This exercise focuses on the Christoffel symbols in a two-dimensional plane described by polar coordinates \((r,\phi)\). Even though the plane itself is geometrically flat, the choice of polar coordinates introduces nontrivial metric components: \(g_{rr} = 1\) and \(g_{\phi\phi} = r^2\). We will explore how these affect the connection coefficients.}
+
+\subsection*{Solution}
+
+\paragraph{(i) Total number of Christoffel symbols in 2D.}
+
+In two dimensions, each index \(\mu,\nu,\lambda\) of \(\Gamma^\mu_{\;\nu\lambda}\) can take 2 values (which we may denote by \(r\) and \(\phi\)). If we ignore any symmetries, there are \(2 \times 2 \times 2 = 8\) possible symbols.
+
+\emph{However, for the Levi-Civita connection, we use the crucial symmetry}
+\[
+\Gamma^\mu_{\;\nu\lambda} \;=\; \Gamma^\mu_{\;\lambda\nu},
+\]
+\emph{which states that interchanging the lower two indices does not produce a new or different symbol. Thus, the \(\Gamma\) are symmetric under \(\nu \leftrightarrow \lambda\). Since we only consider distinct pairs \((\nu,\lambda)\) up to this symmetry, we effectively reduce the total count from 8 to 6. Hence, there are \(\boxed{6}\) independent Christoffel symbols in 2D.}
+
+\paragraph{(ii) Non-vanishing Christoffel symbols in polar coordinates \((r,\phi)\).}
+
+Given the 2D plane in polar coordinates:
+\[
+ds^2 = dr^2 + r^2\,d\phi^2,
+\]
+we read off the metric and its inverse:
+\[
+g_{\mu\nu}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & r^2
+\end{pmatrix},
+\quad
+g^{\mu\nu}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & \frac{1}{r^2}
+\end{pmatrix}.
+\]
+\emph{Note that the metric is diagonal. In the formula for the Christoffel symbols,}
+\[
+\Gamma^\mu_{\;\nu\lambda}
+=
+\frac{1}{2}\;g^{\mu\rho}
+\Bigl(
+\partial_\nu g_{\rho\lambda}
+\;+\;
+\partial_\lambda g_{\rho\nu}
+\;-\;
+\partial_\rho g_{\nu\lambda}
+\Bigr),
+\]
+\emph{a diagonal metric means that many terms vanish unless \(\rho = \mu\). Concretely, if \(\mu\neq\rho\), then \(g^{\mu\rho}\) will be zero for a strictly diagonal metric. This helps eliminate many potential non-zero symbols.}
+
+In polar coordinates, the only non-zero partial derivative of the metric is:
+\[
+\partial_r g_{\phi\phi} = 2\,r,
+\]
+while \(\partial_\phi g_{rr}\), \(\partial_r g_{rr}\), and \(\partial_\phi g_{\phi\phi}\) vanish. Consequently, any Christoffel symbol that does not involve \(\partial_r g_{\phi\phi}\) will be zero. Checking each possible combination systematically, one finds that the only non-zero symbols are:
+\[
+\Gamma^r_{\;\phi\phi} = -\,r,
+\quad
+\Gamma^\phi_{\;r\phi} = \Gamma^\phi_{\;\phi r} = \frac{1}{r}.
+\]
+All others vanish.
+
+\emph{Even though the plane is flat, the curvilinear coordinates \((r,\phi)\) introduce these non-zero Christoffel symbols. If we switched to Cartesian coordinates, we would get zero for all Christoffel symbols because the metric becomes constant and diagonal with no dependence on \(x\) or \(y\).}
+
+\paragraph{(iii) Explicit calculation of \(\Gamma^r_{\;\phi\phi}\).}
+
+\emph{For illustration, let us compute \(\Gamma^r_{\;\phi\phi}\). Substitute \(\mu = r\), \(\nu = \phi\), and \(\lambda = \phi\) into the Levi-Civita connection formula:}
+\[
+\Gamma^r_{\;\phi\phi}
+=
+\frac{1}{2}
+\;g^{r\rho}
+\Bigl(
+\partial_\phi g_{\rho\phi}
+\;+\;
+\partial_\phi g_{\rho\phi}
+\;-\;
+\partial_\rho g_{\phi\phi}
+\Bigr).
+\]
+Since \(g^{rr} = 1\) and \(g^{r\phi} = 0\), the only relevant piece comes from \(\rho = r\). We use:
+\[
+\partial_r g_{\phi\phi} = 2\,r,
+\quad
+\partial_\phi g_{\phi r} = 0,
+\]
+thus
+\[
+\bigl(\,\partial_\phi g_{r\phi} + \partial_\phi g_{r\phi} - \partial_r g_{\phi\phi}\bigr)
+=
+(0 + 0 - 2r)
+=
+-\,2r.
+\]
+\emph{Multiplying by \(g^{rr} = 1\) and then by \(1/2\):}
+\[
+\Gamma^r_{\;\phi\phi}
+=
+\frac12 (-2r)
+=
+-\,r.
+\]
+\emph{Hence,}
+\(\boxed{\Gamma^r_{\;\phi\phi} = -\,r}.\)
+
+\emph{This coefficient tells us how the basis vector in the \(r\)-direction changes when we vary \(\phi\). In a curvilinear coordinate system, such as polar coordinates, this accounts for the “circular arcs” nature of \(\phi\).}
+
+\pagebreak
+
+\section*{Question 3}
+
+Consider a two-dimensional spacetime where the infinitesimal line element is given by
+\[
+ds^2 = -(1+x)^2 \, dt^2 + dx^2.
+\]
+(i) How many independent Christoffel symbols are there in principle in two dimensions?\\
+(ii) How many independent and non-vanishing Christoffel symbols are there for this example?\\
+(iii) Compute the explicit form of \(\Gamma^{t}_{\;tx}\) for this example.
+
+\emph{Here, we turn to a “(1+1)-dimensional” spacetime metric. The dependence of \(g_{tt} = -(1+x)^2\) on the spatial coordinate \(x\) leads to interesting non-zero connection coefficients. This scenario illustrates how time can “flow differently” at different positions \(x\).}
+
+\subsection*{Solution}
+
+\paragraph{(i) Number of independent Christoffel symbols in two dimensions.}
+
+Just as in Question 2, we recognize that in 2D each index (\(\mu,\nu,\lambda\)) runs over \(\{t,x\}\). Naively, there would be \(2 \times 2 \times 2 = 8\) Christoffel symbols, but the symmetry
+\[
+\Gamma^\mu_{\;\nu\lambda} = \Gamma^\mu_{\;\lambda\nu}
+\]
+cuts this count down to \(6\). Thus there are \(\boxed{6}\) independent symbols.
+
+\emph{The same logic applies: in 2D, for each upper index \(\mu\), there are 3 unique pairs \((\nu,\lambda)\) up to symmetry. Since \(\mu\) can be \(t\) or \(x\), we have \(3+3 = 6\).}
+
+\paragraph{(ii) Number of independent and non-vanishing Christoffel symbols for this example.}
+
+From
+\[
+ds^2 = -(1+x)^2 \, dt^2 + dx^2,
+\]
+we read off
+\[
+g_{\mu\nu} =
+\begin{pmatrix}
+-(1+x)^2 & 0 \\
+0 & 1
+\end{pmatrix},
+\quad
+g^{\mu\nu} =
+\begin{pmatrix}
+-\frac{1}{(1+x)^2} & 0 \\
+0 & 1
+\end{pmatrix}.
+\]
+\emph{Again, the metric is diagonal. Therefore, in the Christoffel symbol formula, many off-diagonal terms disappear. Moreover, note that \(g_{tt} = -(1+x)^2\) depends on \(x\), while \(g_{xx} = 1\) is constant.}
+
+Recall the connection formula:
+\[
+\Gamma^{\mu}_{\;\nu\lambda}
+=
+\frac{1}{2}\;g^{\mu\rho}
+\Bigl(
+\partial_\nu g_{\rho\lambda}
+\;+\;
+\partial_\lambda g_{\rho\nu}
+\;-\;
+\partial_\rho g_{\nu\lambda}
+\Bigr).
+\]
+Since
+\[
+\partial_x g_{tt} = -2(1+x),
+\quad
+\partial_x g_{xx} = 0,
+\quad
+\partial_t g_{\mu\nu} = 0,
+\]
+\emph{the only non-zero derivative of the metric is \(\partial_x g_{tt}\). Hence, any Christoffel symbol that does not involve \(\partial_x g_{tt}\) in the sum will vanish. By matching indices in the connection formula, we find only three potential symbols could be non-zero: \(\Gamma^x_{\;tt}\), \(\Gamma^t_{\;tx} = \Gamma^t_{\;xt}\), and \(\Gamma^x_{\;xx}\). A direct check confirms \(\Gamma^x_{\;xx} = 0\). Thus the only non-zero Christoffel symbols are:}
+\[
+\Gamma^x_{\;tt}
+\quad \text{and} \quad
+\Gamma^t_{\;tx} = \Gamma^t_{\;xt}.
+\]
+\emph{This precisely reflects the \((1+x)\)-dependence in \(g_{tt}\). If \(g_{tt}\) were constant, these symbols would vanish, signifying a trivial geometry.}
+
+\paragraph{(iii) Explicit form of \(\Gamma^{t}_{\;tx}\).}
+
+We compute:
+\[
+\Gamma^{t}_{\;tx}
+=
+\frac{1}{2}\;g^{t\rho}
+\Bigl(
+\partial_t g_{x\rho}
++
+\partial_x g_{t\rho}
+-
+\partial_\rho g_{tx}
+\Bigr).
+\]
+\emph{Since \(g^{tx} = 0\) (diagonal inverse metric) and \(\partial_t g_{\alpha\beta} = 0\) (metric independent of \(t\)), the dominant term arises when \(\rho = t\). That term involves \(\partial_x g_{tt}\). Because the metric is diagonal, effectively we need \(\mu = \rho\) in many sums to get a non-zero result.}
+
+Thus:
+\[
+\Gamma^{t}_{\;tx}
+=
+\frac{1}{2}\;g^{tt}\;\partial_x g_{tt}.
+\]
+\emph{We substitute:}
+\[
+g^{tt} = -\frac{1}{(1+x)^2},
+\quad
+\partial_x g_{tt} = -2(1+x).
+\]
+Hence:
+\[
+\Gamma^t_{\;tx}
+=
+\frac12
+\Bigl(-\tfrac{1}{(1+x)^2}\Bigr)
+\Bigl(-2(1+x)\Bigr)
+=
+\frac{1}{1+x}.
+\]
+\emph{Interpretation:}
+\(\Gamma^{t}_{\;tx} = \frac{1}{1+x}\) shows how the time basis vector changes in the \(x\)-direction. Because \((1+x)\) appears in the time component of the metric, the rate of time flow depends on \(x\). Moving along \(x\) effectively shifts how clocks tick in this spacetime.
+
+\bigskip
+
+\textbf{Final Remarks for Question 3.}
+\emph{One can check \(\Gamma^x_{\;tt} = 1 + x\) and verify \(\Gamma^x_{\;xx} = 0\). Together with \(\Gamma^t_{\;tx} = \Gamma^t_{\;xt} = \frac{1}{1+x}\), these are the only non-zero symbols. They reflect the coordinate dependence of the metric and thus a non-trivial connection. In a 2D “spacetime” context, it tells us that an observer’s notion of time changes with position \(x\).}
+
+
+\section*{Question 4}
+
+\noindent
+Consider a two-dimensional space whose infinitesimal line element is given by
+\[
+ds^2 = (1 + x^2)\,dx^2 \;+\; (1 + y^2)\,dy^2.
+\]
+We want to compute the Christoffel symbols \(\Gamma^{x}_{\,xx}\) and \(\Gamma^{x}_{\,yy}\).
+
+\emph{In this problem, we have a 2D space with metric:
+\[
+ds^2 = (1 + x^2)\,dx^2 + (1 + y^2)\,dy^2.
+\]
+The coordinates \((x, y)\) are orthogonal, since there is no mixed term \(dx\,dy\). Our goal is to compute two specific Christoffel symbols, \(\Gamma^x_{\;xx}\) and \(\Gamma^x_{\;yy}\).}
+
+\subsection*{Solution (Question 4)}
+
+\noindent
+From the line element,
+\[
+ds^2 \;=\; (1 + x^2)\,dx^2 \;+\; (1 + y^2)\,dy^2,
+\]
+we identify the metric tensor in coordinates \((x,y)\):
+\[
+g_{\mu\nu} \;=\;
+\begin{pmatrix}
+1 + x^2 & 0 \\
+0 & 1 + y^2
+\end{pmatrix}.
+\]
+\emph{This is a diagonal metric, with \(g_{xx} = 1 + x^2\) and \(g_{yy} = 1 + y^2\). Hence \(g_{xy} = g_{yx} = 0\).}
+
+Its inverse is then
+\[
+g^{\mu\nu} \;=\;
+\begin{pmatrix}
+\frac{1}{1 + x^2} & 0 \\
+0 & \frac{1}{1 + y^2}
+\end{pmatrix}.
+\]
+\emph{Because the metric is diagonal, we simply invert each diagonal element: \(g^{xx} = \tfrac{1}{1+x^2}\) and \(g^{yy} = \tfrac{1}{1+y^2}\).}
+
+\medskip
+
+\paragraph{Christoffel Symbols.}
+Recall the connection formula:
+\[
+\Gamma^{\mu}_{\;\nu\lambda}
+=
+\frac{1}{2}\;g^{\mu\rho}
+\Bigl(
+\partial_\nu g_{\rho\lambda}
+\;+\;
+\partial_\lambda g_{\rho\nu}
+\;-\;
+\partial_\rho g_{\nu\lambda}
+\Bigr).
+\]
+Only \(g_{xx} = 1 + x^2\) depends on \(x\), and only \(g_{yy} = 1 + y^2\) depends on \(y\). Therefore,
+\[
+\partial_x g_{xx} = 2x,
+\quad
+\partial_y g_{yy} = 2y,
+\]
+while all other partial derivatives of \(g_{\mu\nu}\) vanish (for example, \(\partial_x g_{yy} = 0\) and \(\partial_y g_{xx} = 0\)).
+
+\bigskip
+
+\paragraph{(i) Calculation of \(\Gamma^x_{\;xx}\).}
+
+\noindent
+We set \(\mu = x\), \(\nu = x\), \(\lambda = x\) in the formula. Hence,
+\[
+\Gamma^x_{\;xx}
+=
+\frac{1}{2}\;g^{x\rho}
+\Bigl(
+\partial_x g_{\rho x}
+\;+\;
+\partial_x g_{x \rho}
+\;-\;
+\partial_\rho g_{xx}
+\Bigr).
+\]
+\emph{Since the metric is diagonal, \(g_{x\rho}\) is nonzero only if \(\rho = x\). Therefore, \(g^{x\rho}\) is also nonzero only for \(\rho = x\). This leaves us with:}
+\[
+\Gamma^x_{\;xx}
+=
+\frac12 \; g^{xx}
+\Bigl(
+\partial_x g_{xx}
++ \partial_x g_{xx}
+- \partial_x g_{xx}
+\Bigr)
+=
+\frac12 \; g^{xx}
+\bigl(\partial_x g_{xx}\bigr).
+\]
+Since \(\partial_x g_{xx} = 2x\) and \(g^{xx} = \tfrac{1}{1 + x^2}\), we obtain
+\[
+\Gamma^x_{\;xx}
+=
+\frac12 \cdot \frac{1}{1 + x^2} \cdot (2x)
+=
+\frac{x}{1 + x^2}.
+\]
+
+\bigskip
+
+\paragraph{(ii) Calculation of \(\Gamma^x_{\;yy}\).}
+
+\noindent
+We now set \(\mu = x\), \(\nu = y\), \(\lambda = y\):
+\[
+\Gamma^x_{\;yy}
+=
+\frac{1}{2}\;g^{x\rho}
+\Bigl(
+\partial_y g_{\rho y}
+\;+\;
+\partial_y g_{y \rho}
+\;-\;
+\partial_\rho g_{yy}
+\Bigr).
+\]
+\emph{Here, \(\partial_y g_{yy} = 2y\) is the only derivative that might contribute. However, it will appear with \(\rho = y\), in which case the factor outside becomes \(g^{xy}\). Since \(g^{xy} = 0\) (diagonal inverse), that term vanishes. Alternatively, if \(\rho = x\), then \(\partial_x g_{yy} = 0\).}
+
+Hence,
+\[
+\Gamma^x_{\;yy} = 0.
+\]
+
+\bigskip
+
+\noindent
+\textbf{Final Results}
+\[
+\boxed{
+\Gamma^x_{\;xx} = \frac{x}{1 + x^2}
+\quad\text{and}\quad
+\Gamma^x_{\;yy} = 0.
+}
+\]
+\emph{Because \(g_{xx}\) depends on \(x\), \(\Gamma^x_{\;xx}\) is non-zero. Meanwhile, \(g_{yy}\) does not depend on \(x\), so \(\Gamma^x_{\;yy}\) vanishes.}
+
+\bigskip
+
+\subsection*{Unified Perspective and Key Observations}
+
+\begin{itemize}
+    \item \emph{\textbf{Diagonal Metric Simplification:} As in other 2D examples, the metric is diagonal, so \(g^{\mu\nu}\) is also diagonal. This annihilates many terms in the Christoffel sum (since \(g^{xy} = 0\), etc.), making computations much simpler.}
+
+    \item \emph{\textbf{Coordinate Dependence vs.\ Curvature:} A non-zero \(\Gamma^x_{\;xx}\) can arise either from genuine curvature or simply from the coordinate dependence of the metric. Here, \(g_{xx} = 1 + x^2\) depends on \(x\), producing a nontrivial connection coefficient. Meanwhile, \(\Gamma^x_{\;yy}\) vanishes because \(g_{yy}\) has no \(x\)-dependence.}
+
+    \item \emph{\textbf{Symmetry in 2D:} The property \(\Gamma^\mu_{\;\nu\lambda} = \Gamma^\mu_{\;\lambda\nu}\) cuts the naive 8 symbols down to 6 independent ones. From there, only those involving non-zero derivatives of \(g_{\mu\nu}\) can survive.}
+
+    \item \emph{\textbf{Summation Index Matching:} For a diagonal metric, \(g^{\mu\rho}\) is nonzero only if \(\mu = \rho\). Thus, when we compute \(\Gamma^x_{\;xx}\), only the \(\rho = x\) term matters. Similarly, for \(\Gamma^x_{\;yy}\), the \(\rho = y\) term appears multiplied by \(g^{xy}\), which is zero, forcing the entire expression to vanish.}
+\end{itemize}
+
+\pagebreak
+
+\section*{Question 5: Gravitational Time Dilation}
+
+\textit{This exercise explores gravitational time dilation, a consequence of Einstein's General Relativity. We will determine the difference in proper time measured by two clocks positioned at varying altitudes on Earth. We approximate Earth's gravitational field using the Schwarzschild metric and utilize the weak field approximation, neglecting effects due to Earth's rotation.}
+
+\textbf{Metric Approximation:}
+
+A suitable approximation for the metric outside the Earth's surface (in a weak gravitational field) is:
+\[
+ds^2 = -\left(1+2\Phi\right)dt^2 + \left(1-2\Phi\right)dr^2 + r^2d\theta^2 + r^2\sin^2\theta d\phi^2,
+\]
+where $\Phi = -\frac{GM_E}{r}$ is the Newtonian gravitational potential. We use units where the speed of light $c=1$ unless otherwise specified.
+
+\textit{Here, $ds^2$ is the spacetime interval, $dt$ the coordinate time interval, $dr$ the radial interval, and $d\theta$, $d\phi$ the angular intervals in spherical coordinates. $\Phi$ is the Newtonian gravitational potential, $G$ the universal gravitational constant, $M_E$ the Earth's mass, and $r$ the radial distance from the Earth's center. The negative sign in the definition of $\Phi$ indicates that work is needed to move an object away from Earth's gravity.}
+
+\textbf{Scenario:}
+
+Consider two clocks: one at the Earth's surface ($r = R_E$) and another atop a building of height $h$ ($r = R_E + h$). We aim to calculate the proper time elapsed on each clock as a function of coordinate time $t$ and then determine the ratio of these times in the limit $h \ll R_E$.
+
+\textit{Proper time is the time measured by a clock along its path in spacetime, while coordinate time is the time measured by an observer at rest at infinity. We want to find the ratio of these proper times when the building's height $h$ is significantly smaller than the Earth's radius $R_E$.}
+
+\subsection*{Solution}
+
+\paragraph{(i) Setup and Physical Context}
+
+We use spherical coordinates $(t, r, \theta, \phi)$. The provided metric is static, spherically symmetric, and valid outside the Earth, with $\Phi(r) = -\frac{GM_E}{r}$.
+
+\textit{The metric is time-independent and spherically symmetric, a solution of Einstein's equations, applicable outside the Earth. $\Phi(r)$ is the Newtonian gravitational potential.}
+
+Neglecting Earth's rotation and assuming stationary clocks ($dr = d\theta = d\phi = 0$), the relevant metric component is:
+\[
+ds^2 = -d\tau^2 = -\left(1 + 2\Phi(r)\right)dt^2.
+\]
+\textit{Since clocks are stationary relative to Earth, only the time component of the metric matters.}
+
+\textit{In General Relativity, $ds^2 = -d\tau^2$ relates the spacetime interval between events to the proper time $d\tau$ measured by a clock moving between them. Here, the spacetime interval is purely temporal.}
+
+Thus,
+\[
+d\tau = \sqrt{1 + 2\Phi(r)} dt.
+\]
+\textit{This relates proper time $d\tau$ to coordinate time $dt$. Gravitational potential $\Phi(r)$ affects proper time: a more negative potential (closer to Earth) means slower proper time.}
+
+\paragraph{(ii) Proper Time Calculation}
+
+Define:
+\[
+\Phi_1 = \Phi(R_E) = -\frac{GM_E}{R_E}, \quad \Phi_2 = \Phi(R_E + h) = -\frac{GM_E}{R_E + h}.
+\]
+\textit{We define gravitational potentials $\Phi_1$ and $\Phi_2$ at the Earth's surface and the building's top, respectively.}
+
+\subparagraph{Clock 1 (Earth's Surface)}
+
+At $r = R_E$:
+\[
+d\tau_1 = \sqrt{1 + 2\Phi_1} dt = \sqrt{1 - \frac{2GM_E}{R_E}} dt.
+\]
+\textit{Substituting $r = R_E$ into the proper time equation yields the relation between $d\tau_1$ (clock 1's proper time) and $dt$.}
+
+Integrating over a coordinate time interval $t$:
+\[
+\tau_1 = \int d\tau_1 = \sqrt{1 - \frac{2GM_E}{R_E}} \times t.
+\]
+\textit{Integrating over a coordinate time interval $t$ (same for both clocks) gives the total proper time on clock 1.}
+
+\subparagraph{Clock 2 (Building Top)}
+
+At $r = R_E + h$:
+\[
+d\tau_2 = \sqrt{1 + 2\Phi_2} dt = \sqrt{1 - \frac{2GM_E}{R_E + h}} dt.
+\]
+\textit{Substituting $r = R_E + h$ into the proper time equation yields the relation between $d\tau_2$ (clock 2's proper time) and $dt$.}
+
+Integrating:
+\[
+\tau_2 = \sqrt{1 - \frac{2GM_E}{R_E + h}} \times t.
+\]
+\textit{Integrating gives the total proper time on clock 2.}
+
+\paragraph{(iii) Proper Time Ratio}
+
+The ratio of proper times is:
+\[
+\frac{\tau_2}{\tau_1} = \frac{\sqrt{1 - \frac{2GM_E}{R_E + h}}}{\sqrt{1 - \frac{2GM_E}{R_E}}}.
+\]
+We're interested in the limit $h \ll R_E$.
+
+\textit{We want the ratio when the building's height is much smaller than Earth's radius.}
+
+\paragraph{(iv) Approximation for \(h \ll R_E\)}
+
+We will use the binomial expansion to simplify the expression for the ratio of proper times, leveraging the fact that \(h\) is much smaller than \(R_E\) and we are in a weak gravitational field.
+
+\textbf{Binomial Expansion:}
+
+The binomial expansion states that for any real number \(n\) and \(|x| < 1\):
+
+\[ (1+x)^n = 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + ... \]
+
+When \(x\) is very small (\(|x| \ll 1\)), we can approximate the expansion by neglecting higher-order terms:
+
+\[ (1+x)^n \approx 1 + nx \]
+
+\textbf{Applying the Binomial Expansion:}
+
+We have two terms where we can apply the binomial expansion:
+
+\textbf{1. First Application:}
+
+The terms inside the square roots in our ratio can be written in the form \(\sqrt{1 - 2x}\), where \(x = \frac{GM_E}{R_E + h}\) or \(x = \frac{GM_E}{R_E}\).  We can apply the binomial expansion because we are in a **weak gravitational field**, meaning \(x = \frac{GM_E}{r}\) is very small when \(r \geq R_E\). Specifically, for \(r = R_E\), we have \(x = \frac{GM_E}{R_E} \approx 6.957 \times 10^{-10}\) (as calculated later), which is much less than 1. Thus we can rewrite \(\sqrt{1 - 2x}\) as \((1 - 2x)^{\frac{1}{2}}\) and apply the binomial expansion with \(n = \frac{1}{2}\) and \(x\) replaced by \(-2x\):
+
+\[
+\sqrt{1 - 2x} = (1 - 2x)^{\frac{1}{2}} \approx 1 + \frac{1}{2}(-2x) = 1 - x
+\]
+
+Applying this to our ratio, we get:
+\[
+\frac{\tau_2}{\tau_1} \approx \frac{1 - \frac{GM_E}{R_E + h}}{1 - \frac{GM_E}{R_E}}
+\]
+
+\textbf{2. Second Application:}
+
+We have the term \(\frac{1}{R_E + h}\) in the numerator. We can rewrite it as:
+
+\[
+\frac{1}{R_E + h} = \frac{1}{R_E(1 + \frac{h}{R_E})} = \frac{1}{R_E} \cdot \frac{1}{(1 + \frac{h}{R_E})}
+\]
+
+Here, we have a term of the form \(\frac{1}{1 + x}\), where \(x = \frac{h}{R_E}\). Since \(h \ll R_E\), we have \(x \ll 1\). We can rewrite this as \((1 + x)^{-1}\) and apply the binomial expansion with \(n = -1\):
+
+\[
+\frac{1}{(1 + \frac{h}{R_E})} = (1 + \frac{h}{R_E})^{-1} \approx 1 - \frac{h}{R_E}
+\]
+
+Therefore:
+
+\[
+\frac{1}{R_E + h} \approx \frac{1}{R_E}\left(1 - \frac{h}{R_E}\right)
+\]
+
+\textbf{Substituting and Simplifying:}
+
+Substituting the second approximation into the first, we get:
+
+\[
+\frac{\tau_2}{\tau_1} \approx \frac{1 - \frac{GM_E}{R_E}\left(1 - \frac{h}{R_E}\right)}{1 - \frac{GM_E}{R_E}} = \frac{1 - \frac{GM_E}{R_E} + \frac{GM_Eh}{R_E^2}}{1 - \frac{GM_E}{R_E}}
+\]
+
+\textbf{Approximation in the Weak Field Limit}
+Since we are in a weak gravitational field, the term \(\frac{GM_E}{R_E}\) is very small (approximately \(6.957 \times 10^{-10}\) as calculated below). Therefore, we can approximate the denominator as:
+\[
+1-\frac{GM_E}{R_E} \approx 1
+\]
+This simplifies our expression to:
+
+\[
+\frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E h}{R_E^2}
+\]
+We can further calculate \(\frac{\tau_2}{\tau_1}\) explicitly using SI units:
+\[
+G \approx 6.674 \times 10^{-11} \, \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}}
+\]
+\[
+M_E \approx 5.972 \times 10^{24} \, \mathrm{kg}
+\]
+\[
+R_E \approx 6.371 \times 10^6 \, \mathrm{m}
+\]
+\[
+\frac{\tau_2}{\tau_1} \approx 1 + \frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{(6.371 \times 10^6)^2} h \approx 1 + (9.82 \frac{\mathrm{m}}{\mathrm{s^2}}) \frac{h}{c^2}
+\]
+In natural units, \(c=1\), thus:
+\[
+\frac{\tau_2}{\tau_1} \approx 1 + (9.82 \frac{\mathrm{m}}{\mathrm{s^2}})h
+\]
+\textbf{Geometrized Units - Explanation}
+In the calculations above, we used geometrized units for simplification. Let's explain what that means:
+To further simplify this expression, we introduce the concept of geometrized units (also known as natural units). In this system, we set fundamental constants like the speed of light \(c\) and the gravitational constant \(G\) to 1.
+
+\textbf{Setting \(c = 1\)}: This implies that we are measuring distance and time in the same units. For example, we could measure distance in light-seconds or time in meters.
+
+\textbf{Setting \(G = 1\)}: This implies that mass, length, and time are all measured in the same units.
+
+When we set \(c=1\) and \(G=1\), the term \(\frac{GM_E}{R_E}\) becomes dimensionless. Let's see why:
+In SI units, the dimensions of the terms are:
+
+\[
+[G] = \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}}
+\]
+\[
+[M_E] = \mathrm{kg}
+\]
+\[
+[R_E] = \mathrm{m}
+\]
+
+Therefore:
+
+\[
+\left[\frac{GM_E}{R_E}\right] = \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}} \cdot \frac{\mathrm{kg}}{\mathrm{m}} = \frac{\mathrm{m^2}}{\mathrm{s^2}}
+\]
+
+This is a velocity squared. In geometrized units, where \(c = 1\) and \(G = 1\), we have:
+
+\[
+[c^2] = 1
+\]
+\[
+[G] = 1
+\]
+
+Since \(c=1\), then \(\left[\frac{m^2}{s^2}\right] = 1\). Thus, \(\frac{GM_E}{R_E}\) becomes dimensionless:
+
+\[
+\left[\frac{GM_E}{R_E}\right] = 1
+\]
+
+We can calculate its approximate numerical value in SI units and then convert it to geometrized units.
+
+\[
+\frac{GM_E}{R_E c^2} \approx \frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{6.371 \times 10^6 \cdot (2.998 \times 10^8)^2} \approx 6.957 \times 10^{-10}
+\]
+
+In natural units, \(c = 1\) and \(G = 1\). We can use the previous result to evaluate \(\frac{GM_E}{R_E}\) by dropping the \(c^2\) factor (since \(c = 1\)) in the denominator:
+
+\[ \frac{GM_E}{R_E} \approx 6.957 \times 10^{-10} \]
+
+This is why, in geometrized units, we were able to simplify the denominator \(1 - \frac{GM_E}{R_E}\) to just 1.
+
+\textbf{Final Result}
+We found that:
+\[
+\frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E}{R_E^2} h
+\]
+In geometrized units. Recognizing that \(\frac{GM_E}{R_E^2} = g\) (the acceleration due to gravity at the Earth's surface), and converting back to SI units by reintroducing \(c^2\), we get the final result:
+
+\[
+\frac{\tau_2}{\tau_1} \approx 1 + \frac{gh}{c^2}
+\]
+
+where \(g \approx 9.82 \, \mathrm{m/s^2}\) is the acceleration due to gravity in SI units. We can neglect the term of the gravitational potential because we are in a weak gravitational field.
+\pagebreak
+
+
+\section*{Question 6}
+Consider the metric for a two-dimensional sphere of unit radius, given by
+\[
+ds^{2} \;=\; d\theta^{2} \;+\; \sin^{2}\theta\,d\phi^{2}.
+\]
+This is the standard line element for a sphere in spherical coordinates, where \(\theta\) is the polar angle (colatitude) and \(\phi\) is the azimuthal angle (longitude). The line element \(ds^2\) represents the infinitesimal squared distance between two nearby points on the sphere.
+
+We label the coordinates as \(x^{\mu} = (\theta, \phi)\). In this setup, the only non-vanishing Christoffel symbols on the sphere are:
+\[
+\Gamma_{\phi \phi}^{\theta}
+\;=\; -\,\sin\theta\,\cos\theta
+\quad\text{and}\quad
+\Gamma_{\theta \phi}^{\phi}
+\;=\; \Gamma_{\phi \theta}^{\phi}
+\;=\; \frac{\cos\theta}{\sin\theta}
+\;=\; \cot\theta.
+\]
+\emph{The Christoffel symbols, denoted by \(\Gamma\), appear in the geodesic equation. They represent the ``connection coefficients'' of the metric, describing how the basis vectors change from point to point. Christoffel symbols are computed from the metric tensor. In this case, the metric tensor is diagonal with \(g_{\theta\theta} = 1\) and \(g_{\phi\phi} = \sin^2\theta\). The provided Christoffel symbols follow from these metric components.}
+
+\bigskip
+
+\textbf{Task:} Write down the geodesic equations for this metric and use them to show that
+\begin{enumerate}
+\item[(i)] lines of constant longitude (\(\phi=\text{const.}\)) are geodesics,
+\item[(ii)] the only geodesic at constant latitude (\(\theta = \text{const.}\)) is the equator (\(\theta = \tfrac{\pi}{2}\)).
+\end{enumerate}
+
+\subsection*{Solution}
+
+\paragraph{Geodesic equations.}
+The geodesic equations in a 2D manifold, for coordinates \(x^\mu=(\theta,\phi)\), read
+\[
+\frac{d^2 x^\mu}{d\lambda^2}
+\;+\;
+\Gamma_{\alpha\beta}^\mu \,\frac{dx^\alpha}{d\lambda}\,\frac{dx^\beta}{d\lambda}
+\;=\; 0,
+\]
+where \(\lambda\) is an affine parameter along the curve.\\
+\emph{This is the general form of the geodesic equation. A geodesic is the shortest path between two points in a given geometry (in this case, a curved geometry). The affine parameter \(\lambda\) parametrizes the trajectory. The geodesic equation is a second-order differential equation describing the ``straightest possible lines'' in a curved space. The first term represents the acceleration along the geodesic, while the second term, involving the Christoffel symbols, accounts for the curvature of the space.}
+
+Using the given Christoffel symbols, we obtain the explicit system:
+\begin{align}
+\frac{d^2 \theta}{d\lambda^2}
+&-\sin\theta \,\cos\theta \,\Bigl(\frac{d\phi}{d\lambda}\Bigr)^2
+= 0,
+\label{eq:theta}\\[6pt]
+\frac{d^2 \phi}{d\lambda^2}
+&+ 2 \,\cot\theta\,\frac{d\theta}{d\lambda}\,\frac{d\phi}{d\lambda}
+= 0.
+\label{eq:phi}
+\end{align}
+\\
+\emph{These are the specific geodesic equations for the metric on the sphere, obtained by inserting the Christoffel symbols into the general geodesic equation. For \(\mu = \theta\), there are contributions from \(\Gamma^{\theta}_{\phi\phi}\), while for \(\mu = \phi\), there are contributions from \(\Gamma^{\phi}_{\theta\phi} = \Gamma^{\phi}_{\phi\theta}\).}
+
+\emph{TEquation \eqref{eq:theta} describes how the \(\theta\) coordinate changes along a geodesic when there is ``motion'' in the \(\phi\) direction. The term \(\sin\theta\,\cos\theta \bigl(\tfrac{d\phi}{d\lambda}\bigr)^2\) acts like a ``force'' due to the curvature of the sphere, specifically how the \(\phi\) direction varies.}
+
+\emph{Equation \eqref{eq:phi} similarly shows how the \(\phi\) coordinate is affected by the combined changes of \(\theta\) and \(\phi\). The term \(2 \,\cot\theta\, \tfrac{d\theta}{d\lambda} \tfrac{d\phi}{d\lambda}\) represents a ``force'' due to curvature, depending on how both \(\theta\) and \(\phi\) vary.}
+
+\emph{These equations describe how a free particle would move on the surface of the sphere (with no external forces), following the shortest path (a geodesic) between two points.}
+
+\paragraph{(i) Lines at constant longitude.}
+A line at constant longitude implies
+\[
+\phi(\lambda) = \text{const.}
+\quad\Longrightarrow\quad
+\frac{d\phi}{d\lambda} = 0, \quad
+\frac{d^2\phi}{d\lambda^2} = 0.
+\]
+A line of constant longitude means that the coordinate \(\phi\) remains fixed along the path. Therefore, the first and second derivatives of \(\phi\) with respect to the affine parameter \(\lambda\) vanish.
+
+Substitute these into the geodesic equations:
+\begin{itemize}
+\item From Eq.~\eqref{eq:theta}:
+\[
+\frac{d^2 \theta}{d\lambda^2} = 0.
+\]
+The general solution is \(\theta(\lambda) = a\,\lambda + b\). This describes a curve in which \(\theta\) changes linearly with \(\lambda\), i.e.\ a straight line in the \(\theta\)-coordinate. Since \(\tfrac{d\phi}{d\lambda} = 0\), the second term in equation \eqref{eq:theta} vanishes. We are left with \(\tfrac{d^2 \theta}{d\lambda^2} = 0\), which implies that the rate of change of \(\theta\) with respect to \(\lambda\) is constant, so \(\theta\) changes linearly with \(\lambda\). This is consistent with motion along a meridian (a line of constant longitude).
+
+\item From Eq.~\eqref{eq:phi}:
+\[
+\frac{d^2 \phi}{d\lambda^2}
++ 2 \,\cot\theta\,\frac{d\theta}{d\lambda}\,\underbrace{\frac{d\phi}{d\lambda}}_{=\,0}
+= 0
+\;\;\Longrightarrow\;\;
+0 = 0,
+\]
+which is trivially satisfied. Since \(\tfrac{d\phi}{d\lambda} = 0\) and \(\tfrac{d^2\phi}{d\lambda^2} = 0\), equation \eqref{eq:phi} is automatically satisfied, regardless of the value of \(\theta\) and \(\tfrac{d\theta}{d\lambda}\). This means that the geodesic equation for \(\phi\) does not impose any additional constraints when \(\phi\) is constant.
+\end{itemize}
+
+\emph{Geometrically, keeping \(\phi\) constant means moving along a meridian (a great circle from the north pole to the south pole). The fact that the \(\theta\)-equation reduces to a simple second-order ODE with constant coefficients confirms that meridians are geodesics. Indeed, a meridian is a line of constant longitude and, on a sphere, meridians are great circles passing through both poles. The fact that the geodesic equation for \(\theta\) becomes \(\tfrac{d^2 \theta}{d\lambda^2} = 0\) shows that motion along a meridian is a geodesic, as it is the ``straightest'' possible path in the \(\theta\) direction (no acceleration in \(\theta\)).}
+
+\paragraph{(ii) Lines at constant latitude.}
+A line at constant latitude implies
+\[
+\theta(\lambda) = \text{const.}
+\quad\Longrightarrow\quad
+\frac{d\theta}{d\lambda} = 0, \quad
+\frac{d^2\theta}{d\lambda^2} = 0.
+\]
+A line of constant latitude means that the coordinate \(\theta\) is fixed and does not vary along the path. Therefore, its first and second derivatives with respect to \(\lambda\) vanish.
+
+Substitute into the geodesic equations:
+
+\begin{itemize}
+\item \textbf{Eq.~\eqref{eq:theta}:}
+\[
+\frac{d^2 \theta}{d\lambda^2}
+\;-\;
+\sin\theta \,\cos\theta \,\Bigl(\tfrac{d\phi}{d\lambda}\Bigr)^2
+\;=\; 0.
+\]
+Since \(\tfrac{d^2\theta}{d\lambda^2} = 0\), we are left with
+\[
+-\sin\theta \,\cos\theta \,\Bigl(\tfrac{d\phi}{d\lambda}\Bigr)^2
+\;=\;
+0.
+\]
+Thus,
+\[
+\sin\theta\,\cos\theta\,\Bigl(\tfrac{d\phi}{d\lambda}\Bigr)^2 = 0.
+\]
+We conclude one of the following must hold:
+
+\begin{itemize}
+\item \(\sin\theta = 0 \implies \theta=0 \text{ or } \theta=\pi\). These correspond to the north and south poles, which are single points (not full ``circles''). If \(\sin\theta = 0\), then \(\theta\) is \(0\) or \(\pi\), which correspond to the north and south poles, respectively. These are single points on the sphere, not lines of latitude.
+
+\item \(\cos\theta = 0 \implies \theta = \tfrac{\pi}{2}\). This is precisely the equator. If \(\cos\theta = 0\), then \(\theta = \tfrac{\pi}{2}\), which corresponds to the equator. This is a line of constant latitude that is also a great circle.
+
+\item \(\tfrac{d\phi}{d\lambda} = 0 \implies \phi=\text{const.}\), which again describes a meridian, not a parallel. If \(\tfrac{d\phi}{d\lambda} = 0\), then \(\phi\) is constant, indicating a meridian (a line of constant longitude), not a line of constant latitude.
+\end{itemize}
+
+\item \textbf{Eq.~\eqref{eq:phi}:}
+\[
+\frac{d^2 \phi}{d\lambda^2}
+\;+\;
+2 \,\cot\theta\,\frac{d\theta}{d\lambda}\,\frac{d\phi}{d\lambda}
+= 0.
+\]
+With \(\tfrac{d\theta}{d\lambda} = 0\), the second term vanishes, so
+\[
+\frac{d^2 \phi}{d\lambda^2} = 0
+\quad\Longrightarrow\quad
+\phi(\lambda) = c\,\lambda + d,
+\]
+meaning \(\phi\) changes linearly with \(\lambda\). Since \(\tfrac{d\theta}{d\lambda} = 0\), the second term in equation \eqref{eq:phi} vanishes. We are left with the equation \(\tfrac{d^2 \phi}{d\lambda^2} = 0\), which implies that \(\phi\) changes linearly with \(\lambda\).
+\end{itemize}
+
+\emph{Hence, the only nontrivial parallel (\(\theta = \text{const}\)) that can be a geodesic is \(\theta = \tfrac{\pi}{2}\), i.e.\ the equator. Indeed, the analysis shows that the only constant-latitude line satisfying both geodesic equations is the equator. For any other fixed value of \(\theta\) (not equal to \(0\), \(\pi/2\), or \(\pi\)), the geodesic equations cannot be simultaneously satisfied unless \(\tfrac{d\phi}{d\lambda} = 0\), which describes a meridian (constant \(\phi\)) rather than a parallel.}
+\emph{
+Geometrically, the equator is a great circle (the largest possible circle on the sphere), whereas any circle at constant \(\theta \neq \tfrac{\pi}{2}\) is not a great circle. Only great circles are geodesics on the sphere. In more intuitive terms, a great circle is the largest circumference one can draw on a sphere, having the same radius as the sphere itself. The equator is one such great circle, but other parallels are not, and thus only the equator is a geodesic among the lines of constant latitude.}
+
+\paragraph{Conclusion.}
+We have shown that:
+\begin{itemize}
+\item Lines of constant longitude (\(\phi=\text{const.}\)) solve the geodesic equations and hence are geodesics (they correspond to meridians). This result confirms that meridians, lines of constant longitude, are indeed geodesics on the sphere. This is consistent with the geometric intuition that meridians are great circles.
+
+\item The only latitude (\(\theta=\text{const.}\)) that is a geodesic is \(\theta=\tfrac{\pi}{2}\), the equator, which is a great circle. This result shows that among all lines of constant latitude, only the equator is a geodesic because it is the only parallel that is also a great circle.
+\end{itemize}
+
+\pagebreak
+
+\section*{Question 7}
+
+Consider the two-dimensional space whose infinitesimal line element is given by
+\[
+ds^2 = d\theta^2 + \sin^2\theta \, d\phi^2,
+\]
+with coordinates \(x^\mu = (\theta, \phi)\). The non-vanishing Christoffel symbols are
+\[
+\Gamma^\theta_{\phi\phi} = -\sin\theta\,\cos\theta,
+\quad
+\Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta} = \cot\theta.
+\]
+Let \(V^\mu = (V^\theta, V^\phi)\) be a vector field on this sphere. Compute the covariant derivatives \(\nabla_\mu V^\nu\) and \(\nabla_\mu V_\nu\), and then show explicitly that
+\[
+\nabla_{\mu} \bigl( V^{\nu} V_{\nu} \bigr)
+=
+\partial_{\mu} \bigl( V^{\nu} V_{\nu} \bigr).
+\]
+
+\emph{This exercise asks us to work with a two-dimensional space that represents the surface of a unit-radius sphere. The metric is given by the infinitesimal line element \(ds^2 = d\theta^2 + \sin^2\theta \, d\phi^2\), where \(\theta\) is the polar angle and \(\phi\) is the azimuthal angle. We are given the non-zero Christoffel symbols and a vector field \(V^\mu = (V^\theta, V^\phi)\) on this sphere. We must compute the covariant derivatives \(\nabla_\mu V^\nu\) and \(\nabla_\mu V_\nu\), and then demonstrate that the covariant derivative of the scalar product \(V^\mu V_\mu\) equals its ordinary partial derivative.}
+
+\subsection*{Solution}
+
+\paragraph*{(i) Metric, Coordinates, and Christoffel Symbols}
+We have
+\[
+ds^2 = d\theta^2 + \sin^2\theta \, d\phi^2,
+\]
+where \(\theta\) is the polar angle \((0 \leq \theta \leq \pi)\) and \(\phi\) is the azimuthal angle \((0 \leq \phi < 2\pi)\).
+\emph{This is the infinitesimal line element for a unit sphere in spherical coordinates. \(d\theta^2\) represents the contribution to the infinitesimal distance due to a variation in the polar angle \(\theta\), while \(\sin^2\theta \, d\phi^2\) represents the contribution due to a variation in the azimuthal angle \(\phi\). The factor \(\sin^2\theta\) accounts for the fact that the circumference of the circles of constant latitude decreases as we approach the poles.}
+The non-zero Christoffel symbols for this metric are
+\[
+\Gamma^\theta_{\phi\phi} = -\sin\theta\,\cos\theta,
+\quad
+\Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta} = \cot\theta.
+\]
+\emph{These are the non-vanishing Christoffel symbols for the unit-sphere metric. They describe how the basis vectors change from point to point on the sphere. \(\Gamma^\theta_{\phi\phi}\) represents the variation of the \(\theta\)-basis vector when moving along the \(\phi\)-direction, whereas \(\Gamma^\phi_{\theta\phi} = \Gamma^\phi_{\phi\theta}\) represents the variation of the \(\phi\)-basis vector when moving along the \(\theta\) or \(\phi\) directions. We note that these Christoffel symbols depend on \(\theta\), reflecting the curvature of the sphere.}
+They arise when computing the connection on the two-sphere (intuitively, they reflect the curvature of the sphere).
+
+\paragraph*{(ii) Covariant Derivative of a Contravariant Vector}
+The covariant derivative of \(V^\nu\) is
+\[
+\nabla_\mu V^\nu
+=
+\partial_\mu V^\nu + \Gamma^\nu_{\mu\lambda}\,V^\lambda.
+\]
+\emph{This is the formula for the covariant derivative of a contravariant vector \(V^\nu\). The covariant derivative takes into account not only the variation of the vector components but also the variation of the basis vectors themselves, encoded in the Christoffel symbols.}
+
+\paragraph{(a)} For \(\mu = \theta\) and \(\nu = \theta\):
+\[
+\nabla_{\theta} V^\theta
+=
+\partial_\theta V^\theta
++
+\Gamma^\theta_{\theta \lambda}\, V^\lambda.
+\]
+\emph{Here we are computing the \(\theta\theta\) component of the covariant derivative. We substitute \(\mu = \theta\) and \(\nu = \theta\) into the general formula.}
+Since \(\Gamma^\theta_{\theta\theta} = 0\) and \(\Gamma^\theta_{\theta\phi} = 0\),
+\emph{Because the Christoffel symbols \(\Gamma^\theta_{\theta\theta}\) and \(\Gamma^\theta_{\theta\phi}\) are both zero for this metric,}
+\[
+\nabla_{\theta} V^\theta
+=
+\partial_\theta V^\theta.
+\]
+\emph{the covariant derivative \(\nabla_{\theta} V^\theta\) reduces to the ordinary partial derivative \(\partial_\theta V^\theta\).}
+
+\paragraph{(b)} For \(\mu = \theta\) and \(\nu = \phi\):
+\[
+\nabla_{\theta} V^\phi
+=
+\partial_\theta V^\phi
++
+\Gamma^\phi_{\theta\lambda}\,V^\lambda.
+\]
+\emph{Now we compute the \(\theta\phi\) component of the covariant derivative. We substitute \(\mu = \theta\) and \(\nu = \phi\) into the general formula.}
+Only \(\Gamma^\phi_{\theta\phi} = \cot\theta\) is non-zero, thus
+\emph{The only non-zero Christoffel symbol with \(\nu = \phi\) and \(\mu = \theta\) is \(\Gamma^\phi_{\theta\phi} = \cot\theta\), so}
+\[
+\nabla_{\theta} V^\phi
+=
+\partial_\theta V^\phi + \cot\theta \, V^\phi.
+\]
+\emph{the covariant derivative \(\nabla_{\theta} V^\phi\) includes the extra term \(\cot\theta \, V^\phi\) in addition to the ordinary partial derivative.}
+
+\paragraph{(c)} For \(\mu = \phi\) and \(\nu = \theta\):
+\[
+\nabla_{\phi} V^\theta
+=
+\partial_\phi V^\theta
++
+\Gamma^\theta_{\phi\lambda}\,V^\lambda.
+\]
+\emph{We now compute the \(\phi\theta\) component of the covariant derivative.}
+Since \(\Gamma^\theta_{\phi\phi} = -\sin\theta\,\cos\theta\),
+\emph{The only non-zero Christoffel symbol with \(\nu = \theta\) and \(\mu = \phi\) is \(\Gamma^\theta_{\phi\phi} = -\sin\theta\,\cos\theta\), so}
+\[
+\nabla_{\phi} V^\theta
+=
+\partial_\phi V^\theta
+-
+\sin\theta\,\cos\theta \, V^\phi.
+\]
+\emph{the covariant derivative \(\nabla_{\phi} V^\theta\) includes an extra \(-\,\sin\theta\,\cos\theta \, V^\phi\).}
+
+\paragraph{(d)} For \(\mu = \phi\) and \(\nu = \phi\):
+\[
+\nabla_{\phi} V^\phi
+=
+\partial_\phi V^\phi
++
+\Gamma^\phi_{\phi\lambda}\,V^\lambda.
+\]
+\emph{Finally, we compute the \(\phi\phi\) component of the covariant derivative.}
+With \(\Gamma^\phi_{\phi\theta} = \cot\theta\),
+\emph{The only non-zero Christoffel symbol with \(\nu = \phi\) and \(\mu = \phi\) is \(\Gamma^\phi_{\phi\theta} = \cot\theta\), so}
+\[
+\nabla_{\phi} V^\phi
+=
+\partial_\phi V^\phi
++
+\cot\theta \, V^\theta.
+\]
+\emph{the covariant derivative \(\nabla_{\phi} V^\phi\) includes an extra \(\cot\theta \, V^\theta\).}
+
+\paragraph*{(iii) Covariant Derivative of a Covariant Vector}
+The covariant derivative of \(V_\nu\) is
+\[
+\nabla_\mu V_\nu
+=
+\partial_\mu V_\nu
+-
+\Gamma^\lambda_{\mu\nu}\,V_\lambda.
+\]
+\emph{This is the formula for the covariant derivative of a covariant vector \(V_\nu\). Note that the sign of the term involving the Christoffel symbols is opposite to that for a contravariant vector.}
+
+\paragraph{(a)} For \(\mu = \theta\) and \(\nu = \theta\):
+\[
+\nabla_{\theta} V_\theta
+=
+\partial_\theta V_\theta
+-
+\Gamma^\lambda_{\theta\theta}\,V_\lambda.
+\]
+\emph{We compute the \(\theta\theta\) component of the covariant derivative of a covariant vector.}
+Since \(\Gamma^\theta_{\theta\theta} = 0\) and \(\Gamma^\phi_{\theta\theta} = 0\),
+\emph{Because the Christoffel symbols \(\Gamma^\theta_{\theta\theta}\) and \(\Gamma^\phi_{\theta\theta}\) are both zero,}
+\[
+\nabla_{\theta} V_\theta
+=
+\partial_\theta V_\theta.
+\]
+\emph{the covariant derivative \(\nabla_{\theta} V_\theta\) reduces to the ordinary partial derivative \(\partial_\theta V_\theta\).}
+
+\paragraph{(b)} For \(\mu = \theta\) and \(\nu = \phi\):
+\[
+\nabla_{\theta} V_\phi
+=
+\partial_\theta V_\phi
+-
+\Gamma^\lambda_{\theta\phi}\,V_\lambda.
+\]
+\emph{We compute the \(\theta\phi\) component of the covariant derivative.}
+Here \(\Gamma^\phi_{\theta\phi} = \cot\theta\),
+\emph{The only non-zero Christoffel symbol with \(\mu = \theta\) and \(\nu = \phi\) is \(\Gamma^\phi_{\theta\phi} = \cot\theta\), so}
+\[
+\nabla_{\theta} V_\phi
+=
+\partial_\theta V_\phi
+-
+\cot\theta \, V_\phi.
+\]
+\emph{the covariant derivative \(\nabla_{\theta} V_\phi\) includes an extra \(-\,\cot\theta \, V_\phi\).}
+
+\paragraph{(c)} For \(\mu = \phi\) and \(\nu = \theta\):
+\[
+\nabla_{\phi} V_\theta
+=
+\partial_\phi V_\theta
+-
+\Gamma^\lambda_{\phi\theta}\,V_\lambda.
+\]
+\emph{We compute the \(\phi\theta\) component of the covariant derivative.}
+Since \(\Gamma^\phi_{\phi\theta} = \cot\theta\),
+\emph{The only non-zero Christoffel symbol with \(\mu = \phi\) and \(\nu = \theta\) is \(\Gamma^\phi_{\phi\theta} = \cot\theta\), so}
+\[
+\nabla_{\phi} V_\theta
+=
+\partial_\phi V_\theta
+-
+\cot\theta \, V_\phi.
+\]
+\emph{the covariant derivative \(\nabla_{\phi} V_\theta\) includes an extra \(-\,\cot\theta \, V_\phi\).}
+
+\paragraph{(d)} For \(\mu = \phi\) and \(\nu = \phi\):
+\[
+\nabla_{\phi} V_\phi
+=
+\partial_\phi V_\phi
+-
+\Gamma^\lambda_{\phi\phi}\,V_\lambda.
+\]
+\emph{Finally, we compute the \(\phi\phi\) component of the covariant derivative.}
+With \(\Gamma^\theta_{\phi\phi} = -\sin\theta\,\cos\theta\),
+\emph{The only non-zero Christoffel symbol with \(\mu = \phi\) and \(\nu = \phi\) is \(\Gamma^\theta_{\phi\phi} = -\sin\theta\,\cos\theta\), so}
+\[
+\nabla_{\phi} V_\phi
+=
+\partial_\phi V_\phi
++
+\sin\theta\,\cos\theta \, V_\theta.
+\]
+\emph{the covariant derivative \(\nabla_{\phi} V_\phi\) includes an extra \(\sin\theta\,\cos\theta \, V_\theta\).}
+
+\paragraph*{(iv) Checking \(\nabla_{\mu}\bigl(V^{\nu} V_{\nu}\bigr)=\partial_{\mu}\bigl(V^{\nu} V_{\nu}\bigr)\)}
+We want to show explicitly that the covariant derivative of the scalar \(V^\nu V_\nu\) coincides with its ordinary partial derivative. Let us start from
+\[
+\nabla_\mu \bigl(V^\nu V_\nu \bigr)
+\,=\,
+\nabla_\mu \bigl(g_{\alpha\beta}\,V^\alpha V^\beta \bigr)
+\,=\,
+V^\nu \,\nabla_\mu V_\nu
+\;+\;
+V_\nu \,\nabla_\mu V^\nu,
+\]
+\emph{where we have used the product rule for the covariant derivative and the fact that the metric \(g_{\alpha\beta}\) is covariantly constant, so \(\nabla_\mu g_{\alpha\beta} = 0\).}
+
+\subparagraph*{(a) Substituting the definitions of \(\nabla_\mu V_\nu\) and \(\nabla_\mu V^\nu\)}
+Recall that
+\[
+\nabla_\mu V_\nu
+=
+\partial_\mu V_\nu
+-
+\Gamma^\lambda_{\mu\nu} \, V_\lambda
+\quad\text{and}\quad
+\nabla_\mu V^\nu
+=
+\partial_\mu V^\nu
++
+\Gamma^\nu_{\mu\lambda} \, V^\lambda.
+\]
+Hence,
+\[
+\nabla_\mu \bigl(V^\nu V_\nu\bigr)
+=
+V^\nu \,\Bigl(\partial_\mu V_\nu - \Gamma^\lambda_{\mu\nu}\, V_\lambda\Bigr)
+\;+\;
+V_\nu \,\Bigl(\partial_\mu V^\nu + \Gamma^\nu_{\mu\lambda}\, V^\lambda\Bigr).
+\]
+Expanding,
+\[
+\nabla_\mu \bigl(V^\nu V_\nu\bigr)
+=
+\underbrace{V^\nu \,\partial_\mu V_\nu \;+\; V_\nu \,\partial_\mu V^\nu}_{\text{(A)}}
+\;+\;
+\underbrace{\Bigl(-\,V^\nu\,\Gamma^\lambda_{\mu\nu}\,V_\lambda + V_\nu\,\Gamma^\nu_{\mu\lambda}\,V^\lambda\Bigr)}_{\text{(B)}}.
+\]
+
+\emph{Part (A) is exactly \(\partial_\mu(V^\nu V_\nu)\). We now show that part (B) vanishes.}
+
+\subparagraph*{(b) Splitting part (B) into \(T_1\) and \(T_2\)}
+Define
+\[
+T_1
+\,=\,
+-\,V^\nu\,\Gamma^\lambda_{\mu\nu}\,V_\lambda,
+\qquad
+T_2
+\,=\,
+V_\nu\,\Gamma^\nu_{\mu\lambda}\,V^\lambda.
+\]
+Then
+\[
+\text{(B)}
+\,=\,
+T_1 + T_2.
+\]
+
+\subparagraph*{(c) Renaming dummy indices and showing \(T_1 + T_2 = 0\)}
+We focus on
+\[
+T_2
+=
+V_\nu\,\Gamma^\nu_{\mu\lambda}\,V^\lambda.
+\]
+Since \(\nu\) and \(\lambda\) are dummy summation indices, we can swap their names:
+\[
+\nu \;\longmapsto\; \lambda,
+\quad
+\lambda \;\longmapsto\; \nu.
+\]
+Hence,
+\[
+T_2
+=
+V_\lambda \,\Gamma^\lambda_{\mu\nu}\,V^\nu
+\]
+without changing the numerical value of the sum. Now compare with
+\[
+T_1
+=
+-\,V^\nu \,\Gamma^\lambda_{\mu\nu}\,V_\lambda.
+\]
+Putting them together:
+\[
+T_1 + T_2
+=
+-\,\bigl[V^\nu \,\Gamma^\lambda_{\mu\nu}\,V_\lambda\bigr]
+\;+\;
+\bigl[V_\lambda \,\Gamma^\lambda_{\mu\nu}\,V^\nu\bigr].
+\]
+Noting that \(V^\nu\) and \(V_\lambda\) are just real numbers (for fixed indices), we can swap their order of multiplication. Therefore,
+\[
+V_\lambda \,\Gamma^\lambda_{\mu\nu}\,V^\nu
+=
+V^\nu\,V_\lambda\,\Gamma^\lambda_{\mu\nu},
+\]
+and thus
+\[
+T_1 + T_2
+=
+-\,\bigl[V^\nu\,V_\lambda\,\Gamma^\lambda_{\mu\nu}\bigr]
+\;+\;
+\bigl[V^\nu\,V_\lambda\,\Gamma^\lambda_{\mu\nu}\bigr]
+=
+0.
+\]
+
+\subparagraph*{(d) Final result}
+Since part (B) vanishes, we have
+\[
+\nabla_\mu \bigl(V^\nu V_\nu\bigr)
+=
+\bigl(\partial_\mu V^\nu\bigr)\,V_\nu
+\;+\;
+V^\nu\,\bigl(\partial_\mu V_\nu\bigr)
+=
+\partial_\mu \bigl(V^\nu V_\nu\bigr).
+\]
+\emph{Thus, the covariant derivative of the scalar \(V^\nu V_\nu\) is equal to its ordinary partial derivative, as required. The key steps are renaming the summed indices in one of the two terms and recognizing that the components of the vectors are real scalars that commute.}
 
 \end{document}
