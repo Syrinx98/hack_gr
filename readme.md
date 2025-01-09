@@ -183,13 +183,7 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 1. **General Commutator Formula**
 
    For a $(2,0)$ tensor $W^{\mu\nu}$,
-   $
-   [\nabla_\alpha, \nabla_\beta]\;W^{\mu\nu}
-   \;=\;
-   R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu}
-   \;+\;
-   R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma}.
-   $
+   $[\nabla_\alpha, \nabla_\beta]\;W^{\mu\nu} \;=\; R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu} \;+\; R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma}.$
 
 2. **Contraction and Conditions**
 
