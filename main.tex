@@ -1326,5 +1326,707 @@ V^\nu\,\bigl(\partial_\mu V_\nu\bigr)
 \partial_\mu \bigl(V^\nu V_\nu\bigr).
 \]
 \emph{Thus, the covariant derivative of the scalar \(V^\nu V_\nu\) is equal to its ordinary partial derivative, as required. The key steps are renaming the summed indices in one of the two terms and recognizing that the components of the vectors are real scalars that commute.}
+    
+\section*{Question 8}
+
+Given an arbitrary $(2,0)$ tensor $W^{\mu\nu}$, determine under what conditions the identity
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr] \,W^{\mu\nu} \;=\; 0
+\]
+holds.
+
+\textit{This exercise concerns the identity of the commutator of covariant derivatives applied to a tensor of type (2,0). The objective is to determine under what conditions such a commutator vanishes. This problem helps us to better understand the relationship between the geometry of spacetime (described by the Riemann tensor and the Ricci tensor) and the symmetry properties of the tensors.}
+
+\textit{We have an arbitrary tensor \(W^{\mu\nu}\) of type (2,0), i.e., with two contravariant indices. We must find the conditions for which the commutator of the covariant derivatives \(\nabla_{\mu}\) and \(\nabla_{\nu}\), applied to \(W^{\mu\nu}\) with contracted indices, is equal to zero. }
+
+\subsection*{Solution}
+
+\textit{Before we start, we will make an important assumption: we will assume that we are working in a (pseudo) Riemannian manifold with zero torsion. This is a common assumption in General Relativity and simplifies the calculations considerably. The connection is therefore the Levi-Civita connection, which is the unique torsion-free metric connection.  This assumption is not explicitly stated in the problem, but it is often implicitly assumed in this type of exercise. Without this assumption, the calculations would become significantly more complex due to the presence of torsion terms in the commutator of covariant derivatives.  By making this assumption, we can focus on the core concepts related to the Riemann and Ricci tensors.}
+
+\paragraph{(i) Commutator of Covariant Derivatives}
+\textit{Let's start by recalling the general expression for the commutator of two covariant derivatives acting on a (2,0) tensor. This expression involves the Riemann tensor, which describes the curvature of spacetime. The commutator essentially measures how much the order of covariant differentiation matters.}
+We start by recalling the general expression for the commutator of covariant derivatives acting on a $(2,0)$ tensor:
+\[
+\bigl[\nabla_{\alpha}, \nabla_{\beta}\bigr]\,W^{\mu\nu}
+\;=\;
+R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu}
+\;+\;
+R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma},
+\]
+where $R^\rho_{\;\;\sigma\mu\nu}$ is the Riemann curvature tensor.
+\textit{Here, \([\nabla_{\alpha}, \nabla_{\beta}]\) represents the commutator of the covariant derivatives \(\nabla_{\alpha}\) and \(\nabla_{\beta}\), defined as \(\nabla_{\alpha}\nabla_{\beta} - \nabla_{\beta}\nabla_{\alpha}\). This means we apply first \(\nabla_{\beta}\), then \(\nabla_{\alpha}\), and subtract the result of applying them in the reverse order. \(W^{\mu\nu}\) is a generic tensor of type (2,0), meaning it has two upper indices (contravariant). \(R^\rho_{\;\;\sigma\mu\nu}\) is the Riemann curvature tensor, a fundamental object in differential geometry that quantifies the curvature of spacetime. It tells us how much a vector changes when parallel transported around an infinitesimal loop. The indices of the Riemann tensor have specific meanings: \(\rho\) is the index of the resulting vector after parallel transport, \(\sigma\) is the index of the original vector, and \(\mu\) and \(\nu\) define the plane of the infinitesimal loop.}
+
+\textit{The first term on the right-hand side of the equation, \(R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu}\), represents the effect of curvature on the \(\mu\) component of the tensor. We contract (sum over) the index \(\sigma\) of the Riemann tensor with the first index of \(W^{\sigma\nu}\). The second term, \(R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma}\), represents the effect of curvature on the \(\nu\) component of the tensor. Here, we contract the index \(\sigma\) of the Riemann tensor with the second index of \(W^{\mu\sigma}\). In practice, this equation tells us how the parallel transport of a tensor around an infinitesimal parallelogram (defined by \(\alpha\) and \(\beta\)) differs from the parallel transport in the opposite direction.}
+
+\paragraph{(ii) Specializing to $W^{\mu\nu}$ with Indices Contracted}
+\textit{Now we apply the general formula of the commutator to our specific case, where we want the commutator to vanish when the indices of the tensor \(W^{\mu\nu}\) are contracted with the indices of the covariant derivatives in the commutator. This means we are setting \(\alpha = \mu\) and \(\beta = \nu\) and summing over these indices.}
+We want the commutator to vanish when the resulting tensor is $W^{\mu\nu}$ contracted with the same pair of indices $(\mu,\nu)$ as appear in the commutator:
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\; 0.
+\]
+\textit{This means that we are calculating \([\nabla_{\mu}, \nabla_{\nu}]\,W^{\mu\nu}\), where the first index of the commutator (\(\mu\)) is contracted with the first index of the tensor (\(\mu\)), and the second index of the commutator (\(\nu\)) is contracted with the second index of the tensor (\(\nu\)). We are summing over repeated indices, as per the Einstein summation convention.}
+Substituting $\alpha=\mu$ and $\beta=\nu$ into the general formula, we get
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
+\;=\;
+R^\mu_{\;\;\sigma\mu\nu}\,W^{\sigma\nu}
+\;+\;
+R^\nu_{\;\;\sigma\mu\nu}\,W^{\mu\sigma}.
+\]
+\textit{Substituting \(\alpha = \mu\) and \(\beta = \nu\) into the general formula, we obtain this specific expression for our case. Note that the indices \(\mu\) and \(\nu\) now appear both as covariant derivative indices and as indices of the Riemann tensor. We are now summing over \(\mu\) and \(\nu\) in the commutator and on the right-hand side.}
+
+\paragraph{(iii) Ricci Tensor and Antisymmetry}
+\textit{We now use the definition of the Ricci tensor and an important antisymmetry property of the Riemann tensor to simplify the expression. These are key properties that will allow us to manipulate the equation.}
+Next, we recall that the Ricci tensor $R_{\mu\nu}$ is defined as the contraction
+\[
+R_{\mu\nu} \;=\; R^\lambda_{\;\;\mu\lambda\nu}.
+\]
+\textit{The Ricci tensor \(R_{\mu\nu}\) is obtained by contracting (summing over) the first and third indices of the Riemann tensor. This means we set the first index (\(\rho\)) and the third index (\(\lambda\)) of the Riemann tensor to be the same, \(\lambda\), and sum over all possible values of \(\lambda\). The Ricci tensor is a measure of the curvature of spacetime, and it plays a crucial role in Einstein's field equations.}
+Hence, the first term can be written as
+\[
+R^\mu_{\;\;\sigma\mu\nu}\,W^{\sigma\nu}
+\;=\;
+R_{\sigma\nu}\,W^{\sigma\nu}.
+\]
+\textit{Using the definition of the Ricci tensor, we can rewrite the first term as a contraction between the Ricci tensor and the tensor \(W^{\sigma\nu}\). More specifically we are using the definition of the Ricci tensor: \(R_{\sigma\nu} = R^\mu_{\;\;\sigma\mu\nu}\), where we contracted the first and the third indices of the Riemann tensor. Since we are summing over \(\mu\), we can replace \(R^\mu_{\;\;\sigma\mu\nu}\) with \(R_{\sigma\nu}\).}
+
+For the second term, we use a key antisymmetry property of the Riemann tensor:
+\[
+R^\nu_{\;\;\sigma\mu\nu}
+\;=\;
+-\,R^\nu_{\;\;\sigma\nu\mu}.
+\]
+\textit{The Riemann tensor is antisymmetric in the last two indices. This means that by swapping the last two indices, the tensor changes sign. This is a fundamental property of the Riemann tensor, arising from its geometric interpretation in terms of parallel transport around an infinitesimal loop. Swapping the last two indices corresponds to reversing the direction of the loop.}
+It follows that
+\[
+R^\nu_{\;\;\sigma\mu\nu}\,W^{\mu\sigma}
+\;=\;
+-\,R^\nu_{\;\;\sigma\nu\mu}\,W^{\mu\sigma}
+\;=\;
+-\,R_{\sigma\mu}\,W^{\mu\sigma}.
+\]
+\textit{Using this antisymmetry property, we can rewrite the second term, changing the sign and swapping the last two indices of the Riemann tensor. Then we can contract again the first and third index to obtain the Ricci tensor: \(R^\nu_{\;\;\sigma\nu\mu} = R_{\sigma\mu}\). We are allowed to do this because we are summing over \(\nu\), so we can replace \(R^\nu_{\;\;\sigma\nu\mu}\) with \(R_{\sigma\mu}\).}
+
+\paragraph{(iv) Combining the Two Terms}
+\textit{Now we put the two terms back together and exploit the fact that dummy indices can be renamed. Dummy indices are indices that are summed over, and we can change their names without changing the meaning of the expression, as long as we do it consistently.}
+Putting these two contributions together, we have
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
+\;=\;
+R_{\sigma\nu}\,W^{\sigma\nu}
+\;-\;
+R_{\sigma\mu}\,W^{\mu\sigma}.
+\]
+Observe that the two indices in the second term $(\sigma,\mu)$ are dummy indices.
+\textit{The indices \(\sigma\) and \(\mu\) in the second term are "dummy" indices, i.e., summation indices that can be renamed without changing the meaning of the expression. This is because we are summing over all possible values of these indices, so the specific letter used to denote them doesn't matter.}
+
+By swapping and index in the second term (renaming $\mu\to\nu$), we get
+\[
+R_{\sigma\nu}\,W^{\sigma\nu}
+\;-\;
+R_{\sigma\nu}\,W^{\nu\sigma}
+\;=\;
+R_{\sigma\nu}\,
+\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
+\]
+\textit{By renaming the dummy indices in the second term, we can rewrite the expression as a difference between two terms involving the Ricci tensor and the tensor \(W\), but with the indices swapped. We renamed \(\mu\) to \(\nu\), so the expression becomes \(R_{\sigma\nu}W^{\nu\sigma}\). Then we can factor out the Ricci tensor, since it's now the same in both terms.}
+Therefore,
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\;
+R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
+\]
+For this quantity to vanish for the \emph{arbitrary} tensor $W^{\mu\nu}$, the factor in parentheses must vanish unless $R_{\sigma\nu}=0$ everywhere.
+\textit{For this expression to be equal to zero for an arbitrary tensor \(W^{\mu\nu}\), the factor in parentheses must be zero, unless the Ricci tensor is identically zero. If the factor in parentheses is zero, the whole expression is zero, regardless of the value of the Ricci tensor. If the Ricci tensor is zero, the whole expression is zero, regardless of the value of \(W^{\mu\nu}\).}
+
+\paragraph{(v) Conditions for Vanishing Commutator}
+\textit{We conclude by deriving the two possible conditions under which the commutator vanishes. These conditions arise from the fact that the product of two factors is zero if and only if at least one of the factors is zero.}
+Thus, there are two distinct possibilities for
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\; 0:
+\]
+\begin{itemize}
+\item \textbf{Case 1: $W^{\mu\nu}$ is symmetric.} If $W^{\mu\nu}$ is symmetric, then $W^{\sigma\nu} - W^{\nu\sigma} = 0$, and consequently
+\[
+R_{\sigma\nu}\,\bigl(W^{\sigma\nu} - W^{\nu\sigma}\bigr)\;=\;0
+\]
+for any Ricci tensor $R_{\sigma\nu}$, making the whole expression vanish.
+\textit{Case 1: If \(W^{\mu\nu}\) is symmetric (i.e., \(W^{\mu\nu} = W^{\nu\mu}\)), then the difference \(W^{\sigma\nu} - W^{\nu\sigma}\) is zero, and therefore the whole expression vanishes, regardless of the value of the Ricci tensor. A tensor is symmetric if swapping its indices doesn't change its value.  This means that if we swap the indices \(\sigma\) and \(\nu\), the tensor remains the same.}
+\item \textbf{Case 2: $R_{\mu\nu} = 0$.} If the spacetime is Ricci-flat, meaning $R_{\mu\nu}=0$, then
+\[
+R_{\sigma\nu}\,\bigl(W^{\sigma\nu} - W^{\nu\sigma}\bigr)\;=\;0
+\]
+regardless of whether $W^{\mu\nu}$ is symmetric or not. In this scenario, the commutator also vanishes for \emph{any} $(2,0)$ tensor.
+\textit{Case 2: If the spacetime is Ricci-flat (i.e., \(R_{\mu\nu} = 0\)), then the whole expression vanishes, regardless of the symmetry or antisymmetry of \(W^{\mu\nu}\). In this case, the commutator vanishes for any tensor of type (2,0). Ricci-flat means that the Ricci tensor is zero everywhere. This is a strong condition on the geometry of spacetime.}
+\end{itemize}
+
+\paragraph{(vi) Physical Interpretation (Optional Remark)}
+\textit{We give a brief physical interpretation of the two conditions. This helps to connect the mathematical results to their physical meaning in the context of General Relativity.}
+In the context of General Relativity, the condition $R_{\mu\nu}=0$ (with zero cosmological constant) implies a vacuum solution of Einstein's field equations, indicating no matter or energy content.
+\textit{In the context of General Relativity, the condition \(R_{\mu\nu}=0\) (in the absence of a cosmological constant) corresponds to a vacuum solution of Einstein's field equations, that is, a spacetime without matter or energy. This means that the spacetime is empty, and its curvature is entirely determined by the initial conditions.}
+On the other hand, requiring $W^{\mu\nu}$ to be symmetric imposes a restriction on the form of the tensor rather than on the geometry of the spacetime.
+\textit{On the other hand, requiring that \(W^{\mu\nu}\) be symmetric imposes a restriction on the form of the tensor, but not on the geometry of spacetime. It's a condition on the specific tensor we are considering, not on the underlying spacetime itself.}
+
+\paragraph{(vii) Final Answer}
+\textit{Let's summarize the final result.}
+Hence,
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
+\;=\;0
+\quad
+\Longleftrightarrow
+\quad
+\text{either }W^{\mu\nu}\text{ is symmetric, or }R_{\mu\nu}=0.
+\]
+\textit{Ultimately, the commutator \([\nabla_{\mu}, \nabla_{\nu}]\,W^{\mu\nu}\) is equal to zero if and only if \(W^{\mu\nu}\) is a symmetric tensor, or if the spacetime is Ricci-flat (\(R_{\mu\nu}=0\)). These are the two possible conditions under which the given identity holds.}
+
+\subsection*{Question 8: Theoretical Background: Understanding the Building Blocks}
+
+\textit{This appendix provides a brief overview of the fundamental concepts used in the exercise, including the Riemann curvature tensor, the Ricci tensor, and the covariant derivative. We will aim for an intuitive understanding, emphasizing the geometric meaning of these objects.}
+
+\paragraph{Covariant Derivative: Parallel Transport in Curved Spacetime}
+
+\textit{In flat space, we are used to the idea that parallel lines never meet. However, in curved space, the notion of "parallel" becomes more subtle. The covariant derivative is a way to generalize differentiation to curved spaces, taking into account the curvature of the space. It allows us to define how a tensor changes as we move it along a curve while keeping it "as parallel as possible" to its initial direction.}
+
+Imagine you are walking on the surface of a sphere, carrying an arrow that always points in the same direction, tangent to the sphere. As you walk along a curved path, the direction of the arrow relative to your path will change, even though you are trying to keep it parallel. This change is due to the curvature of the sphere.
+
+The covariant derivative, denoted by \(\nabla_{\mu}\), captures this notion of change in curved space. When applied to a vector \(V^\nu\), it is defined as:
+
+\[
+\nabla_{\mu} V^\nu = \partial_{\mu} V^\nu + \Gamma^\nu_{\mu\lambda} V^\lambda
+\]
+
+\textit{where \(\partial_{\mu}\) is the ordinary partial derivative, and \(\Gamma^\nu_{\mu\lambda}\) are the Christoffel symbols (also known as the connection coefficients). The Christoffel symbols encode information about the curvature of the space and can be computed from the metric tensor \(g_{\mu\nu}\), which defines distances in the space.}
+
+\textbf{Intuition:} The first term, \(\partial_{\mu} V^\nu\), represents the change in the vector as we would calculate it in flat space. The second term, \(\Gamma^\nu_{\mu\lambda} V^\lambda\), is a "correction" term that accounts for the curvature of the space. It tells us how much the vector needs to be adjusted to keep it parallel as we move along the curve.
+
+\textit{The covariant derivative can be similarly extended to tensors of higher rank. For example, for a (2,0) tensor \(W^{\mu\nu}\), we have:}
+
+\[
+\nabla_\alpha W^{\mu\nu} = \partial_\alpha W^{\mu\nu} + \Gamma^\mu_{\alpha\sigma} W^{\sigma\nu} + \Gamma^\nu_{\alpha\sigma} W^{\mu\sigma}
+\]
+\textit{Each upper index gets a correction term with a positive sign}
+
+\textit{The idea is that we are comparing the tensor at a given point with the tensor at a neighboring point, but we need to account for the fact that the coordinate system itself is changing due to the curvature.}
+\textbf{Key takeaway: the covariant derivative allows for differentiation in curved space by keeping tensors parallel during transport, encapsulating the intrinsic curvature's effect on differentiation.}
+
+\paragraph{Riemann Curvature Tensor: Measuring the Curvature}
+
+\textit{The Riemann curvature tensor, denoted by \(R^\rho_{\;\;\sigma\mu\nu}\), is the central object that quantifies the curvature of a (pseudo) Riemannian manifold. It measures how much the geometry of the space deviates from flat Euclidean space.}
+
+\textbf{Geometric Interpretation:} One way to understand the Riemann tensor is to consider parallel transporting a vector around a small closed loop in the space. If the space is flat, the vector will return to its original direction after being transported around the loop. However, if the space is curved, the vector will be rotated by an amount proportional to the area enclosed by the loop and the Riemann tensor.
+
+More precisely, if we parallel transport a vector \(V^\sigma\) around an infinitesimal parallelogram defined by two vectors \(A^\mu\) and \(B^\nu\), the change in the vector \(\delta V^\rho\) after one loop is given by:
+
+\[
+\delta V^\rho \approx R^\rho_{\;\;\sigma\mu\nu} V^\sigma A^\mu B^\nu
+\]
+
+\textit{This equation shows that the Riemann tensor relates the change in a vector under parallel transport to the area of the loop and the components of the vector itself.}
+
+\textbf{Another way to interpret the Riemann tensor} is through the commutator of covariant derivatives. As we saw in the exercise, for a (2,0) tensor:
+\[
+\bigl[\nabla_{\alpha}, \nabla_{\beta}\bigr]\,W^{\mu\nu}
+\;=\;
+R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu}
+\;+\;
+R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma},
+\]
+For a vector \(V^\mu\), the commutator is given by
+\[
+[\nabla_\mu, \nabla_\nu] V^\rho = R^\rho_{\;\;\sigma\mu\nu} V^\sigma
+\]
+
+\textit{This means the Riemann tensor also measures the non-commutativity of covariant derivatives. In flat space, the order of differentiation doesn't matter, so the commutator is zero. In curved space, the commutator is non-zero, and the Riemann tensor quantifies this non-commutativity.}
+
+\textbf{Symmetries of the Riemann Tensor:} The Riemann tensor has several important symmetries:
+\begin{itemize}
+    \item \(R^\rho_{\;\;\sigma\mu\nu} = -R^\rho_{\;\;\sigma\nu\mu}\): Antisymmetry in the last two indices. This reflects the fact that reversing the direction of the loop in the parallel transport picture reverses the rotation of the vector.
+    \item \(R_{\rho\sigma\mu\nu} = -R_{\sigma\rho\mu\nu}\): Antisymmetry in the first two indices (when lowered with the metric).
+    \item \(R_{\rho\sigma\mu\nu} = R_{\mu\nu\rho\sigma}\): Pair exchange symmetry.
+    \item \(R^\rho_{\;\;\sigma\mu\nu} + R^\rho_{\;\;\mu\nu\sigma} + R^\rho_{\;\;\nu\sigma\mu} = 0\): The first Bianchi identity.
+\end{itemize}
+
+\textit{These symmetries reduce the number of independent components of the Riemann tensor.}
+
+\textbf{Key Takeaway}: the Riemann curvature tensor is a fundamental geometric object capturing the essence of curvature by measuring the change in a vector after parallel transport around a closed loop and quantifying the non-commutativity of covariant derivatives.
+
+\paragraph{Ricci Tensor: A Contraction of the Riemann Tensor}
+
+\textit{The Ricci tensor, denoted by \(R_{\mu\nu}\), is obtained by contracting the first and third indices of the Riemann tensor:}
+
+\[
+R_{\mu\nu} \;=\; R^\lambda_{\;\;\mu\lambda\nu}
+\]
+
+\textit{In other words, we set \(\rho = \lambda\) in \(R^\rho_{\;\;\sigma\mu\nu}\) and sum over \(\lambda\).}
+
+\textbf{Geometric Interpretation:} The Ricci tensor measures a particular aspect of the curvature: the tendency of volumes to change in curved space compared to flat space. More precisely, it describes how the volume of a small geodesic ball (a ball defined by geodesics emanating from a central point) differs from the volume of a ball of the same radius in Euclidean space.
+
+\textit{If \(R_{\mu\nu}\) is positive definite in a region, it means that volumes in that region tend to be smaller than in flat space. If \(R_{\mu\nu}\) is negative definite, volumes tend to be larger. If \(R_{\mu\nu} = 0\), volumes are locally the same as in flat space, at least to leading order.}
+
+\textbf{In General Relativity:} The Ricci tensor plays a crucial role in Einstein's field equations, which relate the geometry of spacetime to the distribution of mass and energy:
+
+\[
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G T_{\mu\nu}
+\]
+
+\textit{where \(R\) is the Ricci scalar (the trace of the Ricci tensor, \(R = g^{\mu\nu}R_{\mu\nu}\)), \(g_{\mu\nu}\) is the metric tensor, \(G\) is the gravitational constant, and \(T_{\mu\nu}\) is the stress-energy tensor. This equation tells us that the Ricci curvature is directly related to the presence of matter and energy.}
+
+\textbf{Key Takeaway}: The Ricci tensor provides a measure of how volumes change in curved space compared to flat space and is directly linked to the distribution of mass and energy in General Relativity.
+
+\pagebreak
+
+\section*{Question 9}
+
+Consider a photon moving in a 2D spacetime described by the metric
+\begin{equation}
+ds^2 = -\left(1 + \frac{x^2}{\ell^2}\right)\,dt^2 + dx^2,
+\end{equation}
+where \(\ell\) is a constant. The photon follows a geodesic \(x^\mu(\lambda)\) parametrized by an affine parameter \(\lambda\), and its four-momentum is given by \(p^\mu = \frac{dx^\mu}{d\lambda}\). Using the geodesic equation, derive all the conserved quantities for this system. Then use these results to express \(\frac{dx}{d\lambda}\) in terms of the radial coordinate \(x\) and the conserved quantities.
+
+\subsection*{Solution}
+
+\paragraph{1. The Metric and Photon Setup.}
+
+\textit{We are given the 2D metric:}
+\begin{equation}
+ds^2
+= -\left(1 + \frac{x^2}{\ell^2}\right)\,dt^2
++ dx^2.
+\end{equation}
+\textit{A photon follows a geodesic \(x^\mu(\lambda)\) parametrized by an affine parameter \(\lambda\). Its four-momentum is defined as}
+\[
+p^\mu \;=\; \frac{dx^\mu}{d\lambda}.
+\]
+
+\paragraph{2. Geodesic Equation in Contravariant Form.}
+
+\textit{The standard geodesic equation is:}
+\begin{equation}\label{eq:geod}
+\frac{d^2 x^\mu}{d\lambda^2}
++ \Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\lambda}\,\frac{dx^\beta}{d\lambda}
+= 0,
+\end{equation}
+\textit{where \(\Gamma^\mu_{\alpha\beta}\) are the Christoffel symbols. They are computed from}
+\begin{equation}\label{eq:christoffel}
+\Gamma^\mu_{\alpha\beta}
+= \frac{1}{2}\,g^{\mu\sigma}
+\bigl(\partial_\alpha g_{\sigma\beta}
++ \partial_\beta g_{\sigma\alpha}
+- \partial_\sigma g_{\alpha\beta}\bigr).
+\end{equation}
+\textit{Equation \eqref{eq:geod} tells us how the tangent vector to the geodesic, i.e., the four-momentum \(p^\mu = \frac{dx^\mu}{d\lambda}\), changes along the geodesic itself. The Christoffel symbols \(\Gamma^\mu_{\alpha\beta}\) represent the affine connection, and they encode how the spacetime is curved. They depend on the first derivatives of the metric.}
+
+\textit{Substituting \(p^\mu = \frac{dx^\mu}{d\lambda}\) into \eqref{eq:geod}, we get the contravariant form of the four-momentum evolution:}
+\begin{equation}
+\frac{dp^\mu}{d\lambda}
++ \Gamma^\mu_{\alpha\beta}\,p^\alpha\,p^\beta
+= 0.
+\end{equation}
+\textit{This equation tells us how the contravariant four-momentum changes along the geodesic.}
+
+\paragraph{3. Metric Components.}
+
+\textit{In our 2D case, the components of the metric \(g_{\mu\nu}\) are:}
+\[
+g_{tt} = -\left(1 + \frac{x^2}{\ell^2}\right),
+\quad
+g_{xx} = 1,
+\]
+\textit{and all other components are zero. The inverse metric is:}
+\[
+g^{tt}
+= -\frac{1}{\,1 + \frac{x^2}{\ell^2}\,},
+\quad
+g^{xx}
+= 1.
+\]
+\textit{The inverse metric is obtained by calculating the inverse of the metric tensor matrix.}
+
+\paragraph{4. Conserved Quantities and Symmetries.}
+
+\textit{A crucial point in General Relativity is that if the metric \(g_{\alpha\beta}\) does not explicitly depend on a coordinate \(x^\sigma\), then the corresponding component of the covariant four-momentum \(p_\sigma\) is conserved.}
+
+\textit{\textbf{Why?}}
+
+\begin{itemize}
+\item \textit{Multiplying the geodesic equation \eqref{eq:geod} by $g_{\mu\nu}$, we get:}
+ \[
+ g_{\mu\nu}\frac{d^2x^\mu}{d\lambda^2} + g_{\mu\nu}\Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\lambda}\,\frac{dx^\beta}{d\lambda} = 0.
+ \]
+ \textit{Recalling that $p_\nu = g_{\mu\nu}p^{\mu}$ and $p^\mu = \frac{dx^\mu}{d\lambda}$, we can rewrite the first term as $\frac{dp_\nu}{d\lambda}$.}
+ \textit{For the second term, we use the definition of the Christoffel symbols \eqref{eq:christoffel} and, for simplicity, consider only the part containing the metric derivatives:}
+ \[
+ g_{\mu\nu}\Gamma^\mu_{\alpha\beta} = g_{\mu\nu} \frac{1}{2}g^{\mu\sigma} \bigl(\partial_\alpha g_{\sigma\beta} + \partial_\beta g_{\sigma\alpha} - \partial_\sigma g_{\alpha\beta}\bigr) = \frac{1}{2} \delta^\sigma_\nu \left( \partial_\alpha g_{\sigma\beta} + \partial_\beta g_{\sigma\alpha} - \partial_\sigma g_{\alpha\beta} \right)
+ \]
+ \textit{where we used the fact that $g_{\mu\nu}g^{\mu\sigma} = \delta^\sigma_\nu$. Simplifying further, we obtain:}
+ \[
+ g_{\mu\nu}\Gamma^\mu_{\alpha\beta} = \frac{1}{2} \left( \partial_\alpha g_{\nu\beta} + \partial_\beta g_{\nu\alpha} - \partial_\nu g_{\alpha\beta} \right)
+ \]
+\textit{Substituting into the geodesic equation multiplied by $g_{\mu\nu}$, we get:}
+ \[
+ \frac{dp_\nu}{d\lambda}
+ \;=\;
+ \frac12\,\partial_\nu g_{\alpha\beta}\,p^\alpha p^\beta.
+ \]
+\textit{This is the covariant form of the geodesic equation.}\\
+\textit{In fact, explicitly writing out the steps, we have:}
+\begin{align*}
+  g_{\mu\nu} \frac{d^2 x^\mu}{d\lambda^2} + g_{\mu\nu} \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{d\lambda} \frac{dx^\beta}{d\lambda} &= 0 \\
+  \frac{d}{d\lambda} \left( g_{\mu\nu} \frac{dx^\mu}{d\lambda} \right) - \frac{dg_{\mu\nu}}{d\lambda}\frac{dx^\mu}{d\lambda} + g_{\mu\nu} \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{d\lambda} \frac{dx^\beta}{d\lambda} &= 0 \\
+  \frac{dp_\nu}{d\lambda} - \frac{\partial g_{\mu\nu}}{\partial x^\rho} \frac{dx^\rho}{d\lambda}\frac{dx^\mu}{d\lambda} + g_{\mu\nu} \frac{1}{2} g^{\mu\sigma} \left( \partial_\alpha g_{\sigma\beta} + \partial_\beta g_{\sigma\alpha} - \partial_\sigma g_{\alpha\beta} \right) \frac{dx^\alpha}{d\lambda} \frac{dx^\beta}{d\lambda} &= 0 \\
+  \frac{dp_\nu}{d\lambda} - \partial_\rho g_{\mu\nu} p^\rho p^\mu + \frac{1}{2} \left( \partial_\alpha g_{\nu\beta} + \partial_\beta g_{\nu\alpha} - \partial_\nu g_{\alpha\beta} \right) p^\alpha p^\beta &= 0 \\
+  \frac{dp_\nu}{d\lambda} - \partial_\alpha g_{\beta\nu} p^\alpha p^\beta + \frac{1}{2}\partial_\alpha g_{\nu\beta} p^\alpha p^\beta + \frac{1}{2} \partial_\beta g_{\nu\alpha} p^\alpha p^\beta - \frac{1}{2} \partial_\nu g_{\alpha\beta} p^\alpha p^\beta &= 0 \\
+  \frac{dp_\nu}{d\lambda} - \frac{1}{2} \partial_\alpha g_{\beta\nu} p^\alpha p^\beta - \frac{1}{2} \partial_\beta g_{\alpha\nu} p^\alpha p^\beta + \frac{1}{2}\partial_\alpha g_{\nu\beta} p^\alpha p^\beta + \frac{1}{2} \partial_\beta g_{\nu\alpha} p^\alpha p^\beta - \frac{1}{2} \partial_\nu g_{\alpha\beta} p^\alpha p^\beta &= 0
+\end{align*}
+\textit{where the first 4 terms cancel in pairs, since $\alpha$ and $\beta$ are dummy indices, and we finally obtain}
+\[
+\frac{dp_\nu}{d\lambda} = \frac{1}{2} \partial_\nu g_{\alpha\beta} p^\alpha p^\beta
+\]
+\textit{If \(\partial_\nu g_{\alpha\beta} = 0\) for some index \(\nu\), this immediately implies that \(\frac{dp_\nu}{d\lambda} = 0\). Hence, \(p_\nu\) is constant along the geodesic.}
+
+\item \textit{Physically, this corresponds to the existence of a \emph{Killing vector} (a symmetry) along that coordinate. In simpler terms, \(\partial_t g_{\alpha\beta} = 0\) reflects the invariance of the metric under time translations, yielding a conserved energy.}
+\end{itemize}
+
+\textit{In our specific problem, the metric does not depend on the time coordinate \(t\). Thus, \(\partial_t g_{\alpha\beta} = 0\), and therefore \(p_t\) is conserved. We call this constant of motion}
+\begin{equation}
+p_t = - E,
+\end{equation}
+\textit{where \(E\) is interpreted as the energy of the photon.}
+
+\textit{Note on Notation:} \textit{Writing \(p_t = -E\) is a common convention. The minus sign is conventional so that \(E\) is considered a positive energy, consistent with the sign of \(g_{tt}\).}
+\paragraph{5. Explicit Calculation of \(\boldsymbol{p_t}\).}
+
+\textit{We can calculate \(p_t\) explicitly:}
+\[
+p_t
+= g_{t\alpha}\,p^\alpha
+= g_{tt}\,p^t
+= -\left(1 + \frac{x^2}{\ell^2}\right)\,\frac{dt}{d\lambda}.
+\]
+\textit{Since \(p_t = -E\) is constant along the photon geodesic, we have}
+\begin{equation}\label{eq:pt-const}
+\left(1 + \frac{x^2}{\ell^2}\right)\,\frac{dt}{d\lambda} = E.
+\end{equation}
+\textit{This is our first conserved quantity: the photon's energy.}
+
+\paragraph{6. Null Condition for the Photon and \(\frac{dx}{d\lambda}\).}
+
+\textit{Since we are dealing with a photon (a massless particle), its path is a \emph{null} geodesic. That is,}
+\[
+ds^2 = 0.
+\]
+\textit{Thus, using our metric,}
+\begin{equation}
+0
+= -\left(1 + \frac{x^2}{\ell^2}\right)\,\left(\frac{dt}{d\lambda}\right)^2
+\;+\;
+\left(\frac{dx}{d\lambda}\right)^2.
+\end{equation}
+\textit{This equation reflects that the photon moves at the speed of light in this curved 2D geometry.}
+
+\textit{We can substitute the result from \eqref{eq:pt-const},}
+\[
+\frac{dt}{d\lambda}
+= \frac{E}{\,1 + \frac{x^2}{\ell^2}\,},
+\]
+\textit{into the null condition. Then we get:}
+\[
+0
+= -\left(1 + \frac{x^2}{\ell^2}\right)\,
+ \left(\frac{E}{\,1 + \frac{x^2}{\ell^2}\,}\right)^2
+\;+\;
+\left(\frac{dx}{d\lambda}\right)^2.
+\]
+\textit{Simplifying,}
+\[
+\left(\frac{dx}{d\lambda}\right)^2
+= \frac{E^2}{\,1 + \frac{x^2}{\ell^2}\,}.
+\]
+\textit{Taking the square root,}
+\begin{equation}
+\frac{dx}{d\lambda}
+= \pm\,\frac{E}{\sqrt{\,1 + \frac{x^2}{\ell^2}\,}}.
+\end{equation}
+\textit{The \(\pm\) sign indicates that the photon can move in either the positive or negative \(x\) direction.}
+
+\paragraph{7. Final Expressions and Physical Interpretation.}
+
+\begin{itemize}
+\item \(\displaystyle p_t = -E\) \textit{is the \emph{conserved} energy component, due to the time translation symmetry (\(\partial_t g_{\alpha\beta} = 0\)).}
+\item \textit{From \(p_t\), we get \(\displaystyle \frac{dt}{d\lambda} = \frac{E}{1 + x^2/\ell^2}\).}
+\item \textit{The null condition \(ds^2 = 0\) then gives \(\displaystyle \frac{dx}{d\lambda} = \pm \frac{E}{\sqrt{1 + x^2/\ell^2}}\). }
+\end{itemize}
+
+\textit{Thus, we see that the photon's motion in \((t,x)\) coordinates is completely described once the constant energy \(E\) is specified.}
+
+\paragraph{Why We Used the Geodesic Equation for \(\mathbf{p_\mu}\) Conservation.}
+
+\textit{One last remark: to show that \(p_t\) is constant, one needs to analyze how \(p_\mu\) evolves along \(\lambda\). The geodesic equation (in its covariant form) states:}
+\[
+\frac{dp_\nu}{d\lambda}
+= \frac12\,\partial_\nu g_{\alpha\beta}\,p^\alpha p^\beta.
+\]
+\textit{If the metric does not depend on \(t\), then \(\partial_t g_{\alpha\beta} = 0\), which \emph{directly} implies that \(\frac{dp_t}{d\lambda} = 0\). Thus, \(p_t\) is a conserved quantity. This is the rigorous link between the symmetry of the metric (\(\partial_t = 0\)) and the constancy of \(p_t\).}\\\\
+
+
+\pagebreak
+
+\section*{Exercise 10}
+
+\noindent
+Starting from the expression of the Schwarzschild metric, compute the explicit expressions for the Christoffel symbols \(\Gamma_{r r}^{r}\) and \(\Gamma_{r \phi}^{\phi}\).
+
+\bigskip
+\subsection*{Extended Solution with Additional Explanations}
+
+\paragraph{(i) Schwarzschild Metric.}
+We consider the Schwarzschild metric in the coordinates \((t,\,r,\,\theta,\,\phi)\):
+\[
+ds^2 \;=\; 
+-\Bigl(1 - \frac{2GM}{r}\Bigr)\,dt^2
+\;+\;
+\Bigl(1 - \frac{2GM}{r}\Bigr)^{-1} dr^2
+\;+\;
+r^2 \, d\theta^2
+\;+\;
+r^2 \, \sin^2\theta \, d\phi^2.
+\]
+
+\emph{This metric describes the curved spacetime outside a spherically symmetric mass. A spherically symmetric mass means that its gravitational influence depends only on the distance from the center and not on directions. The term \(2GM\) is called the Schwarzschild radius, and when \(r\) is at this value, one reaches the event horizon of a black hole solution. The Schwarzschild metric is a vacuum solution of Einstein’s field equations, implying there is no matter or energy density outside the central mass. The coordinate \(t\) can be seen as the time measured by an observer far away from the mass (at infinity), and \(r\) can be understood as the radial coordinate, though at small distances it does not behave like the usual flat-space radius. The angles \(\theta\) and \(\phi\) are the usual spherical angles.}
+
+\noindent
+The nonzero components of the metric tensor \(g_{\mu\nu}\) are:
+\[
+g_{tt} = -\Bigl(1 - \tfrac{2GM}{r}\Bigr), 
+\quad
+g_{rr} = \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
+\quad
+g_{\theta\theta} = r^2,
+\quad
+g_{\phi\phi} = r^2 \sin^2\theta.
+\]
+All other components vanish.
+
+\emph{We see that these components are arranged diagonally, reflecting spherical symmetry and no rotation (no off-diagonal terms). The negative sign in \(g_{tt}\) is a signature convention often used in General Relativity, and it encodes the fact that \(t\) is a timelike coordinate.}
+
+\smallskip
+
+\noindent
+The inverse metric tensor \(g^{\mu\nu}\) has the nonzero components:
+\[
+g^{tt} 
+= 
+-\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
+\quad
+g^{rr} 
+= 
+\Bigl(1 - \tfrac{2GM}{r}\Bigr),
+\quad
+g^{\theta\theta} 
+= 
+\frac{1}{r^2},
+\quad
+g^{\phi\phi} 
+= 
+\frac{1}{r^2 \sin^2\theta}.
+\]
+
+\emph{Notice how each nonzero component of the inverse metric is simply the reciprocal of the corresponding component of \(g_{\mu\nu}\) (up to a sign for the time component). This pattern is characteristic of a diagonal metric. The factor \(\bigl(1 - \frac{2GM}{r}\bigr)\) is central to the Schwarzschild solution and it appears in many calculations of physical quantities, such as orbital speeds and gravitational redshift.}
+
+\paragraph{(ii) Christoffel Symbols: General Formula.}
+The Christoffel symbols \(\Gamma^\rho_{\mu\nu}\) are defined by:
+\[
+\Gamma^\rho_{\mu \nu} 
+\;=\;
+\frac{1}{2} \, g^{\rho \sigma}
+\Bigl(
+\partial_\mu g_{\sigma\nu}
+\;+\;
+\partial_\nu g_{\sigma\mu}
+\;-\;
+\partial_\sigma g_{\mu\nu}
+\Bigr).
+\]
+
+\emph{These symbols can be thought of as describing the ``connection'' in a curved space or spacetime, telling us how to take derivatives of vector or tensor fields when coordinates change from one point to another. Although they are not tensors themselves, they appear in important equations such as the geodesic equation. Recall that the geodesic equation}
+\[
+\frac{d^2 x^\rho}{d\tau^2} 
++ 
+\Gamma^\rho_{\mu\nu} 
+\frac{dx^\mu}{d\tau}\,\frac{dx^\nu}{d\tau} 
+= 0
+\]
+\emph{tells us how a free-falling particle (or photon) moves under gravity alone. For instance, setting the coordinate indices appropriately will reveal how a radial distance or an angular coordinate might change if there is no external force except gravity.}
+
+\noindent
+We are specifically interested in the components \(\Gamma^r_{rr}\) and \(\Gamma^\phi_{r\phi}\).
+
+\paragraph{(iii) Calculation of \(\Gamma^r_{rr}\).}
+We set \(\rho = r\), \(\mu = r\), and \(\nu = r\). Then, by the definition:
+\[
+\Gamma^r_{rr}
+\;=\;
+\frac{1}{2}\,g^{r\sigma}
+\Bigl(
+\partial_r g_{\sigma r}
+\;+\;
+\partial_r g_{\sigma r}
+\;-\;
+\partial_\sigma g_{rr}
+\Bigr).
+\]
+Since \(g^{r\sigma}\) is nonzero only when \(\sigma = r\), we get:
+\[
+\Gamma^r_{rr}
+\;=\;
+\frac{1}{2}\, g^{rr}
+\Bigl(
+\partial_r g_{rr}
+\;+\;
+\partial_r g_{rr}
+\;-\;
+\partial_r g_{rr}
+\Bigr)
+\;=\;
+\frac{1}{2}\, g^{rr} \,\partial_r g_{rr}.
+\]
+
+\emph{Observe that one of the three terms inside the parentheses is subtracted, so we effectively get a single partial derivative. This is a common simplification that happens when two of the terms combine to cancel out the third.}
+
+\smallskip
+
+\noindent
+Recall that
+\[
+g_{rr} 
+= 
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
+\]
+so its derivative with respect to \(r\) is (using the derivative of nested functions)
+\[
+\partial_r \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}
+\;=\;
+-\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-2}
+\cdot
+\frac{2GM}{r^2}.
+\]
+Also note that
+\[
+g^{rr} 
+= 
+\Bigl(1 - \tfrac{2GM}{r}\Bigr).
+\]
+
+\emph{It may help to do the derivative step by step. Let \(f(r) = 1 - \tfrac{2GM}{r}\). Then \(g_{rr} = f(r)^{-1}\). By the chain rule, \(\tfrac{d}{dr}[f(r)^{-1}] = -f(r)^{-2} \tfrac{df}{dr}\). And \(\tfrac{df}{dr} = \tfrac{2GM}{r^2}\). Combining these gives the expression above.}
+
+\smallskip
+
+\noindent
+Putting everything together:
+\[
+\Gamma^r_{rr}
+\;=\;
+\frac{1}{2}
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)
+\Bigl[
+-\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-2}
+\cdot 
+\frac{2GM}{r^2}
+\Bigr].
+\]
+We can factor out the terms carefully:
+\[
+\Gamma^r_{rr}
+=
+-\frac{1}{2} 
+\Bigl(1 - \tfrac{2GM}{r}\Bigr) 
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-2}
+\cdot
+\frac{2GM}{r^2}
+=
+-\frac{GM}{r^2} 
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}.
+\]
+
+\emph{The negative sign indicates that a free-falling object would accelerate in the negative \(r\)-direction, i.e.\ towards smaller \(r\), which aligns with the idea of a gravitational pull inward. This Christoffel symbol is crucial in determining the radial part of the geodesic equation.}
+
+\paragraph{(iv) Calculation of \(\Gamma^\phi_{r\phi}\).}
+We set \(\rho = \phi\), \(\mu = r\), and \(\nu = \phi\). From the definition, we have:
+\[
+\Gamma^\phi_{r\phi}
+\;=\;
+\frac{1}{2}\,g^{\phi\sigma}
+\Bigl(
+\partial_r g_{\sigma \phi}
+\;+\;
+\partial_\phi g_{\sigma r}
+\;-\;
+\partial_\sigma g_{r \phi}
+\Bigr).
+\]
+Since \(g^{\phi\sigma}\) is nonzero only for \(\sigma = \phi\), and since \(g_{r\phi} = 0\) (there are no cross terms in the metric between \(r\) and \(\phi\)), it follows that
+\[
+\Gamma^\phi_{r\phi}
+\;=\;
+\frac{1}{2} \, g^{\phi\phi}\,\partial_r g_{\phi\phi}.
+\]
+
+\emph{This simplification relies on the fact that the only relevant term is the derivative of \(g_{\phi\phi}\) with respect to \(r\). Again, cross terms do not appear in the Schwarzschild metric, keeping the expression neat.}
+
+\smallskip
+
+\noindent
+Recall that
+\[
+g_{\phi\phi} 
+= 
+r^2 \sin^2\theta,
+\]
+and its derivative with respect to \(r\) is
+\[
+\partial_r (r^2 \sin^2\theta) 
+= 
+2r \,\sin^2\theta.
+\]
+We also have
+\[
+g^{\phi\phi} 
+= 
+\frac{1}{r^2 \sin^2\theta}.
+\]
+
+\emph{Thus, \(g_{\phi\phi}\) grows like \(r^2\), reflecting the area of a sphere in spherical coordinates. The factor \(\sin^2\theta\) ensures that the metric reduces properly on different slices of constant \(\theta\).}
+
+\smallskip
+
+\noindent
+Putting these together:
+\[
+\Gamma^\phi_{r\phi}
+=
+\frac{1}{2}
+\Bigl(\tfrac{1}{r^2 \sin^2\theta}\Bigr)
+\bigl(2\,r\,\sin^2\theta\bigr)
+=
+\frac{1}{r}.
+\]
+
+\emph{This \(1/r\) dependence is typical for spherical coordinates and reflects the fact that when you move radially outward, the circle of radius \(r\) (in the \(\theta,\phi\) plane) expands. The Christoffel symbol tells us precisely how the basis vectors for the \(\phi\) direction change with \(r\).}
+
+\paragraph{(v) Final Results.}
+We conclude that the two Christoffel symbols requested in this problem are:
+\[
+\Gamma^r_{rr}
+=
+-\frac{GM}{r^2}
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
+\qquad
+\Gamma^\phi_{r\phi}
+=
+\frac{1}{r}.
+\]
+
+\emph{These components play an important role in understanding geodesics in Schwarzschild spacetime. The \(\Gamma^r_{rr}\) component affects the radial part of a freely falling particle’s motion, while \(\Gamma^\phi_{r\phi}\) influences the azimuthal coordinate \(\phi\) when changing \(r\). In short, they are key ingredients in describing the geometry around a non-rotating, spherically symmetric mass. They encapsulate how local coordinate directions ``twist'' and ``turn'' in a curved geometry, ensuring that we can write down the correct equations of motion in General Relativity.}
 
 \end{document}
