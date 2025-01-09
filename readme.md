@@ -175,3 +175,141 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
     *   Substitute the expressions for $\nabla_\mu V^\nu$ and $\nabla_\mu V_\nu$.
     *   Show that the terms involving Christoffel symbols cancel out after renaming dummy indices.
     *   The result follows: $\nabla_\mu (V^\nu V_\nu) = \partial_\mu (V^\nu V_\nu)$.
+
+---
+
+## 8. Commutator of Covariant Derivatives on a (2,0) Tensor
+
+1. **General Commutator Formula**
+
+   For a $(2,0)$ tensor $W^{\mu\nu}$,
+   $
+   [\nabla_\alpha, \nabla_\beta]\;W^{\mu\nu}
+   \;=\;
+   R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu}
+   \;+\;
+   R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma}.
+   $
+
+2. **Contraction and Conditions**
+
+   After contracting suitable indices (so that we look at $[\nabla_{\mu}, \nabla_{\nu}]\,W^{\mu\nu}$), one obtains
+   $
+   [\nabla_{\mu}, \nabla_{\nu}]\,W^{\mu\nu}
+   \;=\;
+   R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
+   $
+   This expression vanishes under either of these conditions:
+   *   $W^{\mu\nu}$ is symmetric, i.e.\ $W^{\mu\nu} = W^{\nu\mu}$.
+   *   The spacetime is Ricci-flat, $R_{\mu\nu} = 0$.
+
+---
+
+## 9. Photon Geodesics in 2D Spacetime
+
+1. **Metric and Null Condition**
+
+   *   The 2D metric is:
+     $
+     ds^2 
+     = 
+     -\Bigl(1 + \frac{x^2}{\ell^2}\Bigr)\,dt^2
+     \;+\;
+     dx^2.
+     $
+   *   A photon satisfies $ds^2 = 0$ (null geodesic).
+
+2. **Conserved Quantity**
+
+   *   The metric does not depend on $t$, so $p_t = g_{t\alpha} \, p^\alpha$ is conserved.
+   *   Define $p_t = -\,E$, leading to
+     $
+     \Bigl(1 + \frac{x^2}{\ell^2}\Bigr)\,\frac{dt}{d\lambda} = E.
+     $
+
+3. **Solve for \(\frac{dx}{d\lambda}\)**
+
+   *   From the null condition:
+     $
+     0
+     =
+     -\Bigl(1 + \frac{x^2}{\ell^2}\Bigr)\,\Bigl(\frac{dt}{d\lambda}\Bigr)^2
+     \;+\;
+     \Bigl(\frac{dx}{d\lambda}\Bigr)^2.
+     $
+   *   Substitute $\tfrac{dt}{d\lambda} = \tfrac{E}{1 + x^2/\ell^2}$ to get
+     $
+     \Bigl(\frac{dx}{d\lambda}\Bigr)^2
+     =
+     \frac{E^2}{\,1 + \frac{x^2}{\ell^2}\,}.
+     $
+   *   Therefore,
+     $
+     \frac{dx}{d\lambda}
+     =
+     \pm\;\frac{E}{\sqrt{\,1 + \frac{x^2}{\ell^2}\,}}.
+     $
+
+---
+
+## 10. Christoffel Symbols in Schwarzschild Coordinates
+
+1. **Schwarzschild Metric**
+
+   $
+   ds^2 
+   = 
+   -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,dt^2
+   \;+\;
+   \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}\,dr^2
+   \;+\;
+   r^2\,d\theta^2
+   \;+\;
+   r^2\,\sin^2\theta\,d\phi^2.
+   $
+
+2. **Compute \(\Gamma^r_{rr}\)**
+
+   *   Recall
+     $
+     \Gamma^r_{rr}
+     =
+     \tfrac12\,g^{rr}\,\partial_r g_{rr},
+     \quad
+     g_{rr}
+     =
+     \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
+     \quad
+     g^{rr}
+     =
+     \Bigl(1 - \tfrac{2GM}{r}\Bigr).
+     $
+   *   One finds
+     $
+     \Gamma^r_{rr}
+     =
+     -\,\frac{GM}{r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}.
+     $
+
+3. **Compute \(\Gamma^\phi_{r\phi}\)**
+
+   *   Recall
+     $
+     \Gamma^\phi_{r\phi}
+     =
+     \tfrac12\,g^{\phi\phi}\,\partial_r g_{\phi\phi},
+     \quad
+     g_{\phi\phi}
+     =
+     r^2\,\sin^2\theta,
+     \quad
+     g^{\phi\phi}
+     =
+     \frac{1}{\,r^2\,\sin^2\theta\,}.
+     $
+   *   Hence
+     $
+     \Gamma^\phi_{r\phi}
+     =
+     \frac{1}{r}.
+     $
