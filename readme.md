@@ -229,13 +229,13 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
 2. **Compute \(\Gamma^r_{rr}\)**
 
    *   Recall
-     $\Gamma^r_{rr} = \tfrac12\,g^{rr}\,\partial_r g_{rr}, \quad g_{rr} = \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}, \quad g^{rr} = \Bigl(1 - \tfrac{2GM}{r}\Bigr).$
+     * $\Gamma^r_{rr} = \tfrac12\,g^{rr}\,\partial_r g_{rr}, \quad g_{rr} = \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}, \quad g^{rr} = \Bigl(1 - \tfrac{2GM}{r}\Bigr).$
    *   One finds
-     $\Gamma^r_{rr} = -\,\frac{GM}{r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}.$
+     * $\Gamma^r_{rr} = -\,\frac{GM}{r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}.$
 
 3. **Compute \(\Gamma^\phi_{r\phi}\)**
 
    *   Recall
-     $ \Gamma^\phi_{r\phi}=\tfrac12\,g^{\phi\phi}\,\partial_r g_{\phi\phi},\quad g_{\phi\phi} = r^2\,\sin^2\theta, \quad g^{\phi\phi} = \frac{1}{\,r^2\,\sin^2\theta\,}.$
+     * $ \Gamma^\phi_{r\phi}=\tfrac12\,g^{\phi\phi}\,\partial_r g_{\phi\phi},\quad g_{\phi\phi} = r^2\,\sin^2\theta, \quad g^{\phi\phi} = \frac{1}{\,r^2\,\sin^2\theta\,}.$
    *   Hence
-     $ \Gamma^\phi_{r\phi} = \frac{1}{r}.$
+     * $ \Gamma^\phi_{r\phi} = \frac{1}{r}.$
