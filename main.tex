@@ -2029,4 +2029,285 @@ We conclude that the two Christoffel symbols requested in this problem are:
 
 \emph{These components play an important role in understanding geodesics in Schwarzschild spacetime. The \(\Gamma^r_{rr}\) component affects the radial part of a freely falling particle’s motion, while \(\Gamma^\phi_{r\phi}\) influences the azimuthal coordinate \(\phi\) when changing \(r\). In short, they are key ingredients in describing the geometry around a non-rotating, spherically symmetric mass. They encapsulate how local coordinate directions ``twist'' and ``turn'' in a curved geometry, ensuring that we can write down the correct equations of motion in General Relativity.}
 
+
+\pagebreak
+
+\section*{Question 11}
+
+\textit{This exercise focuses on the orbits of massive particles in a Schwarzschild geometry, which describes the spacetime around a spherically symmetric and non-rotating object, such as a star or a black hole. In particular, the objective is to determine the minimum radius for a stable circular orbit.}
+
+For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
+\[
+E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda}, 
+\quad
+L = r^{2} \frac{d\phi}{d\lambda}.
+\]
+\textit{These two conserved quantities, \(E\) and \(L\), derive from the symmetries of the Schwarzschild metric. They are associated with the Killing vectors related to time-translation invariance and axisymmetry, respectively. \(E\) is the energy per unit mass of the particle, conserved due to the invariance under time translations (the metric does not explicitly depend on time \(t\)). \(L\) is the angular momentum per unit mass, conserved due to the spherical symmetry (the metric does not depend on the angle \(\phi\)). \(\lambda\) is an affine parameter that parametrizes the geodesic.}
+Determine the smallest allowed radius for a stable circular orbit for a massive object.
+
+\subsection*{Solution}
+
+\paragraph{(i) Schwarzschild Metric and Conserved Quantities}
+\textit{We begin by writing the Schwarzschild metric and the conserved quantities associated with the motion of a massive particle in this metric.}
+
+We consider the Schwarzschild metric:
+\begin{equation}
+ds^2 = - \left(1 - \frac{2GM}{r}\right)dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\phi^2.
+\end{equation}
+\textit{This is the Schwarzschild metric in coordinates \((t, r, \theta, \phi)\), where \(t\) is the coordinate time, \(r\) is the radial coordinate, and \(\theta\) and \(\phi\) are the angular coordinates. \(M\) is the mass of the central object (like a black hole or a star), and \(G\) is the universal gravitational constant.}
+Because of the symmetries of this spacetime (time-translation invariance and spherical symmetry), two conserved quantities naturally arise for geodesic motion:
+
+\begin{equation}
+E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda},
+\quad
+L = r^{2} \frac{d\phi}{d\lambda}.
+\end{equation}
+
+In our case of a massive particle, we can use $d\tau$ instead of $d\lambda$, hence we get:
+
+\begin{equation}
+E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\tau},
+\quad
+L = r^{2} \frac{d\phi}{d\tau}.
+\end{equation}
+
+Here, \(E\) can be interpreted as the energy per unit mass of the particle, while \(L\) is the angular momentum per unit mass.
+\textit{\(E\) is the energy per unit mass of the particle, conserved because of the invariance under time translations (the metric does not explicitly depend on time \(t\)). \(L\) is the angular momentum per unit mass, conserved because of the spherical symmetry (the metric does not depend on the angle \(\phi\)). \(\tau\) is the proper time that parametrizes the geodesic.}
+
+\paragraph{(ii) Normalization Condition and Effective Potential}
+\textit{For a massive particle, its four-velocity \(u^\mu = \frac{dx^\mu}{d\tau}\) is normalized. Using this normalization condition and the conserved quantities, we can define an effective potential that describes the radial motion of the particle.}
+
+\textit{Theoretical Setup:}
+
+In General Relativity, the motion of a test particle is described by the geodesic equation, which dictates that the particle follows the shortest path (geodesic) through curved spacetime. To analyze this motion, we need tools to describe the particle's trajectory and the forces acting on it. This is where the four-velocity and its normalization condition come into play.
+
+\subparagraph{Four-Velocity}
+
+The four-velocity is a four-vector that generalizes the concept of velocity to four-dimensional spacetime. For a massive particle, we use the proper time \(\tau\) as the affine parameter. Proper time is the time measured by a clock moving along with the particle. The four-velocity is defined as:
+
+\begin{equation}
+u^\mu = \frac{dx^\mu}{d\tau}
+\end{equation}
+
+where \(x^\mu = (t, r, \theta, \phi)\) are the spacetime coordinates in Schwarzschild spacetime. Each component of the four-velocity represents the rate of change of the corresponding coordinate with respect to proper time.
+
+\textit{Why use the four-velocity?}
+
+\textit{Covariance:} The four-velocity is a four-vector, which means it transforms covariantly under coordinate transformations. This ensures that the equations of motion are independent of the chosen coordinate system.\\
+\textit{Relativistic Invariance:} The four-velocity incorporates both the particle's spatial velocity and the effects of time dilation, making it a suitable quantity to describe motion in a relativistic context.\\
+\textit{Normalization:} The four-velocity has a specific normalization condition that provides a crucial constraint on the particle's motion, as explained below.
+
+\subparagraph{Normalization Condition}
+
+The four-velocity of a massive particle is normalized such that its scalar product with itself is equal to -1 (using the metric signature -, +, +, +). This arises from the definition of proper time, which is the time measured by a clock moving along with the particle. The proper time interval \(d\tau\) is related to the spacetime interval \(ds\) by:
+
+\begin{equation}
+ds^2 = - d\tau^2
+\end{equation}
+where we are using units where $c=1$.
+
+In four-vector notation, the spacetime interval is given by:
+
+\begin{equation}
+ds^2 = g_{\mu\nu} dx^\mu dx^\nu
+\end{equation}
+
+Dividing both sides by \(d\tau^2\), we get:
+
+\begin{equation}
+\frac{ds^2}{d\tau^2} = g_{\mu\nu} \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} = g_{\mu\nu}u^\mu u^\nu
+\end{equation}
+
+Since \(ds^2 = -d\tau^2\) (with $c=1$), we have \(\frac{ds^2}{d\tau^2} = -1\). Therefore, the normalization condition is:
+
+\begin{equation}
+g_{\mu\nu}u^\mu u^\nu = -1.
+\end{equation}
+
+\textit{Why is this important?}
+
+\textit{Physical Constraint:} This condition reflects the fact that massive particles travel along timelike geodesics, meaning their four-velocity is always timelike.\\
+\textit{Connection to Energy:} The normalization condition, combined with the conserved quantities (energy and angular momentum), allows us to derive an equation of motion for the radial coordinate that resembles the energy conservation equation in classical mechanics. This enables us to define an effective potential.
+
+\subparagraph{Equatorial Plane and Simplification}
+
+We further simplify the problem by restricting the motion to the equatorial plane, setting \(\theta = \frac{\pi}{2}\).
+
+\textit{Why can we do this?}
+
+\textit{Spherical Symmetry:} The Schwarzschild spacetime is spherically symmetric. This means that if a particle starts moving in a particular plane, there are no forces to push it out of that plane. It will continue to move in that plane indefinitely.
+\textit{Coordinate Choice:} Setting \(\theta = \frac{\pi}{2}\) is simply a choice of coordinates that aligns our coordinate system with the plane of motion. This simplifies the equations without loss of generality.
+
+With \(d\theta = 0\) (since \(\theta = \frac{\pi}{2}\) is constant) and using the definition \(u^\mu = \frac{dx^\mu}{d\tau}\), the normalization condition becomes:
+
+\begin{equation}
+g_{\mu\nu} \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} = -1.
+\end{equation}
+
+Substituting the components of the Schwarzschild metric and expanding the summation, we have:
+
+\begin{equation}
+g_{tt}\left(\frac{dt}{d\tau}\right)^2 + g_{rr}\left(\frac{dr}{d\tau}\right)^2 + g_{\phi\phi}\left(\frac{d\phi}{d\tau}\right)^2 = -1.
+\end{equation}
+
+Plugging in the explicit form of the Schwarzschild metric components for the equatorial plane:
+
+\begin{equation}
+-\left(1 - \frac{2GM}{r}\right)\left(\frac{dt}{d\tau}\right)^2 + \left(1 - \frac{2GM}{r}\right)^{-1} \left(\frac{dr}{d\tau}\right)^2 + r^2 \left(\frac{d\phi}{d\tau}\right)^2 = -1.
+\end{equation}
+
+\subparagraph{Conserved Quantities and Effective Potential}
+
+We have the conserved quantities \(E\) and \(L\) defined as:
+
+\begin{equation}
+E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\tau},
+\quad
+L = r^2 \frac{d\phi}{d\tau}.
+\end{equation}
+
+These quantities are conserved due to the symmetries of the Schwarzschild spacetime (timelike and rotational Killing vectors).
+
+From these, we can isolate \(\frac{dt}{d\tau}\) and \(\frac{d\phi}{d\tau}\) as follows:
+
+\begin{equation}
+\frac{dt}{d\tau} = \frac{E}{1 - \frac{2GM}{r}},
+\quad
+\frac{d\phi}{d\tau} = \frac{L}{r^2}.
+\end{equation}
+
+Substituting these expressions into the normalization equation gives:
+
+\begin{equation}
+-\left(1 - \frac{2GM}{r}\right) \left( \frac{E}{1-\frac{2GM}{r}} \right)^2 + \left( 1- \frac{2GM}{r} \right)^{-1} \left( \frac{dr}{d\tau} \right)^2 + r^2 \left( \frac{L}{r^2} \right)^2 = -1.
+\end{equation}
+
+Simplifying the equation:
+
+\begin{equation}
+-\frac{E^2}{1-\frac{2GM}{r}} + \left( 1- \frac{2GM}{r} \right)^{-1} \left( \frac{dr}{d\tau} \right)^2 + \frac{L^2}{r^2} = -1.
+\end{equation}
+
+Multiply through by $\left( 1- \frac{2GM}{r} \right)$ to get rid of the denominators:
+
+\begin{equation}
+-E^2 + \left( \frac{dr}{d\tau} \right)^2 + \frac{L^2}{r^2}\left( 1- \frac{2GM}{r} \right) = -\left( 1 - \frac{2GM}{r} \right).
+\end{equation}
+
+Expanding the last term on the left side:
+
+\begin{equation}
+-E^2 + \left( \frac{dr}{d\tau} \right)^2 + \frac{L^2}{r^2} - \frac{2GML^2}{r^3} = -1 + \frac{2GM}{r}.
+\end{equation}
+
+Rearranging to isolate $\left( \frac{dr}{d\tau} \right)^2$:
+
+\begin{equation}
+\left( \frac{dr}{d\tau} \right)^2 = E^2 - 1 + \frac{2GM}{r} - \frac{L^2}{r^2} + \frac{2GML^2}{r^3}.
+\end{equation}
+
+Now, multiply the equation by $\frac{1}{2}$ and collect terms to match the form $\frac{1}{2}\left(\frac{dr}{d\tau}\right)^2 + V_{\mathrm{eff}}(r) = \frac{E^2}{2}$:
+
+\begin{equation}
+\frac{1}{2}\left(\frac{dr}{d\tau}\right)^2 = \frac{E^2}{2} - \frac{1}{2} + \frac{GM}{r} - \frac{L^2}{2r^2} + \frac{GML^2}{r^3}.
+\end{equation}
+
+Rearranging to isolate $\frac{E^2}{2}$ on the right side:
+
+\begin{equation}
+\frac{1}{2}\left(\frac{dr}{d\tau}\right)^2 + \left(-\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} + \frac{1}{2} \right) = \frac{E^2}{2}.
+\end{equation}
+
+Comparing with the desired form, we identify the effective potential $V_{\mathrm{eff}}(r)$ as:
+
+\begin{equation}
+V_{\mathrm{eff}}(r) = -\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} + \frac{1}{2}.
+\end{equation}
+This equation has the same form as the energy conservation equation in classical mechanics:
+Kinetic Energy + Potential Energy = Total Energy.
+
+Here, $\frac{1}{2}\left(\frac{dr}{d\tau}\right)^2$ represents the "kinetic energy" associated with radial motion, $V_{\mathrm{eff}}(r)$ is the "effective potential energy", and $\frac{E^2}{2}$ is the "total energy".
+
+This can also be written as:
+
+\begin{equation}
+V_{\mathrm{eff}}(r) = \left(1 - \frac{2GM}{r}\right)\left(\frac{1}{2} + \frac{L^2}{2r^2}\right).
+\end{equation}
+\textit{This equation has a form similar to that of energy in classical mechanics, where the first term represents the radial kinetic energy and the second term is the effective potential. $V_{\mathrm{eff}}(r)$ is a function of the radial coordinate $r$ and depends on the parameters $G$, $M$, and $L$. The effective potential combines the effects of gravitational attraction, centrifugal repulsion, and a relativistic correction.}
+Expanding,
+\begin{equation}
+V_{\mathrm{eff}}(r) = \frac{1}{2} - \frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GM L^2}{r^3}.
+\end{equation}
+\textit{Expanding the expression for the effective potential, we obtain a more explicit form that allows us to analyze its behavior. The first term is a constant, the second term is the Newtonian term (attractive), the third term is a centrifugal term (repulsive), and the fourth term is an additional term due to General Relativity (attractive).}
+Intuitively, $V_{\mathrm{eff}}(r)$ encodes the combined effects of the gravitational attraction (terms with $GM/r$) and the centrifugal repulsion (terms with $L^2$).
+\textit{Intuitively, $V_{\mathrm{eff}}(r)$ takes into account both the gravitational attraction (terms with $GM/r$) and the centrifugal repulsion (terms with $L^2$). The effective potential represents the effective potential energy per unit mass of the particle as a function of the radial coordinate $r$.}
+
+\paragraph{(iii) Circular Orbits}
+\textit{Now we analyze the conditions for having circular orbits. A circular orbit is characterized by a constant radius, which implies that the radial velocity is zero.}
+
+To have a circular orbit at radius \(r\), the radial coordinate must remain constant, implying
+\begin{equation}
+\frac{dr}{d\tau} = 0.
+\end{equation}
+\textit{For a circular orbit, the radial coordinate $r$ must remain constant. This means that the derivative of $r$ with respect to the proper time $\tau$ must be zero.}
+This means we sit at an extremum of the effective potential (since the motion in $r$-direction is momentarily at rest and remains so):
+\begin{equation}
+\frac{dV_{\mathrm{eff}}}{dr} = 0.
+\end{equation}
+\textit{The condition $dr/d\tau = 0$ implies that we are at an extremum point (maximum or minimum) of the effective potential. At an extremum point, the derivative of the effective potential with respect to $r$ is zero.}
+Computing the derivative of $V_{\mathrm{eff}}(r)$:
+\begin{equation}
+\frac{dV_{\mathrm{eff}}}{dr} = \frac{GM}{r^2} - \frac{L^2}{r^3} + \frac{3 G M L^2}{r^4}.
+\end{equation}
+\textit{We calculate the derivative of the effective potential with respect to $r$.}
+Setting this to zero gives the condition for circular orbits:
+\begin{equation}
+\frac{GM}{r^2} - \frac{L^2}{r^3} + \frac{3 G M L^2}{r^4} = 0.
+\end{equation}
+\textit{Setting the derivative of the effective potential equal to zero, we obtain the condition for the existence of circular orbits.}
+Multiplying by $r^4$ yields a quadratic equation in $r$:
+\begin{equation}
+GM r^2 - L^2 r + 3 G M L^2 = 0.
+\end{equation}
+\textit{Multiplying the previous equation by $r^4$, we obtain a quadratic equation in $r$, the solution of which will give us the radii of the possible circular orbits.}
+This equation will generally give up to two real solutions for $r$, corresponding to (at most) two possible circular orbit radii for a given $L$.
+\textit{This quadratic equation can have up to two real solutions for $r$, which correspond to two possible radii of circular orbits for a given value of the angular momentum $L$.} Solving for $r$ we get:
+\begin{equation}
+r = \frac{L^2 \pm \sqrt{L^4 - 12 G^2 M^2 L^2}}{2 G M}.
+\end{equation}
+\paragraph{(iv) Smallest Stable Radius}
+\textit{We now determine the minimum radius for a stable circular orbit. This corresponds to the point where the two solutions of the quadratic equation for $r$ coincide.}
+
+Solving
+\begin{equation*}
+GM r^2 - L^2 r + 3 G M L^2 = 0
+\end{equation*}
+for $r$ gives
+\begin{equation*}
+r = \frac{L^2 \pm \sqrt{L^4 - 12 G^2 M^2 L^2}}{2 G M}.
+\end{equation*}
+\textit{We solve the quadratic equation for $r$ using the quadratic formula for second-degree equations.}
+Real solutions exist only if the discriminant is non-negative:
+\begin{equation*}
+L^4 - 12 G^2 M^2 L^2 \ge 0
+\quad \Longrightarrow \quad
+L^2 \left(L^2 - 12 G^2 M^2\right) \ge 0
+\quad \Longrightarrow \quad
+L^2 \ge 12 G^2 M^2.
+\end{equation*}
+\textit{Real solutions exist only if the discriminant of the quadratic equation is non-negative. This gives us a condition on the minimum value of the angular momentum $L$ for the existence of circular orbits.}
+At the threshold $L^2 = 12 G^2 M^2$, the two solutions for $r$ coincide. Substituting $L^2 = 12 G^2 M^2$ back into $r$, we get
+\begin{equation*}
+r = \frac{L^2 \pm 0}{2 G M} = \frac{12 G^2 M^2 \pm 0}{2 G M} = 6 G M.
+\end{equation*}
+\textit{At the threshold value $L^2 = 12 G^2 M^2$, the two solutions for $r$ coincide. Substituting this value of $L$ into the expression for $r$, we obtain the minimum radius for a circular orbit.}
+This particular circular orbit at $r = 6 G M$ corresponds to the \emph{innermost stable circular orbit} (ISCO) for a massive particle in Schwarzschild geometry. Below this radius, any circular orbit would be unstable or not allowed by the geometry.
+\textit{This particular circular orbit at $r = 6 G M$ corresponds to the innermost stable circular orbit (ISCO) for a massive particle in the Schwarzschild geometry. Below this radius, any circular orbit would be unstable or not allowed by the geometry.}
+
+
+\[
+\boxed{
+\text{Therefore, the smallest allowed radius for a stable circular orbit is } r = 6 G M.
+}
+\]
 \end{document}

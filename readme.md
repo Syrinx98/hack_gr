@@ -239,3 +239,39 @@ This concise guide outlines the essential steps to solve the GR (General Relativ
      *   $\Gamma^\phi_{r\phi} = \frac{1}{2}g^{\phi\phi}\partial_r g_{\phi\phi},\quad g_{\phi\phi} = r^2\sin^2\theta, \quad g^{\phi\phi} = \frac{1}{r^2\sin^2\theta}.$
    *   Hence
      *   $\Gamma^\phi_{r\phi} = \frac{1}{r}.$
+
+---
+
+## 11. Stable Circular Orbits in Schwarzschild Geometry
+
+1.  **Schwarzschild Metric and Conserved Quantities**
+    *   The Schwarzschild metric is:
+        $ds^2 = - \left(1 - \frac{2GM}{r}\right)dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\phi^2.$
+    *   Conserved quantities for geodesic motion are:
+        $E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\tau}$ (energy per unit mass)
+        $L = r^2 \frac{d\phi}{d\tau}$ (angular momentum per unit mass)
+
+2.  **Normalization Condition and Effective Potential**
+    *   For a massive particle, the four-velocity normalization is:
+        $g_{\mu\nu} \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} = -1$
+    *   Restricting motion to the equatorial plane ($\theta = \frac{\pi}{2}$), the normalization condition becomes:
+        $-\left(1 - \frac{2GM}{r}\right)\left(\frac{dt}{d\tau}\right)^2 + \left(1 - \frac{2GM}{r}\right)^{-1} \left(\frac{dr}{d\tau}\right)^2 + r^2 \left(\frac{d\phi}{d\tau}\right)^2 = -1$
+    *   Substituting $E$ and $L$ and rearranging, we get:
+        $\frac{1}{2}\left(\frac{dr}{d\tau}\right)^2 + V_{\mathrm{eff}}(r) = \frac{E^2}{2}$
+    *   The effective potential $V_{\mathrm{eff}}(r)$ is:
+        $V_{\mathrm{eff}}(r) = -\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} + \frac{1}{2} = \left(1-\frac{2GM}{r}\right)\left(\frac{L^2}{2r^2}+\frac{1}{2}\right)$
+
+3.  **Circular Orbits**
+    *   For circular orbits, $\frac{dr}{d\tau} = 0$, implying an extremum of the effective potential:
+        $\frac{dV_{\mathrm{eff}}}{dr} = 0$
+    *   This condition leads to the equation:
+        $\frac{GM}{r^2} - \frac{L^2}{r^3} + \frac{3 G M L^2}{r^4} = 0$
+    *   Multiplying by $r^4$ gives a quadratic equation in $r$:
+        $GMr^2 - L^2r + 3GML^2 = 0$
+
+4.  **Smallest Stable Radius (ISCO)**
+    *   The quadratic equation has solutions:
+        $r = \frac{L^2 \pm \sqrt{L^4 - 12 G^2 M^2 L^2}}{2 G M}$
+    *   Real solutions exist only if $L^2 \ge 12 G^2 M^2$.
+    *   At the threshold $L^2 = 12 G^2 M^2$, the two solutions coincide, giving the innermost stable circular orbit (ISCO):
+        $r_{\text{ISCO}} = 6GM$
