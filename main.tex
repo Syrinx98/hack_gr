@@ -1432,7 +1432,7 @@ R_{\sigma\nu}\,
 \textit{By renaming the dummy indices in the second term, we can rewrite the expression as a difference between two terms involving the Ricci tensor and the tensor \(W\), but with the indices swapped. We renamed \(\mu\) to \(\nu\), so the expression becomes \(R_{\sigma\nu}W^{\nu\sigma}\). Then we can factor out the Ricci tensor, since it's now the same in both terms.}
 Therefore,
 \[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\; 
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\;
 R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
 \]
 For this quantity to vanish for the \emph{arbitrary} tensor $W^{\mu\nu}$, the factor in parentheses must vanish unless $R_{\sigma\nu}=0$ everywhere.
@@ -1464,9 +1464,180 @@ On the other hand, requiring $W^{\mu\nu}$ to be symmetric imposes a restriction 
 
 \paragraph{(vii) Final Answer}
 \textit{Let's summarize the final result.}
-Hence, 
+Hence,
 \[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} 
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
+\;=\;0
+\quad
+\Longleftrightarrow
+\quad
+\text{either }W^{\mu\nu}\text{ is symmetric, or }R_{\mu\nu}=0.
+\]
+\textit{Ultimately, the commutator \([\nabla_{\mu}, \nabla_{\nu}]\,W^{\mu\nu}\) is equal to zero if and only if \(W^{\mu\nu}\) is a symmetric tensor, or if the spacetime is Ricci-flat (\(R_{\mu\nu}=0\)). These are the two possible conditions under which the given identity holds.
+However, read the following section to have a different view/approach to this problem.}
+
+\subsection*{Solution, different approach}
+
+\boxed{%
+\begin{minipage}{0.99\linewidth}
+\[
+\begin{aligned}
+& \textit{We decompose the (2,0) tensor } W^{\mu\nu} \textit{ into symmetric } (S^{\mu\nu}) \textit{ and antisymmetric } (A^{\mu\nu}) \textit{ parts:} \\
+& \qquad W^{\mu\nu} = S^{\mu\nu} + A^{\mu\nu} \\
+& \qquad S^{\mu\nu} = \frac{1}{2}(W^{\mu\nu} + W^{\nu\mu}), \quad A^{\mu\nu} = \frac{1}{2}(W^{\mu\nu} - W^{\nu\mu}) \\
+\\
+& \textit{Substituting into the commutator } \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \textit{ yields:} \\
+& \qquad \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} = R_{\sigma\nu}(S^{\sigma\nu} - S^{\nu\sigma}) + R_{\sigma\nu}(A^{\sigma\nu} - A^{\nu\sigma}) \\
+\\
+& \textit{The symmetric part's contribution vanishes. The antisymmetric part contributes } 2R_{\sigma\nu}A^{\sigma\nu}. \\
+& \textit{Since the Ricci tensor is symmetric, its contraction with the antisymmetric part } A^{\sigma\nu} \textit{ is always zero.} \\
+\\
+& \textit{We assume a torsion-free connection (specifically, the Levi-Civita connection), so } T^\rho_{\mu\nu} = 0. \\
+& \textit{With torsion, our analysis would be more complex.} \\
+\\
+& \textit{Under zero torsion, we conclude:} \\
+& \textit{The commutator } \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \textit{ is always zero for any (2,0) tensor } W^{\mu\nu} \textit{ in a torsion-free}\\
+& \textit{spacetime. This is because } W^{\mu\nu} \textit{ can always be decomposed into symmetric and antisymmetric} \\
+&\textit{parts. The commutator vanishes for the symmetric part trivially, and for the antisymmetric part, it}\\
+& \textit{vanishes because the contraction of the symmetric Ricci tensor with an antisymmetric tensor is always zero.}\\
+\\
+& \textit{Therefore, in a torsion-free spacetime, the identity } \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} = 0 \textit{ always holds for any (2,0) tensor.}
+\end{aligned}
+\]
+\end{minipage}
+}
+
+\subsection*{Question 8: Theoretical Background: Understanding the Building Blocks}
+
+\textit{This appendix provides a brief overview of the fundamental concepts used in the exercise, including the Riemann curvature tensor, the Ricci tensor, and the covariant derivative. We will aim for an intuitive understanding, emphasizing the geometric meaning of these objects.}
+
+\paragraph{Covariant Derivative: Parallel Transport in Curved Spacetime}
+
+\textit{In flat space, we are used to the idea that parallel lines never meet. However, in curved space, the notion of "parallel" becomes more subtle. The covariant derivative is a way to generalize differentiation to curved spaces, taking into account the curvature of the space. It allows us to define how a tensor changes as we move it along a curve while keeping it "as parallel as possible" to its initial direction.}
+
+Imagine you are walking on the surface of a sphere, carrying an arrow that always points in the same direction, tangent to the sphere. As you walk along a curved path, the direction of the arrow relative to your path will change, even though you are trying to keep it parallel. This change is due to the curvature of the sphere.
+
+The covariant derivative, denoted by \(\nabla_{\mu}\), captures this notion of change in curved space. When applied to a vector \(V^\nu\), it is defined as:
+
+\[
+\nabla_{\mu} V^\nu = \partial_{\mu} V^\nu + \Gamma^\nu_{\mu\lambda} V^\lambda
+\]
+
+\textit{where \(\partial_{\mu}\) is the ordinary partial derivative, and \(\Gamma^\nu_{\mu\lambda}\) are the Christoffel symbols (also known as the connection coefficients). The Christoffel symbols encode information about the curvature of the space and can be computed from the metric tensor \(g_{\mu\nu}\), which defines distances in the space.}
+
+\textbf{Intuition:} The first term, \(\partial_{\mu} V^\nu\), represents the change in the vector as we would calculate it in flat space. The second term, \(\Gamma^\nu_{\mu\lambda} V^\lambda\), is a "correction" term that accounts for the curvature of the space. It tells us how much the vector needs to be adjusted to keep it parallel as we move along the curve.
+
+\textit{The covariant derivative can be similarly extended to tensors of higher rank. For example, for a (2,0) tensor \(W^{\mu\nu}\), we have:}
+
+\[
+\nabla_\alpha W^{\mu\nu} = \partial_\alpha W^{\mu\nu} + \Gamma^\mu_{\alpha\sigma} W^{\sigma\nu} + \Gamma^\nu_{\alpha\sigma} W^{\mu\sigma}
+\]
+\textit{Each upper index gets a correction term with a positive sign}
+
+\textit{The idea is that we are comparing the tensor at a given point with the tensor at a neighboring point, but we need to account for the fact that the coordinate system itself is changing due to the curvature.}
+\textbf{Key takeaway: the covariant derivative allows for differentiation in curved space by keeping tensors parallel during transport, encapsulating the intrinsic curvature's effect on differentiation.}
+
+\paragraph{Riemann Curvature Tensor: Measuring the Curvature}
+
+\textit{The Riemann curvature tensor, denoted by \(R^\rho_{\;\;\sigma\mu\nu}\), is the central object that quantifies the curvature of a (pseudo) Riemannian manifold. It measures how much the geometry of the space deviates from flat Euclidean space.}
+
+\textbf{Geometric Interpretation:} One way to understand the Riemann tensor is to consider parallel transporting a vector around a small closed loop in the space. If the space is flat, the vector will return to its original direction after being transported around the loop. However, if the space is curved, the vector will be rotated by an amount proportional to the area enclosed by the loop and the Riemann tensor.
+
+More precisely, if we parallel transport a vector \(V^\sigma\) around an infinitesimal parallelogram defined by two vectors \(A^\mu\) and \(B^\nu\), the change in the vector \(\delta V^\rho\) after one loop is given by:
+
+\[
+\delta V^\rho \approx R^\rho_{\;\;\sigma\mu\nu} V^\sigma A^\mu B^\nu
+\]
+
+\textit{This equation shows that the Riemann tensor relates the change in a vector under parallel transport to the area of the loop and the components of the vector itself.}
+
+\textbf{Another way to interpret the Riemann tensor} is through the commutator of covariant derivatives. As we saw in the exercise, for a (2,0) tensor:
+\[
+\bigl[\nabla_{\alpha}, \nabla_{\beta}\bigr]\,W^{\mu\nu}
+\;=\;
+R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu}
+\;+\;
+R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma},
+\]
+For a vector \(V^\mu\), the commutator is given by
+\[
+[\nabla_\mu, \nabla_\nu] V^\rho = R^\rho_{\;\;\sigma\mu\nu} V^\sigma
+\]
+
+\textit{This means the Riemann tensor also measures the non-commutativity of covariant derivatives. In flat space, the order of differentiation doesn't matter, so the commutator is zero. In curved space, the commutator is non-zero, and the Riemann tensor quantifies this non-commutativity.}
+
+\textbf{Symmetries of the Riemann Tensor:} The Riemann tensor has several important symmetries:
+\begin{itemize}
+    \item \(R^\rho_{\;\;\sigma\mu\nu} = -R^\rho_{\;\;\sigma\nu\mu}\): Antisymmetry in the last two indices. This reflects the fact that reversing the direction of the loop in the parallel transport picture reverses the rotation of the vector.
+    \item \(R_{\rho\sigma\mu\nu} = -R_{\sigma\rho\mu\nu}\): Antisymmetry in the first two indices (when lowered with the metric).
+    \item \(R_{\rho\sigma\mu\nu} = R_{\mu\nu\rho\sigma}\): Pair exchange symmetry.
+    \item \(R^\rho_{\;\;\sigma\mu\nu} + R^\rho_{\;\;\mu\nu\sigma} + R^\rho_{\;\;\nu\sigma\mu} = 0\): The first Bianchi identity.
+\end{itemize}
+
+\textit{These symmetries reduce the number of independent components of the Riemann tensor.}
+
+\textbf{Key Takeaway}: the Riemann curvature tensor is a fundamental geometric object capturing the essence of curvature by measuring the change in a vector after parallel transport around a closed loop and quantifying the non-commutativity of covariant derivatives.
+
+\paragraph{Ricci Tensor: A Contraction of the Riemann Tensor}
+
+\textit{The Ricci tensor, denoted by \(R_{\mu\nu}\), is obtained by contracting the first and third indices of the Riemann tensor:}
+
+\[
+R_{\mu\nu} \;=\; R^\lambda_{\;\;\mu\lambda\nu}
+\]
+
+\textit{In other words, we set \(\rho = \lambda\) in \(R^\rho_{\;\;\sigma\mu\nu}\) and sum over \(\lambda\).}
+
+\textbf{Geometric Interpretation:} The Ricci tensor measures a particular aspect of the curvature: the tendency of volumes to change in curved space compared to flat space. More precisely, it describes how the volume of a small geodesic ball (a ball defined by geodesics emanating from a central point) differs from the volume of a ball of the same radius in Euclidean space.
+
+\textit{If \(R_{\mu\nu}\) is positive definite in a region, it means that volumes in that region tend to be smaller than in flat space. If \(R_{\mu\nu}\) is negative definite, volumes tend to be larger. If \(R_{\mu\nu} = 0\), volumes are locally the same as in flat space, at least to leading order.}
+
+\textbf{In General Relativity:} The Ricci tensor plays a crucial role in Einstein's field equations, which relate the geometry of spacetime to the distribution of mass and energy:
+
+\[
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G T_{\mu\nu}
+\]
+
+\textit{where \(R\) is the Ricci scalar (the trace of the Ricci tensor, \(R = g^{\mu\nu}R_{\mu\nu}\)), \(g_{\mu\nu}\) is the metric tensor, \(G\) is the gravitational constant, and \(T_{\mu\nu}\) is the stress-energy tensor. This equation tells us that the Ricci curvature is directly related to the presence of matter and energy.}
+
+\textbf{Key Takeaway}: The Ricci tensor provides a measure of how volumes change in curved space compared to flat space and is directly linked to the distribution of mass and energy in General Relativity.
+
+\pagebreak
+
+R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
+\]
+For this quantity to vanish for the \emph{arbitrary} tensor $W^{\mu\nu}$, the factor in parentheses must vanish unless $R_{\sigma\nu}=0$ everywhere.
+\textit{For this expression to be equal to zero for an arbitrary tensor \(W^{\mu\nu}\), the factor in parentheses must be zero, unless the Ricci tensor is identically zero. If the factor in parentheses is zero, the whole expression is zero, regardless of the value of the Ricci tensor. If the Ricci tensor is zero, the whole expression is zero, regardless of the value of \(W^{\mu\nu}\).}
+
+\paragraph{(v) Conditions for Vanishing Commutator and the Role of Torsion}
+\textit{We now analyze the conditions under which the commutator vanishes. We had initially identified two cases, but a closer examination, particularly in light of the tensor decomposition discussed below, reveals a more nuanced relationship between these cases and the underlying assumptions.}
+
+\textit{Recall the result we derived:}
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\;
+R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
+\]
+\textit{For this expression to be zero for arbitrary \(W^{\mu\nu}\), we initially identified two distinct possibilities:}
+
+\begin{itemize}
+    \item \textbf{Case 1: $W^{\mu\nu}$ is symmetric.} If $W^{\mu\nu} = W^{\nu\mu}$, the term in the parentheses vanishes, leading to a zero commutator regardless of the value of the Ricci tensor \(R_{\sigma\nu}\).
+
+    \item \textbf{Case 2: $R_{\mu\nu} = 0$ (Ricci-flat spacetime).} If the Ricci tensor is zero, the entire expression vanishes, regardless of the symmetry properties of \(W^{\mu\nu}\). This condition corresponds to a vacuum solution in General Relativity (in the absence of a cosmological constant), where \(T_{\mu\nu} = 0\).  \textit{An example of this is the void case. The Ricci tensor describes how an infinitesimal volume of particles that moves along geodesics expands or contracts. \(R_{\mu\nu} = 0\) means there is no volume variation, but you can still have curvature of spacetime as described by the full Riemann tensor.}
+\end{itemize}
+
+
+\paragraph{(vi) Physical Interpretation (Optional Remark)}
+\textit{We give a brief physical interpretation of the two conditions. This helps to connect the mathematical results to their physical meaning in the context of General Relativity.}
+In the context of General Relativity, the condition $R_{\mu\nu}=0$ (with zero cosmological constant) implies a vacuum solution of Einstein's field equations, indicating no matter or energy content.
+\textit{In the context of General Relativity, the condition \(R_{\mu\nu}=0\) (in the absence of a cosmological constant) corresponds to a vacuum solution of Einstein's field equations, that is, a spacetime without matter or energy. This means that the spacetime is empty, and its curvature is entirely determined by the initial conditions.}
+On the other hand, requiring $W^{\mu\nu}$ to be symmetric imposes a restriction on the form of the tensor rather than on the geometry of the spacetime.
+\textit{On the other hand, requiring that \(W^{\mu\nu}\) be symmetric imposes a restriction on the form of the tensor, but not on the geometry of spacetime. It's a condition on the specific tensor we are considering, not on the underlying spacetime itself.}
+
+\paragraph{(vii) Final Answer}
+\textit{Let's summarize the final result.}
+Hence,
+\[
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
 \;=\;0
 \quad
 \Longleftrightarrow
@@ -2754,8 +2925,8 @@ Find the minimum value of \(E\) such that the photon can reach the singularity a
 \paragraph{(i) Schwarzschild Metric and Conserved Quantities}
 The Schwarzschild metric in coordinates \(\{t, r, \theta, \phi\}\) is given by:
 \[
-ds^2 
-\,=\, -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,dt^2 
+ds^2
+\,=\, -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,dt^2
 \;+\; \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}\,dr^2
 \;+\; r^2\,d\theta^2
 \;+\; r^2\,\sin^2\theta\,d\phi^2.
@@ -2820,7 +2991,7 @@ This equation has the form of an energy conservation equation, where the first t
 A photon can reach the singularity at \(r=0\) only if its total ``energy'' (in the effective potential sense) is large enough to overcome any potential barrier.
 
 \paragraph{(iii) Setting \(GM=1\) and \(L=10\)}
-We now set \(GM=1\). The angular momentum is given as \(L=10\). 
+We now set \(GM=1\). The angular momentum is given as \(L=10\).
 Hence,
 \[
 V_{\text{eff}}(r)
@@ -2848,7 +3019,7 @@ This equation describes the radial motion of the photon in terms of the effectiv
 \paragraph{(iv) Condition for the Photon to Reach the Singularity}
 To find whether the photon can fall into \(r=0\), we look for the largest barrier in \(V_{\text{eff}}(r)\). The maximum of \(V_{\text{eff}}\) occurs where
 \[
-\frac{dV_{\text{eff}}}{dr} 
+\frac{dV_{\text{eff}}}{dr}
 \,=\,
 -\frac{100}{r^3}
 \;+\;
