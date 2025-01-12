@@ -284,3 +284,98 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     *   Real solutions exist only if $L^2 \ge 12 G^2 M^2$.
     *   At the threshold $L^2 = 12 G^2 M^2$, the two solutions coincide, giving the innermost stable circular orbit (ISCO):
         $r_{\text{ISCO}} = 6GM$
+
+## 12. Stable Circular Orbits in Schwarzschild Geometry (Continued)
+
+    *   The effective potential $V_{\mathrm{eff}}(r)$ is:
+        $V_{\mathrm{eff}}(r) = -\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} + \frac{1}{2} = \left(1-\frac{2GM}{r}\right)\left(\frac{L^2}{2r^2}+\frac{1}{2}\right)$
+
+3.  **Circular Orbits**
+    *   For circular orbits, $\frac{dr}{d\tau} = 0$, implying an extremum of the effective potential:
+        $\frac{dV_{\mathrm{eff}}}{dr} = 0$
+    *   This condition leads to the equation:
+        $\frac{GM}{r^2} - \frac{L^2}{r^3} + \frac{3 G M L^2}{r^4} = 0$
+    *   Multiplying by $r^4$ gives a quadratic equation in $r$:
+        $GMr^2 - L^2r + 3GML^2 = 0$
+
+4.  **Smallest Stable Radius (ISCO)**
+    *   The quadratic equation has solutions:
+        $r = \frac{L^2 \pm \sqrt{L^4 - 12 G^2 M^2 L^2}}{2 G M}$
+    *   Real solutions exist only if $L^2 \ge 12 G^2 M^2$.
+    *   At the threshold $L^2 = 12 G^2 M^2$, the two solutions coincide, giving the innermost stable circular orbit (ISCO):
+        $r_{\text{ISCO}} = 6GM$
+
+5.  **Stable Orbit in the \(L \to \infty\) Limit**
+    *   For large \(L\), the stable orbit radius is approximately:
+        $r \approx \frac{L^2}{GM}$
+    *   This matches the Newtonian result in the same limit.
+
+---
+
+## 13. Circular Orbits for Massless Objects in Schwarzschild Geometry
+
+1.  **Schwarzschild Metric and Conserved Quantities**
+    *   The Schwarzschild metric is:
+        $ds^2 = - \left(1 - \frac{2GM}{r}\right)dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\phi^2.$
+    *   Conserved quantities for geodesic motion are:
+        $E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda}$ (energy)
+        $L = r^2 \frac{d\phi}{d\lambda}$ (angular momentum)
+
+2.  **Normalization Condition and Effective Potential**
+    *   For a massless particle, the four-momentum normalization is:
+        $g_{\mu\nu} \frac{dx^\mu}{d\lambda} \frac{dx^\nu}{d\lambda} = 0$
+    *   Restricting motion to the equatorial plane ($\theta = \frac{\pi}{2}$), the normalization condition becomes:
+        $-\left(1 - \frac{2GM}{r}\right)\left(\frac{dt}{d\lambda}\right)^2 + \left(1 - \frac{2GM}{r}\right)^{-1} \left(\frac{dr}{d\lambda}\right)^2 + r^2 \left(\frac{d\phi}{d\lambda}\right)^2 = 0$
+    *   Substituting $E$ and $L$ and rearranging, we get:
+        $\frac{1}{2}\left(\frac{dr}{d\lambda}\right)^2 + V_{\mathrm{eff}}(r) = \frac{E^2}{2}$
+    *   The effective potential $V_{\mathrm{eff}}(r)$ is:
+        $V_{\mathrm{eff}}(r) = \frac{L^2}{2r^2}\left(1-\frac{2GM}{r}\right)$
+
+3.  **Circular Orbits**
+    *   For circular orbits, $\frac{dr}{d\lambda} = 0$, implying an extremum of the effective potential:
+        $\frac{dV_{\mathrm{eff}}}{dr} = 0$
+    *   Setting $GM=1$ and $L=10$, this condition leads to the equation:
+         $-\frac{100}{r^3} + \frac{300}{r^4} = 0$, that is solved for $r = 3GM$.
+   *   Thus, the radius of the circular orbit for a massless particle is:
+        $r = 3GM$
+
+4.  **Stability of the Circular Orbit**
+    *   To check stability, we compute the second derivative of the effective potential:
+        $\frac{d^2 V_{\text{eff}}}{dr^2} = \frac{3L^2}{r^4} - \frac{12GML^2}{r^5}$
+    *   Evaluating at $r = 3GM$, we get:
+        $\frac{d^2 V_{\text{eff}}}{dr^2}\Big|_{r=3GM} = -\frac{L^2}{81(GM)^4} < 0$
+    *   Since the second derivative is negative, the circular orbit at $r = 3GM$ is unstable.
+
+---
+
+## 14. Minimum Energy for Photon to Reach Singularity in Schwarzschild Geometry
+
+1.  **Schwarzschild Metric and Conserved Quantities**
+    *   The Schwarzschild metric is:
+        $ds^2 = - \left(1 - \frac{2GM}{r}\right)dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\phi^2.$
+    *   Conserved quantities for geodesic motion are:
+        $E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda}$ (energy)
+        $L = r^2 \frac{d\phi}{d\lambda}$ (angular momentum)
+
+2.  **Normalization Condition and Effective Potential**
+    *   For a massless particle (photon), the four-momentum normalization is:
+        $g_{\mu\nu} \frac{dx^\mu}{d\lambda} \frac{dx^\nu}{d\lambda} = 0$
+    *   Restricting motion to the equatorial plane ($\theta = \frac{\pi}{2}$), the normalization condition becomes:
+        $-\left(1 - \frac{2GM}{r}\right)\left(\frac{dt}{d\lambda}\right)^2 + \left(1 - \frac{2GM}{r}\right)^{-1} \left(\frac{dr}{d\lambda}\right)^2 + r^2 \left(\frac{d\phi}{d\lambda}\right)^2 = 0$
+    *   Substituting $E$ and $L$ and rearranging, we get:
+        $\frac{1}{2}\left(\frac{dr}{d\lambda}\right)^2 + V_{\mathrm{eff}}(r) = \frac{E^2}{2}$
+    *   The effective potential $V_{\mathrm{eff}}(r)$ is:
+        $V_{\mathrm{eff}}(r) = \frac{L^2}{2r^2}\left(1-\frac{2GM}{r}\right)$
+
+3.  **Conditions for Reaching the Singularity**
+    *   Setting $GM=1$ and $L=10$, the effective potential becomes:
+        $V_{\mathrm{eff}}(r) = \frac{50}{r^2} - \frac{100}{r^3}$
+    *   To reach the singularity at $r=0$, the photon's energy must be greater than or equal to the maximum value of the effective potential.
+    *   The maximum of $V_{\mathrm{eff}}$ occurs at $r_{\text{max}} = 3GM = 3$ (in units where $GM=1$).
+    *   The value of the effective potential at this maximum is:
+        $V_{\mathrm{eff}}(3) = \frac{50}{27}$
+
+4.  **Minimum Energy**
+    *   The photon can reach the singularity if $\frac{E^2}{2} \ge V_{\mathrm{eff}}(3)$.
+    *   Therefore, the minimum energy required is:
+        $E_{\min} = \sqrt{2 V_{\mathrm{eff}}(3)} = \frac{10}{3\sqrt{3}}$

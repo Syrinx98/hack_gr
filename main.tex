@@ -1382,7 +1382,7 @@ Next, we recall that the Ricci tensor $R_{\mu\nu}$ is defined as the contraction
 R_{\mu\nu} \;=\; R^\lambda_{\;\;\mu\lambda\nu}.
 \]
 \textit{The Ricci tensor \(R_{\mu\nu}\) is obtained by contracting (summing over) the first and third indices of the Riemann tensor. This means we set the first index (\(\rho\)) and the third index (\(\lambda\)) of the Riemann tensor to be the same, \(\lambda\), and sum over all possible values of \(\lambda\). The Ricci tensor is a measure of the curvature of spacetime, and it plays a crucial role in Einstein's field equations.}
-Hence, the first term can be written as 
+Hence, the first term can be written as
 \[
 R^\mu_{\;\;\sigma\mu\nu}\,W^{\sigma\nu}
 \;=\;
@@ -2329,4 +2329,637 @@ This particular circular orbit at $r = 6 G M$ corresponds to the \emph{innermost
 \text{Therefore, the smallest allowed radius for a stable circular orbit is } r = 6 G M.
 }
 \]
+
+
+\section*{Question 12}
+For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
+\[
+E = \bigl(1 - \tfrac{2 G M}{r}\bigr)\,\frac{dt}{d\lambda},
+\qquad
+L = r^{2}\,\frac{d\phi}{d\lambda}.
+\]
+\textit{These are the conserved energy $E$ and angular momentum $L$ per unit mass of a test particle moving along a geodesic in the Schwarzschild spacetime. Here, $G$ is the gravitational constant, $M$ is the mass of the central object, $r$ is the radial coordinate, $t$ is the time coordinate, $\phi$ is the azimuthal angle, and $\lambda$ is an affine parameter along the geodesic.}
+
+Consider the circular orbits for a massive object and determine the radius of the stable orbit in the $L \rightarrow \infty$ limit. \textit{We are asked to find the radius of the stable circular orbit for a massive object in the limit of large angular momentum.}
+
+Compare this result with the corresponding Newtonian result.
+
+\subsection*{Solution}
+
+\paragraph{(i) Schwarzschild Metric and Conserved Quantities}
+
+We start by recalling that the Schwarzschild metric is:
+\[
+ds^2 \;=\; -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,dt^2
+\;+\;\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1} dr^2
+\;+\; r^2\,d\theta^2
+\;+\; r^2\,\sin^2\theta\,d\phi^2.
+\]
+\textit{This is the Schwarzschild metric, which describes the geometry of spacetime outside a spherically symmetric mass distribution. The metric is expressed in Schwarzschild coordinates $(t, r, \theta, \phi)$, where $t$ is the time coordinate, $r$ is the radial coordinate, $\theta$ is the polar angle, and $\phi$ is the azimuthal angle. The term $d\Omega^2 = d\theta^2 + \sin^2\theta \, d\phi^2$ represents the metric on the 2-sphere.}
+
+For a test particle of unit mass, two quantities remain constant along its geodesic:
+
+\[
+E \;=\; \Bigl(1 - \tfrac{2GM}{r}\Bigr)\,\frac{dt}{d\lambda},
+\quad\quad
+L \;=\; r^{2}\,\frac{d\phi}{d\lambda}.
+\]
+\textit{These conserved quantities derive from the symmetries of the Schwarzschild metric. In particular, the metric does not depend on $t$ (time translation invariance) nor on $\phi$ (rotational symmetry around the z-axis).}
+
+These constants follow from, respectively, time-translation invariance (energy conservation) and spherical symmetry (angular momentum conservation).
+
+\paragraph{(ii) Normalization Condition and Effective Potential}
+
+For a massive particle, the four-velocity $u^\mu = \frac{dx^\mu}{d\lambda}$ must satisfy
+\[
+g_{\mu\nu}\,u^\mu\,u^\nu \;=\; -1.
+\]
+\textit{This is the normalization condition for the four-velocity of a massive particle. It indicates that the proper time along the particle's trajectory is measured by $\lambda$ such that the square of the four-velocity is -1.}
+
+Restricting the motion to the equatorial plane ($\theta = \pi/2$), the normalization condition becomes:
+\[
+-\Bigl(1 - \tfrac{2GM}{r}\Bigr)
+\Bigl(\tfrac{dt}{d\lambda}\Bigr)^2
+\;+\;\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}
+\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2
+\;+\; r^2 \Bigl(\tfrac{d\phi}{d\lambda}\Bigr)^2
+\;=\; -1.
+\]
+\textit{We consider motion confined to the equatorial plane for simplicity, which is possible due to the spherical symmetry of the Schwarzschild metric.}
+
+Using
+\[
+E \;=\;\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,\frac{dt}{d\lambda},
+\quad
+L \;=\; r^2\,\frac{d\phi}{d\lambda},
+\]
+we rewrite the above equation as
+\[
+-\frac{E^2}{\bigl(1 - \tfrac{2GM}{r}\bigr)}
+\;+\;\frac{1}{\bigl(1 - \tfrac{2GM}{r}\bigr)}
+\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2
+\;+\;\frac{L^2}{r^2}
+\;=\; -1.
+\]
+\textit{We have substituted the expressions for the conserved quantities $E$ and $L$ into the normalization condition.}
+
+Rearranging leads to a form where we identify the \emph{effective potential} $V_{\text{eff}}(r)$:
+\[
+\tfrac{1}{2}\,\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2
+\;+\;
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)\Bigl(\tfrac{1}{2} + \tfrac{L^2}{2r^2}\Bigr)
+\;=\; \tfrac{E^2}{2}.
+\]
+Hence,
+\[
+V_{\text{eff}}(r)
+\;=\;
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)\Bigl(\tfrac{1}{2} + \tfrac{L^2}{2r^2}\Bigr)
+\;=\;
+\tfrac{1}{2} \;-\;\tfrac{GM}{r} \;+\;\tfrac{L^2}{2r^2} \;-\;\tfrac{GM\,L^2}{r^3}.
+\]
+\textit{The equation now resembles that of a particle with “energy” $\tfrac{E^2}{2}$ moving in an effective potential $V_{\text{eff}}(r)$. The effective potential includes terms corresponding to Newtonian gravity, a centrifugal barrier, and a relativistic correction term.}
+
+(Observe that the first two terms reproduce a Newtonian-like potential, while the last two terms encode relativistic corrections.)
+
+\paragraph{(iii) Circular Orbits}
+
+A circular orbit occurs at constant $r$, implying $\tfrac{dr}{d\lambda} = 0$. At this radius, the effective potential must be at an extremum:
+\[
+\frac{dV_{\text{eff}}}{dr} \;=\; 0.
+\]
+\textit{For a circular orbit, the radial distance $r$ does not change with the affine parameter $\lambda$. This occurs at a minimum (stable) or maximum (unstable) of the effective potential.}
+
+Differentiating $V_{\text{eff}}(r)$ with respect to $r$:
+\[
+\frac{dV_{\text{eff}}}{dr}
+\;=\;
+\frac{GM}{r^2} \;-\;\frac{L^2}{r^3} \;+\;\frac{3\,GM\,L^2}{r^4}.
+\]
+Setting this to zero:
+\[
+\frac{GM}{r^2}
+\;-\;\frac{L^2}{r^3}
+\;+\;\frac{3\,GM\,L^2}{r^4}
+\;=\;0,
+\]
+which, upon multiplying by $r^4$, becomes the quadratic in $r$:
+\[
+GM\,r^2
+\;-\;L^2\,r
+\;+\;3\,GM\,L^2
+\;=\;0.
+\]
+\textit{This is a quadratic equation for the radius $r$ of a circular orbit. The solutions of this equation provide the radii for which circular orbits are possible.}
+
+\paragraph{(iv) Circular Orbit Radius in the $L \rightarrow \infty$ Limit}
+
+The general solutions of the quadratic equation for $r$ are:
+\[
+r
+\;=\;
+\frac{\,L^2 \;\pm\; \sqrt{\,L^4 \;-\; 12\,G^2 M^2 L^2\,}}{\,2\,GM\,}.
+\]
+For large $L$, we can approximate the term under the square root using the binomial expansion. We factor out $L^4$ from the square root:
+\[
+\sqrt{\,L^4 \;-\; 12\,G^2 M^2 L^2\,}
+\;=\;
+\sqrt{L^4 \Bigl(1 - \frac{12\,G^2 M^2}{L^2}\Bigr)}
+\;=\;
+L^2\,\sqrt{\,1 - \tfrac{12\,G^2 M^2}{L^2}\,}.
+\]
+\textit{In the limit of large angular momentum $L$, we can use a binomial approximation to simplify the square root.}
+
+Now we apply the binomial expansion for $\sqrt{1+x}$ with $x = -\frac{12\,G^2 M^2}{L^2}$. The binomial expansion is given by:
+\[
+(1+x)^n \;=\; 1 + nx + \frac{n(n-1)}{2!}x^2 + \frac{n(n-1)(n-2)}{3!}x^3 + ...
+\]
+In our case, $n = \frac{1}{2}$ and $x = -\frac{12\,G^2 M^2}{L^2}$. Since $L$ is large, $x$ is small, and we can approximate the square root by taking the first two terms of the expansion:
+\[
+\sqrt{1+x} \;\approx\; 1 + \frac{1}{2}x.
+\]
+Thus,
+\[
+\sqrt{\,1 - \tfrac{12\,G^2 M^2}{L^2}\,}
+\;\approx\;
+1 + \frac{1}{2}\Bigl(-\frac{12\,G^2 M^2}{L^2}\Bigr)
+\;=\;
+1 - \frac{6\,G^2 M^2}{L^2}.
+\]
+Substituting this back into the expression for the square root, we get:
+\[
+\sqrt{\,L^4 \;-\; 12\,G^2 M^2 L^2\,}
+\;\approx\;
+L^2 \Bigl(1 - \frac{6\,G^2 M^2}{L^2}\Bigr).
+\]
+Now we can substitute this back into the solutions for $r$:
+\[
+r
+\;\approx\;
+\frac{L^2 \,\pm\, L^2\bigl(1 - \tfrac{6\,G^2 M^2}{L^2}\bigr)}{\,2\,GM\,}
+\;=\;
+\frac{L^2}{2GM} \;\pm\;
+\frac{L^2}{2GM}
+\Bigl(1 - \tfrac{6\,G^2 M^2}{L^2}\Bigr).
+\]
+This yields two approximate solutions:
+\[
+r_{(1)}
+\;\approx\;
+\frac{L^2}{2GM} \;+\; \frac{L^2}{2GM} - \frac{L^2}{2GM} \cdot \frac{6\,G^2 M^2}{L^2}
+\;=\;
+\frac{L^2}{GM} - 3\,GM,
+\]
+\[
+r_{(2)}
+\;\approx\;
+\frac{L^2}{2GM} \;-\; \frac{L^2}{2GM} + \frac{L^2}{2GM} \cdot \frac{6\,G^2 M^2}{L^2}
+\;=\;
+3\,GM.
+\]
+The first solution, $r_{(1)} \approx \tfrac{L^2}{GM} - 3\,GM$, grows large for large $L$ and describes stable circular orbits (the subleading constant term $-\,3GM$ becomes negligible for $L \to \infty$).
+\textit{This solution corresponds to the stable circular orbit, and its radius increases as $L$ increases.}
+
+The second solution, $r_{(2)} \approx 3\,GM$, corresponds to an unstable circular orbit.
+\textit{This solution corresponds to the unstable circular orbit at a fixed radius of $3GM$, independent of $L$.}
+
+Therefore, in the limit $L \rightarrow \infty$, the stable circular orbit effectively satisfies
+\[
+r \;\approx\; \frac{L^2}{GM}.
+\]
+\textit{Detailed explanation:}
+
+We are interested in the stable orbit, which is given by $r_{(1)} \approx \frac{L^2}{GM} - 3\,GM$. As $L$ approaches infinity, the term $\frac{L^2}{GM}$ grows without bound, while the term $3\,GM$ remains constant. Thus, the term $\frac{L^2}{GM}$ dominates the expression.
+
+We can rewrite the expression for $r_{(1)}$ as:
+\[
+r_{(1)} \;\approx\; \frac{L^2}{GM}\Bigl(1 - \frac{3\,G^2M^2}{L^2}\Bigr).
+\]
+As $L \rightarrow \infty$, the term $\frac{3\,G^2M^2}{L^2}$ approaches zero. Therefore, the expression in the parenthesis approaches 1.
+
+Hence, in the limit of large $L$, the radius of the stable circular orbit is approximately:
+\[
+r \;\approx\; \frac{L^2}{GM}.
+\]
+\textit{In the limit of large $L$, the radius of the stable circular orbit is approximately $\frac{L^2}{GM}$.}
+
+\paragraph{(v) Comparison with the Newtonian Result}
+
+In Newtonian gravity, the effective potential for a particle of mass $m$ and angular momentum $L$ in a central field $GMm/r$ is
+\[
+V_{\text{eff}}(r)
+\;=\;
+-\frac{GMm}{r} \;+\;\frac{L^2}{2\,m\,r^2}.
+\]
+\textit{This is the Newtonian effective potential, which includes the gravitational potential energy and the centrifugal potential energy.}
+
+The circular-orbit condition $\tfrac{dV_{\text{eff}}}{dr} = 0$ gives
+\[
+\frac{GMm}{r^2} \;-\;\frac{L^2}{m\,r^3} \;=\; 0
+\quad\Longrightarrow\quad
+r \;=\; \frac{L^2}{GM\,m^2}.
+\]
+If $m=1$ (taking unit mass), we get the same leading-order form
+\[
+r_{\text{Newton}}
+\;=\;
+\frac{L^2}{GM}.
+\]
+Hence, at large $L$, the relativistic orbit radius $r \approx \tfrac{L^2}{GM}$ matches the Newtonian prediction up to relativistic corrections.
+\textit{In the limit of large angular momentum, the radius of the stable circular orbit in general relativity approaches the Newtonian result.}
+
+The difference is that in Schwarzschild geometry we treat a test particle (mass $m$ is effectively canceled out), whereas in the Newtonian context $r$ explicitly depends on $m$. In any case, the leading $1/GM$ scaling with $L^2$ is the same in both theories for large angular momentum.
+
+\pagebreak
+
+\pagebreak
+
+\section*{Exercise 13}
+For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
+\[
+E = \bigl(1 - \tfrac{2 G M}{r}\bigr)\,\frac{dt}{d\lambda},
+\qquad
+L = r^{2}\,\frac{d\phi}{d\lambda}.
+\]
+Discuss all possible circular orbits for a massless object and determine their stability.
+
+\subsection*{Solution}
+
+\paragraph{(i) Schwarzschild Metric and Conserved Quantities.}
+Consider the Schwarzschild metric in \((t,r,\theta,\phi)\) coordinates:
+\begin{equation}
+ds^2 \;=\; -\,\Bigl(1 - \frac{2GM}{r}\Bigr)\,dt^2
+\;+\;
+\Bigl(1 - \frac{2GM}{r}\Bigr)^{-1}\,dr^2
+\;+\;
+r^2\,d\theta^2
+\;+\;
+r^2\,\sin^2\theta\,d\phi^2.
+\end{equation}
+\textit{This is the Schwarzschild metric, describing the geometry of spacetime outside a spherically symmetric mass distribution. The metric is given in Schwarzschild coordinates $(t, r, \theta, \phi)$, where $t$ is the time coordinate, $r$ is the radial coordinate, $\theta$ is the polar angle, and $\phi$ is the azimuthal angle. The term $d\Omega^2 = d\theta^2 + \sin^2\theta \, d\phi^2$ represents the metric on the 2-sphere.}
+
+Two quantities remain constant along any geodesic:
+\begin{align}
+E &= \Bigl(1 - \tfrac{2GM}{r}\Bigr)\,\frac{dt}{d\lambda},\\
+L &= r^2\,\frac{d\phi}{d\lambda}.
+\end{align}
+\textit{These conserved quantities arise from the symmetries of the Schwarzschild metric. Specifically, the metric does not depend on $t$ (time translation invariance) or $\phi$ (rotational symmetry about the z-axis). $E$ represents the conserved energy and $L$ the conserved angular momentum per unit mass of a test particle moving along a geodesic in the Schwarzschild spacetime. Here, $G$ is the gravitational constant, $M$ is the mass of the central object, $r$ is the radial coordinate, $t$ is the time coordinate, $\phi$ is the azimuthal angle, and $\lambda$ is an affine parameter along the geodesic.}
+Here, \(\lambda\) is an affine parameter along the geodesic.
+
+\paragraph{(ii) Normalization Condition for a Massless Particle.}
+For a massless object (e.g., a photon), its four-momentum \(p^\mu = \tfrac{dx^\mu}{d\lambda}\) satisfies
+\begin{equation}
+g_{\mu\nu}\,p^\mu p^\nu \;=\; 0.
+\end{equation}
+\textit{This is the normalization condition for the four-momentum of a massless particle. Unlike the massive case, where the condition is $g_{\mu\nu}u^\mu u^\nu = -1$, for massless particles, the condition is $g_{\mu\nu}p^\mu p^\nu = 0$. This reflects the fact that massless particles move at the speed of light, and their proper time cannot be used as an affine parameter. Instead, we use an affine parameter $\lambda$ that is related to the coordinate time $t$ and radial coordinate $r$ through the conserved quantities $E$ and $L$.}
+
+We can restrict the motion to the equatorial plane \(\theta = \pi/2\), which simplifies the metric by eliminating the \(d\theta^2\) term. \textit{We consider the motion confined to the equatorial plane for simplicity, which is possible due to the spherical symmetry of the Schwarzschild metric. Setting $\theta = \pi/2$ implies $d\theta = 0$ and $\sin^2\theta = 1$}. Thus,
+\begin{equation}
+-\Bigl(1 - \tfrac{2GM}{r}\Bigr)\!\Bigl(\frac{dt}{d\lambda}\Bigr)^2
+\;+\;
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}
+\Bigl(\frac{dr}{d\lambda}\Bigr)^2
+\;+\;
+r^2\,\Bigl(\frac{d\phi}{d\lambda}\Bigr)^2
+\;=\;
+0.
+\end{equation}
+Substitute the conserved quantities
+\(\tfrac{dt}{d\lambda} = \tfrac{E}{1 - \tfrac{2GM}{r}}\) and \(\tfrac{d\phi}{d\lambda} = \tfrac{L}{r^2}\):
+\begin{equation}
+-\,
+\frac{E^2}{\,1 - \tfrac{2GM}{r}\,}
+\;+\;
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}
+\Bigl(\frac{dr}{d\lambda}\Bigr)^2
+\;+\;
+\frac{L^2}{r^2}
+\;=\; 0.
+\end{equation}
+\textit{We have substituted the expressions for the conserved quantities $E$ and $L$ into the normalization condition.}
+
+Rearrange to isolate \(\bigl(\tfrac{dr}{d\lambda}\bigr)^2\):
+\begin{equation}
+\Bigl(\frac{dr}{d\lambda}\Bigr)^2
+\;+\;
+\frac{L^2}{r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)
+\;=\;
+E^2.
+\end{equation}
+Define the effective potential for the massless particle:
+\begin{equation}
+V_\mathrm{eff}(r)
+\;=\;
+\frac{L^2}{2\,r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr).
+\end{equation}
+Then, our radial equation is
+\(
+\bigl(\tfrac{dr}{d\lambda}\bigr)^2 + 2\,V_\mathrm{eff}(r) = E^2.
+\)
+\textit{The equation now resembles that of a particle with “energy” $E^2$ moving in an effective potential $V_{\text{eff}}(r)$. The effective potential includes terms corresponding to a centrifugal barrier and a relativistic correction term. Unlike the massive case, there is no Newtonian-like term because massless particles do not experience Newtonian gravity.}
+
+\paragraph{(iii) Circular Orbits for a Massless Object.}
+A circular orbit requires a constant radius, hence
+\(\tfrac{dr}{d\lambda} = 0\). In terms of the effective potential, this implies
+\begin{equation}
+E^2 \;=\; 2\,V_\mathrm{eff}(r),
+\quad\text{and}\quad
+\frac{dV_\mathrm{eff}}{dr}\;=\;0.
+\end{equation}
+\textit{For a circular orbit, the radial distance $r$ does not change with the affine parameter $\lambda$. This occurs at an extremum (minimum or maximum) of the effective potential.}
+
+Differentiate \(V_\mathrm{eff}(r)\):
+\begin{equation}
+V_\mathrm{eff}(r)
+\;=\;
+\frac{L^2}{2\,r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr).
+\end{equation}
+\begin{equation}
+\frac{dV_\mathrm{eff}}{dr}
+\;=\;
+-\frac{L^2}{r^3}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)
+\;+\;
+\frac{L^2}{r^2}\,\frac{2GM}{r^2}
+\;=\;
+-\frac{L^2}{\,r^3\,}
+\;+\;
+\frac{3\,GM\,L^2}{\,r^4\,}.
+\end{equation}
+Setting \(\tfrac{dV_\mathrm{eff}}{dr} = 0\) yields
+\begin{equation}
+-\frac{L^2}{\,r^3\,}
+\;+\;
+\frac{3\,GM\,L^2}{\,r^4\,}
+\;=\; 0
+\quad\Longrightarrow\quad
+r \;=\; 3\,GM.
+\end{equation}
+Thus, for a massless particle (photon), the only possible circular orbit is at \(r = 3GM\). This is the well-known photon sphere.
+\textit{This result shows that there is only one possible radius for a circular orbit for a massless particle in the Schwarzschild spacetime, and it is located at $r = 3GM$. This is known as the photon sphere.}
+
+\paragraph{(iv) Stability of the Circular Orbit.}
+To test stability, we look at the second derivative of \(V_\mathrm{eff}\). An extremum is stable if \(\tfrac{d^2V_\mathrm{eff}}{dr^2} > 0\) (minimum) and unstable if \(\tfrac{d^2V_\mathrm{eff}}{dr^2} < 0\) (maximum). We compute:
+\begin{equation}
+\frac{d^2V_\mathrm{eff}}{dr^2}
+\;=\;
+\frac{3\,L^2}{r^4}
+\;-\;
+\frac{12\,GM\,L^2}{r^5}.
+\end{equation}
+Evaluating at \(r = 3GM\):
+\begin{align}
+\left.\frac{d^2V_\mathrm{eff}}{dr^2}\right|_{r=3GM}
+&=\;
+\frac{3\,L^2}{(3GM)^4}
+\;-\;
+\frac{12\,GM\,L^2}{(3GM)^5}
+\;=\;
+\frac{3\,L^2}{81\,G^4M^4}
+\;-\;
+\frac{12\,L^2}{243\,G^4M^4}
+\nonumber\\
+&=\;
+\frac{3\,L^2}{81\,G^4M^4}
+\;-\;
+\frac{4\,L^2}{81\,G^4M^4}
+\;=\;
+-\,\frac{L^2}{81\,G^4M^4}
+\;<\;0.
+\end{align}
+Since this is negative, the orbit at \(r=3GM\) is a maximum of the effective potential and thus unstable. A small perturbation in \(r\) will drive the photon either inwards toward the black hole horizon at \(r=2GM\), or outwards to larger \(r\).
+\textit{The negative value of the second derivative of the effective potential at $r=3GM$ indicates that this circular orbit is unstable. Any slight perturbation will cause the photon to either spiral inward towards the event horizon or escape to infinity.}
+
+\paragraph{(v) Final Remarks.}
+For a massless object (e.g.\ a photon) in Schwarzschild spacetime, there is exactly one circular orbit at \(r=3GM\). However, it is an unstable orbit: any tiny radial perturbation will send the particle plunging inward or escaping outward. This purely relativistic effect has no Newtonian analogue, since massless particles do not orbit under Newtonian gravity.
+\textit{In conclusion, the photon sphere at $r=3GM$ is a unique feature of the Schwarzschild spacetime. It is the only radius at which massless particles can orbit, but this orbit is unstable. This is a purely relativistic phenomenon with no counterpart in Newtonian gravity.}
+
+\pagebreak
+
+
+\section*{Question 14}
+For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
+\[
+E = \Bigl(1 - \tfrac{2GM}{r}\Bigr) \frac{dt}{d\lambda},
+\quad
+L = r^{2}\,\frac{d\phi}{d\lambda}.
+\]
+These are the conserved energy \(E\) and angular momentum \(L\) per unit mass of a test particle moving along a geodesic in the Schwarzschild spacetime. Here, \(G\) is the gravitational constant, \(M\) is the mass of the central object, \(r\) is the radial coordinate, \(t\) is the time coordinate, \(\phi\) is the azimuthal angle, and \(\lambda\) is an affine parameter along the geodesic. The conservation of these quantities is a consequence of the time translation invariance and rotational symmetry of the Schwarzschild metric.
+
+In this problem, we set our units such that \(GM = 1\) and consider the motion of a photon with angular momentum \(L = 10\). We are choosing a system of units in which the product of the gravitational constant \(G\) and the mass of the central object \(M\) is 1. This simplifies the equations. We are considering a photon, which is a massless particle, with an angular momentum \(L=10\).
+
+Find the minimum value of \(E\) such that the photon can reach the singularity at \(r \to 0\).
+
+\subsection*{Solution}
+
+\paragraph{(i) Schwarzschild Metric and Conserved Quantities}
+The Schwarzschild metric in coordinates \(\{t, r, \theta, \phi\}\) is given by:
+\[
+ds^2 
+\,=\, -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,dt^2 
+\;+\; \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}\,dr^2
+\;+\; r^2\,d\theta^2
+\;+\; r^2\,\sin^2\theta\,d\phi^2.
+\]
+This is the Schwarzschild metric, which describes the geometry of spacetime outside a spherically symmetric mass distribution. The metric is expressed in Schwarzschild coordinates \((t, r, \theta, \phi)\), where \(t\) is the time coordinate, \(r\) is the radial coordinate, \(\theta\) is the polar angle, and \(\phi\) is the azimuthal angle. The term \(d\Omega^2 = d\theta^2 + \sin^2\theta\,d\phi^2\) represents the metric on a 2-sphere.
+
+Since the metric is stationary (time translation symmetry) and spherically symmetric, two quantities are conserved along geodesics:
+\[
+E \;=\; \Bigl(1 - \tfrac{2GM}{r}\Bigr)\,\frac{dt}{d\lambda},
+\quad
+L \;=\; r^{2}\,\frac{d\phi}{d\lambda}.
+\]
+The conserved quantity \(E\) is associated with the time translation symmetry of the metric (it does not depend on \(t\)), while \(L\) is associated with the rotational symmetry about the \(z\)-axis (the metric does not depend on \(\phi\)).
+
+Here, \(\lambda\) is an affine parameter along the photon's path.
+
+\paragraph{(ii) Normalization Condition and Effective Potential}
+For a photon (massless particle), the four-momentum \(p^\mu = \frac{dx^\mu}{d\lambda}\) satisfies
+\[
+g_{\mu\nu}\,p^\mu\,p^\nu \;=\; 0.
+\]
+This is the normalization condition for the four-momentum of a massless particle (photon). It expresses that the four-momentum is a null vector, i.e., its squared magnitude is zero.
+
+Assume motion is confined to the equatorial plane (\(\theta = \pi/2\)), which is always possible by spherical symmetry. Then the condition becomes:
+\[
+-\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,\Bigl(\tfrac{dt}{d\lambda}\Bigr)^2
+\;+\;
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}\,\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2
+\;+\;
+r^2\,\Bigl(\tfrac{d\phi}{d\lambda}\Bigr)^2
+\;=\;0.
+\]
+We can choose the equatorial plane without loss of generality due to the spherical symmetry of the Schwarzschild metric. This simplifies the equations by setting \(d\theta/d\lambda = 0\) and \(\sin\theta = 1\).
+
+Substitute the conserved quantities \(E\) and \(L\) to rewrite it in terms of \(dr/d\lambda\):
+\[
+-\,\frac{E^2}{\;1 - \frac{2GM}{r}\;}
+\;+\;
+\frac{1}{\;1 - \frac{2GM}{r}\;}\,\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2
+\;+\;
+\frac{L^2}{\,r^2\,}
+\;=\;0.
+\]
+We have substituted \(E\) and \(L\) into the normalization condition to eliminate \(dt/d\lambda\) and \(d\phi/d\lambda\).
+
+Rearrange this into:
+\[
+\tfrac12\,\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2
+\;+\;
+\frac{L^2}{2\,r^2}\,\Bigl(1-\tfrac{2GM}{r}\Bigr)
+\;=\;
+\tfrac{E^2}{2}.
+\]
+We identify the \emph{effective potential} as
+\[
+V_{\text{eff}}(r)
+\;=\;
+\frac{L^2}{2\,r^2}\,\Bigl(1-\tfrac{2GM}{r}\Bigr).
+\]
+This equation has the form of an energy conservation equation, where the first term represents the ``kinetic energy'' and the second term the ``potential energy''. The effective potential \(V_{\text{eff}}(r)\) determines the radial motion of the photon.
+
+A photon can reach the singularity at \(r=0\) only if its total ``energy'' (in the effective potential sense) is large enough to overcome any potential barrier.
+
+\paragraph{(iii) Setting \(GM=1\) and \(L=10\)}
+We now set \(GM=1\). The angular momentum is given as \(L=10\). 
+Hence,
+\[
+V_{\text{eff}}(r)
+\,=\,
+\frac{L^2}{2\,r^2}\,\Bigl(1-\tfrac{2}{r}\Bigr)
+\,=\,
+\frac{100}{2\,r^2}
+\;-\;
+\frac{100}{\,r^3\,}
+\,=\,
+\frac{50}{\,r^2\,}
+\;-\;
+\frac{100}{\,r^3\,}.
+\]
+We have substituted \(GM=1\) and \(L=10\) into the expression for the effective potential.
+
+The radial equation becomes
+\[
+\tfrac12\,\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2 + V_{\text{eff}}(r)
+\;=\;
+\tfrac{E^2}{2}.
+\]
+This equation describes the radial motion of the photon in terms of the effective potential and the conserved energy \(E\).
+
+\paragraph{(iv) Condition for the Photon to Reach the Singularity}
+To find whether the photon can fall into \(r=0\), we look for the largest barrier in \(V_{\text{eff}}(r)\). The maximum of \(V_{\text{eff}}\) occurs where
+\[
+\frac{dV_{\text{eff}}}{dr} 
+\,=\,
+-\frac{100}{r^3}
+\;+\;
+\frac{300}{r^4}
+\,=\,0.
+\]
+To find the maximum value of the effective potential, we calculate its derivative with respect to \(r\) and set it equal to zero.
+
+Solving yields \(r_{\max} = 3\). Solving the equation \(\frac{dV_{\text{eff}}}{dr} = 0\) gives \(r_{\max} = 3\) (in units where \(GM=1\)).
+
+At this point,
+\[
+V_{\text{eff}}(3)
+=
+\frac{50}{3^2}
+\;-\;
+\frac{100}{3^3}
+=
+\frac{50}{9}
+\;-\;
+\frac{100}{27}
+=
+\frac{150 - 100}{27}
+=
+\frac{50}{27}.
+\]
+We calculate the effective potential at \(r_{\max} = 3\) to find the height of the potential barrier.
+
+The photon must have
+\[
+\frac{E^2}{2}
+\;\ge\;
+V_{\text{eff}}(3),
+\quad\text{i.e.}\quad
+E^2
+\;\ge\;
+2\,\frac{50}{27}
+\;=\;
+\frac{100}{27}.
+\]
+In order for the photon to reach the singularity at \(r=0\), its energy squared must be greater than or equal to the maximum value of the effective potential.
+
+Thus,
+\[
+E
+\;\ge\;
+\sqrt{\frac{100}{27}}
+\;=\;
+\frac{10}{\sqrt{27}}
+\;=\;
+\frac{10}{3\sqrt{3}}.
+\]
+Hence the minimum energy for the photon to reach \(r=0\) is
+\[
+E_{\min}
+\;=\;
+\frac{10}{3\,\sqrt{3}}.
+\]
+We find the minimum energy \(E_{\min}\) by taking the square root of the minimum value of \(E^2\).
+
+\paragraph{(v) Additional Comments}
+
+\begin{itemize}
+    \item The radius \(r=3GM\) (or \(r=3\) in our units where \(GM=1\)) is a special location in the Schwarzschild spacetime known as the photon sphere. At this radius, a photon with precisely the right energy and angular momentum can orbit the central mass in an unstable circular orbit. This is a purely relativistic effect with no Newtonian counterpart.
+
+    To understand why this orbit is unstable, consider the effective potential
+    \[
+    V_{\text{eff}}(r)
+    \;=\;
+    \frac{L^2}{2\,r^2}\,\Bigl(1-\tfrac{2GM}{r}\Bigr).
+    \]
+    At the photon sphere ($r=3GM$), the first derivative of the effective potential vanishes, $\frac{dV_{\text{eff}}}{dr}|_{r=3GM} = 0$, indicating a circular orbit.
+    To check the stability, we need to compute the second derivative:
+    \begin{align*}
+        \frac{d^2V_{\text{eff}}}{dr^2} &= \frac{d}{dr}\left(-\frac{L^2}{r^3} + \frac{3GML^2}{r^4}\right) \\
+        &= \frac{3L^2}{r^4} - \frac{12GML^2}{r^5} \\
+        &= \frac{L^2}{r^4}\left(3 - \frac{12GM}{r}\right).
+    \end{align*}
+    Evaluating this at $r=3GM$, we get
+    \[
+        \frac{d^2V_{\text{eff}}}{dr^2}\Bigr|_{r=3GM} = \frac{L^2}{(3GM)^4}(3-4) = -\frac{L^2}{81(GM)^4} < 0.
+    \]
+
+    The negative sign of the second derivative means that the effective potential has a maximum at $r=3GM$. Therefore, the circular orbit at the photon sphere is unstable. A slight inward or outward radial perturbation will cause the photon to either spiral into the black hole or escape to infinity, respectively.
+
+    Recall that in the lectures, we discussed how the existence and properties of circular orbits are related to the shape of the effective potential. In particular, stable circular orbits correspond to minima of $V_{\text{eff}}$, while unstable ones correspond to maxima. The photon sphere is an example of the latter.
+
+    \item When the photon's energy \(E\) is lower than the threshold value found in part (iv), i.e., \(E < E_{\min} = \frac{10}{3\sqrt{3}}\) (in units where \(GM=1\) and \(L=10\)), the photon will encounter a turning point at some radius \(r_t > 2GM\) where its "radial kinetic energy" vanishes:
+    \[
+    \tfrac12\,\Bigl(\tfrac{dr}{d\lambda}\Bigr)^2 = \tfrac{E^2}{2} - V_{\text{eff}}(r) = 0.
+    \]
+
+    At this point, the photon's radial velocity changes sign, and it cannot proceed further inwards. Instead, it will turn around and move back to larger radii, eventually escaping to infinity. The turning point can be found by solving the equation $E^2/2 = V_{\text{eff}}(r)$ for $r$.
+
+    This behavior is analogous to that of a classical particle moving in a potential with a barrier. If the particle's energy is less than the barrier height, it cannot cross the barrier and will be reflected back.
+
+    \item The existence of a potential barrier for massless particles (photons) in the Schwarzschild spacetime is a remarkable feature of general relativity. In Newtonian gravity, there is no such barrier, and the path of light is unaffected by gravity (in the geometric optics approximation). The effective potential for photons in the Schwarzschild metric,
+    \[
+    V_{\text{eff}}(r)
+    \;=\;
+    \frac{L^2}{2\,r^2}\,\Bigl(1-\tfrac{2GM}{r}\Bigr),
+    \]
+    arises from the curvature of spacetime around the central mass. The $1/r^3$ term, which is responsible for the barrier, has no Newtonian analogue. It represents a purely relativistic correction to the centrifugal potential $L^2/2r^2$.
+
+    This potential barrier is what allows for phenomena like the photon sphere and the deflection of light by massive objects (gravitational lensing), which we studied in the lectures. The fact that even massless particles are affected by gravity in this nontrivial way is a consequence of the fundamental principle of general relativity that all forms of energy and momentum contribute to the curvature of spacetime.
+
+    \item In the full Schwarzschild geometry, the radius $r=2GM$ defines the event horizon of the black hole, a surface of no return. Any photon that crosses the event horizon is trapped inside and cannot escape to infinity. In our linearized treatment, we have assumed weak gravity ($r>2GM$) and a static situation, so this effect is not accurately captured. Nevertheless, the potential barrier and the photon sphere are real features that exist even in the full non-linear theory.
+
+\end{itemize}
+
+These additional comments aim to provide a deeper understanding of the physical and theoretical implications of the result obtained in the exercise, connecting it to the broader concepts discussed in the lectures.
+
+
 \end{document}
