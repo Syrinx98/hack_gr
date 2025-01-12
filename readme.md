@@ -204,7 +204,7 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
 
 3. **Different approach**
 
-    Note: also a different approach is possible, if we assume zero torsion, then the commutator of covariant derivatives is always zero.
+    Note: also a different approach is possible, if we assume zero torsion, then the commutator of covariant derivatives is always zero. (see box)
 
 ---
 
