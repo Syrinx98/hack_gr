@@ -287,10 +287,11 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
 
 ## 12. Stable Circular Orbits in Schwarzschild Geometry (Continued)
 
+1.  **Effective Potential**
     *   The effective potential $V_{\mathrm{eff}}(r)$ is:
         $V_{\mathrm{eff}}(r) = -\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} + \frac{1}{2} = \left(1-\frac{2GM}{r}\right)\left(\frac{L^2}{2r^2}+\frac{1}{2}\right)$
 
-3.  **Circular Orbits**
+2.  **Circular Orbits**
     *   For circular orbits, $\frac{dr}{d\tau} = 0$, implying an extremum of the effective potential:
         $\frac{dV_{\mathrm{eff}}}{dr} = 0$
     *   This condition leads to the equation:
@@ -298,19 +299,17 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     *   Multiplying by $r^4$ gives a quadratic equation in $r$:
         $GMr^2 - L^2r + 3GML^2 = 0$
 
-4.  **Smallest Stable Radius (ISCO)**
+3. **Smallest Stable Radius (ISCO)**
     *   The quadratic equation has solutions:
         $r = \frac{L^2 \pm \sqrt{L^4 - 12 G^2 M^2 L^2}}{2 G M}$
     *   Real solutions exist only if $L^2 \ge 12 G^2 M^2$.
     *   At the threshold $L^2 = 12 G^2 M^2$, the two solutions coincide, giving the innermost stable circular orbit (ISCO):
         $r_{\text{ISCO}} = 6GM$
 
-5.  **Stable Orbit in the \(L \to \infty\) Limit**
+4.  **Stable Orbit in the \(L \to \infty\) Limit**
     *   For large \(L\), the stable orbit radius is approximately:
         $r \approx \frac{L^2}{GM}$
     *   This matches the Newtonian result in the same limit.
-
----
 
 ## 13. Circular Orbits for Massless Objects in Schwarzschild Geometry
 
