@@ -1382,7 +1382,7 @@ Next, we recall that the Ricci tensor $R_{\mu\nu}$ is defined as the contraction
 R_{\mu\nu} \;=\; R^\lambda_{\;\;\mu\lambda\nu}.
 \]
 \textit{The Ricci tensor \(R_{\mu\nu}\) is obtained by contracting (summing over) the first and third indices of the Riemann tensor. This means we set the first index (\(\rho\)) and the third index (\(\lambda\)) of the Riemann tensor to be the same, \(\lambda\), and sum over all possible values of \(\lambda\). The Ricci tensor is a measure of the curvature of spacetime, and it plays a crucial role in Einstein's field equations.}
-Hence, the first term can be written as
+Hence, the first term can be written as 
 \[
 R^\mu_{\;\;\sigma\mu\nu}\,W^{\sigma\nu}
 \;=\;
@@ -1432,32 +1432,28 @@ R_{\sigma\nu}\,
 \textit{By renaming the dummy indices in the second term, we can rewrite the expression as a difference between two terms involving the Ricci tensor and the tensor \(W\), but with the indices swapped. We renamed \(\mu\) to \(\nu\), so the expression becomes \(R_{\sigma\nu}W^{\nu\sigma}\). Then we can factor out the Ricci tensor, since it's now the same in both terms.}
 Therefore,
 \[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\;
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\; 
 R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
 \]
 For this quantity to vanish for the \emph{arbitrary} tensor $W^{\mu\nu}$, the factor in parentheses must vanish unless $R_{\sigma\nu}=0$ everywhere.
 \textit{For this expression to be equal to zero for an arbitrary tensor \(W^{\mu\nu}\), the factor in parentheses must be zero, unless the Ricci tensor is identically zero. If the factor in parentheses is zero, the whole expression is zero, regardless of the value of the Ricci tensor. If the Ricci tensor is zero, the whole expression is zero, regardless of the value of \(W^{\mu\nu}\).}
 
-\paragraph{(v) Conditions for Vanishing Commutator}
-\textit{We conclude by deriving the two possible conditions under which the commutator vanishes. These conditions arise from the fact that the product of two factors is zero if and only if at least one of the factors is zero.}
-Thus, there are two distinct possibilities for
+\paragraph{(v) Conditions for Vanishing Commutator and the Role of Torsion}
+\textit{We now analyze the conditions under which the commutator vanishes. We had initially identified two cases, but a closer examination, particularly in light of the tensor decomposition discussed below, reveals a more nuanced relationship between these cases and the underlying assumptions.}
+
+\textit{Recall the result we derived:}
 \[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\; 0:
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\;
+R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
 \]
+\textit{For this expression to be zero for arbitrary \(W^{\mu\nu}\), we initially identified two distinct possibilities:}
+
 \begin{itemize}
-\item \textbf{Case 1: $W^{\mu\nu}$ is symmetric.} If $W^{\mu\nu}$ is symmetric, then $W^{\sigma\nu} - W^{\nu\sigma} = 0$, and consequently
-\[
-R_{\sigma\nu}\,\bigl(W^{\sigma\nu} - W^{\nu\sigma}\bigr)\;=\;0
-\]
-for any Ricci tensor $R_{\sigma\nu}$, making the whole expression vanish.
-\textit{Case 1: If \(W^{\mu\nu}\) is symmetric (i.e., \(W^{\mu\nu} = W^{\nu\mu}\)), then the difference \(W^{\sigma\nu} - W^{\nu\sigma}\) is zero, and therefore the whole expression vanishes, regardless of the value of the Ricci tensor. A tensor is symmetric if swapping its indices doesn't change its value.  This means that if we swap the indices \(\sigma\) and \(\nu\), the tensor remains the same.}
-\item \textbf{Case 2: $R_{\mu\nu} = 0$.} If the spacetime is Ricci-flat, meaning $R_{\mu\nu}=0$, then
-\[
-R_{\sigma\nu}\,\bigl(W^{\sigma\nu} - W^{\nu\sigma}\bigr)\;=\;0
-\]
-regardless of whether $W^{\mu\nu}$ is symmetric or not. In this scenario, the commutator also vanishes for \emph{any} $(2,0)$ tensor.
-\textit{Case 2: If the spacetime is Ricci-flat (i.e., \(R_{\mu\nu} = 0\)), then the whole expression vanishes, regardless of the symmetry or antisymmetry of \(W^{\mu\nu}\). In this case, the commutator vanishes for any tensor of type (2,0). Ricci-flat means that the Ricci tensor is zero everywhere. This is a strong condition on the geometry of spacetime.}
+    \item \textbf{Case 1: $W^{\mu\nu}$ is symmetric.} If $W^{\mu\nu} = W^{\nu\mu}$, the term in the parentheses vanishes, leading to a zero commutator regardless of the value of the Ricci tensor \(R_{\sigma\nu}\).
+
+    \item \textbf{Case 2: $R_{\mu\nu} = 0$ (Ricci-flat spacetime).} If the Ricci tensor is zero, the entire expression vanishes, regardless of the symmetry properties of \(W^{\mu\nu}\). This condition corresponds to a vacuum solution in General Relativity (in the absence of a cosmological constant), where \(T_{\mu\nu} = 0\).  \textit{An example of this is the void case. The Ricci tensor describes how an infinitesimal volume of particles that moves along geodesics expands or contracts. \(R_{\mu\nu} = 0\) means there is no volume variation, but you can still have curvature of spacetime as described by the full Riemann tensor.}
 \end{itemize}
+
 
 \paragraph{(vi) Physical Interpretation (Optional Remark)}
 \textit{We give a brief physical interpretation of the two conditions. This helps to connect the mathematical results to their physical meaning in the context of General Relativity.}
@@ -1468,9 +1464,9 @@ On the other hand, requiring $W^{\mu\nu}$ to be symmetric imposes a restriction 
 
 \paragraph{(vii) Final Answer}
 \textit{Let's summarize the final result.}
-Hence,
+Hence, 
 \[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} 
 \;=\;0
 \quad
 \Longleftrightarrow
@@ -1478,6 +1474,41 @@ Hence,
 \text{either }W^{\mu\nu}\text{ is symmetric, or }R_{\mu\nu}=0.
 \]
 \textit{Ultimately, the commutator \([\nabla_{\mu}, \nabla_{\nu}]\,W^{\mu\nu}\) is equal to zero if and only if \(W^{\mu\nu}\) is a symmetric tensor, or if the spacetime is Ricci-flat (\(R_{\mu\nu}=0\)). These are the two possible conditions under which the given identity holds.}
+
+\subsection*{Question 8: Null conditions}
+
+\boxed{%
+\begin{minipage}{0.99\linewidth}
+\begin{aligned}
+& \textit{We decompose the (2,0) tensor } W^{\mu\nu} \textit{ into symmetric } (S^{\mu\nu}) \textit{ and antisymmetric } (A^{\mu\nu}) \textit{ parts:} \\
+& \qquad W^{\mu\nu} = S^{\mu\nu} + A^{\mu\nu} \\
+& \qquad S^{\mu\nu} = \frac{1}{2}(W^{\mu\nu} + W^{\nu\mu}), \quad A^{\mu\nu} = \frac{1}{2}(W^{\mu\nu} - W^{\nu\mu}) \\
+\\
+& \textit{Substituting into the commutator } \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \textit{ yields:} \\
+& \qquad \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} = R_{\sigma\nu}(S^{\sigma\nu} - S^{\nu\sigma}) + R_{\sigma\nu}(A^{\sigma\nu} - A^{\nu\sigma}) \\
+\\
+& \textit{The symmetric part's contribution vanishes. The antisymmetric part contributes } 2R_{\sigma\nu}A^{\sigma\nu}. \\
+& \textit{A symmetric } W^{\mu\nu} \textit{ always yields a zero commutator. An antisymmetric } W^{\mu\nu} \textit{ can also} \\
+& \textit{result in a zero commutator, provided the contraction } R_{\sigma\nu}A^{\sigma\nu} \textit{ is zero.} \\
+& \textit{This is akin to "orthogonality" between the Ricci tensor and the antisymmetric part of } W^{\mu\nu}. \\
+& \textit{Since the Ricci tensor is symmetric, its contraction with } A^{\sigma\nu} \textit{ is always zero.} \\
+\\
+& \textit{We assume a torsion-free connection (specifically, the Levi-Civita connection), so } T^\rho_{\mu\nu} = 0. \\
+& \textit{With torsion, our analysis would be more complex.} \\
+\\
+& \textit{Under zero torsion, we conclude:} \\
+& \textit{1. Symmetric } W^{\mu\nu} \textit{ guarantees a zero commutator, regardless of the Ricci tensor.} \\
+& \textit{2. Ricci-flat spacetime } (R_{\mu\nu} = 0) \textit{ implies a zero commutator for any } W^{\mu\nu} \textit{ because the} \\
+& \quad \textit{symmetric Ricci tensor always has a zero contraction with any antisymmetric part.} \\
+& \textit{3. Purely antisymmetric } W^{\mu\nu} \textit{ always leads to a zero commutator, as the contraction} \\
+& \quad \textit{between the symmetric Ricci tensor and antisymmetric } W^{\mu\nu} \textit{ vanishes.} \\
+\\
+& \textit{In a torsion-free spacetime, the commutator vanishes if } W^{\mu\nu} \textit{ is symmetric or if } R_{\mu\nu} = 0. \\
+& \textit{The antisymmetric part of } W^{\mu\nu} \textit{ can also lead to a zero commutator under specific conditions,} \\
+& \textit{illustrating the interplay between tensor symmetry and spacetime curvature.}
+\end{aligned}
+\end{minipage}
+}
 
 \subsection*{Question 8: Theoretical Background: Understanding the Building Blocks}
 
@@ -1576,12 +1607,13 @@ R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G T_{\mu\nu}
 
 \pagebreak
 
+
 \section*{Question 9}
 
 Consider a photon moving in a 2D spacetime described by the metric
-\begin{equation}
+\begin{equation*}
 ds^2 = -\left(1 + \frac{x^2}{\ell^2}\right)\,dt^2 + dx^2,
-\end{equation}
+\end{equation*}
 where \(\ell\) is a constant. The photon follows a geodesic \(x^\mu(\lambda)\) parametrized by an affine parameter \(\lambda\), and its four-momentum is given by \(p^\mu = \frac{dx^\mu}{d\lambda}\). Using the geodesic equation, derive all the conserved quantities for this system. Then use these results to express \(\frac{dx}{d\lambda}\) in terms of the radial coordinate \(x\) and the conserved quantities.
 
 \subsection*{Solution}
@@ -1589,41 +1621,33 @@ where \(\ell\) is a constant. The photon follows a geodesic \(x^\mu(\lambda)\) p
 \paragraph{1. The Metric and Photon Setup.}
 
 \textit{We are given the 2D metric:}
-\begin{equation}
+\begin{equation*}
 ds^2
 = -\left(1 + \frac{x^2}{\ell^2}\right)\,dt^2
 + dx^2.
-\end{equation}
+\end{equation*}
 \textit{A photon follows a geodesic \(x^\mu(\lambda)\) parametrized by an affine parameter \(\lambda\). Its four-momentum is defined as}
 \[
 p^\mu \;=\; \frac{dx^\mu}{d\lambda}.
 \]
 
-\paragraph{2. Geodesic Equation in Contravariant Form.}
+\paragraph{2. Geodesic Equation.}
 
 \textit{The standard geodesic equation is:}
-\begin{equation}\label{eq:geod}
+\begin{equation*}\label{eq:geod}
 \frac{d^2 x^\mu}{d\lambda^2}
 + \Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\lambda}\,\frac{dx^\beta}{d\lambda}
 = 0,
-\end{equation}
+\end{equation*}
 \textit{where \(\Gamma^\mu_{\alpha\beta}\) are the Christoffel symbols. They are computed from}
-\begin{equation}\label{eq:christoffel}
+\begin{equation*}\label{eq:christoffel}
 \Gamma^\mu_{\alpha\beta}
 = \frac{1}{2}\,g^{\mu\sigma}
 \bigl(\partial_\alpha g_{\sigma\beta}
 + \partial_\beta g_{\sigma\alpha}
 - \partial_\sigma g_{\alpha\beta}\bigr).
-\end{equation}
+\end{equation*}
 \textit{Equation \eqref{eq:geod} tells us how the tangent vector to the geodesic, i.e., the four-momentum \(p^\mu = \frac{dx^\mu}{d\lambda}\), changes along the geodesic itself. The Christoffel symbols \(\Gamma^\mu_{\alpha\beta}\) represent the affine connection, and they encode how the spacetime is curved. They depend on the first derivatives of the metric.}
-
-\textit{Substituting \(p^\mu = \frac{dx^\mu}{d\lambda}\) into \eqref{eq:geod}, we get the contravariant form of the four-momentum evolution:}
-\begin{equation}
-\frac{dp^\mu}{d\lambda}
-+ \Gamma^\mu_{\alpha\beta}\,p^\alpha\,p^\beta
-= 0.
-\end{equation}
-\textit{This equation tells us how the contravariant four-momentum changes along the geodesic.}
 
 \paragraph{3. Metric Components.}
 
@@ -1641,74 +1665,78 @@ g^{tt}
 g^{xx}
 = 1.
 \]
-\textit{The inverse metric is obtained by calculating the inverse of the metric tensor matrix.}
+\textit{The inverse metric is obtained by calculating the inverse of the metric tensor matrix.} \emph{We can verify that \(g_{\mu\alpha}g^{\alpha\nu} = \delta_\mu^\nu\), as required.}
 
-\paragraph{4. Conserved Quantities and Symmetries.}
+\paragraph{4. Calculation of the Christoffel Symbols.}
 
-\textit{A crucial point in General Relativity is that if the metric \(g_{\alpha\beta}\) does not explicitly depend on a coordinate \(x^\sigma\), then the corresponding component of the covariant four-momentum \(p_\sigma\) is conserved.}
+\textit{We only need the Christoffel symbols \(\Gamma^x_{tt}\) and \(\Gamma^{t}_{tx}\). Given that the only non-zero derivative of the metric is \(\partial_x g_{tt} = -\frac{2x}{\ell^2}\), we have:}
 
-\textit{\textbf{Why?}}
-
-\begin{itemize}
-\item \textit{Multiplying the geodesic equation \eqref{eq:geod} by $g_{\mu\nu}$, we get:}
- \[
- g_{\mu\nu}\frac{d^2x^\mu}{d\lambda^2} + g_{\mu\nu}\Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\lambda}\,\frac{dx^\beta}{d\lambda} = 0.
- \]
- \textit{Recalling that $p_\nu = g_{\mu\nu}p^{\mu}$ and $p^\mu = \frac{dx^\mu}{d\lambda}$, we can rewrite the first term as $\frac{dp_\nu}{d\lambda}$.}
- \textit{For the second term, we use the definition of the Christoffel symbols \eqref{eq:christoffel} and, for simplicity, consider only the part containing the metric derivatives:}
- \[
- g_{\mu\nu}\Gamma^\mu_{\alpha\beta} = g_{\mu\nu} \frac{1}{2}g^{\mu\sigma} \bigl(\partial_\alpha g_{\sigma\beta} + \partial_\beta g_{\sigma\alpha} - \partial_\sigma g_{\alpha\beta}\bigr) = \frac{1}{2} \delta^\sigma_\nu \left( \partial_\alpha g_{\sigma\beta} + \partial_\beta g_{\sigma\alpha} - \partial_\sigma g_{\alpha\beta} \right)
- \]
- \textit{where we used the fact that $g_{\mu\nu}g^{\mu\sigma} = \delta^\sigma_\nu$. Simplifying further, we obtain:}
- \[
- g_{\mu\nu}\Gamma^\mu_{\alpha\beta} = \frac{1}{2} \left( \partial_\alpha g_{\nu\beta} + \partial_\beta g_{\nu\alpha} - \partial_\nu g_{\alpha\beta} \right)
- \]
-\textit{Substituting into the geodesic equation multiplied by $g_{\mu\nu}$, we get:}
- \[
- \frac{dp_\nu}{d\lambda}
- \;=\;
- \frac12\,\partial_\nu g_{\alpha\beta}\,p^\alpha p^\beta.
- \]
-\textit{This is the covariant form of the geodesic equation.}\\
-\textit{In fact, explicitly writing out the steps, we have:}
-\begin{align*}
-  g_{\mu\nu} \frac{d^2 x^\mu}{d\lambda^2} + g_{\mu\nu} \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{d\lambda} \frac{dx^\beta}{d\lambda} &= 0 \\
-  \frac{d}{d\lambda} \left( g_{\mu\nu} \frac{dx^\mu}{d\lambda} \right) - \frac{dg_{\mu\nu}}{d\lambda}\frac{dx^\mu}{d\lambda} + g_{\mu\nu} \Gamma^\mu_{\alpha\beta} \frac{dx^\alpha}{d\lambda} \frac{dx^\beta}{d\lambda} &= 0 \\
-  \frac{dp_\nu}{d\lambda} - \frac{\partial g_{\mu\nu}}{\partial x^\rho} \frac{dx^\rho}{d\lambda}\frac{dx^\mu}{d\lambda} + g_{\mu\nu} \frac{1}{2} g^{\mu\sigma} \left( \partial_\alpha g_{\sigma\beta} + \partial_\beta g_{\sigma\alpha} - \partial_\sigma g_{\alpha\beta} \right) \frac{dx^\alpha}{d\lambda} \frac{dx^\beta}{d\lambda} &= 0 \\
-  \frac{dp_\nu}{d\lambda} - \partial_\rho g_{\mu\nu} p^\rho p^\mu + \frac{1}{2} \left( \partial_\alpha g_{\nu\beta} + \partial_\beta g_{\nu\alpha} - \partial_\nu g_{\alpha\beta} \right) p^\alpha p^\beta &= 0 \\
-  \frac{dp_\nu}{d\lambda} - \partial_\alpha g_{\beta\nu} p^\alpha p^\beta + \frac{1}{2}\partial_\alpha g_{\nu\beta} p^\alpha p^\beta + \frac{1}{2} \partial_\beta g_{\nu\alpha} p^\alpha p^\beta - \frac{1}{2} \partial_\nu g_{\alpha\beta} p^\alpha p^\beta &= 0 \\
-  \frac{dp_\nu}{d\lambda} - \frac{1}{2} \partial_\alpha g_{\beta\nu} p^\alpha p^\beta - \frac{1}{2} \partial_\beta g_{\alpha\nu} p^\alpha p^\beta + \frac{1}{2}\partial_\alpha g_{\nu\beta} p^\alpha p^\beta + \frac{1}{2} \partial_\beta g_{\nu\alpha} p^\alpha p^\beta - \frac{1}{2} \partial_\nu g_{\alpha\beta} p^\alpha p^\beta &= 0
-\end{align*}
-\textit{where the first 4 terms cancel in pairs, since $\alpha$ and $\beta$ are dummy indices, and we finally obtain}
 \[
-\frac{dp_\nu}{d\lambda} = \frac{1}{2} \partial_\nu g_{\alpha\beta} p^\alpha p^\beta
+\Gamma^x_{tt} = \frac{1}{2}g^{xx}(\partial_t g_{xt} + \partial_t g_{tx} - \partial_x g_{tt}) = \frac{1}{2} \cdot 1 \cdot (0 + 0 - (-\frac{2x}{\ell^2})) = \frac{x}{\ell^2}
 \]
-\textit{If \(\partial_\nu g_{\alpha\beta} = 0\) for some index \(\nu\), this immediately implies that \(\frac{dp_\nu}{d\lambda} = 0\). Hence, \(p_\nu\) is constant along the geodesic.}
+\emph{Here, we used the fact that \(g^{xx} = 1\), and the only surviving term is \(-\partial_x g_{tt}\) because \(g_{tx} = g_{xt} = 0\).}
 
-\item \textit{Physically, this corresponds to the existence of a \emph{Killing vector} (a symmetry) along that coordinate. In simpler terms, \(\partial_t g_{\alpha\beta} = 0\) reflects the invariance of the metric under time translations, yielding a conserved energy.}
-\end{itemize}
-
-\textit{In our specific problem, the metric does not depend on the time coordinate \(t\). Thus, \(\partial_t g_{\alpha\beta} = 0\), and therefore \(p_t\) is conserved. We call this constant of motion}
-\begin{equation}
-p_t = - E,
-\end{equation}
-\textit{where \(E\) is interpreted as the energy of the photon.}
-
-\textit{Note on Notation:} \textit{Writing \(p_t = -E\) is a common convention. The minus sign is conventional so that \(E\) is considered a positive energy, consistent with the sign of \(g_{tt}\).}
-\paragraph{5. Explicit Calculation of \(\boldsymbol{p_t}\).}
-
-\textit{We can calculate \(p_t\) explicitly:}
 \[
-p_t
-= g_{t\alpha}\,p^\alpha
-= g_{tt}\,p^t
-= -\left(1 + \frac{x^2}{\ell^2}\right)\,\frac{dt}{d\lambda}.
+\Gamma^t_{tx} = \Gamma^t_{xt} = \frac{1}{2}g^{tt}(\partial_t g_{tx} + \partial_x g_{tt} - \partial_t g_{tx}) = \frac{1}{2} \cdot \left(-\frac{1}{1 + \frac{x^2}{\ell^2}}\right) \cdot (-\frac{2x}{\ell^2}) = \frac{x}{\ell^2} \frac{1}{1 + \frac{x^2}{\ell^2}} = \frac{x}{x^2 + \ell^2}
 \]
-\textit{Since \(p_t = -E\) is constant along the photon geodesic, we have}
-\begin{equation}\label{eq:pt-const}
+\emph{Similarly, we used \(g^{tt} = -\frac{1}{1 + x^2/\ell^2}\), and only \(\partial_x g_{tt}\) is non-zero.}
+
+All other Christoffel symbols are zero. \emph{This can be verified by plugging in the other indices into the formula for the Christoffel symbols.}
+
+\paragraph{5. Applying the Geodesic Equation.}
+
+\textit{Let's write out the geodesic equation for \(\mu = t\):}
+\[
+\frac{d^2t}{d\lambda^2} + \Gamma^t_{\alpha\beta} \frac{dx^\alpha}{d\lambda} \frac{dx^\beta}{d\lambda} = 0
+\]
+\textit{Since only \(\Gamma^t_{tx} = \Gamma^t_{xt}\) is non-zero, this simplifies to:}
+\[
+\frac{d^2t}{d\lambda^2} + 2\Gamma^t_{tx} \frac{dt}{d\lambda} \frac{dx}{d\lambda} = 0
+\]
+\emph{The factor of 2 comes from the fact that \(\Gamma^t_{tx}\) and \(\Gamma^t_{xt}\) are equal and both contribute.}
+
+\textit{Substituting the value of \(\Gamma^t_{tx} = \frac{x}{x^2 + \ell^2}\), we have:}
+\[
+\frac{d^2t}{d\lambda^2} + 2\frac{x}{x^2 + \ell^2} \frac{dt}{d\lambda} \frac{dx}{d\lambda} = 0
+\]
+
+\textit{Multiplying by \((1 + \frac{x^2}{\ell^2})\), we get:}
+\[
+(1 + \frac{x^2}{\ell^2}) \frac{d^2t}{d\lambda^2} + \frac{2x}{\ell^2} \frac{x^2 + \ell^2}{x^2+\ell^2} \frac{dt}{d\lambda} \frac{dx}{d\lambda} = 0
+\]
+\[
+\left(1 + \frac{x^2}{\ell^2}\right) \frac{d^2 t}{d\lambda^2} + \frac{2x}{\ell^2} \frac{dt}{d\lambda}\frac{dx}{d\lambda} = 0
+\]
+
+\textit{Notice that this can be written as:}
+\[
+\frac{d}{d\lambda} \left( (1 + \frac{x^2}{\ell^2}) \frac{dt}{d\lambda} \right) = 0
+\]
+
+\boxed{%
+\begin{aligned}
+\emph{Explicit passages:} \quad
+&\frac{d}{d\lambda}\left[\left(1+\frac{x^2}{\ell^2}\right)\frac{dt}{d\lambda}\right]\\[1mm]
+\emph{using the product rule:}\quad
+&\frac{d}{d\lambda}\bigl[f(\lambda)g(\lambda)\bigr] = f'(\lambda)g(\lambda) + f(\lambda)g'(\lambda),\\[1mm]
+\emph{with } &f(\lambda)=1+\frac{x^2}{\ell^2}\quad \text{and}\quad g(\lambda)=\frac{dt}{d\lambda}.\\[1mm]
+\emph{Since } \quad
+&\frac{d}{d\lambda}\left(1+\frac{x^2}{\ell^2}\right)
+=\frac{1}{\ell^2}\frac{d}{d\lambda}(x^2)
+=\frac{2x}{\ell^2}\frac{dx}{d\lambda},\\[1mm]
+\emph{we obtain } \quad
+&\frac{d}{d\lambda}\left[\left(1+\frac{x^2}{\ell^2}\right)\frac{dt}{d\lambda}\right] \\
+&\quad = \frac{2x}{\ell^2}\frac{dx}{d\lambda}\frac{dt}{d\lambda}
++ \left(1+\frac{x^2}{\ell^2}\right)\frac{d^2t}{d\lambda^2}\,.
+\end{aligned}%
+}
+
+
+\textit{This implies that \((1 + \frac{x^2}{\ell^2}) \frac{dt}{d\lambda}\) is a conserved quantity. We call this constant of motion \(E\), so that}
+\begin{equation*}\label{eq:pt-const}
 \left(1 + \frac{x^2}{\ell^2}\right)\,\frac{dt}{d\lambda} = E.
-\end{equation}
-\textit{This is our first conserved quantity: the photon's energy.}
+\end{equation*}
+\textit{This is our first conserved quantity: the photon's energy. \emph{We interpret \(E\) as the energy because the metric is time-translation invariant, meaning it doesn't depend explicitly on \(t\).}}
 
 \paragraph{6. Null Condition for the Photon and \(\frac{dx}{d\lambda}\).}
 
@@ -1717,12 +1745,12 @@ p_t
 ds^2 = 0.
 \]
 \textit{Thus, using our metric,}
-\begin{equation}
+\begin{equation*}
 0
 = -\left(1 + \frac{x^2}{\ell^2}\right)\,\left(\frac{dt}{d\lambda}\right)^2
 \;+\;
 \left(\frac{dx}{d\lambda}\right)^2.
-\end{equation}
+\end{equation*}
 \textit{This equation reflects that the photon moves at the speed of light in this curved 2D geometry.}
 
 \textit{We can substitute the result from \eqref{eq:pt-const},}
@@ -1743,32 +1771,24 @@ ds^2 = 0.
 \left(\frac{dx}{d\lambda}\right)^2
 = \frac{E^2}{\,1 + \frac{x^2}{\ell^2}\,}.
 \]
+\textit{We simply moved the negative term to the right-hand side and canceled one factor of \((1 + \frac{x^2}{\ell^2})\).}
+
 \textit{Taking the square root,}
-\begin{equation}
+\begin{equation*}
 \frac{dx}{d\lambda}
 = \pm\,\frac{E}{\sqrt{\,1 + \frac{x^2}{\ell^2}\,}}.
-\end{equation}
+\end{equation*}
 \textit{The \(\pm\) sign indicates that the photon can move in either the positive or negative \(x\) direction.}
 
 \paragraph{7. Final Expressions and Physical Interpretation.}
 
 \begin{itemize}
-\item \(\displaystyle p_t = -E\) \textit{is the \emph{conserved} energy component, due to the time translation symmetry (\(\partial_t g_{\alpha\beta} = 0\)).}
-\item \textit{From \(p_t\), we get \(\displaystyle \frac{dt}{d\lambda} = \frac{E}{1 + x^2/\ell^2}\).}
-\item \textit{The null condition \(ds^2 = 0\) then gives \(\displaystyle \frac{dx}{d\lambda} = \pm \frac{E}{\sqrt{1 + x^2/\ell^2}}\). }
+\item \textit{From the geodesic equation we found \(\displaystyle \left(1 + \frac{x^2}{\ell^2}\right)\,\frac{dt}{d\lambda} = E\), where \(E\) is a \emph{conserved} quantity interpreted as the energy of the photon}
+\item \textit{From this, we get \(\displaystyle \frac{dt}{d\lambda} = \frac{E}{1 + x^2/\ell^2}\). \emph{This tells us how coordinate time \(t\) changes with the affine parameter \(\lambda\) along the photon's path.}}
+\item \textit{The null condition \(ds^2 = 0\) then gives \(\displaystyle \frac{dx}{d\lambda} = \pm \frac{E}{\sqrt{1 + x^2/\ell^2}}\). \emph{This describes the spatial velocity of the photon in this geometry.}}
 \end{itemize}
 
 \textit{Thus, we see that the photon's motion in \((t,x)\) coordinates is completely described once the constant energy \(E\) is specified.}
-
-\paragraph{Why We Used the Geodesic Equation for \(\mathbf{p_\mu}\) Conservation.}
-
-\textit{One last remark: to show that \(p_t\) is constant, one needs to analyze how \(p_\mu\) evolves along \(\lambda\). The geodesic equation (in its covariant form) states:}
-\[
-\frac{dp_\nu}{d\lambda}
-= \frac12\,\partial_\nu g_{\alpha\beta}\,p^\alpha p^\beta.
-\]
-\textit{If the metric does not depend on \(t\), then \(\partial_t g_{\alpha\beta} = 0\), which \emph{directly} implies that \(\frac{dp_t}{d\lambda} = 0\). Thus, \(p_t\) is a conserved quantity. This is the rigorous link between the symmetry of the metric (\(\partial_t = 0\)) and the constancy of \(p_t\).}\\\\
-
 
 \pagebreak
 
@@ -2037,7 +2057,7 @@ We conclude that the two Christoffel symbols requested in this problem are:
 
 For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
 \[
-E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda}, 
+E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda},
 \quad
 L = r^{2} \frac{d\phi}{d\lambda}.
 \]

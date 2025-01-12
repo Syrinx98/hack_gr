@@ -2,6 +2,15 @@
 
 This concise guide outlines the essential steps to solve the GR (General Relativity) exercises.
 
+Thank for all the contibutors in the telegram group (year 2024/2025):
+
+* Jean-Pierre
+* Belli Luigi
+* Fulterz
+* Margherita
+* Sergio Lucci
+* NikoG
+
 ## 1. Metric Tensor Transformation
 
 1.  **Identify the Original Metric**
