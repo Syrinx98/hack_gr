@@ -436,12 +436,12 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     *   For '+' polarization in standard TT gauge: $C_{11} = -C_{22} = C_+$ and $C_{12} = C_{21} = 0$, $C_{0\nu} = C_{3\nu} = 0$.
     *   Explicitly:
         * $C_{\mu\nu} = $
-        $\begin{bmatrix}
+        $$\begin{bmatrix}
         0 & 0 & 0 & 0 \\
         0 & C_+ & 0 & 0 \\
         0 & 0 & -C_+ & 0 \\
         0 & 0 & 0 & 0
-        \end{bmatrix}$
+        \end{bmatrix}$$
 
 3.  **Gauge Transformation**
 
