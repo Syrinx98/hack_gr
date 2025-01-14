@@ -391,31 +391,31 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
 
 ## 15. Gauge Transformations in Linearized Gravity
 
-1.  **Definition of \(V_\mu\)**
+1.  **Definition of $V_\mu$**
 
-    *   Define the vector \(V_\mu\) as:
-        \(V_\mu = \partial_\nu h^\nu_\mu - \frac{1}{2} \partial_\mu h^\nu_\nu\)
-    *   \(h^\nu_\mu = \eta^{\nu\alpha}h_{\mu\alpha}\) and \(h^\nu_\nu = \eta^{\nu\alpha}h_{\nu\alpha}\) is the trace of \(h_{\mu\nu}\).
+    *   Define the vector $V_\mu$ as:
+        * $V_\mu = \partial_\nu h^\nu_\mu - \frac{1}{2} \partial_\mu h^\nu_\nu$
+    *   $h^\nu_\mu = \eta^{\nu\alpha}h_{\mu\alpha}$ and $h^\nu_\nu = \eta^{\nu\alpha}h_{\nu\alpha}$ is the trace of $h_{\mu\nu}$.
 
 2.  **Infinitesimal Gauge Transformation**
 
     *   Consider a small coordinate transformation:
-        \(x^\mu \to x^\mu + \xi^\mu\)
-    *   The metric perturbation \(h_{\mu\nu}\) transforms as:
-        \(h_{\mu\nu} \to h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu\)
-    *   \(\xi_\mu = \eta_{\mu\alpha} \xi^\alpha\)
+        * $x^\mu \to x^\mu + \xi^\mu$
+    *   The metric perturbation $h_{\mu\nu}$ transforms as:
+        * $h_{\mu\nu} \to h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu$
+    *   $\xi_\mu = \eta_{\mu\alpha} \xi^\alpha$
 
-3.  **Transformation of \(V_\mu\)**
+3.  **Transformation of $V_\mu$**
 
-    *   Under the gauge transformation, \(V_\mu\) transforms as:
-        \(V_\mu \to V_\mu + \Box \xi_\mu\)
-    *   \(\Box = \partial^\alpha \partial_\alpha\) is the d'Alembert operator.
+    *   Under the gauge transformation, $V_\mu$ transforms as:
+        * $V_\mu \to V_\mu + \Box \xi_\mu$
+    *   $\Box = \partial^\alpha \partial_\alpha$ is the d'Alembert operator.
 
 4.  **Existence of Lorenz Gauge**
 
-    *   It is always possible to find a gauge where \(V_\mu = 0\) (Lorenz gauge).
-    *   This is achieved by choosing \(\xi_\mu\) such that:
-        \(\Box \xi_\mu = -V_\mu\)
+    *   It is always possible to find a gauge where $V_\mu = 0$ (Lorenz gauge).
+    *   This is achieved by choosing $\xi_\mu$ such that:
+        * $\Box \xi_\mu = -V_\mu$
     *   The existence of a solution to this inhomogeneous wave equation guarantees that the Lorenz gauge can always be reached.
 
 ---
@@ -425,34 +425,36 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
 1.  **Plane Wave in TT Gauge**
 
     *   Consider a plane wave propagating in the positive z-direction:
-        \(h_{\mu\nu}^{TT} = \operatorname{Re}(C_{\mu\nu} e^{ik_\sigma x^\sigma})\)
-    *   \(k^\mu = (\omega, 0, 0, \omega)\) for a wave propagating along the positive z-axis.
+        * $h_{\mu\nu}^{TT} = \operatorname{Re}(C_{\mu\nu} e^{ik_\sigma x^\sigma})$
+    *   $k^\mu = (\omega, 0, 0, \omega)$ for a wave propagating along the positive z-axis.
 
-2.  **Polarization Tensor \(C_{\mu\nu}\) for '+' Polarization**
+2.  **Polarization Tensor $C_{\mu\nu}$ for '+' Polarization**
 
-    *   \(C_{\mu\nu}\) is symmetric: \(C_{\mu\nu} = C_{\nu\mu}\).
-    *   Transversality: \(k^\mu C_{\mu\nu} = 0 \implies C_{0\nu} = -C_{3\nu}\)
-    *   Tracelessness: \(C^\mu_\mu = 0 \implies C_{00} = C_{33}, C_{11} = -C_{22}\).
-    *   For '+' polarization in standard TT gauge: \(C_{11} = -C_{22} = C_+\) and \(C_{12} = C_{21} = 0\), \(C_{0\nu} = C_{3\nu} = 0\).
+    *   $C_{\mu\nu}$ is symmetric: $C_{\mu\nu} = C_{\nu\mu}$.
+    *   Transversality: $k^\mu C_{\mu\nu} = 0 \implies C_{0\nu} = -C_{3\nu}$
+    *   Tracelessness: $C^\mu_\mu = 0 \implies C_{00} = C_{33}, C_{11} = -C_{22}$.
+    *   For '+' polarization in standard TT gauge: $C_{11} = -C_{22} = C_+$ and $C_{12} = C_{21} = 0$, $C_{0\nu} = C_{3\nu} = 0$.
     *   Explicitly:
-        \(C_{\mu\nu} = \begin{pmatrix}
+        * $C_{\mu\nu} = \left[ \begin{matrix}
         0 & 0 & 0 & 0 \\
         0 & C_+ & 0 & 0 \\
         0 & 0 & -C_+ & 0 \\
         0 & 0 & 0 & 0
-        \end{pmatrix}\)
+        \end{matrix} \right]$
 
 3.  **Gauge Transformation**
 
     *   Consider a gauge transformation:
-        \(\xi^\mu = (\alpha(x^\mu), \beta(x^\mu), 0, 0)\)
+        * $\xi^\mu = (\alpha(x^\mu), \beta(x^\mu), 0, 0)$
     *   The metric perturbation transforms as:
-        \(h_{\mu\nu} \to h'_{\mu\nu} = h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu\)
-    *   Compute \(\partial_\mu \xi_\nu + \partial_\nu \xi_\mu\), where \(\xi_\nu = (-\alpha, \beta, 0, 0)\), by explicitly calculating all the partial derivatives.
+        * $h_{\mu\nu} \to h'_{\mu\nu} = h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu$
+    *   Compute $\partial_\mu \xi_\nu + \partial_\nu \xi_\mu$, where $\xi_\nu = (-\alpha, \beta, 0, 0)$, by explicitly calculating all the partial derivatives.
     *   The transformed metric perturbation is:
-        \(h'_{\mu\nu} = \begin{pmatrix}
+        * $h'_{\mu\nu} = \left[
+        \begin{matrix}
         -2\partial_0 \alpha & \partial_0 \beta - \partial_1 \alpha & -\partial_2 \alpha & -\partial_3 \alpha \\
         \partial_0 \beta - \partial_1 \alpha & C_{+} \cos(\omega(t-z)) + 2\partial_1 \beta & \partial_2 \beta & \partial_3 \beta \\
         -\partial_2 \alpha & \partial_2 \beta & -C_{+} \cos(\omega(t-z)) & 0 \\
         -\partial_3 \alpha & \partial_3 \beta & 0 & 0
-        \end{pmatrix}\)
+        \end{matrix}
+        \right]$
