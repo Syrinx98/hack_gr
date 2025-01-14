@@ -457,7 +457,7 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     *   Consider a gauge transformation:
         * $\xi^\mu = (\alpha(x^\mu), \beta(x^\mu), 0, 0)$
     *   The metric perturbation transforms as:
-        * $h_{\mu\nu} \to h'_{\mu\nu} = h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu$
+        * $h_{\mu\nu} \to h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu$
     *   Compute $\partial_\mu \xi_\nu + \partial_\nu \xi_\mu$, where $\xi_\nu = (-\alpha, \beta, 0, 0)$, by explicitly calculating all the partial derivatives.
     *   The transformed metric perturbation is:
         * $h'_{00} = -2\partial_0 \alpha$
