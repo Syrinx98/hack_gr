@@ -435,12 +435,7 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     *   Tracelessness: $C^\mu_\mu = 0 \implies C_{00} = C_{33}, C_{11} = -C_{22}$.
     *   For '+' polarization in standard TT gauge: $C_{11} = -C_{22} = C_+$ and $C_{12} = C_{21} = 0$, $C_{0\nu} = C_{3\nu} = 0$.
     *   Explicitly:
-        * $C_{\mu\nu} = \left[ \begin{matrix}
-        0 & 0 & 0 & 0 \\
-        0 & C_+ & 0 & 0 \\
-        0 & 0 & -C_+ & 0 \\
-        0 & 0 & 0 & 0
-        \end{matrix} \right]$
+        * $C_{\mu\nu} = \left[ 0 \quad 0 \quad 0 \quad 0 \atop 0 \quad C_+ \quad 0 \quad 0 \atop 0 \quad 0 \quad -C_+ \quad 0 \atop 0 \quad 0 \quad 0 \quad 0 \right]$
 
 3.  **Gauge Transformation**
 
@@ -450,11 +445,4 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
         * $h_{\mu\nu} \to h'_{\mu\nu} = h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu$
     *   Compute $\partial_\mu \xi_\nu + \partial_\nu \xi_\mu$, where $\xi_\nu = (-\alpha, \beta, 0, 0)$, by explicitly calculating all the partial derivatives.
     *   The transformed metric perturbation is:
-        * $h'_{\mu\nu} = \left[
-        \begin{matrix}
-        -2\partial_0 \alpha & \partial_0 \beta - \partial_1 \alpha & -\partial_2 \alpha & -\partial_3 \alpha \\
-        \partial_0 \beta - \partial_1 \alpha & C_{+} \cos(\omega(t-z)) + 2\partial_1 \beta & \partial_2 \beta & \partial_3 \beta \\
-        -\partial_2 \alpha & \partial_2 \beta & -C_{+} \cos(\omega(t-z)) & 0 \\
-        -\partial_3 \alpha & \partial_3 \beta & 0 & 0
-        \end{matrix}
-        \right]$
+        * $h'_{\mu\nu} = \left[ -2\partial_0 \alpha \quad \partial_0 \beta - \partial_1 \alpha \quad -\partial_2 \alpha \quad -\partial_3 \alpha \atop \partial_0 \beta - \partial_1 \alpha \quad C_{+} \cos(\omega(t-z)) + 2\partial_1 \beta \quad \partial_2 \beta \quad \partial_3 \beta \atop -\partial_2 \alpha \quad \partial_2 \beta \quad -C_{+} \cos(\omega(t-z)) \quad 0 \atop -\partial_3 \alpha \quad \partial_3 \beta \quad 0 \quad 0 \right]$
