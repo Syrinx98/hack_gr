@@ -465,12 +465,12 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
         * $h'_{02} = -\partial_2 \alpha$
         * $h'_{03} = -\partial_3 \alpha$
         * $h'_{10} = \partial_0 \beta - \partial_1 \alpha$
-        * $h'_{11} = C_{+} cos(\omega(t-z)) + 2\partial_1 \beta$
+        * $h'_{11} = C \cos(\omega(t-z)) + 2\partial_1 \beta$
         * $h'_{12} = \partial_2 \beta$
         * $h'_{13} = \partial_3 \beta$
         * $h'_{20} = -\partial_2 \alpha$
         * $h'_{21} = \partial_2 \beta$
-        * $h'_{22} = -C_{+} cos(\omega(t-z))$
+        * $h'_{22} = -C \cos(\omega(t-z))$
         * $h'_{23} = 0$
         * $h'_{30} = -\partial_3 \alpha$
         * $h'_{31} = \partial_3 \beta$
