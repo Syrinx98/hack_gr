@@ -425,7 +425,7 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
 1.  **Plane Wave in TT Gauge**
 
     *   Consider a plane wave propagating in the positive z-direction:
-        * $h_{\mu\nu}^{TT} = \operatorname{Re}(C_{\mu\nu} e^{ik_\sigma x^\sigma})$
+        * $h_{\mu\nu}^{TT} = Re(C_{\mu\nu} e^{ik_\sigma x^\sigma})$
     *   $k^\mu = (\omega, 0, 0, \omega)$ for a wave propagating along the positive z-axis.
 
 2.  **Polarization Tensor $C_{\mu\nu}$ for '+' Polarization**
