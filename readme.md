@@ -435,12 +435,15 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     *   Tracelessness: $C^\mu_\mu = 0 \implies C_{00} = C_{33}, C_{11} = -C_{22}$.
     *   For '+' polarization in standard TT gauge: $C_{11} = -C_{22} = C_+$ and $C_{12} = C_{21} = 0$, $C_{0\nu} = C_{3\nu} = 0$.
     *   Explicitly:
-        * $C_{\mu\nu} = \begin{pmatrix}
+        * $C_{\mu\nu} = $
+        ```math
+        \begin{bmatrix}
         0 & 0 & 0 & 0 \\
         0 & C_+ & 0 & 0 \\
         0 & 0 & -C_+ & 0 \\
         0 & 0 & 0 & 0
-        \end{pmatrix}$
+        \end{bmatrix}
+        ```
 
 3.  **Gauge Transformation**
 
