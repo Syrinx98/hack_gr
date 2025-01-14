@@ -428,17 +428,29 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
         * $h_{\mu\nu}^{TT} = Re(C_{\mu\nu} e^{ik_\sigma x^\sigma})$
     *   $k^\mu = (\omega, 0, 0, \omega)$ for a wave propagating along the positive z-axis.
 
-2.  **Polarization Tensor  $C_{\mu\nu}$ for '+' Polarization**
+2.  **Polarization Tensor $C_{\mu\nu}$ for '+' Polarization**
 
     *   $C_{\mu\nu}$ is symmetric: $C_{\mu\nu} = C_{\nu\mu}$.
     *   Transversality: $k^\mu C_{\mu\nu} = 0 \implies C_{0\nu} = -C_{3\nu}$
     *   Tracelessness: $C^\mu_\mu = 0 \implies C_{00} = C_{33}, C_{11} = -C_{22}$.
     *   For '+' polarization in standard TT gauge: $C_{11} = -C_{22} = C_+$ and $C_{12} = C_{21} = 0$, $C_{0\nu} = C_{3\nu} = 0$.
     *   Explicitly:
-        * $C_{\mu\nu} = $
-        $\begin{bmatrix} u\\e \end{bmatrix}  \sim 
-N (\begin{bmatrix}0\\0\end{bmatrix},
-\begin{bmatrix} G(\sigma_g) &0\\ 0 &R(\sigma_{\gamma})\end{bmatrix})$
+        * $C_{00} = 0$
+        * $C_{01} = 0$
+        * $C_{02} = 0$
+        * $C_{03} = 0$
+        * $C_{10} = 0$
+        * $C_{11} = C_+$
+        * $C_{12} = 0$
+        * $C_{13} = 0$
+        * $C_{20} = 0$
+        * $C_{21} = 0$
+        * $C_{22} = -C_+$
+        * $C_{23} = 0$
+        * $C_{30} = 0$
+        * $C_{31} = 0$
+        * $C_{32} = 0$
+        * $C_{33} = 0$
 
 3.  **Gauge Transformation**
 
@@ -448,9 +460,19 @@ N (\begin{bmatrix}0\\0\end{bmatrix},
         * $h_{\mu\nu} \to h'_{\mu\nu} = h_{\mu\nu} + \partial_\mu \xi_\nu + \partial_\nu \xi_\mu$
     *   Compute $\partial_\mu \xi_\nu + \partial_\nu \xi_\mu$, where $\xi_\nu = (-\alpha, \beta, 0, 0)$, by explicitly calculating all the partial derivatives.
     *   The transformed metric perturbation is:
-        * $h'_{\mu\nu} = \begin{pmatrix}
-        -2\partial_0 \alpha & \partial_0 \beta - \partial_1 \alpha & -\partial_2 \alpha & -\partial_3 \alpha \\
-        \partial_0 \beta - \partial_1 \alpha & C_{+} \cos(\omega(t-z)) + 2\partial_1 \beta & \partial_2 \beta & \partial_3 \beta \\
-        -\partial_2 \alpha & \partial_2 \beta & -C_{+} \cos(\omega(t-z)) & 0 \\
-        -\partial_3 \alpha & \partial_3 \beta & 0 & 0
-        \end{pmatrix}$
+        * $h'_{00} = -2\partial_0 \alpha$
+        * $h'_{01} = \partial_0 \beta - \partial_1 \alpha$
+        * $h'_{02} = -\partial_2 \alpha$
+        * $h'_{03} = -\partial_3 \alpha$
+        * $h'_{10} = \partial_0 \beta - \partial_1 \alpha$
+        * $h'_{11} = C_{+} \cos(\omega(t-z)) + 2\partial_1 \beta$
+        * $h'_{12} = \partial_2 \beta$
+        * $h'_{13} = \partial_3 \beta$
+        * $h'_{20} = -\partial_2 \alpha$
+        * $h'_{21} = \partial_2 \beta$
+        * $h'_{22} = -C_{+} \cos(\omega(t-z))$
+        * $h'_{23} = 0$
+        * $h'_{30} = -\partial_3 \alpha$
+        * $h'_{31} = \partial_3 \beta$
+        * $h'_{32} = 0$
+        * $h'_{33} = 0$
