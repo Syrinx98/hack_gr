@@ -476,3 +476,164 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
         * $h'_{31} = \partial_3 \beta$
         * $h'_{32} = 0$
         * $h'_{33} = 0$
+
+---
+
+## 17. Gravitational Wave Polarization and Coordinate Transformations
+
+1.  **Relation between $\omega$ and $k$**
+
+    *   Given the wave vector $k^{\mu} = (\omega, 0, k, k)$.
+    *   Gravitational waves propagate at the speed of light, hence $k_{\mu}k^{\mu}=0$.
+    *   Using the Minkowski metric $\eta_{\mu\nu} = \text{diag}(-1, +1, +1, +1)$, we have $k_{\mu}=(-\omega, 0, k, k)$.
+    *   The null condition gives:
+        *   $-\omega^2 + k^2 + k^2 = 0$
+        *   $\omega^2 = 2k^2$
+        *   $\omega = \sqrt{2}k$
+
+2.  **Explicit form of $C_{\mu \nu}$ for + polarization**
+
+    *   The polarization tensor $C_{\mu \nu}$ in TT gauge satisfies:
+        *   Symmetry: $C_{\mu \nu} = C_{\nu \mu}$
+        *   Transversality: $k^{\mu} C_{\mu \nu} = 0 \implies C_{0\nu} = -C_{3\nu}$
+        *   Tracelessness: $C^{\mu}_{\mu} = 0 \implies C_{00} = C_{33}, C_{11} = -C_{22}$
+    *   For "+" polarization in the standard TT gauge: $C_{11} = -C_{22} = C_+$ and $C_{12} = C_{21} = 0$, $C_{0\nu} = C_{3\nu} = 0$.
+    *   Explicitly:
+        *   $C_{00} = C_{01} = C_{02} = C_{03} = 0$
+        *   $C_{10} = C_{20} = C_{30} = 0$
+        *   $C_{11} = C_+$
+        *   $C_{12} = C_{21} = 0$
+        *   $C_{13} = C_{31} = 0$
+        *   $C_{22} = -C_+$
+        *   $C_{23} = C_{32} = 0$
+        *   $C_{33} = 0$
+
+3.  **Coordinate Transformation**
+
+    *   Define a new coordinate system $(x', y', z')$:
+        *   $x = x'$
+        *   $z' = \frac{1}{\sqrt{2}}(y+z)$ (propagation direction)
+        *   $y' = \frac{1}{\sqrt{2}}(y-z)$ (ensures a right-handed system)
+    *   In the new system, the wave is a superposition of "+" and "$\times$" polarizations:
+        *   $C'_{00} = C'_{01} = C'_{02} = C'_{03} = 0$
+        *   $C'_{10} = C'_{20} = C'_{30} = 0$
+        *   $C'_{11} = h'_{+}$
+        *   $C'_{12} = C'_{21} = h'_{\times}$
+        *   $C'_{13} = C'_{31} = 0$
+        *   $C'_{22} = -h'_{+}$
+        *   $C'_{23} = C'_{32} = 0$
+        *   $C'_{33} = 0$
+    *   Transformation matrix:
+        *   $\Lambda^{\mu'}_{\;\mu} = \frac{\partial x^{\mu'}}{\partial x^{\mu}}$
+        *   $\Lambda^{t'}_{\;t} = 1$, $\Lambda^{t'}_{\;x} = \Lambda^{t'}_{\;y} = \Lambda^{t'}_{\;z} = 0$
+        *   $\Lambda^{x'}_{\;t} = 0$, $\Lambda^{x'}_{\;x} = 1$, $\Lambda^{x'}_{\;y} = \Lambda^{x'}_{\;z} = 0$
+        *   $\Lambda^{y'}_{\;t} = 0$, $\Lambda^{y'}_{\;x} = 0$, $\Lambda^{y'}_{\;y} = \frac{1}{\sqrt{2}}$, $\Lambda^{y'}_{\;z} = -\frac{1}{\sqrt{2}}$
+        *   $\Lambda^{z'}_{\;t} = 0$, $\Lambda^{z'}_{\;x} = 0$, $\Lambda^{z'}_{\;y} = \frac{1}{\sqrt{2}}$, $\Lambda^{z'}_{\;z} = \frac{1}{\sqrt{2}}$
+        *   $\Lambda^{\mu}_{\;\mu'} = (\Lambda^{\mu'}_{\;\mu})^T$
+    *   Transform the amplitude tensor:
+        *   $C_{\mu\nu} = \Lambda^{\mu'}_{\;\mu}\,\Lambda^{\nu'}_{\;\nu}\,C'_{\mu'\nu'}$
+    *   Explicitly, calculating each component:
+        *   $C_{tt} = 0$
+        *   $C_{tx} = C_{xt} = 0$
+        *   $C_{ty} = C_{yt} = 0$
+        *   $C_{tz} = C_{zt} = 0$
+        *   $C_{xx} = h'_{+}$
+        *   $C_{xy} = C_{yx} = \frac{1}{\sqrt{2}}(h'_{+} + h'_{\times})$
+        *   $C_{xz} = C_{zx} = \frac{1}{\sqrt{2}}(h'_{+} + h'_{\times})$
+        *   $C_{yy} = -\frac{1}{2}h'_{+}$
+        *   $C_{yz} = C_{zy} = -\frac{1}{2}h'_{+} + \frac{1}{2}h'_{\times}$
+        *   $C_{zz} = -\frac{1}{2}h'_{+}$
+
+---
+
+## 18. Deriving the Acceleration Equation in Cosmology
+
+1.  **Start with the Friedmann equation and the fluid equation:**
+    *   Friedmann equation:
+        *   $H^2 = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2}$
+    *   Fluid equation:
+        *   $\dot{\rho} + 3H(\rho + p) = 0$
+
+2.  **Take the time derivative of the Friedmann equation:**
+    *   $2H\left(\frac{\ddot{a}}{a} - H^2\right) = \frac{8\pi G}{3}\dot{\rho} + 2\frac{\kappa}{a^2}H$
+
+3.  **Substitute the fluid equation into the differentiated Friedmann equation:**
+    *   $\frac{\ddot{a}}{a} - H^2 = -\frac{4\pi G}{3}(3H(\rho+p)) + \frac{\kappa}{a^2}$
+
+4.  **Rearrange and substitute the Friedmann equation for $H^2$:**
+    *   $\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2} - 4\pi GH(\rho+p) + \frac{\kappa}{a^2}$
+
+5.  **Simplify to obtain the acceleration equation:**
+    *   The $\frac{\kappa}{a^2}$ terms cancel out.
+    *   $\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi GH(\rho+p)$
+    *   Substitute $H=\frac{\dot{a}}{a}$ and use the fluid equation to replace $\dot{\rho}$:
+    *   $\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{4\pi G}{3}(3H(\rho+p) + 3H(\rho+p))$
+    *   Since $\dot{\rho} = -3H(\rho + p)$, we get:
+    *   $\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}(\rho + 3p)$
+
+---
+
+
+---
+
+## 19. Evolution of a Flat Universe with a Specific Equation of State
+
+1.  **Energy Density as a Function of Scale Factor**
+
+    *   Given the equation of state $p = \frac{2}{3}\rho$, we use the fluid equation:
+        *   $\dot{\rho} + 3\frac{\dot{a}}{a}(\rho + p) = 0$
+        *   $\frac{d\rho}{\rho} = -5 \frac{da}{a}$
+    *   Integrating, we obtain:
+        *   $\rho(a) = \rho_0 a^{-5}$ (since $a_0 = 1$)
+
+2.  **Scale Factor as a Function of Time**
+
+    *   Substituting $\rho(a)$ into the Friedmann equation for a flat universe ($\kappa = 0$):
+        *   $\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} \rho_0 a^{-5}$
+        *   $\dot{a} = \sqrt{\frac{8\pi G \rho_0}{3}} a^{-3/2}$
+    *   Integrating, we find:
+        *   $a(t) = \left(\frac{25}{4}\frac{8\pi G \rho_0}{3}\right)^{1/5} t^{2/5} = \left(\frac{50\pi G \rho_0}{3}\right)^{1/5} t^{2/5}$
+    *   Using the condition $a(t_0) = 1$, we get:
+        *   $a(t) = \left(\frac{t}{t_0}\right)^{2/5}$ with $t_0 = \left(\frac{3}{50\pi G \rho_0}\right)^{1/2}$
+
+3.  **Hubble Parameter as a Function of Time**
+
+    *   Using $H(t) = \frac{\dot{a}(t)}{a(t)}$ and the expression for $a(t)$:
+        *   $H(t) = \frac{2}{5t}$
+
+4.  **Energy Density as a Function of Time**
+
+    *   Substituting $a(t)$ into $\rho(a) = \rho_0 a^{-5}$:
+        *   $\rho(t) = \rho_0 \left(\frac{3}{50\pi G \rho_0}\right) t^{-2} = \frac{3}{50\pi G t^2}$
+
+---
+
+## 20. Evolution of a Flat Universe with Non-Relativistic Matter and Cosmological Constant
+
+1.  **Derivation of \(\Omega_M(a)\)**
+
+    *   Given a spatially flat universe ($\kappa=0$) with non-relativistic matter and a cosmological constant $\Lambda$.
+    *   Friedmann equation: $H^2 = \frac{8\pi G}{3}(\rho_M + \rho_\Lambda) = \frac{8\pi G}{3}\rho_M + \frac{\Lambda}{3}$
+    *   $\rho_M(a) = \rho_0 a^{-3}$ (since $a_0 = 1$)
+    *   $\rho_\Lambda = \frac{\Lambda}{8\pi G}$
+    *   Critical density: $\rho_{\text{cr}}(t) = \frac{3H^2(t)}{8\pi G}$
+    *   Current critical density: $\rho_{\text{cr},0} = \frac{3H_0^2}{8\pi G}$
+    *   Current matter density parameter: $\Omega_0 = \frac{\rho_0}{\rho_{\text{cr},0}} = 0.3$
+    *   At present time: $H_0^2 = \frac{8\pi G}{3}\rho_0 + \frac{\Lambda}{3}$
+    *   Dividing the Friedmann equation by $H^2$: $1 = \frac{\rho_M}{\rho_{\text{cr}}} + \frac{\Lambda}{3H^2}$
+    *   Density parameter for matter: $\Omega_M(a) = \frac{\rho_M(a)}{\rho_{\text{cr}}(a)} = \frac{8\pi G \rho_0}{3H^2(a)a^3} = \Omega_0 \frac{H_0^2}{H^2(a)a^3}$
+    *   Expressing $\frac{\Lambda}{3}$ in terms of $H_0$ and $\Omega_0$: $\frac{\Lambda}{3} = H_0^2(1-\Omega_0)$
+    *   Substituting into $H^2(a)$: $H^2(a) = H_0^2(\Omega_0 a^{-3} + 1 - \Omega_0)$
+    *   Finally: $\Omega_M(a) = \frac{\Omega_0 a^{-3}}{\Omega_0 a^{-3} + 1 - \Omega_0}$
+
+2.  **Scale Factor at the Onset of Acceleration**
+
+    *   Acceleration equation: $\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}(\rho_M - 2\rho_\Lambda)$
+    *   Acceleration begins when $\ddot{a} > 0$, i.e., $\rho_M < 2\rho_\Lambda$
+    *   Using $\rho_M(a) = \rho_0 a^{-3}$ and $\rho_\Lambda = \frac{\rho_0}{\Omega_0}(1-\Omega_0)$:
+        *   $\rho_0 a^{-3} < 2 \frac{\rho_0}{\Omega_0}(1-\Omega_0)$
+        *   $a^3 > \frac{\Omega_0}{2(1-\Omega_0)}$
+    *   Scale factor at the onset of acceleration: $a_\Lambda = \left(\frac{\Omega_0}{2(1-\Omega_0)}\right)^{1/3}$
+    *   With $\Omega_0 = 0.3$: $a_\Lambda = \left(\frac{0.3}{2(1-0.3)}\right)^{1/3} \approx 0.6$
+
+---

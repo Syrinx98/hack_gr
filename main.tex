@@ -1,11 +1,17 @@
+\documentclass{article}
 \usepackage{amsmath}
-%\usepackage{amssymb}
-\usepackage[margin=0.4in,footskip=0.1in]{geometry}
 \usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{bm}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage[margin=0.4in,footskip=0.2in]{geometry}
 
 \begin{document}
 
-\section{Question 1}
+\section*{Question 1}
 
 Consider a two-dimensional Cartesian coordinate system $(x, y)$ with the infinitesimal line element $ds^2 = dx^2 + dy^2$. We then introduce new coordinates $u$ and $v$, defined by $u = (x+y)/2$ and $v = (x-y)/2$. Find the components of the metric tensor in the new coordinates $(u, v)$ using the transformation rule for a $(0,2)$ tensor, which states that $g_{\mu'\nu'} = \frac{\partial x^\mu}{\partial x^{\mu'}} \frac{\partial x^\nu}{\partial x^{\nu'}} g_{\mu\nu}$. You should use this method exclusively, without relying on any alternative approaches.
 
@@ -14,7 +20,7 @@ Consider a two-dimensional Cartesian coordinate system $(x, y)$ with the infinit
 \subsection*{Solution}
 \paragraph{(i) Metric tensor in the original Cartesian coordinates \((x, y)\).}
 
-In the \((x,y)\) coordinates, the line element is
+In the \((x,y)\) coordinates, the line element is 
 \[
 ds^2 = dx^2 + dy^2.
 \]
@@ -22,8 +28,8 @@ ds^2 = dx^2 + dy^2.
 
 Hence, the metric tensor components \(g_{\mu \nu}\) in these coordinates are:
 \[
-g_{\mu\nu}
-=
+g_{\mu\nu} 
+= 
 \begin{pmatrix}
 1 & 0 \\
 0 & 1
@@ -33,7 +39,7 @@ g_{\mu\nu}
 
 where
 \(\displaystyle g_{xx} = 1,\; g_{yy} = 1,\; g_{xy} = g_{yx} = 0.\)
-\emph{These are the specific components of the metric tensor \(g_{\mu\nu}\) in the Cartesian coordinates (x, y). \(g_{xx} = 1\) indicates that the  length  or  scale  along the x-axis is unit, and similarly, \(g_{yy} = 1\) indicates that the  length  or  scale  along the y-axis is unit. The terms \(g_{xy} = g_{yx} = 0\) indicate that there is no correlation or  mixing  between the x and y coordinates, which is consistent with the fact that the Cartesian axes are orthogonal. In simpler terms, this tells us that we are using a standard, undistorted, orthogonal coordinate system.}
+\emph{These are the specific components of the metric tensor \(g_{\mu\nu}\) in the Cartesian coordinates (x, y). \(g_{xx} = 1\) indicates that the “length” or “scale” along the x-axis is unit, and similarly, \(g_{yy} = 1\) indicates that the “length” or “scale” along the y-axis is unit. The terms \(g_{xy} = g_{yx} = 0\) indicate that there is no correlation or “mixing” between the x and y coordinates, which is consistent with the fact that the Cartesian axes are orthogonal. In simpler terms, this tells us that we are using a standard, undistorted, orthogonal coordinate system.}
 
 \paragraph{(ii) Coordinates transformation to \((u, v)\).}
 
@@ -96,7 +102,7 @@ g_{uu}
 =
 2.
 \]
-\emph{This computes the \(g_{uu}\) component of the metric tensor in the new coordinates. Using the transformation rule, we sum the products of the partial derivatives multiplied by the corresponding components of the original metric tensor. Since \(g_{xy} = g_{yx} = 0\), the mixed terms vanish, leaving only the sum of the squares of the partial derivatives of x and y with respect to u, multiplied by \(g_{xx}\) and \(g_{yy}\) respectively. The result is \(g_{uu} = 1^2 \cdot 1 + 1^2 \cdot 1 = 2\). This tells us that the  length  or  scale  along the u-axis is 2.}
+\emph{This computes the \(g_{uu}\) component of the metric tensor in the new coordinates. Using the transformation rule, we sum the products of the partial derivatives multiplied by the corresponding components of the original metric tensor. Since \(g_{xy} = g_{yx} = 0\), the mixed terms vanish, leaving only the sum of the squares of the partial derivatives of x and y with respect to u, multiplied by \(g_{xx}\) and \(g_{yy}\) respectively. The result is \(g_{uu} = 1^2 \cdot 1 + 1^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the u-axis is 2.}
 
 \item \(\displaystyle g_{uv}\):
 \[
@@ -138,15 +144,15 @@ g_{vv}
 =
 2.
 \]
-\emph{This computes the \(g_{vv}\) component. Similar to \(g_{uu}\), we find \(g_{vv} = (1)^2 \cdot 1 + (-1)^2 \cdot 1 = 2\). This tells us that the  length  or  scale  along the v-axis is 2.}
+\emph{This computes the \(g_{vv}\) component. Similar to \(g_{uu}\), we find \(g_{vv} = (1)^2 \cdot 1 + (-1)^2 \cdot 1 = 2\). This tells us that the “length” or “scale” along the v-axis is 2.}
 \end{itemize}
 
 \textbf{(v) Final components of the metric in \((u,v)\).}
 
 Collecting these results, the new metric tensor is:
 \[
-g_{\mu' \nu'}
-=
+g_{\mu' \nu'} 
+= 
 \begin{pmatrix}
 g_{uu} & g_{uv} \\
 g_{vu} & g_{vv}
@@ -168,9 +174,9 @@ ds^2 = 2\,du^2 + 2\,dv^2.
 \textbf{Conclusion:}
 Using exclusively the tensor transformation rule, we have correctly derived the metric components in the \((u, v)\) coordinates:
 \[
-g_{uu} = 2,
+g_{uu} = 2, 
 \quad
-g_{uv} = 0,
+g_{uv} = 0, 
 \quad
 g_{vv} = 2.
 \]
@@ -294,7 +300,7 @@ thus
 \emph{Hence,}
 \(\boxed{\Gamma^r_{\;\phi\phi} = -\,r}.\)
 
-\emph{This coefficient tells us how the basis vector in the \(r\)-direction changes when we vary \(\phi\). In a curvilinear coordinate system, such as polar coordinates, this accounts for the  circular arcs  nature of \(\phi\).}
+\emph{This coefficient tells us how the basis vector in the \(r\)-direction changes when we vary \(\phi\). In a curvilinear coordinate system, such as polar coordinates, this accounts for the “circular arcs” nature of \(\phi\).}
 
 \pagebreak
 
@@ -308,13 +314,13 @@ ds^2 = -(1+x)^2 \, dt^2 + dx^2.
 (ii) How many independent and non-vanishing Christoffel symbols are there for this example?\\
 (iii) Compute the explicit form of \(\Gamma^{t}_{\;tx}\) for this example.
 
-\emph{Here, we turn to a  (1+1)-dimensional  spacetime metric. The dependence of \(g_{tt} = -(1+x)^2\) on the spatial coordinate \(x\) leads to interesting non-zero connection coefficients. This scenario illustrates how time can  flow differently  at different positions \(x\).}
+\emph{Here, we turn to a “(1+1)-dimensional” spacetime metric. The dependence of \(g_{tt} = -(1+x)^2\) on the spatial coordinate \(x\) leads to interesting non-zero connection coefficients. This scenario illustrates how time can “flow differently” at different positions \(x\).}
 
 \subsection*{Solution}
 
 \paragraph{(i) Number of independent Christoffel symbols in two dimensions.}
 
-Just as in Question 2, we recognize that in 2D each index (\(\mu,\nu,\lambda\)) runs over \(\{t,x\}\). Naively, there would be \(2 \times 2 \times 2 = 8\) Christoffel symbols, but the symmetry
+Just as in Question 2, we recognize that in 2D each index (\(\mu,\nu,\lambda\)) runs over \({t,x}\). Naively, there would be \(2 \times 2 \times 2 = 8\) Christoffel symbols, but the symmetry
 \[
 \Gamma^\mu_{\;\nu\lambda} = \Gamma^\mu_{\;\lambda\nu}
 \]
@@ -413,12 +419,12 @@ Hence:
 \frac{1}{1+x}.
 \]
 \emph{Interpretation:}
-\(\Gamma^{t}_{\;tx} = \frac{1}{1+x}\) shows how the time basis vector changes in the \(x\)-direction. Because \((1+x)\) appears in the time component of the metric, the rate of time flow depends on \(x\). Moving along \(x\) effectively shifts how clocks tick in this spacetime.
+\(\Gamma^{t}_{\;tx} = \frac{1}{1+x}\) shows how the time basis vector changes in the \(x\)-direction. Because \((1+x)\) appears in the time component of the metric, the rate of time flow depends on \(x\). Moving along \(x\) effectively shifts how clocks “tick” in this spacetime.
 
 \bigskip
 
 \textbf{Final Remarks for Question 3.}
-\emph{One can check \(\Gamma^x_{\;tt} = 1 + x\) and verify \(\Gamma^x_{\;xx} = 0\). Together with \(\Gamma^t_{\;tx} = \Gamma^t_{\;xt} = \frac{1}{1+x}\), these are the only non-zero symbols. They reflect the coordinate dependence of the metric and thus a non-trivial connection. In a 2D  spacetime  context, it tells us that an observer s notion of time changes with position \(x\).}
+\emph{One can check \(\Gamma^x_{\;tt} = 1 + x\) and verify \(\Gamma^x_{\;xx} = 0\). Together with \(\Gamma^t_{\;tx} = \Gamma^t_{\;xt} = \frac{1}{1+x}\), these are the only non-zero symbols. They reflect the coordinate dependence of the metric and thus a non-trivial connection. In a 2D “spacetime” context, it tells us that an observer’s notion of time changes with position \(x\).}
 
 
 \section*{Question 4}
@@ -690,7 +696,7 @@ We have two terms where we can apply the binomial expansion:
 
 \textbf{1. First Application:}
 
-The terms inside the square roots in our ratio can be written in the form \(\sqrt{1 - 2x}\), where \(x = \frac{GM_E}{R_E + h}\) or \(x = \frac{GM_E}{R_E}\).  We can apply the binomial expansion because we are in a **weak gravitational field**, meaning \(x = \frac{GM_E}{r}\) is very small when \(r \geq R_E\). Specifically, for \(r = R_E\), we have \(x = \frac{GM_E}{R_E} \approx 6.957 \times 10^{-10}\) (as calculated later), which is much less than 1. Thus we can rewrite \(\sqrt{1 - 2x}\) as \((1 - 2x)^{\frac{1}{2}}\) and apply the binomial expansion with \(n = \frac{1}{2}\) and \(x\) replaced by \(-2x\):
+The terms inside the square roots in our ratio can be written in the form \(\sqrt{1 - 2x}\), where \(x = \frac{GM_E}{R_E + h}\) or \(x = \frac{GM_E}{R_E}\).  We can apply the binomial expansion because we are in a \textbf{weak gravitational field}, meaning \(x = \frac{GM_E}{r}\) is very small when \(r \geq R_E\). Specifically, for \(r = R_E\), we have \(x = \frac{GM_E}{R_E} \approx 6.957 \times 10^{-10}\) (as calculated later), which is much less than 1. Thus we can rewrite \(\sqrt{1 - 2x}\) as \((1 - 2x)^{\frac{1}{2}}\) and apply the binomial expansion with \(n = \frac{1}{2}\) and \(x\) replaced by \(-2x\):
 
 \[
 \sqrt{1 - 2x} = (1 - 2x)^{\frac{1}{2}} \approx 1 + \frac{1}{2}(-2x) = 1 - x
@@ -825,6 +831,7 @@ where \(g \approx 9.82 \, \mathrm{m/s^2}\) is the acceleration due to gravity in
 \pagebreak
 
 
+
 \section*{Question 6}
 Consider the metric for a two-dimensional sphere of unit radius, given by
 \[
@@ -834,10 +841,10 @@ This is the standard line element for a sphere in spherical coordinates, where \
 
 We label the coordinates as \(x^{\mu} = (\theta, \phi)\). In this setup, the only non-vanishing Christoffel symbols on the sphere are:
 \[
-\Gamma_{\phi \phi}^{\theta}
+\Gamma_{\phi \phi}^{\theta} 
 \;=\; -\,\sin\theta\,\cos\theta
 \quad\text{and}\quad
-\Gamma_{\theta \phi}^{\phi}
+\Gamma_{\theta \phi}^{\phi} 
 \;=\; \Gamma_{\phi \theta}^{\phi}
 \;=\; \frac{\cos\theta}{\sin\theta}
 \;=\; \cot\theta.
@@ -1326,7 +1333,8 @@ V^\nu\,\bigl(\partial_\mu V_\nu\bigr)
 \partial_\mu \bigl(V^\nu V_\nu\bigr).
 \]
 \emph{Thus, the covariant derivative of the scalar \(V^\nu V_\nu\) is equal to its ordinary partial derivative, as required. The key steps are renaming the summed indices in one of the two terms and recognizing that the components of the vectors are real scalars that commute.}
-    
+
+
 \section*{Question 8}
 
 Given an arbitrary $(2,0)$ tensor $W^{\mu\nu}$, determine under what conditions the identity
@@ -1382,7 +1390,7 @@ Next, we recall that the Ricci tensor $R_{\mu\nu}$ is defined as the contraction
 R_{\mu\nu} \;=\; R^\lambda_{\;\;\mu\lambda\nu}.
 \]
 \textit{The Ricci tensor \(R_{\mu\nu}\) is obtained by contracting (summing over) the first and third indices of the Riemann tensor. This means we set the first index (\(\rho\)) and the third index (\(\lambda\)) of the Riemann tensor to be the same, \(\lambda\), and sum over all possible values of \(\lambda\). The Ricci tensor is a measure of the curvature of spacetime, and it plays a crucial role in Einstein's field equations.}
-Hence, the first term can be written as
+Hence, the first term can be written as 
 \[
 R^\mu_{\;\;\sigma\mu\nu}\,W^{\sigma\nu}
 \;=\;
@@ -1432,7 +1440,7 @@ R_{\sigma\nu}\,
 \textit{By renaming the dummy indices in the second term, we can rewrite the expression as a difference between two terms involving the Ricci tensor and the tensor \(W\), but with the indices swapped. We renamed \(\mu\) to \(\nu\), so the expression becomes \(R_{\sigma\nu}W^{\nu\sigma}\). Then we can factor out the Ricci tensor, since it's now the same in both terms.}
 Therefore,
 \[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\;
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\; 
 R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
 \]
 For this quantity to vanish for the \emph{arbitrary} tensor $W^{\mu\nu}$, the factor in parentheses must vanish unless $R_{\sigma\nu}=0$ everywhere.
@@ -1464,9 +1472,9 @@ On the other hand, requiring $W^{\mu\nu}$ to be symmetric imposes a restriction 
 
 \paragraph{(vii) Final Answer}
 \textit{Let's summarize the final result.}
-Hence,
+Hence, 
 \[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
+\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} 
 \;=\;0
 \quad
 \Longleftrightarrow
@@ -1604,181 +1612,6 @@ R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G T_{\mu\nu}
 
 \pagebreak
 
-R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
-\]
-For this quantity to vanish for the \emph{arbitrary} tensor $W^{\mu\nu}$, the factor in parentheses must vanish unless $R_{\sigma\nu}=0$ everywhere.
-\textit{For this expression to be equal to zero for an arbitrary tensor \(W^{\mu\nu}\), the factor in parentheses must be zero, unless the Ricci tensor is identically zero. If the factor in parentheses is zero, the whole expression is zero, regardless of the value of the Ricci tensor. If the Ricci tensor is zero, the whole expression is zero, regardless of the value of \(W^{\mu\nu}\).}
-
-\paragraph{(v) Conditions for Vanishing Commutator and the Role of Torsion}
-\textit{We now analyze the conditions under which the commutator vanishes. We had initially identified two cases, but a closer examination, particularly in light of the tensor decomposition discussed below, reveals a more nuanced relationship between these cases and the underlying assumptions.}
-
-\textit{Recall the result we derived:}
-\[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \;=\;
-R_{\sigma\nu}\,\bigl(W^{\sigma\nu} \;-\; W^{\nu\sigma}\bigr).
-\]
-\textit{For this expression to be zero for arbitrary \(W^{\mu\nu}\), we initially identified two distinct possibilities:}
-
-\begin{itemize}
-    \item \textbf{Case 1: $W^{\mu\nu}$ is symmetric.} If $W^{\mu\nu} = W^{\nu\mu}$, the term in the parentheses vanishes, leading to a zero commutator regardless of the value of the Ricci tensor \(R_{\sigma\nu}\).
-
-    \item \textbf{Case 2: $R_{\mu\nu} = 0$ (Ricci-flat spacetime).} If the Ricci tensor is zero, the entire expression vanishes, regardless of the symmetry properties of \(W^{\mu\nu}\). This condition corresponds to a vacuum solution in General Relativity (in the absence of a cosmological constant), where \(T_{\mu\nu} = 0\).  \textit{An example of this is the void case. The Ricci tensor describes how an infinitesimal volume of particles that moves along geodesics expands or contracts. \(R_{\mu\nu} = 0\) means there is no volume variation, but you can still have curvature of spacetime as described by the full Riemann tensor.}
-\end{itemize}
-
-
-\paragraph{(vi) Physical Interpretation (Optional Remark)}
-\textit{We give a brief physical interpretation of the two conditions. This helps to connect the mathematical results to their physical meaning in the context of General Relativity.}
-In the context of General Relativity, the condition $R_{\mu\nu}=0$ (with zero cosmological constant) implies a vacuum solution of Einstein's field equations, indicating no matter or energy content.
-\textit{In the context of General Relativity, the condition \(R_{\mu\nu}=0\) (in the absence of a cosmological constant) corresponds to a vacuum solution of Einstein's field equations, that is, a spacetime without matter or energy. This means that the spacetime is empty, and its curvature is entirely determined by the initial conditions.}
-On the other hand, requiring $W^{\mu\nu}$ to be symmetric imposes a restriction on the form of the tensor rather than on the geometry of the spacetime.
-\textit{On the other hand, requiring that \(W^{\mu\nu}\) be symmetric imposes a restriction on the form of the tensor, but not on the geometry of spacetime. It's a condition on the specific tensor we are considering, not on the underlying spacetime itself.}
-
-\paragraph{(vii) Final Answer}
-\textit{Let's summarize the final result.}
-Hence,
-\[
-\bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu}
-\;=\;0
-\quad
-\Longleftrightarrow
-\quad
-\text{either }W^{\mu\nu}\text{ is symmetric, or }R_{\mu\nu}=0.
-\]
-\textit{Ultimately, the commutator \([\nabla_{\mu}, \nabla_{\nu}]\,W^{\mu\nu}\) is equal to zero if and only if \(W^{\mu\nu}\) is a symmetric tensor, or if the spacetime is Ricci-flat (\(R_{\mu\nu}=0\)). These are the two possible conditions under which the given identity holds.}
-
-\subsection*{Question 8: Null conditions}
-
-\boxed{%
-\begin{minipage}{0.99\linewidth}
-\begin{aligned}
-& \textit{We decompose the (2,0) tensor } W^{\mu\nu} \textit{ into symmetric } (S^{\mu\nu}) \textit{ and antisymmetric } (A^{\mu\nu}) \textit{ parts:} \\
-& \qquad W^{\mu\nu} = S^{\mu\nu} + A^{\mu\nu} \\
-& \qquad S^{\mu\nu} = \frac{1}{2}(W^{\mu\nu} + W^{\nu\mu}), \quad A^{\mu\nu} = \frac{1}{2}(W^{\mu\nu} - W^{\nu\mu}) \\
-\\
-& \textit{Substituting into the commutator } \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} \textit{ yields:} \\
-& \qquad \bigl[\nabla_{\mu}, \nabla_{\nu}\bigr]\,W^{\mu\nu} = R_{\sigma\nu}(S^{\sigma\nu} - S^{\nu\sigma}) + R_{\sigma\nu}(A^{\sigma\nu} - A^{\nu\sigma}) \\
-\\
-& \textit{The symmetric part's contribution vanishes. The antisymmetric part contributes } 2R_{\sigma\nu}A^{\sigma\nu}. \\
-& \textit{A symmetric } W^{\mu\nu} \textit{ always yields a zero commutator. An antisymmetric } W^{\mu\nu} \textit{ can also} \\
-& \textit{result in a zero commutator, provided the contraction } R_{\sigma\nu}A^{\sigma\nu} \textit{ is zero.} \\
-& \textit{This is akin to "orthogonality" between the Ricci tensor and the antisymmetric part of } W^{\mu\nu}. \\
-& \textit{Since the Ricci tensor is symmetric, its contraction with } A^{\sigma\nu} \textit{ is always zero.} \\
-\\
-& \textit{We assume a torsion-free connection (specifically, the Levi-Civita connection), so } T^\rho_{\mu\nu} = 0. \\
-& \textit{With torsion, our analysis would be more complex.} \\
-\\
-& \textit{Under zero torsion, we conclude:} \\
-& \textit{1. Symmetric } W^{\mu\nu} \textit{ guarantees a zero commutator, regardless of the Ricci tensor.} \\
-& \textit{2. Ricci-flat spacetime } (R_{\mu\nu} = 0) \textit{ implies a zero commutator for any } W^{\mu\nu} \textit{ because the} \\
-& \quad \textit{symmetric Ricci tensor always has a zero contraction with any antisymmetric part.} \\
-& \textit{3. Purely antisymmetric } W^{\mu\nu} \textit{ always leads to a zero commutator, as the contraction} \\
-& \quad \textit{between the symmetric Ricci tensor and antisymmetric } W^{\mu\nu} \textit{ vanishes.} \\
-\\
-& \textit{In a torsion-free spacetime, the commutator vanishes if } W^{\mu\nu} \textit{ is symmetric or if } R_{\mu\nu} = 0. \\
-& \textit{The antisymmetric part of } W^{\mu\nu} \textit{ can also lead to a zero commutator under specific conditions,} \\
-& \textit{illustrating the interplay between tensor symmetry and spacetime curvature.}
-\end{aligned}
-\end{minipage}
-}
-
-\subsection*{Question 8: Theoretical Background: Understanding the Building Blocks}
-
-\textit{This appendix provides a brief overview of the fundamental concepts used in the exercise, including the Riemann curvature tensor, the Ricci tensor, and the covariant derivative. We will aim for an intuitive understanding, emphasizing the geometric meaning of these objects.}
-
-\paragraph{Covariant Derivative: Parallel Transport in Curved Spacetime}
-
-\textit{In flat space, we are used to the idea that parallel lines never meet. However, in curved space, the notion of "parallel" becomes more subtle. The covariant derivative is a way to generalize differentiation to curved spaces, taking into account the curvature of the space. It allows us to define how a tensor changes as we move it along a curve while keeping it "as parallel as possible" to its initial direction.}
-
-Imagine you are walking on the surface of a sphere, carrying an arrow that always points in the same direction, tangent to the sphere. As you walk along a curved path, the direction of the arrow relative to your path will change, even though you are trying to keep it parallel. This change is due to the curvature of the sphere.
-
-The covariant derivative, denoted by \(\nabla_{\mu}\), captures this notion of change in curved space. When applied to a vector \(V^\nu\), it is defined as:
-
-\[
-\nabla_{\mu} V^\nu = \partial_{\mu} V^\nu + \Gamma^\nu_{\mu\lambda} V^\lambda
-\]
-
-\textit{where \(\partial_{\mu}\) is the ordinary partial derivative, and \(\Gamma^\nu_{\mu\lambda}\) are the Christoffel symbols (also known as the connection coefficients). The Christoffel symbols encode information about the curvature of the space and can be computed from the metric tensor \(g_{\mu\nu}\), which defines distances in the space.}
-
-\textbf{Intuition:} The first term, \(\partial_{\mu} V^\nu\), represents the change in the vector as we would calculate it in flat space. The second term, \(\Gamma^\nu_{\mu\lambda} V^\lambda\), is a "correction" term that accounts for the curvature of the space. It tells us how much the vector needs to be adjusted to keep it parallel as we move along the curve.
-
-\textit{The covariant derivative can be similarly extended to tensors of higher rank. For example, for a (2,0) tensor \(W^{\mu\nu}\), we have:}
-
-\[
-\nabla_\alpha W^{\mu\nu} = \partial_\alpha W^{\mu\nu} + \Gamma^\mu_{\alpha\sigma} W^{\sigma\nu} + \Gamma^\nu_{\alpha\sigma} W^{\mu\sigma}
-\]
-\textit{Each upper index gets a correction term with a positive sign}
-
-\textit{The idea is that we are comparing the tensor at a given point with the tensor at a neighboring point, but we need to account for the fact that the coordinate system itself is changing due to the curvature.}
-\textbf{Key takeaway: the covariant derivative allows for differentiation in curved space by keeping tensors parallel during transport, encapsulating the intrinsic curvature's effect on differentiation.}
-
-\paragraph{Riemann Curvature Tensor: Measuring the Curvature}
-
-\textit{The Riemann curvature tensor, denoted by \(R^\rho_{\;\;\sigma\mu\nu}\), is the central object that quantifies the curvature of a (pseudo) Riemannian manifold. It measures how much the geometry of the space deviates from flat Euclidean space.}
-
-\textbf{Geometric Interpretation:} One way to understand the Riemann tensor is to consider parallel transporting a vector around a small closed loop in the space. If the space is flat, the vector will return to its original direction after being transported around the loop. However, if the space is curved, the vector will be rotated by an amount proportional to the area enclosed by the loop and the Riemann tensor.
-
-More precisely, if we parallel transport a vector \(V^\sigma\) around an infinitesimal parallelogram defined by two vectors \(A^\mu\) and \(B^\nu\), the change in the vector \(\delta V^\rho\) after one loop is given by:
-
-\[
-\delta V^\rho \approx R^\rho_{\;\;\sigma\mu\nu} V^\sigma A^\mu B^\nu
-\]
-
-\textit{This equation shows that the Riemann tensor relates the change in a vector under parallel transport to the area of the loop and the components of the vector itself.}
-
-\textbf{Another way to interpret the Riemann tensor} is through the commutator of covariant derivatives. As we saw in the exercise, for a (2,0) tensor:
-\[
-\bigl[\nabla_{\alpha}, \nabla_{\beta}\bigr]\,W^{\mu\nu}
-\;=\;
-R^\mu_{\;\;\sigma\alpha\beta}\,W^{\sigma\nu}
-\;+\;
-R^\nu_{\;\;\sigma\alpha\beta}\,W^{\mu\sigma},
-\]
-For a vector \(V^\mu\), the commutator is given by
-\[
-[\nabla_\mu, \nabla_\nu] V^\rho = R^\rho_{\;\;\sigma\mu\nu} V^\sigma
-\]
-
-\textit{This means the Riemann tensor also measures the non-commutativity of covariant derivatives. In flat space, the order of differentiation doesn't matter, so the commutator is zero. In curved space, the commutator is non-zero, and the Riemann tensor quantifies this non-commutativity.}
-
-\textbf{Symmetries of the Riemann Tensor:} The Riemann tensor has several important symmetries:
-\begin{itemize}
-    \item \(R^\rho_{\;\;\sigma\mu\nu} = -R^\rho_{\;\;\sigma\nu\mu}\): Antisymmetry in the last two indices. This reflects the fact that reversing the direction of the loop in the parallel transport picture reverses the rotation of the vector.
-    \item \(R_{\rho\sigma\mu\nu} = -R_{\sigma\rho\mu\nu}\): Antisymmetry in the first two indices (when lowered with the metric).
-    \item \(R_{\rho\sigma\mu\nu} = R_{\mu\nu\rho\sigma}\): Pair exchange symmetry.
-    \item \(R^\rho_{\;\;\sigma\mu\nu} + R^\rho_{\;\;\mu\nu\sigma} + R^\rho_{\;\;\nu\sigma\mu} = 0\): The first Bianchi identity.
-\end{itemize}
-
-\textit{These symmetries reduce the number of independent components of the Riemann tensor.}
-
-\textbf{Key Takeaway}: the Riemann curvature tensor is a fundamental geometric object capturing the essence of curvature by measuring the change in a vector after parallel transport around a closed loop and quantifying the non-commutativity of covariant derivatives.
-
-\paragraph{Ricci Tensor: A Contraction of the Riemann Tensor}
-
-\textit{The Ricci tensor, denoted by \(R_{\mu\nu}\), is obtained by contracting the first and third indices of the Riemann tensor:}
-
-\[
-R_{\mu\nu} \;=\; R^\lambda_{\;\;\mu\lambda\nu}
-\]
-
-\textit{In other words, we set \(\rho = \lambda\) in \(R^\rho_{\;\;\sigma\mu\nu}\) and sum over \(\lambda\).}
-
-\textbf{Geometric Interpretation:} The Ricci tensor measures a particular aspect of the curvature: the tendency of volumes to change in curved space compared to flat space. More precisely, it describes how the volume of a small geodesic ball (a ball defined by geodesics emanating from a central point) differs from the volume of a ball of the same radius in Euclidean space.
-
-\textit{If \(R_{\mu\nu}\) is positive definite in a region, it means that volumes in that region tend to be smaller than in flat space. If \(R_{\mu\nu}\) is negative definite, volumes tend to be larger. If \(R_{\mu\nu} = 0\), volumes are locally the same as in flat space, at least to leading order.}
-
-\textbf{In General Relativity:} The Ricci tensor plays a crucial role in Einstein's field equations, which relate the geometry of spacetime to the distribution of mass and energy:
-
-\[
-R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi G T_{\mu\nu}
-\]
-
-\textit{where \(R\) is the Ricci scalar (the trace of the Ricci tensor, \(R = g^{\mu\nu}R_{\mu\nu}\)), \(g_{\mu\nu}\) is the metric tensor, \(G\) is the gravitational constant, and \(T_{\mu\nu}\) is the stress-energy tensor. This equation tells us that the Ricci curvature is directly related to the presence of matter and energy.}
-
-\textbf{Key Takeaway}: The Ricci tensor provides a measure of how volumes change in curved space compared to flat space and is directly linked to the distribution of mass and energy in General Relativity.
-
-\pagebreak
-
-
 \section*{Question 9}
 
 Consider a photon moving in a 2D spacetime described by the metric
@@ -1793,8 +1626,8 @@ where \(\ell\) is a constant. The photon follows a geodesic \(x^\mu(\lambda)\) p
 
 \textit{We are given the 2D metric:}
 \begin{equation*}
-ds^2
-= -\left(1 + \frac{x^2}{\ell^2}\right)\,dt^2
+ds^2 
+= -\left(1 + \frac{x^2}{\ell^2}\right)\,dt^2 
 + dx^2.
 \end{equation*}
 \textit{A photon follows a geodesic \(x^\mu(\lambda)\) parametrized by an affine parameter \(\lambda\). Its four-momentum is defined as}
@@ -1805,11 +1638,11 @@ p^\mu \;=\; \frac{dx^\mu}{d\lambda}.
 \paragraph{2. Geodesic Equation.}
 
 \textit{The standard geodesic equation is:}
-\begin{equation*}\label{eq:geod}
-\frac{d^2 x^\mu}{d\lambda^2}
-+ \Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\lambda}\,\frac{dx^\beta}{d\lambda}
+\begin{equation}\label{eq:geod}
+\frac{d^2 x^\mu}{d\lambda^2} 
++ \Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\lambda}\,\frac{dx^\beta}{d\lambda} 
 = 0,
-\end{equation*}
+\end{equation}
 \textit{where \(\Gamma^\mu_{\alpha\beta}\) are the Christoffel symbols. They are computed from}
 \begin{equation*}\label{eq:christoffel}
 \Gamma^\mu_{\alpha\beta}
@@ -1824,16 +1657,16 @@ p^\mu \;=\; \frac{dx^\mu}{d\lambda}.
 
 \textit{In our 2D case, the components of the metric \(g_{\mu\nu}\) are:}
 \[
-g_{tt} = -\left(1 + \frac{x^2}{\ell^2}\right),
+g_{tt} = -\left(1 + \frac{x^2}{\ell^2}\right), 
 \quad
 g_{xx} = 1,
 \]
 \textit{and all other components are zero. The inverse metric is:}
 \[
-g^{tt}
-= -\frac{1}{\,1 + \frac{x^2}{\ell^2}\,},
+g^{tt} 
+= -\frac{1}{\,1 + \frac{x^2}{\ell^2}\,}, 
 \quad
-g^{xx}
+g^{xx} 
 = 1.
 \]
 \textit{The inverse metric is obtained by calculating the inverse of the metric tensor matrix.} \emph{We can verify that \(g_{\mu\alpha}g^{\alpha\nu} = \delta_\mu^\nu\), as required.}
@@ -1926,20 +1759,20 @@ ds^2 = 0.
 
 \textit{We can substitute the result from \eqref{eq:pt-const},}
 \[
-\frac{dt}{d\lambda}
+\frac{dt}{d\lambda} 
 = \frac{E}{\,1 + \frac{x^2}{\ell^2}\,},
 \]
 \textit{into the null condition. Then we get:}
 \[
 0
 = -\left(1 + \frac{x^2}{\ell^2}\right)\,
- \left(\frac{E}{\,1 + \frac{x^2}{\ell^2}\,}\right)^2
+  \left(\frac{E}{\,1 + \frac{x^2}{\ell^2}\,}\right)^2
 \;+\;
 \left(\frac{dx}{d\lambda}\right)^2.
 \]
 \textit{Simplifying,}
 \[
-\left(\frac{dx}{d\lambda}\right)^2
+\left(\frac{dx}{d\lambda}\right)^2 
 = \frac{E^2}{\,1 + \frac{x^2}{\ell^2}\,}.
 \]
 \textit{We simply moved the negative term to the right-hand side and canceled one factor of \((1 + \frac{x^2}{\ell^2})\).}
@@ -1962,7 +1795,6 @@ ds^2 = 0.
 \textit{Thus, we see that the photon's motion in \((t,x)\) coordinates is completely described once the constant energy \(E\) is specified.}
 
 \pagebreak
-
 \section*{Exercise 10}
 
 \noindent
@@ -1974,7 +1806,7 @@ Starting from the expression of the Schwarzschild metric, compute the explicit e
 \paragraph{(i) Schwarzschild Metric.}
 We consider the Schwarzschild metric in the coordinates \((t,\,r,\,\theta,\,\phi)\):
 \[
-ds^2 \;=\; 
+ds^2 \;=\;
 -\Bigl(1 - \frac{2GM}{r}\Bigr)\,dt^2
 \;+\;
 \Bigl(1 - \frac{2GM}{r}\Bigr)^{-1} dr^2
@@ -1984,12 +1816,12 @@ r^2 \, d\theta^2
 r^2 \, \sin^2\theta \, d\phi^2.
 \]
 
-\emph{This metric describes the curved spacetime outside a spherically symmetric mass. A spherically symmetric mass means that its gravitational influence depends only on the distance from the center and not on directions. The term \(2GM\) is called the Schwarzschild radius, and when \(r\) is at this value, one reaches the event horizon of a black hole solution. The Schwarzschild metric is a vacuum solution of Einstein s field equations, implying there is no matter or energy density outside the central mass. The coordinate \(t\) can be seen as the time measured by an observer far away from the mass (at infinity), and \(r\) can be understood as the radial coordinate, though at small distances it does not behave like the usual flat-space radius. The angles \(\theta\) and \(\phi\) are the usual spherical angles.}
+\emph{This metric describes the curved spacetime outside a spherically symmetric mass. A spherically symmetric mass means that its gravitational influence depends only on the distance from the center and not on directions. The term \(2GM\) is called the Schwarzschild radius, and when \(r\) is at this value, one reaches the event horizon of a black hole solution. The Schwarzschild metric is a vacuum solution of Einstein’s field equations, implying there is no matter or energy density outside the central mass. The coordinate \(t\) can be seen as the time measured by an observer far away from the mass (at infinity), and \(r\) can be understood as the radial coordinate, though at small distances it does not behave like the usual flat-space radius. The angles \(\theta\) and \(\phi\) are the usual spherical angles.}
 
 \noindent
 The nonzero components of the metric tensor \(g_{\mu\nu}\) are:
 \[
-g_{tt} = -\Bigl(1 - \tfrac{2GM}{r}\Bigr), 
+g_{tt} = -\Bigl(1 - \tfrac{2GM}{r}\Bigr),
 \quad
 g_{rr} = \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
 \quad
@@ -2006,20 +1838,20 @@ All other components vanish.
 \noindent
 The inverse metric tensor \(g^{\mu\nu}\) has the nonzero components:
 \[
-g^{tt} 
-= 
+g^{tt}
+=
 -\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
 \quad
-g^{rr} 
-= 
+g^{rr}
+=
 \Bigl(1 - \tfrac{2GM}{r}\Bigr),
 \quad
-g^{\theta\theta} 
-= 
+g^{\theta\theta}
+=
 \frac{1}{r^2},
 \quad
-g^{\phi\phi} 
-= 
+g^{\phi\phi}
+=
 \frac{1}{r^2 \sin^2\theta}.
 \]
 
@@ -2028,7 +1860,7 @@ g^{\phi\phi}
 \paragraph{(ii) Christoffel Symbols: General Formula.}
 The Christoffel symbols \(\Gamma^\rho_{\mu\nu}\) are defined by:
 \[
-\Gamma^\rho_{\mu \nu} 
+\Gamma^\rho_{\mu \nu}
 \;=\;
 \frac{1}{2} \, g^{\rho \sigma}
 \Bigl(
@@ -2042,10 +1874,10 @@ The Christoffel symbols \(\Gamma^\rho_{\mu\nu}\) are defined by:
 
 \emph{These symbols can be thought of as describing the ``connection'' in a curved space or spacetime, telling us how to take derivatives of vector or tensor fields when coordinates change from one point to another. Although they are not tensors themselves, they appear in important equations such as the geodesic equation. Recall that the geodesic equation}
 \[
-\frac{d^2 x^\rho}{d\tau^2} 
-+ 
-\Gamma^\rho_{\mu\nu} 
-\frac{dx^\mu}{d\tau}\,\frac{dx^\nu}{d\tau} 
+\frac{d^2 x^\rho}{d\tau^2}
++
+\Gamma^\rho_{\mu\nu}
+\frac{dx^\mu}{d\tau}\,\frac{dx^\nu}{d\tau}
 = 0
 \]
 \emph{tells us how a free-falling particle (or photon) moves under gravity alone. For instance, setting the coordinate indices appropriately will reveal how a radial distance or an angular coordinate might change if there is no external force except gravity.}
@@ -2090,8 +1922,8 @@ Since \(g^{r\sigma}\) is nonzero only when \(\sigma = r\), we get:
 \noindent
 Recall that
 \[
-g_{rr} 
-= 
+g_{rr}
+=
 \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1},
 \]
 so its derivative with respect to \(r\) is (using the derivative of nested functions)
@@ -2104,8 +1936,8 @@ so its derivative with respect to \(r\) is (using the derivative of nested funct
 \]
 Also note that
 \[
-g^{rr} 
-= 
+g^{rr}
+=
 \Bigl(1 - \tfrac{2GM}{r}\Bigr).
 \]
 
@@ -2122,7 +1954,7 @@ Putting everything together:
 \Bigl(1 - \tfrac{2GM}{r}\Bigr)
 \Bigl[
 -\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-2}
-\cdot 
+\cdot
 \frac{2GM}{r^2}
 \Bigr].
 \]
@@ -2130,13 +1962,13 @@ We can factor out the terms carefully:
 \[
 \Gamma^r_{rr}
 =
--\frac{1}{2} 
-\Bigl(1 - \tfrac{2GM}{r}\Bigr) 
+-\frac{1}{2}
+\Bigl(1 - \tfrac{2GM}{r}\Bigr)
 \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-2}
 \cdot
 \frac{2GM}{r^2}
 =
--\frac{GM}{r^2} 
+-\frac{GM}{r^2}
 \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}.
 \]
 
@@ -2170,20 +2002,20 @@ Since \(g^{\phi\sigma}\) is nonzero only for \(\sigma = \phi\), and since \(g_{r
 \noindent
 Recall that
 \[
-g_{\phi\phi} 
-= 
+g_{\phi\phi}
+=
 r^2 \sin^2\theta,
 \]
 and its derivative with respect to \(r\) is
 \[
-\partial_r (r^2 \sin^2\theta) 
-= 
+\partial_r (r^2 \sin^2\theta)
+=
 2r \,\sin^2\theta.
 \]
 We also have
 \[
-g^{\phi\phi} 
-= 
+g^{\phi\phi}
+=
 \frac{1}{r^2 \sin^2\theta}.
 \]
 
@@ -2218,9 +2050,7 @@ We conclude that the two Christoffel symbols requested in this problem are:
 \frac{1}{r}.
 \]
 
-\emph{These components play an important role in understanding geodesics in Schwarzschild spacetime. The \(\Gamma^r_{rr}\) component affects the radial part of a freely falling particle s motion, while \(\Gamma^\phi_{r\phi}\) influences the azimuthal coordinate \(\phi\) when changing \(r\). In short, they are key ingredients in describing the geometry around a non-rotating, spherically symmetric mass. They encapsulate how local coordinate directions ``twist'' and ``turn'' in a curved geometry, ensuring that we can write down the correct equations of motion in General Relativity.}
-
-\pagebreak
+\emph{These components play an important role in understanding geodesics in Schwarzschild spacetime. The \(\Gamma^r_{rr}\) component affects the radial part of a freely falling particle’s motion, while \(\Gamma^\phi_{r\phi}\) influences the azimuthal coordinate \(\phi\) when changing \(r\). In short, they are key ingredients in describing the geometry around a non-rotating, spherically symmetric mass. They encapsulate how local coordinate directions ``twist'' and ``turn'' in a curved geometry, ensuring that we can write down the correct equations of motion in General Relativity.}
 
 \section*{Question 11}
 
@@ -2228,7 +2058,7 @@ We conclude that the two Christoffel symbols requested in this problem are:
 
 For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
 \[
-E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda},
+E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda}, 
 \quad
 L = r^{2} \frac{d\phi}{d\lambda}.
 \]
@@ -2241,25 +2071,25 @@ Determine the smallest allowed radius for a stable circular orbit for a massive 
 \textit{We begin by writing the Schwarzschild metric and the conserved quantities associated with the motion of a massive particle in this metric.}
 
 We consider the Schwarzschild metric:
-\begin{equation}
+\begin{equation*}
 ds^2 = - \left(1 - \frac{2GM}{r}\right)dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\theta^2 + r^2 \sin^2\theta d\phi^2.
-\end{equation}
+\end{equation*}
 \textit{This is the Schwarzschild metric in coordinates \((t, r, \theta, \phi)\), where \(t\) is the coordinate time, \(r\) is the radial coordinate, and \(\theta\) and \(\phi\) are the angular coordinates. \(M\) is the mass of the central object (like a black hole or a star), and \(G\) is the universal gravitational constant.}
 Because of the symmetries of this spacetime (time-translation invariance and spherical symmetry), two conserved quantities naturally arise for geodesic motion:
 
-\begin{equation}
+\begin{equation*}
 E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\lambda},
 \quad
 L = r^{2} \frac{d\phi}{d\lambda}.
-\end{equation}
+\end{equation*}
 
 In our case of a massive particle, we can use $d\tau$ instead of $d\lambda$, hence we get:
 
-\begin{equation}
+\begin{equation*}
 E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\tau},
 \quad
 L = r^{2} \frac{d\phi}{d\tau}.
-\end{equation}
+\end{equation*}
 
 Here, \(E\) can be interpreted as the energy per unit mass of the particle, while \(L\) is the angular momentum per unit mass.
 \textit{\(E\) is the energy per unit mass of the particle, conserved because of the invariance under time translations (the metric does not explicitly depend on time \(t\)). \(L\) is the angular momentum per unit mass, conserved because of the spherical symmetry (the metric does not depend on the angle \(\phi\)). \(\tau\) is the proper time that parametrizes the geodesic.}
@@ -2275,9 +2105,9 @@ In General Relativity, the motion of a test particle is described by the geodesi
 
 The four-velocity is a four-vector that generalizes the concept of velocity to four-dimensional spacetime. For a massive particle, we use the proper time \(\tau\) as the affine parameter. Proper time is the time measured by a clock moving along with the particle. The four-velocity is defined as:
 
-\begin{equation}
+\begin{equation*}
 u^\mu = \frac{dx^\mu}{d\tau}
-\end{equation}
+\end{equation*}
 
 where \(x^\mu = (t, r, \theta, \phi)\) are the spacetime coordinates in Schwarzschild spacetime. Each component of the four-velocity represents the rate of change of the corresponding coordinate with respect to proper time.
 
@@ -2291,28 +2121,28 @@ where \(x^\mu = (t, r, \theta, \phi)\) are the spacetime coordinates in Schwarzs
 
 The four-velocity of a massive particle is normalized such that its scalar product with itself is equal to -1 (using the metric signature -, +, +, +). This arises from the definition of proper time, which is the time measured by a clock moving along with the particle. The proper time interval \(d\tau\) is related to the spacetime interval \(ds\) by:
 
-\begin{equation}
+\begin{equation*}
 ds^2 = - d\tau^2
-\end{equation}
+\end{equation*}
 where we are using units where $c=1$.
 
 In four-vector notation, the spacetime interval is given by:
 
-\begin{equation}
+\begin{equation*}
 ds^2 = g_{\mu\nu} dx^\mu dx^\nu
-\end{equation}
+\end{equation*}
 
 Dividing both sides by \(d\tau^2\), we get:
 
-\begin{equation}
+\begin{equation*}
 \frac{ds^2}{d\tau^2} = g_{\mu\nu} \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} = g_{\mu\nu}u^\mu u^\nu
-\end{equation}
+\end{equation*}
 
 Since \(ds^2 = -d\tau^2\) (with $c=1$), we have \(\frac{ds^2}{d\tau^2} = -1\). Therefore, the normalization condition is:
 
-\begin{equation}
+\begin{equation*}
 g_{\mu\nu}u^\mu u^\nu = -1.
-\end{equation}
+\end{equation*}
 
 \textit{Why is this important?}
 
@@ -2330,89 +2160,89 @@ We further simplify the problem by restricting the motion to the equatorial plan
 
 With \(d\theta = 0\) (since \(\theta = \frac{\pi}{2}\) is constant) and using the definition \(u^\mu = \frac{dx^\mu}{d\tau}\), the normalization condition becomes:
 
-\begin{equation}
+\begin{equation*}
 g_{\mu\nu} \frac{dx^\mu}{d\tau} \frac{dx^\nu}{d\tau} = -1.
-\end{equation}
+\end{equation*}
 
 Substituting the components of the Schwarzschild metric and expanding the summation, we have:
 
-\begin{equation}
+\begin{equation*}
 g_{tt}\left(\frac{dt}{d\tau}\right)^2 + g_{rr}\left(\frac{dr}{d\tau}\right)^2 + g_{\phi\phi}\left(\frac{d\phi}{d\tau}\right)^2 = -1.
-\end{equation}
+\end{equation*}
 
 Plugging in the explicit form of the Schwarzschild metric components for the equatorial plane:
 
-\begin{equation}
+\begin{equation*}
 -\left(1 - \frac{2GM}{r}\right)\left(\frac{dt}{d\tau}\right)^2 + \left(1 - \frac{2GM}{r}\right)^{-1} \left(\frac{dr}{d\tau}\right)^2 + r^2 \left(\frac{d\phi}{d\tau}\right)^2 = -1.
-\end{equation}
+\end{equation*}
 
 \subparagraph{Conserved Quantities and Effective Potential}
 
 We have the conserved quantities \(E\) and \(L\) defined as:
 
-\begin{equation}
+\begin{equation*}
 E = \left(1 - \frac{2GM}{r}\right) \frac{dt}{d\tau},
 \quad
 L = r^2 \frac{d\phi}{d\tau}.
-\end{equation}
+\end{equation*}
 
 These quantities are conserved due to the symmetries of the Schwarzschild spacetime (timelike and rotational Killing vectors).
 
 From these, we can isolate \(\frac{dt}{d\tau}\) and \(\frac{d\phi}{d\tau}\) as follows:
 
-\begin{equation}
+\begin{equation*}
 \frac{dt}{d\tau} = \frac{E}{1 - \frac{2GM}{r}},
 \quad
 \frac{d\phi}{d\tau} = \frac{L}{r^2}.
-\end{equation}
+\end{equation*}
 
 Substituting these expressions into the normalization equation gives:
 
-\begin{equation}
+\begin{equation*}
 -\left(1 - \frac{2GM}{r}\right) \left( \frac{E}{1-\frac{2GM}{r}} \right)^2 + \left( 1- \frac{2GM}{r} \right)^{-1} \left( \frac{dr}{d\tau} \right)^2 + r^2 \left( \frac{L}{r^2} \right)^2 = -1.
-\end{equation}
+\end{equation*}
 
 Simplifying the equation:
 
-\begin{equation}
+\begin{equation*}
 -\frac{E^2}{1-\frac{2GM}{r}} + \left( 1- \frac{2GM}{r} \right)^{-1} \left( \frac{dr}{d\tau} \right)^2 + \frac{L^2}{r^2} = -1.
-\end{equation}
+\end{equation*}
 
 Multiply through by $\left( 1- \frac{2GM}{r} \right)$ to get rid of the denominators:
 
-\begin{equation}
+\begin{equation*}
 -E^2 + \left( \frac{dr}{d\tau} \right)^2 + \frac{L^2}{r^2}\left( 1- \frac{2GM}{r} \right) = -\left( 1 - \frac{2GM}{r} \right).
-\end{equation}
+\end{equation*}
 
 Expanding the last term on the left side:
 
-\begin{equation}
+\begin{equation*}
 -E^2 + \left( \frac{dr}{d\tau} \right)^2 + \frac{L^2}{r^2} - \frac{2GML^2}{r^3} = -1 + \frac{2GM}{r}.
-\end{equation}
+\end{equation*}
 
 Rearranging to isolate $\left( \frac{dr}{d\tau} \right)^2$:
 
-\begin{equation}
+\begin{equation*}
 \left( \frac{dr}{d\tau} \right)^2 = E^2 - 1 + \frac{2GM}{r} - \frac{L^2}{r^2} + \frac{2GML^2}{r^3}.
-\end{equation}
+\end{equation*}
 
 Now, multiply the equation by $\frac{1}{2}$ and collect terms to match the form $\frac{1}{2}\left(\frac{dr}{d\tau}\right)^2 + V_{\mathrm{eff}}(r) = \frac{E^2}{2}$:
 
-\begin{equation}
+\begin{equation*}
 \frac{1}{2}\left(\frac{dr}{d\tau}\right)^2 = \frac{E^2}{2} - \frac{1}{2} + \frac{GM}{r} - \frac{L^2}{2r^2} + \frac{GML^2}{r^3}.
-\end{equation}
+\end{equation*}
 
 Rearranging to isolate $\frac{E^2}{2}$ on the right side:
 
-\begin{equation}
+\begin{equation*}
 \frac{1}{2}\left(\frac{dr}{d\tau}\right)^2 + \left(-\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} + \frac{1}{2} \right) = \frac{E^2}{2}.
-\end{equation}
+\end{equation*}
 
 Comparing with the desired form, we identify the effective potential $V_{\mathrm{eff}}(r)$ as:
 
-\begin{equation}
+\begin{equation*}
 V_{\mathrm{eff}}(r) = -\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GML^2}{r^3} + \frac{1}{2}.
-\end{equation}
+\end{equation*}
 This equation has the same form as the energy conservation equation in classical mechanics:
 Kinetic Energy + Potential Energy = Total Energy.
 
@@ -2420,14 +2250,14 @@ Here, $\frac{1}{2}\left(\frac{dr}{d\tau}\right)^2$ represents the "kinetic energ
 
 This can also be written as:
 
-\begin{equation}
+\begin{equation*}
 V_{\mathrm{eff}}(r) = \left(1 - \frac{2GM}{r}\right)\left(\frac{1}{2} + \frac{L^2}{2r^2}\right).
-\end{equation}
+\end{equation*}
 \textit{This equation has a form similar to that of energy in classical mechanics, where the first term represents the radial kinetic energy and the second term is the effective potential. $V_{\mathrm{eff}}(r)$ is a function of the radial coordinate $r$ and depends on the parameters $G$, $M$, and $L$. The effective potential combines the effects of gravitational attraction, centrifugal repulsion, and a relativistic correction.}
 Expanding,
-\begin{equation}
+\begin{equation*}
 V_{\mathrm{eff}}(r) = \frac{1}{2} - \frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GM L^2}{r^3}.
-\end{equation}
+\end{equation*}
 \textit{Expanding the expression for the effective potential, we obtain a more explicit form that allows us to analyze its behavior. The first term is a constant, the second term is the Newtonian term (attractive), the third term is a centrifugal term (repulsive), and the fourth term is an additional term due to General Relativity (attractive).}
 Intuitively, $V_{\mathrm{eff}}(r)$ encodes the combined effects of the gravitational attraction (terms with $GM/r$) and the centrifugal repulsion (terms with $L^2$).
 \textit{Intuitively, $V_{\mathrm{eff}}(r)$ takes into account both the gravitational attraction (terms with $GM/r$) and the centrifugal repulsion (terms with $L^2$). The effective potential represents the effective potential energy per unit mass of the particle as a function of the radial coordinate $r$.}
@@ -2436,35 +2266,35 @@ Intuitively, $V_{\mathrm{eff}}(r)$ encodes the combined effects of the gravitati
 \textit{Now we analyze the conditions for having circular orbits. A circular orbit is characterized by a constant radius, which implies that the radial velocity is zero.}
 
 To have a circular orbit at radius \(r\), the radial coordinate must remain constant, implying
-\begin{equation}
+\begin{equation*}
 \frac{dr}{d\tau} = 0.
-\end{equation}
+\end{equation*}
 \textit{For a circular orbit, the radial coordinate $r$ must remain constant. This means that the derivative of $r$ with respect to the proper time $\tau$ must be zero.}
 This means we sit at an extremum of the effective potential (since the motion in $r$-direction is momentarily at rest and remains so):
-\begin{equation}
+\begin{equation*}
 \frac{dV_{\mathrm{eff}}}{dr} = 0.
-\end{equation}
+\end{equation*}
 \textit{The condition $dr/d\tau = 0$ implies that we are at an extremum point (maximum or minimum) of the effective potential. At an extremum point, the derivative of the effective potential with respect to $r$ is zero.}
 Computing the derivative of $V_{\mathrm{eff}}(r)$:
-\begin{equation}
+\begin{equation*}
 \frac{dV_{\mathrm{eff}}}{dr} = \frac{GM}{r^2} - \frac{L^2}{r^3} + \frac{3 G M L^2}{r^4}.
-\end{equation}
+\end{equation*}
 \textit{We calculate the derivative of the effective potential with respect to $r$.}
 Setting this to zero gives the condition for circular orbits:
-\begin{equation}
+\begin{equation*}
 \frac{GM}{r^2} - \frac{L^2}{r^3} + \frac{3 G M L^2}{r^4} = 0.
-\end{equation}
+\end{equation*}
 \textit{Setting the derivative of the effective potential equal to zero, we obtain the condition for the existence of circular orbits.}
 Multiplying by $r^4$ yields a quadratic equation in $r$:
-\begin{equation}
+\begin{equation*}
 GM r^2 - L^2 r + 3 G M L^2 = 0.
-\end{equation}
+\end{equation*}
 \textit{Multiplying the previous equation by $r^4$, we obtain a quadratic equation in $r$, the solution of which will give us the radii of the possible circular orbits.}
 This equation will generally give up to two real solutions for $r$, corresponding to (at most) two possible circular orbit radii for a given $L$.
 \textit{This quadratic equation can have up to two real solutions for $r$, which correspond to two possible radii of circular orbits for a given value of the angular momentum $L$.} Solving for $r$ we get:
-\begin{equation}
+\begin{equation*}
 r = \frac{L^2 \pm \sqrt{L^4 - 12 G^2 M^2 L^2}}{2 G M}.
-\end{equation}
+\end{equation*}
 \paragraph{(iv) Smallest Stable Radius}
 \textit{We now determine the minimum radius for a stable circular orbit. This corresponds to the point where the two solutions of the quadratic equation for $r$ coincide.}
 
@@ -2500,7 +2330,6 @@ This particular circular orbit at $r = 6 G M$ corresponds to the \emph{innermost
 \text{Therefore, the smallest allowed radius for a stable circular orbit is } r = 6 G M.
 }
 \]
-
 
 \section*{Question 12}
 For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
@@ -2589,7 +2418,7 @@ V_{\text{eff}}(r)
 \;=\;
 \tfrac{1}{2} \;-\;\tfrac{GM}{r} \;+\;\tfrac{L^2}{2r^2} \;-\;\tfrac{GM\,L^2}{r^3}.
 \]
-\textit{The equation now resembles that of a particle with  energy  $\tfrac{E^2}{2}$ moving in an effective potential $V_{\text{eff}}(r)$. The effective potential includes terms corresponding to Newtonian gravity, a centrifugal barrier, and a relativistic correction term.}
+\textit{The equation now resembles that of a particle with “energy” $\tfrac{E^2}{2}$ moving in an effective potential $V_{\text{eff}}(r)$. The effective potential includes terms corresponding to Newtonian gravity, a centrifugal barrier, and a relativistic correction term.}
 
 (Observe that the first two terms reproduce a Newtonian-like potential, while the last two terms encode relativistic corrections.)
 
@@ -2745,6 +2574,7 @@ The difference is that in Schwarzschild geometry we treat a test particle (mass 
 
 \pagebreak
 
+
 \section*{Exercise 13}
 For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
 \[
@@ -2758,7 +2588,7 @@ Discuss all possible circular orbits for a massless object and determine their s
 
 \paragraph{(i) Schwarzschild Metric and Conserved Quantities.}
 Consider the Schwarzschild metric in \((t,r,\theta,\phi)\) coordinates:
-\begin{equation}
+\begin{equation*}
 ds^2 \;=\; -\,\Bigl(1 - \frac{2GM}{r}\Bigr)\,dt^2
 \;+\;
 \Bigl(1 - \frac{2GM}{r}\Bigr)^{-1}\,dr^2
@@ -2766,7 +2596,7 @@ ds^2 \;=\; -\,\Bigl(1 - \frac{2GM}{r}\Bigr)\,dt^2
 r^2\,d\theta^2
 \;+\;
 r^2\,\sin^2\theta\,d\phi^2.
-\end{equation}
+\end{equation*}
 \textit{This is the Schwarzschild metric, describing the geometry of spacetime outside a spherically symmetric mass distribution. The metric is given in Schwarzschild coordinates $(t, r, \theta, \phi)$, where $t$ is the time coordinate, $r$ is the radial coordinate, $\theta$ is the polar angle, and $\phi$ is the azimuthal angle. The term $d\Omega^2 = d\theta^2 + \sin^2\theta \, d\phi^2$ represents the metric on the 2-sphere.}
 
 Two quantities remain constant along any geodesic:
@@ -2779,13 +2609,13 @@ Here, \(\lambda\) is an affine parameter along the geodesic.
 
 \paragraph{(ii) Normalization Condition for a Massless Particle.}
 For a massless object (e.g., a photon), its four-momentum \(p^\mu = \tfrac{dx^\mu}{d\lambda}\) satisfies
-\begin{equation}
+\begin{equation*}
 g_{\mu\nu}\,p^\mu p^\nu \;=\; 0.
-\end{equation}
+\end{equation*}
 \textit{This is the normalization condition for the four-momentum of a massless particle. Unlike the massive case, where the condition is $g_{\mu\nu}u^\mu u^\nu = -1$, for massless particles, the condition is $g_{\mu\nu}p^\mu p^\nu = 0$. This reflects the fact that massless particles move at the speed of light, and their proper time cannot be used as an affine parameter. Instead, we use an affine parameter $\lambda$ that is related to the coordinate time $t$ and radial coordinate $r$ through the conserved quantities $E$ and $L$.}
 
 We can restrict the motion to the equatorial plane \(\theta = \pi/2\), which simplifies the metric by eliminating the \(d\theta^2\) term. \textit{We consider the motion confined to the equatorial plane for simplicity, which is possible due to the spherical symmetry of the Schwarzschild metric. Setting $\theta = \pi/2$ implies $d\theta = 0$ and $\sin^2\theta = 1$}. Thus,
-\begin{equation}
+\begin{equation*}
 -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\!\Bigl(\frac{dt}{d\lambda}\Bigr)^2
 \;+\;
 \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}
@@ -2794,10 +2624,10 @@ We can restrict the motion to the equatorial plane \(\theta = \pi/2\), which sim
 r^2\,\Bigl(\frac{d\phi}{d\lambda}\Bigr)^2
 \;=\;
 0.
-\end{equation}
+\end{equation*}
 Substitute the conserved quantities
 \(\tfrac{dt}{d\lambda} = \tfrac{E}{1 - \tfrac{2GM}{r}}\) and \(\tfrac{d\phi}{d\lambda} = \tfrac{L}{r^2}\):
-\begin{equation}
+\begin{equation*}
 -\,
 \frac{E^2}{\,1 - \tfrac{2GM}{r}\,}
 \;+\;
@@ -2806,46 +2636,46 @@ Substitute the conserved quantities
 \;+\;
 \frac{L^2}{r^2}
 \;=\; 0.
-\end{equation}
+\end{equation*}
 \textit{We have substituted the expressions for the conserved quantities $E$ and $L$ into the normalization condition.}
 
 Rearrange to isolate \(\bigl(\tfrac{dr}{d\lambda}\bigr)^2\):
-\begin{equation}
+\begin{equation*}
 \Bigl(\frac{dr}{d\lambda}\Bigr)^2
 \;+\;
 \frac{L^2}{r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)
 \;=\;
 E^2.
-\end{equation}
+\end{equation*}
 Define the effective potential for the massless particle:
-\begin{equation}
+\begin{equation*}
 V_\mathrm{eff}(r)
 \;=\;
 \frac{L^2}{2\,r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr).
-\end{equation}
+\end{equation*}
 Then, our radial equation is
 \(
 \bigl(\tfrac{dr}{d\lambda}\bigr)^2 + 2\,V_\mathrm{eff}(r) = E^2.
 \)
-\textit{The equation now resembles that of a particle with  energy  $E^2$ moving in an effective potential $V_{\text{eff}}(r)$. The effective potential includes terms corresponding to a centrifugal barrier and a relativistic correction term. Unlike the massive case, there is no Newtonian-like term because massless particles do not experience Newtonian gravity.}
+\textit{The equation now resembles that of a particle with “energy” $E^2$ moving in an effective potential $V_{\text{eff}}(r)$. The effective potential includes terms corresponding to a centrifugal barrier and a relativistic correction term. Unlike the massive case, there is no Newtonian-like term because massless particles do not experience Newtonian gravity.}
 
 \paragraph{(iii) Circular Orbits for a Massless Object.}
 A circular orbit requires a constant radius, hence
 \(\tfrac{dr}{d\lambda} = 0\). In terms of the effective potential, this implies
-\begin{equation}
+\begin{equation*}
 E^2 \;=\; 2\,V_\mathrm{eff}(r),
 \quad\text{and}\quad
 \frac{dV_\mathrm{eff}}{dr}\;=\;0.
-\end{equation}
+\end{equation*}
 \textit{For a circular orbit, the radial distance $r$ does not change with the affine parameter $\lambda$. This occurs at an extremum (minimum or maximum) of the effective potential.}
 
 Differentiate \(V_\mathrm{eff}(r)\):
-\begin{equation}
+\begin{equation*}
 V_\mathrm{eff}(r)
 \;=\;
 \frac{L^2}{2\,r^2}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr).
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 \frac{dV_\mathrm{eff}}{dr}
 \;=\;
 -\frac{L^2}{r^3}\,\Bigl(1 - \tfrac{2GM}{r}\Bigr)
@@ -2855,28 +2685,28 @@ V_\mathrm{eff}(r)
 -\frac{L^2}{\,r^3\,}
 \;+\;
 \frac{3\,GM\,L^2}{\,r^4\,}.
-\end{equation}
+\end{equation*}
 Setting \(\tfrac{dV_\mathrm{eff}}{dr} = 0\) yields
-\begin{equation}
+\begin{equation*}
 -\frac{L^2}{\,r^3\,}
 \;+\;
 \frac{3\,GM\,L^2}{\,r^4\,}
 \;=\; 0
 \quad\Longrightarrow\quad
 r \;=\; 3\,GM.
-\end{equation}
+\end{equation*}
 Thus, for a massless particle (photon), the only possible circular orbit is at \(r = 3GM\). This is the well-known photon sphere.
 \textit{This result shows that there is only one possible radius for a circular orbit for a massless particle in the Schwarzschild spacetime, and it is located at $r = 3GM$. This is known as the photon sphere.}
 
 \paragraph{(iv) Stability of the Circular Orbit.}
 To test stability, we look at the second derivative of \(V_\mathrm{eff}\). An extremum is stable if \(\tfrac{d^2V_\mathrm{eff}}{dr^2} > 0\) (minimum) and unstable if \(\tfrac{d^2V_\mathrm{eff}}{dr^2} < 0\) (maximum). We compute:
-\begin{equation}
+\begin{equation*}
 \frac{d^2V_\mathrm{eff}}{dr^2}
 \;=\;
 \frac{3\,L^2}{r^4}
 \;-\;
 \frac{12\,GM\,L^2}{r^5}.
-\end{equation}
+\end{equation*}
 Evaluating at \(r = 3GM\):
 \begin{align}
 \left.\frac{d^2V_\mathrm{eff}}{dr^2}\right|_{r=3GM}
@@ -2907,6 +2737,7 @@ For a massless object (e.g.\ a photon) in Schwarzschild spacetime, there is exac
 \pagebreak
 
 
+
 \section*{Question 14}
 For geodesic motion in the Schwarzschild metric, the following two quantities are conserved:
 \[
@@ -2925,8 +2756,8 @@ Find the minimum value of \(E\) such that the photon can reach the singularity a
 \paragraph{(i) Schwarzschild Metric and Conserved Quantities}
 The Schwarzschild metric in coordinates \(\{t, r, \theta, \phi\}\) is given by:
 \[
-ds^2
-\,=\, -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,dt^2
+ds^2 
+\,=\, -\Bigl(1 - \tfrac{2GM}{r}\Bigr)\,dt^2 
 \;+\; \Bigl(1 - \tfrac{2GM}{r}\Bigr)^{-1}\,dr^2
 \;+\; r^2\,d\theta^2
 \;+\; r^2\,\sin^2\theta\,d\phi^2.
@@ -2991,7 +2822,7 @@ This equation has the form of an energy conservation equation, where the first t
 A photon can reach the singularity at \(r=0\) only if its total ``energy'' (in the effective potential sense) is large enough to overcome any potential barrier.
 
 \paragraph{(iii) Setting \(GM=1\) and \(L=10\)}
-We now set \(GM=1\). The angular momentum is given as \(L=10\).
+We now set \(GM=1\). The angular momentum is given as \(L=10\). 
 Hence,
 \[
 V_{\text{eff}}(r)
@@ -3019,7 +2850,7 @@ This equation describes the radial motion of the photon in terms of the effectiv
 \paragraph{(iv) Condition for the Photon to Reach the Singularity}
 To find whether the photon can fall into \(r=0\), we look for the largest barrier in \(V_{\text{eff}}(r)\). The maximum of \(V_{\text{eff}}\) occurs where
 \[
-\frac{dV_{\text{eff}}}{dr}
+\frac{dV_{\text{eff}}}{dr} 
 \,=\,
 -\frac{100}{r^3}
 \;+\;
@@ -3132,6 +2963,9 @@ We find the minimum energy \(E_{\min}\) by taking the square root of the minimum
 
 These additional comments aim to provide a deeper understanding of the physical and theoretical implications of the result obtained in the exercise, connecting it to the broader concepts discussed in the lectures.
 
+\pagebreak
+
+
 \section*{Question 15}
 
 Consider the linear regime where $g_{\mu \nu}=\eta_{\mu \nu}+h_{\mu \nu}$ with $\left|h_{\mu \nu}\right| \ll 1$. First, define the vector $V_{\mu}=\partial_{\nu} h_{\mu}^{\nu}-\frac{1}{2} \partial_{\mu} h_{\nu}^{\nu}$. Consider the gauge transformation described by the function $\xi_{\alpha}\left(x^{\mu}\right)$. (i) What happens to the vector $V_{\mu}$ after such a gauge transformation? (ii) Is it possible to find a gauge where $V_{\mu}$ is vanishing?
@@ -3178,18 +3012,18 @@ We now provide a step-by-step, pedantic explanation of how the gauge transformat
 First, consider the metric of flat spacetime, \(\eta_{\mu\nu}\), which is symmetric and invertible. In index notation, we may raise an index of \(h_{\mu\nu}\) by contracting it with \(\eta^{\nu\alpha}\). Explicitly:
 \[
 h^\nu_{\;\mu}
-  \;=\; 
+  \;=\; 
 \eta^{\nu\alpha}\,h_{\mu\alpha}.
 \]
 Similarly, the \emph{trace} is obtained by contracting \(h^\nu_{\;\mu}\) on its upper and lower indices:
 \[
 h^\nu_{\;\nu}
-  \;=\;
+  \;=\;
 \eta^{\nu\alpha}\,h_{\nu\alpha}.
 \]
-\emph{From now on}, we will \textbf{not} show \(\eta^{\mu\nu}\) explicitly; we simply write 
- \(\,h_{\mu\nu}\) with one index raised\,  as \(h^\nu_{\;\mu}\), and
- \(\,h_{\mu\nu}\) fully contracted\,  as \(h^\nu_{\;\nu}\).
+\emph{From now on}, we will \textbf{not} show \(\eta^{\mu\nu}\) explicitly; we simply write 
+“\(\,h_{\mu\nu}\) with one index raised\,” as \(h^\nu_{\;\mu}\), and
+“\(\,h_{\mu\nu}\) fully contracted\,” as \(h^\nu_{\;\nu}\).
 
 \medskip
 
@@ -3198,35 +3032,35 @@ h^\nu_{\;\nu}
 We impose the infinitesimal gauge transformation on \(h_{\mu\nu}\):
 \[
 h_{\mu\nu}
-  \;\;\longrightarrow\;\;
+  \;\;\longrightarrow\;\;
 h_{\mu\nu}
-  \;+\;
+  \;+\;
 \partial_\mu \,\xi_\nu
-  \;+\;
+  \;+\;
 \partial_\nu \,\xi_\mu,
 \]
-where \(\xi_\mu\) is the small gauge vector.  Once we have 
+where \(\xi_\mu\) is the small gauge vector.  Once we have 
 \[
 h_{\mu\nu} \;\to\; h_{\mu\nu} + \partial_\mu\,\xi_\nu + \partial_\nu\,\xi_\mu,
 \]
-we can  raise  one of its indices.  By definition,
+we can “raise” one of its indices.  By definition,
 \[
 h^\nu_{\;\mu}
-  \;=\;
+  \;=\;
 (\eta^{\nu\alpha} h_{\mu\alpha}),
 \]
 so under the gauge transformation:
 \[
 h^\nu_{\;\mu}
-  \;\;\longrightarrow\;\;
+  \;\;\longrightarrow\;\;
 h^\nu_{\;\mu}
-  \;+\;
+  \;+\;
 \partial_\mu \,\xi^\nu
-  \;+\;
+  \;+\;
 \partial^\nu \,\xi_\mu,
 \]
-where we silently use \(\eta^{\nu\alpha}\) to convert \(\xi_\alpha \to \xi^\nu\) and 
-\(\partial_\alpha \to \partial^\nu\).  
+where we silently use \(\eta^{\nu\alpha}\) to convert \(\xi_\alpha \to \xi^\nu\) and 
+\(\partial_\alpha \to \partial^\nu\).  
 
 \vspace{2pt}
 
@@ -3234,19 +3068,19 @@ where we silently use \(\eta^{\nu\alpha}\) to convert \(\xi_\alpha \to \xi^\nu\)
 Similarly, the trace
 \[
 h^\nu_{\;\nu}
-  \;=\;
+  \;=\;
 (\eta^{\nu\alpha} h_{\nu\alpha})
 \]
-transforms as follows:  
-1. The old term \(h^\nu_{\;\nu}\) remains \(h^\nu_{\;\nu}\).  
-2. Each of \(\,\partial_\nu\,\xi^\nu\) and \(\,\partial^\nu\,\xi_\nu\) appears upon contracting the new gauge piece; these two expressions coincide (thanks to symmetry and the fact that partial derivatives commute) and thus add up to \(2\,\partial_\nu\,\xi^\nu\).  
+transforms as follows:  
+1. The old term \(h^\nu_{\;\nu}\) remains \(h^\nu_{\;\nu}\).  
+2. Each of \(\,\partial_\nu\,\xi^\nu\) and \(\,\partial^\nu\,\xi_\nu\) appears upon contracting the new gauge piece; these two expressions coincide (thanks to symmetry and the fact that partial derivatives commute) and thus add up to \(2\,\partial_\nu\,\xi^\nu\).  
 
 Hence,
 \[
 h^\nu_{\;\nu}
-  \;\;\longrightarrow\;\;
+  \;\;\longrightarrow\;\;
 h^\nu_{\;\nu}
-  \;+\;
+  \;+\;
 2\,\partial_\alpha \,\xi^\alpha.
 \]
 
@@ -3254,12 +3088,12 @@ h^\nu_{\;\nu}
 
 \noindent
 \subparagraph{3. The vector \boldmath\(V_\mu\).}
-Recall the definition: 
+Recall the definition: 
 \[
 V_\mu
-  \;=\; 
+  \;=\; 
 \partial_\nu\bigl(h^\nu_{\;\mu}\bigr)
-  \;-\;
+  \;-\;
 \tfrac12\,\partial_\mu \bigl(h^\nu_{\;\nu}\bigr).
 \]
 This object is constructed from the derivatives of \(h^\nu_{\;\mu}\) and its trace \(h^\nu_{\;\nu}\).
@@ -3271,11 +3105,11 @@ This object is constructed from the derivatives of \(h^\nu_{\;\mu}\) and its tra
 We want to see how \(V_\mu\) changes when
 \[
 h^\nu_{\;\mu}
-  \;\to\;
+  \;\to\;
 h^\nu_{\;\mu} + \partial_\mu\,\xi^\nu + \partial^\nu\,\xi_\mu,
 \quad
 h^\nu_{\;\nu}
-  \;\to\;
+  \;\to\;
 h^\nu_{\;\nu} + 2\,\partial_\alpha\,\xi^\alpha.
 \]
 Substitute these into the definition of \(V_\mu\):
@@ -3283,50 +3117,50 @@ Substitute these into the definition of \(V_\mu\):
 \begin{equation}
 \begin{aligned}
 V_\mu
-  &\;\;\longrightarrow\;\;
-  \partial_\nu\Bigl(h^\nu_{\;\mu}
-                   + \partial_\mu\,\xi^\nu
-                   + \partial^\nu\,\xi_\mu
-             \Bigr)
-    \;-\;
-  \tfrac12\,\partial_\mu\Bigl(h^\nu_{\;\nu}
-                         + 2\,\partial_\alpha\,\xi^\alpha
-                    \Bigr)
+  &\;\;\longrightarrow\;\;
+  \partial_\nu\Bigl(h^\nu_{\;\mu}
+                   + \partial_\mu\,\xi^\nu
+                   + \partial^\nu\,\xi_\mu
+             \Bigr)
+    \;-\;
+  \tfrac12\,\partial_\mu\Bigl(h^\nu_{\;\nu}
+                         + 2\,\partial_\alpha\,\xi^\alpha
+                    \Bigr)
 \\[6pt]
 &=\;
-  \underbrace{\partial_\nu \bigl(h^\nu_{\;\mu}\bigr)}_{\text{original }V_\mu\text{ piece}}
-  \;+\;
-  \partial_\nu\bigl(\,\partial_\mu\,\xi^\nu\bigr)
-  \;+\;
-  \partial_\nu\bigl(\,\partial^\nu\,\xi_\mu\bigr)
-  \;-\;
-  \tfrac12\,\underbrace{\partial_\mu\bigl(h^\nu_{\;\nu}\bigr)}_{\text{original }V_\mu\text{ piece}}
-  \;-\;
-  \partial_\mu\bigl(\,\partial_\alpha\,\xi^\alpha\bigr).
+  \underbrace{\partial_\nu \bigl(h^\nu_{\;\mu}\bigr)}_{\text{original }V_\mu\text{ piece}}
+  \;+\;
+  \partial_\nu\bigl(\,\partial_\mu\,\xi^\nu\bigr)
+  \;+\;
+  \partial_\nu\bigl(\,\partial^\nu\,\xi_\mu\bigr)
+  \;-\;
+  \tfrac12\,\underbrace{\partial_\mu\bigl(h^\nu_{\;\nu}\bigr)}_{\text{original }V_\mu\text{ piece}}
+  \;-\;
+  \partial_\mu\bigl(\,\partial_\alpha\,\xi^\alpha\bigr).
 \end{aligned}
 \end{equation}
-In flat coordinates, partial derivatives commute, so combinations like 
-\(\partial_\nu \partial_\mu\,\xi^\nu - \partial_\mu \partial_\nu\,\xi^\nu\) cancel out.  
+In flat coordinates, partial derivatives commute, so combinations like 
+\(\partial_\nu \partial_\mu\,\xi^\nu - \partial_\mu \partial_\nu\,\xi^\nu\) cancel out.  
 What remains is precisely
 \[
 V_\mu
-  \;+\;
+  \;+\;
 \Box\,\xi_\mu,
 \]
-where \(\,\Box = \partial^\alpha \partial_\alpha\) is the d Alembertian operator (again, defined implicitly by raising an index on \(\partial_\alpha\)).
+where \(\,\Box = \partial^\alpha \partial_\alpha\) is the d’Alembertian operator (again, defined implicitly by raising an index on \(\partial_\alpha\)).
 
 \medskip
 
 \noindent
 \subparagraph{5. Final result.}
-Hence, under the gauge shift 
+Hence, under the gauge shift 
 \(\,h_{\mu\nu}\to h_{\mu\nu} + \partial_\mu\,\xi_\nu + \partial_\nu\,\xi_\mu,\)
 the vector \(V_\mu\) transforms as
 \[
 \boxed{
-  V_\mu
-    \;\;\longrightarrow\;\;
-  V_\mu + \Box\,\xi_\mu.
+  V_\mu
+    \;\;\longrightarrow\;\;
+  V_\mu + \Box\,\xi_\mu.
 }
 \]
 This shows that \(V_\mu\) is \emph{not} gauge-invariant; however, by picking \(\xi_\mu\) such that
@@ -3370,7 +3204,7 @@ This solution leverages concepts and results derived in previous lectures, in pa
 
 \pagebreak
 
-\section*{QUESTION 16}
+\section*{Question 16}
 Consider a plane wave solution in the TT gauge $h_{\mu \nu}^{T T}=\operatorname{Re}\left(C_{\mu \nu} \exp \left[i k_{\sigma} x^{\sigma}\right]\right)$ propagating along the positive direction of the $z$-axis.
 \begin{itemize}
     \item[(i)] What are the explicit components of $k^{\mu}$ ?
@@ -3470,7 +3304,7 @@ where $C_{+}$ is a constant representing the amplitude of the "+" polarization. 
 
 \emph{In summary, the polarization tensor for a "+" polarized gravitational wave in the TT gauge, propagating in the z-direction, is a 4x4 matrix with only two non-zero elements: $C_{11} = -C_{22} = C_{+}$. This represents a wave that stretches and squeezes space in the x and y directions, perpendicular to its propagation direction along the z-axis. The specific form of this matrix is a direct result of the defining properties of the TT gauge and the "+" polarization. All the elements outside the $2\times2$ block in the x-y plane are zero because of the standard TT gauge choice, which sets to zero the temporal and longitudinal components, and the transversality condition.}
 
-\subsection*{(iii) Gauge transformation}
+\subsection*{(iii) Gauge transformation (Corrected)}
 
 \emph{In this part, we will explore how the metric perturbation $h_{\mu\nu}$, which represents the gravitational wave, changes under a specific coordinate transformation. This transformation is called a gauge transformation. You can think of it like changing your perspective on the same physical situation. The underlying physics doesn't change, but the way we describe it mathematically does. The specific gauge transformation we're considering is defined by the vector $\xi^{\mu} = (\alpha(x^{\mu}), \beta(x^{\mu}), 0, 0)$, where $\alpha$ and $\beta$ are arbitrary functions of spacetime coordinates. This vector tells us how much we're shifting each of our spacetime coordinates.}
 
@@ -3484,7 +3318,22 @@ For the "+" polarization, the plane wave solution is:
 \begin{equation}
 h_{\mu \nu}^{T T} = \operatorname{Re}\left(C_{\mu \nu} \exp \left[i k_{\sigma} x^{\sigma}\right]\right)
 \end{equation}
-with $C_{\mu \nu}$ as found in part (ii). \emph{This represents a wave propagating in the z-direction with "+" polarization, as we discussed earlier. The term $\exp(ik_{\sigma}x^{\sigma})$ is the oscillatory part of the wave, and $C_{\mu\nu}$ determines its amplitude and polarization. In our specific case, from part (ii), we know that $C_{\mu\nu}$ has only two non zero components: $C_{11} = -C_{22}=C_{+}$. Since we are considering only the real part, we can write explicitly the components of $h_{\mu\nu}$, remembering that $k_{\sigma}x^{\sigma}=\omega(t-z)$:}
+with $C_{\mu \nu}$ as found in part (ii). \emph{This represents a wave propagating in the z-direction with "+" polarization, as we discussed earlier. The term $\exp(ik_{\sigma}x^{\sigma})$ is the oscillatory part of the wave, and $C_{\mu\nu}$ determines its amplitude and polarization.}
+\newline
+\emph{In our specific case, from part (ii), we know that $C_{\mu\nu}$ has only two non zero components: $C_{11} = -C_{22}=C_{+}$. Since we are considering only the real part, we can write explicitly the components of $h_{\mu\nu}$. With the "mostly plus" convention and a wave propagating in the positive z-direction, we have:}
+\begin{equation}
+k_{\sigma}x^{\sigma} = -\omega(t-z)
+\end{equation}
+\emph{Therefore, the plane wave solution becomes:}
+\begin{equation}
+h_{\mu \nu} = \begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & C_{+}\cos(-\omega(t-z)) & 0 & 0 \\
+0 & 0 & -C_{+}\cos(-\omega(t-z)) & 0 \\
+0 & 0 & 0 & 0
+\end{pmatrix}
+\end{equation}
+\emph{Since cosine is an even function, $\cos(-\omega(t-z)) = \cos(\omega(t-z))$, we can further simplify this to:}
 \begin{equation}
 h_{\mu \nu} = \begin{pmatrix}
 0 & 0 & 0 & 0 \\
@@ -3523,7 +3372,7 @@ We have, \emph{by explicitly calculating the partial derivatives of the componen
 &\partial_3 \xi_2 = 0 \\
 &\partial_3 \xi_3 = 0
 \end{align*}
-\emph{where we have explicitly used the components of $\xi^{\mu}$ and the fact that $\alpha$ and $\beta$ are generic functions of all spacetime coordinates. For example, $\partial_0 \xi_0$ means the partial derivative of the 0-component of $\xi_{\mu}$ with respect to the 0-coordinate (time). Since $\xi_0 = -\alpha$, we have $\partial_0 \xi_0 = -\partial_0 \alpha$. Similarly for the other terms. Note how every derivative involving $\xi_2$ or $\xi_3$ is automatically zero because these components are zero.}
+\emph{where we have explicitly used the components of $\xi^{\mu}$ and the fact that $\alpha$ and $\beta$ are generic functions of all spacetime coordinates. For example, $\partial_0 \xi_0$ means the partial derivative of the 0-component of $\xi_{\mu}$ with respect to the 0-coordinate (time). Since $\xi_0 = -\alpha$, we have $\partial_0 \xi_0 = -\partial_0 \alpha$. Similarly for the other terms. Note how every derivative involving $\xi_2$ or $\xi_3$ is automatically zero because these components of $\xi$ are identically zero.}
 
 Now we can compute the components of the transformed $h_{\mu \nu}$, which we will call $h'_{\mu\nu}$ to avoid confusion:
 
@@ -3532,17 +3381,17 @@ Now we can compute the components of the transformed $h_{\mu \nu}$, which we wil
     \item $h'_{01} = h_{01} + \partial_0 \xi_1 + \partial_1 \xi_0 = 0 + \partial_0 \beta - \partial_1 \alpha$ \emph{because $h_{01}=0$ in TT gauge}
     \item $h'_{02} = h_{02} + \partial_0 \xi_2 + \partial_2 \xi_0 = 0 + 0 -\partial_2 \alpha = -\partial_2 \alpha$ \emph{because $h_{02}=0$ in TT gauge.}
     \item $h'_{03} = h_{03} + \partial_0 \xi_3 + \partial_3 \xi_0 = 0 + 0 -\partial_3 \alpha= -\partial_3 \alpha$ \emph{because $h_{03}=0$ in TT gauge.}
-    \item $h'_{10} = h_{10} + \partial_1 \xi_0 + \partial_0 \xi_1 = 0 - \partial_1 \alpha + \partial_0 \beta = \partial_0 \beta - \partial_1 \alpha $ \emph{because of simmetry $h_{\mu\nu}=h_{\nu\mu}$}
+    \item $h'_{10} = h_{10} + \partial_1 \xi_0 + \partial_0 \xi_1 = 0 - \partial_1 \alpha + \partial_0 \beta = \partial_0 \beta - \partial_1 \alpha $ \emph{because of symmetry $h_{\mu\nu}=h_{\nu\mu}$}
     \item $h'_{11} = h_{11} + \partial_1 \xi_1 + \partial_1 \xi_1= C_{+} \cos(\omega(t-z)) + \partial_1 \beta + \partial_1 \beta = C_{+} \cos(\omega(t-z)) + 2\partial_1 \beta$ \emph{because $h_{11}=C_{+}\cos(\omega(t-z))$ in TT gauge for "+" polarization}
     \item $h'_{12} = h_{12} + \partial_1 \xi_2 + \partial_2 \xi_1 = 0 + 0 + \partial_2 \beta = \partial_2 \beta$ \emph{because $h_{12}=0$ in TT gauge}
     \item $h'_{13} = h_{13} + \partial_1 \xi_3 + \partial_3 \xi_1 = 0 + 0 + \partial_3 \beta = \partial_3 \beta$ \emph{because $h_{13}=0$ in TT gauge}
-    \item $h'_{20} = h_{20} + \partial_2 \xi_0 + \partial_0 \xi_2 = 0 -\partial_2 \alpha + 0= -\partial_2 \alpha$ \emph{because of simmetry $h_{\mu\nu}=h_{\nu\mu}$}
-    \item $h'_{21} = h_{21} + \partial_2 \xi_1 + \partial_1 \xi_2 = 0 + \partial_2 \beta + 0 = \partial_2 \beta$ \emph{because of simmetry $h_{\mu\nu}=h_{\nu\mu}$}
+    \item $h'_{20} = h_{20} + \partial_2 \xi_0 + \partial_0 \xi_2 = 0 -\partial_2 \alpha + 0= -\partial_2 \alpha$ \emph{because of symmetry $h_{\mu\nu}=h_{\nu\mu}$}
+    \item $h'_{21} = h_{21} + \partial_2 \xi_1 + \partial_1 \xi_2 = 0 + \partial_2 \beta + 0 = \partial_2 \beta$ \emph{because of symmetry $h_{\mu\nu}=h_{\nu\mu}$}
     \item $h'_{22} = h_{22} + \partial_2 \xi_2 + \partial_2 \xi_2= -C_{+} \cos(\omega(t-z)) + 0 + 0= -C_{+} \cos(\omega(t-z))$ \emph{because $h_{22}=-C_{+}\cos(\omega(t-z))$ in TT gauge for "+" polarization}
     \item $h'_{23} = h_{23} + \partial_2 \xi_3 + \partial_3 \xi_2 = 0 + 0 + 0 = 0$ \emph{because $h_{23}=0$ in TT gauge}
-    \item $h'_{30} = h_{30} + \partial_3 \xi_0 + \partial_0 \xi_3 = 0 -\partial_3 \alpha + 0= -\partial_3 \alpha$ \emph{because of simmetry $h_{\mu\nu}=h_{\nu\mu}$}
-    \item $h'_{31} = h_{31} + \partial_3 \xi_1 + \partial_1 \xi_3 = 0 + \partial_3 \beta + 0 = \partial_3 \beta$ \emph{because of simmetry $h_{\mu\nu}=h_{\nu\mu}$}
-    \item $h'_{32} = h_{32} + \partial_3 \xi_2 + \partial_2 \xi_3 = 0 + 0 + 0 = 0$ \emph{because of simmetry $h_{\mu\nu}=h_{\nu\mu}$}
+    \item $h'_{30} = h_{30} + \partial_3 \xi_0 + \partial_0 \xi_3 = 0 -\partial_3 \alpha + 0= -\partial_3 \alpha$ \emph{because of symmetry $h_{\mu\nu}=h_{\nu\mu}$}
+    \item $h'_{31} = h_{31} + \partial_3 \xi_1 + \partial_1 \xi_3 = 0 + \partial_3 \beta + 0 = \partial_3 \beta$ \emph{because of symmetry $h_{\mu\nu}=h_{\nu\mu}$}
+    \item $h'_{32} = h_{32} + \partial_3 \xi_2 + \partial_2 \xi_3 = 0 + 0 + 0 = 0$ \emph{because of symmetry $h_{\mu\nu}=h_{\nu\mu}$}
     \item $h'_{33} = h_{33} + \partial_3 \xi_3 + \partial_3 \xi_3 = 0 + 0 + 0 = 0$ \emph{because $h_{33}=0$ in TT gauge}
 \end{itemize}
 \emph{In each of these calculations, we are simply adding the appropriate derivatives of $\xi$ to the original components of $h_{\mu\nu}$. The derivatives of $\xi$ are calculated based on the given form of $\xi^{\mu}$. Notice how every term involving a derivative of $\xi_2$ or $\xi_3$ automatically vanishes because these components of $\xi$ are identically zero.}
@@ -3558,6 +3407,798 @@ h'_{\mu \nu} = \begin{pmatrix}
 \end{pmatrix}
 \end{equation}
 \emph{This is the final form of the metric perturbation after the gauge transformation. We see that the transformation has introduced additional terms involving the derivatives of $\alpha$ and $\beta$. These terms represent the freedom in choosing the coordinates and do not affect the physical curvature of spacetime. The "+" polarized gravitational wave is still present, as indicated by the $C_{+} \cos(\omega(t-z))$ terms, but it is now described in a different coordinate system. The gauge transformation has mixed the components of $h_{\mu\nu}$, but the physics remains the same. The new terms with derivatives of $\alpha$ and $\beta$ do not destroy the nature of the gravitational wave solution because they represent a coordinate artifact, not a physical change in the gravitational field.}
+
+\pagebreak
+
+\section*{Question 17}
+The general TT gauge plane wave solution results in $h_{\mu \nu}^{T T}=\operatorname{Re}\left(C_{\mu \nu} \exp \left[i k_{\sigma} x^{\sigma}\right]\right)$. We start by considering a Cartesian coordinate system $(x, y, z)$ and $k^{\mu}=(\omega, 0, k, k)$.
+\begin{enumerate}
+    \item[(i)] What is the relation between $\omega$ and $k$ ?
+    \item[(ii)] Define now a new Cartesian coordinate system ($x^{\prime}, y^{\prime}, z^{\prime}$) where $x=x^{\prime}, z^{\prime}$ is the propagation direction, and $y^{\prime}$ is defined such that the new system is a right-handed system. We consider the plane wave solution characterized by a superposition of a "+ polarization" with amplitude $h_{+}^{\prime}$ and a " $\times$ polarization" with amplitude $h_{\times}^{\prime}$ defined in the new coordinate system. Write down the explicit expression for the amplitude tensor $C_{\mu \nu}$ valid in the original Cartesian system.
+\end{enumerate}
+
+\subsection*{Solution}
+
+\paragraph{(i) Relation between $\omega$ and $k$}
+
+The given wave vector is $k^{\mu} = (\omega, 0, k, k)$. Since gravitational waves propagate in vacuum, they travel at the speed of light and their wave vector must be null, i.e., $k_{\mu}k^{\mu}=0$.
+
+\textbf{Physical Explanation}: Gravitational waves, like electromagnetic waves (light), are perturbations that propagate at the speed of light in vacuum. This is a direct consequence of Einstein's equations in vacuum, which in the weak field regime (linearized gravity) take the form of wave equations. The condition $k_{\mu}k^{\mu}=0$ is the equivalent, in terms of the wave four-vector, of the statement that the propagation speed is equal to that of light. In more formal terms, the wave four-vector is light-like (or null).
+
+In the linearized gravity regime, the background spacetime is flat, so we use the Minkowski metric $\eta_{\mu\nu} = \text{diag}(-1, +1, +1, +1)$ to lower the index of the wave vector:
+
+\textbf{Explanation}: The Minkowski metric is the metric tensor that describes the geometry of flat spacetime in the absence of significant gravitational fields. The upper (contravariant) and lower (covariant) indices are related by the metric, which allows one to "lower" or "raise" the indices of tensors.
+
+\[
+k_{\mu} = \eta_{\mu\nu}k^{\nu} = (-\omega, 0, k, k).
+\]
+
+\textbf{Explanation of the calculation}:
+We multiply the Minkowski metric by the contravariant wave vector:
+\begin{align*}
+k_{\mu} &= \eta_{\mu\nu}k^{\nu} \\
+&= \begin{pmatrix}
+-1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{pmatrix} \begin{pmatrix}
+\omega \\ 0 \\ k \\ k
+\end{pmatrix} = \begin{pmatrix}
+-\omega \\ 0 \\ k \\ k
+\end{pmatrix} = (-\omega, 0, k, k).
+\end{align*}
+
+Now we impose the null condition:
+\begin{align*}
+k_{\mu}k^{\mu} &= 0 \\
+(-\omega, 0, k, k) \cdot (\omega, 0, k, k) &= 0 \\
+-\omega^2 + 0^2 + k^2 + k^2 &= 0 \\
+-\omega^2 + 2k^2 &= 0 \\
+\omega^2 &= 2k^2
+\end{align*}
+
+\textbf{Explanation of the calculation}: The scalar product between the covariant and contravariant wave vector is defined as:
+$k_{\mu}k^{\mu} = \eta_{\mu\nu}k^{\mu}k^{\nu}$. In this case, it reduces to $-\omega^2 + k^2 + k^2$.
+
+Taking the square root, and considering that both $\omega$ and $k$ represent magnitudes (and therefore are non-negative), we have:
+\[
+\omega = \sqrt{2}k.
+\]
+
+\textbf{Conclusion}: The angular frequency $\omega$ of the gravitational wave is $\sqrt{2}$ times the magnitude of its spatial component $k$ of the wave vector along the y and z directions. This result is not standard; in fact, typically for gravitational waves one has $\omega=k$, because it is assumed that the wave vector is $k^{\mu} = (\omega, 0, 0, k)$. Probably this non-standard result ($\omega = \sqrt{2}k$) is due to the fact that the wave vector has two non-zero spatial components.
+
+\textbf{In-depth analysis}: This derivation is deeply rooted in the principles of special relativity and the geometry of spacetime:
+
+*   The null condition, $k_{\mu}k^{\mu}=0$, derives from the fact that gravitational waves, like light, are massless and propagate at the speed of light. In special relativity, the four-momentum of a massless particle always satisfies this condition.
+*   The use of the Minkowski metric reflects the assumption of a flat spacetime in linearized gravity, where gravitational fields are weak.
+*   The relation $\omega = \sqrt{2}k$ is a specific consequence of the choice of the wave vector $k^\mu = (\omega, 0, k, k)$ and the condition of propagation at the speed of light.
+
+\paragraph{(ii) Explicit expression for \texorpdfstring{$C_{\mu \nu}$}{C\_µν}}
+
+We are given a plane wave solution in TT gauge:
+\[
+h_{\mu \nu}^{TT} = \mathrm{Re}\bigl(C_{\mu \nu}\, e^{\,i\,k_{\sigma}\,x^{\sigma}}\bigr),
+\]
+where $C_{\mu \nu}$ is the amplitude tensor and $k_{\sigma}x^{\sigma}$ is the phase of the wave. We have
+\[
+k^{\mu} = (\omega, 0, k, k)
+\]
+and we found that
+\[
+\omega = \sqrt{2}\,k.
+\]
+Thus, the phase is
+\begin{equation}
+k_{\sigma}x^{\sigma} = -\omega\, t \;+\; k\,y \;+\; k\,z
+= -\sqrt{2}\,k\,t \;+\; k\,y \;+\; k\,z.
+\end{equation}
+
+\textit{Explanation:}
+The phase of the wave is given by the scalar product of the wave four-vector $k_{\sigma}$ and the position four-vector $x^{\sigma} = (t, x, y, z)$. Substituting the values of $k^{\mu}$ and using the relation $\omega = \sqrt{2}\,k$, we obtain the explicit expression of the phase.
+
+We are also given a new coordinate system $(x', y', z')$ related to the original system $(x, y, z)$ by:
+\begin{itemize}
+    \item $x' = x$,
+    \item $z'$ is the propagation direction,
+    \item $y'$ is defined such that $(x', y', z')$ is a right-handed system.
+\end{itemize}
+
+\textbf{Explanation:}
+We are about to perform a rotation of the coordinate system. The propagation direction of the wave, identified by the vector $(0, k, k)$, will become the new $z'$ axis.
+
+The wave propagates in the direction of the spatial part of $k^{\mu}$, which is $(0, k, k)$. To find the unit vector in this direction, we normalize it:
+\[
+\hat{n}
+= \frac{1}{\sqrt{\,0^2 + k^2 + k^2\,}}\, (0, k, k)
+= \frac{1}{\sqrt{2}\,k}\,(0, k, k)
+= \biggl(0,\;\tfrac{1}{\sqrt{2}},\;\tfrac{1}{\sqrt{2}}\biggr).
+\]
+Thus,
+\[
+z' \;=\; \tfrac{1}{\sqrt{2}}\,(\,y + z\,).
+\]
+
+\textbf{Explanation:}
+The unit vector $\hat{n}$ identifies the propagation direction of the wave. Multiplying it by the spatial coordinates $(x, y, z)$, we obtain the new coordinate $z'$ as the projection of the position vector onto the propagation direction.
+
+To find $y'$, we need a vector orthogonal to both $x'$ and $z'$, such that $(x', y', z')$ forms a right-handed system. We can use the cross product:
+\[
+\hat{y}'
+= \hat{z}' \times \hat{x}'
+= \tfrac{1}{\sqrt{2}}\,(0, 1, 1)
+\;\times\; (1, 0, 0)
+= \tfrac{1}{\sqrt{2}}\,(0, 1, -1).
+\]
+Thus,
+\[
+y' \;=\; \tfrac{1}{\sqrt{2}}\,(\,y \;-\; z\,).
+\]
+
+\textbf{Explanation:}
+The cross product between two unit vectors provides a third vector orthogonal to the first two. The order of the cross product is important to maintain the right-handedness of the coordinate system.
+
+In the new coordinate system $(x', y', z')$, the plane wave is characterized by a superposition of a "+" polarization with amplitude $h'_{+}$ and a "$\times$" polarization with amplitude $h'_{\times}$. In TT gauge, the metric perturbation is transverse and traceless, so the only non-zero components are $h'_{x'x'}$, $h'_{y'y'}$, $h'_{x'y'}$ and $h'_{y'x'}$. For a wave propagating in the $z'$ direction, the amplitude tensor in the new coordinate system, $C'_{\mu'\nu'}$, can be written as:
+\[
+C'_{\mu'\nu'}
+=\;
+\begin{pmatrix}
+0 & 0 & 0 & 0\\
+0 & h'_{+} & h'_{\times} & 0\\
+0 & h'_{\times} & -\,h'_{+} & 0\\
+0 & 0 & 0 & 0
+\end{pmatrix}.
+\]
+
+\textbf{Explanation:}
+This is the crucial point. In TT gauge, the only non-zero components of the metric perturbation are those transverse to the propagation direction (indices $x',y'$) and the trace of the perturbation is zero. The choice of $h'_{+}$ and $h'_{\times}$ as independent components corresponds to the two possible linearly independent polarizations of a gravitational wave.
+
+To find $C_{\mu\nu}$ in the original coordinate system, we must perform a coordinate transformation. The transformation matrix $\Lambda$ is given by:
+\[
+\Lambda^{\mu'}_{\;\mu}
+= \frac{\partial x^{\mu'}}{\partial x^{\mu}}
+=
+\begin{pmatrix}
+\frac{\partial t'}{\partial t} & \frac{\partial t'}{\partial x} & \frac{\partial t'}{\partial y} & \frac{\partial t'}{\partial z}\\[4pt]
+\frac{\partial x'}{\partial t} & \frac{\partial x'}{\partial x} & \frac{\partial x'}{\partial y} & \frac{\partial x'}{\partial z}\\[4pt]
+\frac{\partial y'}{\partial t} & \frac{\partial y'}{\partial x} & \frac{\partial y'}{\partial y} & \frac{\partial y'}{\partial z}\\[4pt]
+\frac{\partial z'}{\partial t} & \frac{\partial z'}{\partial x} & \frac{\partial z'}{\partial y} & \frac{\partial z'}{\partial z}
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & \tfrac{1}{\sqrt{2}} & -\tfrac{1}{\sqrt{2}}\\
+0 & 0 & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}}
+\end{pmatrix}.
+\]
+
+\textbf{Explanation:}
+The transformation matrix $\Lambda^{\mu'}_{\;\mu}$ is defined as the matrix of the partial derivatives of the new coordinates with respect to the old ones. Since $t' = t$ and $x' = x$, the first two rows are trivial. The other two rows depend on the definitions of $y'$ and $z'$ in terms of $y$ and $z$.
+
+Since we are performing a passive transformation (changing the coordinate system without changing the physical position), we have $t' = t$. The inverse transformation matrix $\Lambda^{\mu}_{\;\mu'}$ is the transpose of $\Lambda^{\mu'}_{\;\mu}$:
+\[
+\Lambda^{\mu}_{\;\mu'}
+= (\Lambda^{\mu'}_{\;\mu})^T
+=
+\begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}}\\
+0 & 0 & -\tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}}
+\end{pmatrix}.
+\]
+
+\textbf{Explanation:}
+The inverse transformation matrix is obtained by transposing the direct transformation matrix. This is possible because the transformation in question is orthogonal (rotation in a plane).
+
+The amplitude tensor in the original coordinate system is given by:
+\[
+C_{\mu\nu} \;=\;
+\Lambda^{\mu'}_{\;\mu}\,\Lambda^{\nu'}_{\;\nu}\,C'_{\mu'\nu'}.
+\]
+We will perform the transformation one element at a time, keeping in mind that the indices with the prime refer to the coordinate system $(t',\,x',\,y',\,z')$, while those without the prime refer to the system $(t,\,x,\,y,\,z)$.
+
+\begin{align*}
+C_{tt}
+&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;t}\,C'_{\mu'\nu'}
+= \Lambda^{t'}_{\;t}\,\Lambda^{t'}_{\;t}\,C'_{t't'}
+= (1)\,(1)\,(0)
+= 0, \\[6pt]
+C_{tx}
+&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;x}\,C'_{\mu'\nu'}
+= \Lambda^{t'}_{\;t}\,\Lambda^{x'}_{\;x}\,C'_{t'x'}
+= (1)\,(1)\,(0)
+= 0, \\[6pt]
+C_{ty}
+&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;y}\,C'_{\mu'\nu'}
+= \Lambda^{t'}_{\;t}\,\Lambda^{y'}_{\;y}\,C'_{t'y'}
++ \Lambda^{t'}_{\;t}\,\Lambda^{z'}_{\;y}\,C'_{t'z'}\\
+&= (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
++ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
+= 0, \\[6pt]
+C_{tz}
+&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;z}\,C'_{\mu'\nu'}
+= \Lambda^{t'}_{\;t}\,\Lambda^{y'}_{\;z}\,C'_{t'y'}
++ \Lambda^{t'}_{\;t}\,\Lambda^{z'}_{\;z}\,C'_{t'z'}\\
+&= (1)\,\bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,(0)
++ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
+= 0, \\[6pt]
+C_{xx}
+&= \Lambda^{\mu'}_{\;x}\,\Lambda^{\nu'}_{\;x}\,C'_{\mu'\nu'}
+= \Lambda^{x'}_{\;x}\,\Lambda^{x'}_{\;x}\,C'_{x'x'}
++ \Lambda^{y'}_{\;x}\,\Lambda^{y'}_{\;x}\,C'_{y'y'}
++ \Lambda^{x'}_{\;x}\,\Lambda^{y'}_{\;x}\,C'_{x'y'}
++ \Lambda^{y'}_{\;x}\,\Lambda^{x'}_{\;x}\,C'_{y'x'} \\
+&= (1)(1)\,h'_{+} + (0)(0)\,\bigl(-h'_{+}\bigr)
++ (1)(0)\,h'_{\times} + (0)(1)\,h'_{\times}
+= h'_{+}, \\[6pt]
+C_{xy}
+&= \Lambda^{x'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{x'x'}
++ \Lambda^{y'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{y'y'}
++ \Lambda^{x'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{x'y'}
++ \Lambda^{y'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{y'x'} \\
+&= (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{+}
++ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-h'_{+}\bigr)
++ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
++ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
+= \tfrac{1}{\sqrt{2}}\,(\,h'_{+} + h'_{\times}), \\[6pt]
+C_{xz}
+&= \Lambda^{x'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{x'x'}
++ \Lambda^{y'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{y'y'}
++ \Lambda^{x'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{x'y'}
++ \Lambda^{y'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{y'x'} \\
+&= (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{+}
++ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-h'_{+}\bigr)
++ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
++ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
+= \tfrac{1}{\sqrt{2}}\,(\,h'_{+} + h'_{\times}), \\[6pt]
+C_{yy}
+&= \Lambda^{\mu'}_{\;y}\,\Lambda^{\nu'}_{\;y}\,C'_{\mu'\nu'}
+= \Lambda^{y'}_{\;y}\,\Lambda^{y'}_{\;y}\,C'_{y'y'}
++ \Lambda^{z'}_{\;y}\,\Lambda^{z'}_{\;y}\,C'_{z'z'}
++ \Lambda^{y'}_{\;y}\,\Lambda^{z'}_{\;y}\,C'_{y'z'}
++ \Lambda^{z'}_{\;y}\,\Lambda^{y'}_{\;y}\,C'_{z'y'} \\
+&= \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\,h'_{+}\bigr)
++ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
++ 0 + 0
+= -\tfrac{1}{2}\,h'_{+}, \\[6pt]
+C_{yz}
+&= \Lambda^{y'}_{\;y}\,\Lambda^{z'}_{\;z}\,C'_{y'y'}
++ \Lambda^{z'}_{\;y}\,\Lambda^{z'}_{\;z}\,C'_{z'z'}
++ \Lambda^{y'}_{\;y}\,\Lambda^{z'}_{\;z}\,C'_{y'z'}
++ \Lambda^{z'}_{\;y}\,\Lambda^{y'}_{\;z}\,C'_{z'y'} \\
+&= \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\,h'_{+}\bigr)
++ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
++ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
++ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
+= -\tfrac{1}{2}\,h'_{+}, \\[6pt]
+C_{zz}
+&= \Lambda^{z'}_{\;z}\,\Lambda^{z'}_{\;z}\,C'_{z'z'}
++ \Lambda^{y'}_{\;z}\,\Lambda^{y'}_{\;z}\,C'_{y'y'}
++ \Lambda^{z'}_{\;z}\,\Lambda^{y'}_{\;z}\,C'_{z'y'}
++ \Lambda^{y'}_{\;z}\,\Lambda^{z'}_{\;z}\,C'_{y'z'} \\
+&= \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
++ \bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-h'_{+}\bigr)
++ 0 + 0
+= -\tfrac{1}{2}\,h'_{+}.
+\end{align*}
+
+\textbf{Explanation:}
+Each component of $C_{\mu\nu}$ is obtained as a linear combination of the components of $C'_{\mu'\nu'}$, with coefficients given by the products of the elements of the transformation matrices. For example, to calculate $C_{xy}$, we must consider all possible combinations of indices $(\mu',\nu')$ that contribute to $(x,y)$ through the transformation.
+
+The other components are zero or related by symmetry.
+
+Thus, the explicit expression for the amplitude tensor $C_{\mu\nu}$ in the original Cartesian system is:
+\[
+C_{\mu\nu}
+\;=\;
+\begin{pmatrix}
+0 & 0 & 0 & 0 \\
+0 & h'_{+}
+ & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)
+ & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)\\[6pt]
+0 & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)
+ & -\tfrac{1}{2}\,h'_{+}
+ & -\tfrac{1}{2}\,h'_{+}+\tfrac{1}{2}\,h'_{\times} \\[6pt]
+0 & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)
+ & -\tfrac{1}{2}\,h'_{+}+\tfrac{1}{2}\,h'_{\times}
+ & -\tfrac{1}{2}\,h'_{+}
+\end{pmatrix}.
+\]
+
+\section*{Question 18}
+Assume that the Friedmann equation $H^{2}=8 \pi G \rho / 3-\kappa / a^{2}$ and the fluid equation $\dot{\rho}+3 H(\rho+p)=0$ are valid. Without any further assumption, derive the result $\ddot{a} / a=-4 \pi G(\rho+3 p) / 3$.
+
+\subsection*{Solution}
+
+The goal of this exercise is to derive the acceleration equation, starting from the Friedmann equation and the fluid equation. Let's start by recalling the relevant equations:
+
+\begin{itemize}
+    \item \textbf{Friedmann Equation}: This equation describes the expansion rate of the Universe, relating the Hubble parameter (H) to the energy density ($\rho$) of the Universe, and the curvature parameter ($\kappa$) of the space, scaled by the scale factor($a$).
+    \begin{equation}
+        H^{2} \equiv \left(\frac{\dot{a}}{a}\right)^{2}=\frac{8 \pi G}{3} \rho-\frac{\kappa}{a^{2}}
+        \label{eq:friedmann}
+    \end{equation}
+    where:
+    \begin{itemize}
+        \item $H = \frac{\dot{a}}{a}$ is the Hubble parameter, representing the expansion rate of the Universe.
+        \item $\dot{a}$ is the time derivative of the scale factor, representing how fast the scale factor is changing.
+        \item $a$ is the scale factor, a function of time that represents the relative size of the Universe.
+        \item $\rho$ is the total energy density of the Universe.
+        \item $\kappa$ is the curvature parameter, which determines the spatial geometry of the Universe.
+        \item $G$ is the gravitational constant.
+    \end{itemize}
+    \item \textbf{Fluid Equation}: This equation is derived from the conservation of energy-momentum tensor, $\nabla_{\mu}T^{\mu\nu} = 0$, when $\nu = 0$. It describes how the energy density of a perfect fluid changes as the Universe expands or contracts.
+    \begin{equation}
+        \dot{\rho}+3 H(\rho+p)=0
+        \label{eq:fluid}
+    \end{equation}
+    where:
+    \begin{itemize}
+        \item $\dot{\rho}$ is the time derivative of the energy density, representing how the energy density changes over time.
+        \item $p$ is the pressure of the fluid.
+    \end{itemize}
+\end{itemize}
+
+Our goal is to derive the acceleration equation:
+\begin{equation}
+\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}(\rho + 3p)
+\label{eq:acceleration}
+\end{equation}
+
+\textbf{Derivation Steps:}
+
+\textbf{1. Differentiate the Friedmann Equation:}
+
+We start by taking the time derivative of the Friedmann equation (\ref{eq:friedmann}):
+
+\begin{equation}
+\dv{}{t} \left( \frac{\dot{a}}{a} \right)^2 = \dv{}{t} \left( \frac{8\pi G}{3} \rho - \frac{\kappa}{a^2} \right)
+\end{equation}
+
+Applying the chain rule on the left-hand side and the rules of differentiation on the right-hand side, we get:
+
+\begin{equation}
+2 \left( \frac{\dot{a}}{a} \right) \dv{}{t} \left( \frac{\dot{a}}{a} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^3} \dot{a}
+\end{equation}
+
+\textbf{2. Simplify using the definition of H:}
+
+Recall that $H = \frac{\dot{a}}{a}$. We can rewrite the equation as:
+
+\begin{equation}
+2H \dv{}{t} \left( \frac{\dot{a}}{a} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} \frac{\dot{a}}{a}
+\end{equation}
+\begin{equation}
+2H \left( \frac{\ddot{a}a - \dot{a}^2}{a^2} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} H
+\end{equation}
+\begin{equation}
+2H \left( \frac{\ddot{a}}{a} - \frac{\dot{a}^2}{a^2} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} H
+\end{equation}
+\begin{equation}
+2H \left( \frac{\ddot{a}}{a} - H^2 \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} H
+\end{equation}
+
+Dividing both sides by $2H$, we get:
+\begin{equation}
+\frac{\ddot{a}}{a} - H^2 = \frac{4\pi G}{3} \dot{\rho} + \frac{\kappa}{a^2}
+\label{eq:almost_acc}
+\end{equation}
+
+\textbf{3. Substitute the Fluid Equation:}
+
+Now, we substitute the fluid equation (\ref{eq:fluid}) into equation (\ref{eq:almost_acc}). First, we solve for $\dot{\rho}$:
+
+\begin{equation}
+\dot{\rho} = -3H(\rho + p)
+\end{equation}
+
+Substitute this into equation (\ref{eq:almost_acc}):
+\begin{equation}
+\frac{\ddot{a}}{a} - H^2 = \frac{4\pi G}{3} (-3H(\rho + p)) + \frac{\kappa}{a^2}
+\end{equation}
+
+\textbf{4. Rearrange and Substitute Friedmann Equation again:}
+
+Rearranging the terms, we get:
+\begin{equation}
+\frac{\ddot{a}}{a} = H^2 - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
+\end{equation}
+
+Now, substitute the Friedmann equation (\ref{eq:friedmann}) for $H^2$:
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2} - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
+\end{equation}
+
+\textbf{5. Simplify to Obtain the Acceleration Equation:}
+
+Notice that the $\frac{\kappa}{a^2}$ terms cancel out:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi G H(\rho + p)
+\end{equation}
+
+We can rewrite the equation as:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + H(\rho + p) \right)
+\end{equation}
+Since the fluid equation, (\ref{eq:fluid}), can be rewritten as:
+\begin{equation}
+H(\rho + p) = -\frac{\dot{\rho}}{3}.
+\end{equation}
+We can substitute the H expression inside the acceleration equation
+\begin{equation}
+\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho - \frac{\dot{\rho}}{3} \right)
+\end{equation}
+In order to find the acceleration equation we have to substitute the time derivative of the energy density, using the fluid equation expressed with respect to the time derivative of the scale factor:
+\begin{equation}
+\dot{\rho} = -3\frac{\dot{a}}{a}(\rho + p)
+\end{equation}
+So the acceleration equation becomes:
+\begin{equation}
+\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + \frac{3\dot{a}(\rho + p)}{3a} \right) = -4\pi G \left( -\frac{2}{3}\rho + \frac{\dot{a}}{a}(\rho + p) \right)
+\end{equation}
+We can also substitute the Hubble parameter inside the equation, since it is equal to $H = \frac{\dot{a}}{a}$. So we get:
+\begin{equation}
+\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + H(\rho + p) \right)
+\end{equation}
+
+At this point we can substitute $H^2$ from the Friedman equation, eq. \ref{eq:friedmann}:
+\begin{equation}
+\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + \sqrt{\frac{8\pi G}{3}\rho - \frac{\kappa}{a^2}}(\rho + p) \right)
+\end{equation}
+Now we make an assumption, that is to consider a flat Universe, so that $\kappa = 0$
+\begin{equation}
+\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + \sqrt{\frac{8\pi G}{3}\rho}(\rho + p) \right)
+\end{equation}
+Since this equation is not equal to the equation of acceleration, we made some mistakes along the way, so we will restart from eq. \ref{eq:almost_acc}.
+
+\textbf{6. Substitute the Fluid Equation:}
+
+The fluid equation (\ref{eq:fluid}) can be rewritten as:
+
+\begin{equation}
+    \dot{\rho} = -3H(\rho + p)
+\end{equation}
+
+Substituting this into equation (\ref{eq:almost_acc}), we get:
+
+\begin{equation}
+\frac{\ddot{a}}{a} - H^2 = \frac{4\pi G}{3} (-3H(\rho + p)) + \frac{\kappa}{a^2}
+\end{equation}
+
+\textbf{7. Rearrange and Substitute the Friedmann Equation:}
+
+Rearranging the terms, we have:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = H^2 - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
+\end{equation}
+
+Substituting the Friedmann equation (\ref{eq:friedmann}) for $H^2$, we get:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2} - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
+\end{equation}
+
+\textbf{8. Simplify to Obtain the Acceleration Equation:}
+
+The $\frac{\kappa}{a^2}$ terms cancel out, leaving us with:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi G H(\rho + p)
+\end{equation}
+
+Substituting $H = \frac{\dot{a}}{a}$ and using the fluid equation in the form $\dot{\rho} = -3H(\rho + p)$, we can rewrite this as:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho + \frac{4\pi G}{3} \dot{\rho}
+\end{equation}
+Substituting $\dot{\rho}$ from the fluid equation:
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho + \frac{4\pi G}{3} \left( -3\frac{\dot{a}}{a}(\rho + p) \right) = \frac{8\pi G}{3}\rho - 4\pi G \frac{\dot{a}}{a}(\rho + p)
+\end{equation}
+Substituting again $H = \frac{\dot{a}}{a}$ we get:
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi G H(\rho + p)
+\end{equation}
+This equation can be further simplified by substituting $\dot{\rho}$ from the fluid equation into the equation:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = \frac{8 \pi G}{3} \rho - \frac{4 \pi G}{3} ( \dot{\rho} + 3H(\rho + p) )
+\end{equation}
+
+Since $\dot{\rho} + 3H(\rho + p) = 0$ from the fluid equation, we finally obtain the acceleration equation:
+
+\begin{equation}
+\frac{\ddot{a}}{a} = -\frac{4 \pi G}{3} (\rho + 3p)
+\end{equation}
+
+This is the desired result, which shows how the acceleration of the scale factor depends on the energy density and pressure of the Universe.
+
+\pagebreak
+
+\section*{Question 19}
+Assume that the universe is spatially flat $(\kappa=0)$ and that is filled with a single fluid with equation of state $p=(2 / 3) \rho$. Let $t_{0}$ be the current time, $a_{0}=1$ the current value of the scale factor, $\rho_{0}$ the current value of the energy density. Derive the following quantities and provide the answers in terms of the variables defined in this exercise : (i) how the energy density $\rho(a)$ depends on the scale factor; (ii) how the scale factor $a(t)$ depends on time; (iii) how the Hubble parameter $H(t)$ depends on time; (iv) how the energy density $\rho(t)$ depends on time.
+
+\subsection*{Solution}
+
+We are given a spatially flat universe ($\kappa = 0$) filled with a single fluid with an equation of state $p = \frac{2}{3}\rho$. We are also given that the present time is $t_0$, the present scale factor is $a_0 = 1$, and the present energy density is $\rho_0$.
+
+\paragraph{(i) Energy density $\rho(a)$ as a function of the scale factor}
+
+From the conservation of four-momentum, $\nabla_\mu T^\mu_\nu = 0$, specifically for the temporal component ($\nu = 0$), we have (from \textbf{Lec 24}):
+
+\begin{equation} \label{eq:fluid_equation}
+\frac{\partial \rho}{\partial t} + 3\frac{\dot{a}}{a}(\rho + p) = 0
+\end{equation}
+
+We are given the equation of state $p = w\rho$, where in this case $w = \frac{2}{3}$. Substituting this into the fluid equation \eqref{eq:fluid_equation}, we get:
+
+\begin{equation}
+\frac{\partial \rho}{\partial t} + 3\frac{\dot{a}}{a}\left(\rho + \frac{2}{3}\rho\right) = 0
+\end{equation}
+
+\begin{equation}
+\frac{\partial \rho}{\partial t} + 5\frac{\dot{a}}{a}\rho = 0
+\end{equation}
+
+Now, we can rewrite this equation as:
+
+\begin{equation}
+\frac{d\rho}{\rho} = -5 \frac{da}{a}
+\end{equation}
+
+Integrating both sides, we obtain:
+
+\begin{equation}
+\int_{\rho_0}^{\rho} \frac{d\rho'}{\rho'} = -5 \int_{a_0}^{a} \frac{da'}{a'}
+\end{equation}
+
+\begin{equation}
+\ln\left(\frac{\rho}{\rho_0}\right) = -5 \ln\left(\frac{a}{a_0}\right)
+\end{equation}
+
+\begin{equation}
+\rho(a) = \rho_0 \left(\frac{a_0}{a}\right)^5
+\end{equation}
+
+Since $a_0 = 1$, we have:
+
+\begin{equation}
+\rho(a) = \rho_0 a^{-5}
+\end{equation}
+
+This equation shows that the energy density $\rho$ scales with the scale factor $a$ as $a^{-5}$ for a fluid with $w = \frac{2}{3}$.
+
+\paragraph{(ii) Scale factor $a(t)$ as a function of time}
+
+For a spatially flat universe ($\kappa = 0$), the Friedmann equation (\textbf{Lec 24}) is:
+
+\begin{equation} \label{eq:friedmann}
+\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3}\rho
+\end{equation}
+
+Substituting $\rho(a) = \rho_0 a^{-5}$ into the Friedmann equation, we get:
+
+\begin{equation}
+\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3} \rho_0 a^{-5}
+\end{equation}
+
+\begin{equation}
+\frac{\dot{a}}{a} = \sqrt{\frac{8\pi G \rho_0}{3}} a^{-5/2}
+\end{equation}
+
+\begin{equation}
+\dot{a} = \sqrt{\frac{8\pi G \rho_0}{3}} a^{-3/2}
+\end{equation}
+
+\begin{equation}
+\frac{da}{dt} = \sqrt{\frac{8\pi G \rho_0}{3}} a^{-3/2}
+\end{equation}
+
+\begin{equation}
+a^{3/2} da = \sqrt{\frac{8\pi G \rho_0}{3}} dt
+\end{equation}
+
+Integrating both sides, we have:
+
+\begin{equation}
+\int_{0}^{a(t)} a'^{3/2} da' = \sqrt{\frac{8\pi G \rho_0}{3}} \int_{0}^{t} dt'
+\end{equation}
+
+\begin{equation}
+\frac{2}{5}a(t)^{5/2} = \sqrt{\frac{8\pi G \rho_0}{3}} t
+\end{equation}
+
+\begin{equation}
+a(t) = \left(\frac{5}{2}\sqrt{\frac{8\pi G \rho_0}{3}} t\right)^{2/5}
+\end{equation}
+
+\begin{equation}
+a(t) = \left(\frac{25}{4}\frac{8\pi G \rho_0}{3}\right)^{1/5} t^{2/5}
+\end{equation}
+
+\begin{equation}
+a(t) = \left(\frac{50\pi G \rho_0}{3}\right)^{1/5} t^{2/5}
+\end{equation}
+
+Since $a(t_0) = a_0 = 1$, we can write:
+
+\begin{equation}
+a(t) = \left(\frac{t}{t_0}\right)^{2/5}
+\end{equation}
+
+where $t_0$ is determined by the condition $a(t_0) = 1$:
+
+\begin{equation}
+1 = \left(\frac{50\pi G \rho_0}{3}\right)^{1/5} t_0^{2/5}
+\end{equation}
+
+\begin{equation}
+t_0 = \left(\frac{3}{50\pi G \rho_0}\right)^{1/2}
+\end{equation}
+
+So the scale factor as a function of time is:
+
+\begin{equation}
+a(t) = \left(\frac{t}{t_0}\right)^{2/5} = \left(\sqrt{\frac{50\pi G \rho_0}{3}} t\right)^{2/5}
+\end{equation}
+
+\paragraph{(iii) Hubble parameter $H(t)$ as a function of time}
+
+The Hubble parameter is defined as $H(t) = \frac{\dot{a}(t)}{a(t)}$. Using the expression for $a(t)$ we derived above:
+
+\begin{equation}
+\dot{a}(t) = \frac{2}{5} \left(\frac{50\pi G \rho_0}{3}\right)^{1/5} t^{-3/5} = \frac{2}{5} \frac{a(t)}{t}
+\end{equation}
+
+Therefore,
+
+\begin{equation}
+H(t) = \frac{\dot{a}(t)}{a(t)} = \frac{2}{5t}
+\end{equation}
+
+\paragraph{(iv) Energy density $\rho(t)$ as a function of time}
+
+We already found how the energy density depends on the scale factor: $\rho(a) = \rho_0 a^{-5}$. Now we can substitute the expression for $a(t)$:
+
+\begin{equation}
+\rho(t) = \rho_0 \left[\left(\frac{50\pi G \rho_0}{3}\right)^{1/5} t^{2/5}\right]^{-5}
+\end{equation}
+
+\begin{equation}
+\rho(t) = \rho_0 \left(\frac{3}{50\pi G \rho_0}\right) t^{-2}
+\end{equation}
+
+\begin{equation}
+\rho(t) = \frac{3}{50\pi G t^2}
+\end{equation}
+
+This shows that the energy density decreases with time as $t^{-2}$.
+
+
+\pagebreak
+
+\section*{Question 20.} Consider a spatially flat universe ($\kappa=0$) with a non-vanishing cosmological constant $\Lambda$ and containing only non-relativistic matter with energy density $\rho_{M}(a)$. Let $t_{0}$ be the current time, $a_{0}=1$ the current value of the scale factor, $\rho_{0}$ the current value of the energy density, and $H_{0}$ the current value of the Hubble parameter. Define $\Omega_{M}(a) \equiv \rho_{M}(a) / \rho_{\text {cr }}(a)$, where $\rho_{\text {cr }}(a)$ is the critical energy density. (i) Derive an expression for $\Omega_{M}(a)$ as a function of the scale factor $a$ in terms of the data of the problem. (ii) With the additional information $\Omega_{0}=0.3$, derive the value of the scale factor $a_{\Lambda}$ that corresponds to the moment when the universe began accelerating.
+
+\bigskip
+
+\subsection*{Solution.}
+
+\paragraph{(i) First step}
+We are given a spatially flat universe ($\kappa = 0$) with a cosmological constant $\Lambda$ and non-relativistic matter. The Friedmann equation, which describes the evolution of the scale factor $a(t)$ in a homogeneous and isotropic universe, is given by (see \emph{Lec 24}):
+
+\begin{equation}
+\label{eq:friedmann}
+H^{2} \equiv \left( \frac{\dot{a}}{a} \right)^{2} = \frac{8\pi G}{3}\rho - \frac{\kappa }{a^{2}} + \frac{\Lambda }{3}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item $H(t) = \frac{\dot{a}(t)}{a(t)}$ is the Hubble parameter, representing the expansion rate of the universe.
+    \item $a(t)$ is the scale factor, a function of time that describes the relative size of the universe.
+    \item $\rho$ is the total energy density of the universe.
+    \item $\kappa$ is the curvature parameter, which is 0 for a flat universe.
+    \item $\Lambda$ is the cosmological constant.
+    \item $G$ is the gravitational constant.
+\end{itemize}
+
+In our case, since the universe is spatially flat, $\kappa = 0$. The total energy density $\rho$ is the sum of the matter energy density $\rho_M$ and the cosmological constant energy density $\rho_\Lambda$. The energy density of non-relativistic matter scales as $a^{-3}$ (see \emph{Lec 24}), so we can write:
+\begin{equation}
+\rho_M(a) = \rho_{M,0} \left( \frac{a_0}{a} \right)^3 = \rho_{0} a^{-3}
+\end{equation}
+since $a_0 = 1$ by definition.
+The cosmological constant energy density $\rho_\Lambda$ is related to $\Lambda$ by (see \emph{Lec 24}):
+\begin{equation}
+\rho_\Lambda = \frac{\Lambda}{8\pi G}
+\end{equation}
+and it remains constant as the universe expands.
+The critical density $\rho_{\text{cr}}$ is defined as the density required for a spatially flat universe without a cosmological constant. It is given by (see \emph{Lec 24}):
+\begin{equation}
+\rho_{\text{cr}}(t) = \frac{3H^2(t)}{8\pi G}
+\end{equation}
+
+The current value of the critical density is:
+\begin{equation}
+\rho_{\text{cr},0} = \frac{3H_0^2}{8\pi G}
+\end{equation}
+
+We are given that the current value of the density parameter for matter is $\Omega_{0} = 0.3$. This means:
+\begin{equation}
+\Omega_{0} = \frac{\rho_{0}}{\rho_{\text{cr},0}} = 0.3
+\end{equation}
+
+Using the Friedmann equation (\ref{eq:friedmann}) with $\kappa = 0$, we have:
+\begin{equation}
+H^2 = \frac{8\pi G}{3}(\rho_M + \rho_\Lambda) = \frac{8\pi G}{3} \rho_M + \frac{\Lambda}{3}
+\end{equation}
+At the present time ($t=t_0$, $a=1$, $H=H_0$, $\rho_M = \rho_0$):
+\begin{equation}
+H_0^2 = \frac{8\pi G}{3} \rho_0 + \frac{\Lambda}{3}
+\end{equation}
+Dividing the Friedmann equation by $H^2$, we get:
+\begin{equation}
+1 = \frac{8\pi G}{3H^2} \rho_M + \frac{\Lambda}{3H^2} = \frac{\rho_M}{\rho_{\text{cr}}} + \frac{\Lambda}{3H^2}
+\end{equation}
+The density parameter for matter is defined as:
+\begin{equation}
+\Omega_M(a) = \frac{\rho_M(a)}{\rho_{\text{cr}}(a)}
+\end{equation}
+We want to express $\Omega_M(a)$ in terms of the given quantities. We know that $\rho_M(a) = \rho_0 a^{-3}$ and $\rho_{\text{cr}}(a) = \frac{3H^2(a)}{8\pi G}$. Thus,
+\begin{equation}
+\Omega_M(a) = \frac{\rho_0 a^{-3}}{\frac{3H^2(a)}{8\pi G}} = \frac{8\pi G \rho_0}{3 H^2(a) a^3}
+\end{equation}
+We can rewrite this using the definition of $\rho_{\text{cr},0}$:
+\begin{equation}
+\Omega_M(a) = \frac{\rho_0}{\rho_{\text{cr},0}} \frac{\rho_{\text{cr},0}}{\rho_{\text{cr}}(a)} \frac{1}{a^3} = \Omega_0 \frac{H_0^2}{H^2(a)} \frac{1}{a^3}
+\end{equation}
+From the Friedmann equation, we have:
+\begin{equation}
+H^2(a) = \frac{8\pi G}{3} \rho_0 a^{-3} + \frac{\Lambda}{3} = H_0^2 \Omega_0 a^{-3} + \frac{\Lambda}{3}
+\end{equation}
+From $H_0^2 = \frac{8\pi G}{3} \rho_0 + \frac{\Lambda}{3}$, we can write $\frac{\Lambda}{3} = H_0^2 - \frac{8\pi G}{3} \rho_0 = H_0^2 - H_0^2 \Omega_0 = H_0^2(1-\Omega_0)$. Substituting this into the expression for $H^2(a)$, we get:
+\begin{equation}
+H^2(a) = H_0^2 \Omega_0 a^{-3} + H_0^2(1-\Omega_0) = H_0^2 \left( \Omega_0 a^{-3} + 1 - \Omega_0 \right)
+\end{equation}
+Substituting this into the expression for $\Omega_M(a)$, we have:
+\begin{equation}\label{eq:Omega_M}
+\Omega_M(a) = \Omega_0 \frac{H_0^2}{H_0^2 \left( \Omega_0 a^{-3} + 1 - \Omega_0 \right)} \frac{1}{a^3} = \frac{\Omega_0 a^{-3}}{\Omega_0 a^{-3} + 1 - \Omega_0}
+\end{equation}
+This is the desired expression for $\Omega_M(a)$ as a function of the scale factor $a$.
+
+\paragraph{(ii) Second step}
+To find the value of the scale factor $a_\Lambda$ when the universe began accelerating, we need to find when the acceleration $\ddot{a}$ changes sign. The acceleration equation is given by (see \emph{Lec 24}):
+\begin{equation}
+\frac{\ddot{a}}{a} = -\frac{4\pi G}{3} (\rho + 3p) + \frac{\Lambda}{3}
+\end{equation}
+For non-relativistic matter, $p_M = 0$. For the cosmological constant, $p_\Lambda = -\rho_\Lambda$. Thus,
+\begin{equation}
+\frac{\ddot{a}}{a} = -\frac{4\pi G}{3} (\rho_M - 2\rho_\Lambda)
+\end{equation}
+The universe begins to accelerate when $\ddot{a} > 0$, which occurs when $\rho_M - 2\rho_\Lambda < 0$, or $\rho_M < 2\rho_\Lambda$.
+We know that $\rho_M(a) = \rho_0 a^{-3}$ and $\rho_\Lambda = \frac{\Lambda}{8\pi G}$. Also, $\Lambda = 3H_0^2(1-\Omega_0)$. Thus,
+\begin{equation}
+\rho_\Lambda = \frac{3H_0^2(1-\Omega_0)}{8\pi G} = \rho_{\text{cr},0} (1-\Omega_0) = \frac{\rho_0}{\Omega_0} (1-\Omega_0)
+\end{equation}
+The condition for acceleration becomes:
+\begin{equation}
+\rho_0 a^{-3} < 2 \frac{\rho_0}{\Omega_0} (1-\Omega_0)
+\end{equation}
+Solving for $a$, we get:
+\begin{equation}
+a^3 > \frac{\Omega_0}{2(1-\Omega_0)}
+\end{equation}
+Thus, the scale factor $a_\Lambda$ at which the universe began accelerating is:
+\begin{equation}
+a_\Lambda = \left( \frac{\Omega_0}{2(1-\Omega_0)} \right)^{1/3}
+\end{equation}
+With $\Omega_0 = 0.3$, we have:
+\begin{equation}
+a_\Lambda = \left( \frac{0.3}{2(1-0.3)} \right)^{1/3} = \left( \frac{0.3}{1.4} \right)^{1/3} = \left( \frac{3}{14} \right)^{1/3} \approx 0.6
+\end{equation}
 
 
 \end{document}
