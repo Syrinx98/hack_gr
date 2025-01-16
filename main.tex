@@ -3411,301 +3411,153 @@ h'_{\mu \nu} = \begin{pmatrix}
 \pagebreak
 
 \section*{Question 17}
-The general TT gauge plane wave solution results in $h_{\mu \nu}^{T T}=\operatorname{Re}\left(C_{\mu \nu} \exp \left[i k_{\sigma} x^{\sigma}\right]\right)$. We start by considering a Cartesian coordinate system $(x, y, z)$ and $k^{\mu}=(\omega, 0, k, k)$.
-\begin{enumerate}
-    \item[(i)] What is the relation between $\omega$ and $k$ ?
-    \item[(ii)] Define now a new Cartesian coordinate system ($x^{\prime}, y^{\prime}, z^{\prime}$) where $x=x^{\prime}, z^{\prime}$ is the propagation direction, and $y^{\prime}$ is defined such that the new system is a right-handed system. We consider the plane wave solution characterized by a superposition of a "+ polarization" with amplitude $h_{+}^{\prime}$ and a " $\times$ polarization" with amplitude $h_{\times}^{\prime}$ defined in the new coordinate system. Write down the explicit expression for the amplitude tensor $C_{\mu \nu}$ valid in the original Cartesian system.
-\end{enumerate}
 
-\subsection*{Solution}
-
-\paragraph{(i) Relation between $\omega$ and $k$}
-
-The given wave vector is $k^{\mu} = (\omega, 0, k, k)$. Since gravitational waves propagate in vacuum, they travel at the speed of light and their wave vector must be null, i.e., $k_{\mu}k^{\mu}=0$.
-
-\textbf{Physical Explanation}: Gravitational waves, like electromagnetic waves (light), are perturbations that propagate at the speed of light in vacuum. This is a direct consequence of Einstein's equations in vacuum, which in the weak field regime (linearized gravity) take the form of wave equations. The condition $k_{\mu}k^{\mu}=0$ is the equivalent, in terms of the wave four-vector, of the statement that the propagation speed is equal to that of light. In more formal terms, the wave four-vector is light-like (or null).
-
-In the linearized gravity regime, the background spacetime is flat, so we use the Minkowski metric $\eta_{\mu\nu} = \text{diag}(-1, +1, +1, +1)$ to lower the index of the wave vector:
-
-\textbf{Explanation}: The Minkowski metric is the metric tensor that describes the geometry of flat spacetime in the absence of significant gravitational fields. The upper (contravariant) and lower (covariant) indices are related by the metric, which allows one to "lower" or "raise" the indices of tensors.
-
+The general TT gauge plane wave solution results in
 \[
-k_{\mu} = \eta_{\mu\nu}k^{\nu} = (-\omega, 0, k, k).
+h_{\mu \nu}^{TT} = \operatorname{Re}\bigl(C_{\mu \nu}\, e^{i\,k_{\sigma}\,x^{\sigma}}\bigr).
+\]
+We start by considering a Cartesian coordinate system \((x, y, z)\) and
+\[
+k^{\mu} = (\omega, 0, k, k).
 \]
 
-\textbf{Explanation of the calculation}:
-We multiply the Minkowski metric by the contravariant wave vector:
-\begin{align*}
-k_{\mu} &= \eta_{\mu\nu}k^{\nu} \\
-&= \begin{pmatrix}
--1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 \\
-0 & 0 & 0 & 1
-\end{pmatrix} \begin{pmatrix}
-\omega \\ 0 \\ k \\ k
-\end{pmatrix} = \begin{pmatrix}
--\omega \\ 0 \\ k \\ k
-\end{pmatrix} = (-\omega, 0, k, k).
-\end{align*}
+\paragraph{(i) Relation between \(\omega\) and \(k\).}
 
-Now we impose the null condition:
-\begin{align*}
-k_{\mu}k^{\mu} &= 0 \\
-(-\omega, 0, k, k) \cdot (\omega, 0, k, k) &= 0 \\
--\omega^2 + 0^2 + k^2 + k^2 &= 0 \\
--\omega^2 + 2k^2 &= 0 \\
-\omega^2 &= 2k^2
-\end{align*}
-
-\textbf{Explanation of the calculation}: The scalar product between the covariant and contravariant wave vector is defined as:
-$k_{\mu}k^{\mu} = \eta_{\mu\nu}k^{\mu}k^{\nu}$. In this case, it reduces to $-\omega^2 + k^2 + k^2$.
-
-Taking the square root, and considering that both $\omega$ and $k$ represent magnitudes (and therefore are non-negative), we have:
+Since gravitational waves propagate in vacuum, they travel at the speed of light, and their wave vector must be null:
 \[
-\omega = \sqrt{2}k.
+k_{\mu} k^{\mu} \;=\; 0.
 \]
-
-\textbf{Conclusion}: The angular frequency $\omega$ of the gravitational wave is $\sqrt{2}$ times the magnitude of its spatial component $k$ of the wave vector along the y and z directions. This result is not standard; in fact, typically for gravitational waves one has $\omega=k$, because it is assumed that the wave vector is $k^{\mu} = (\omega, 0, 0, k)$. Probably this non-standard result ($\omega = \sqrt{2}k$) is due to the fact that the wave vector has two non-zero spatial components.
-
-\textbf{In-depth analysis}: This derivation is deeply rooted in the principles of special relativity and the geometry of spacetime:
-
-*   The null condition, $k_{\mu}k^{\mu}=0$, derives from the fact that gravitational waves, like light, are massless and propagate at the speed of light. In special relativity, the four-momentum of a massless particle always satisfies this condition.
-*   The use of the Minkowski metric reflects the assumption of a flat spacetime in linearized gravity, where gravitational fields are weak.
-*   The relation $\omega = \sqrt{2}k$ is a specific consequence of the choice of the wave vector $k^\mu = (\omega, 0, k, k)$ and the condition of propagation at the speed of light.
-
-\paragraph{(ii) Explicit expression for \texorpdfstring{$C_{\mu \nu}$}{C\_µν}}
-
-We are given a plane wave solution in TT gauge:
+Using the Minkowski metric \(\eta_{\mu\nu} = \mathrm{diag}(-1,+1,+1,+1)\) and
 \[
-h_{\mu \nu}^{TT} = \mathrm{Re}\bigl(C_{\mu \nu}\, e^{\,i\,k_{\sigma}\,x^{\sigma}}\bigr),
+k^{\mu} = (\omega,\,0,\,k,\,k),
+\quad
+k_{\mu} = (-\omega,\,0,\,k,\,k),
 \]
-where $C_{\mu \nu}$ is the amplitude tensor and $k_{\sigma}x^{\sigma}$ is the phase of the wave. We have
+we impose \(k_{\mu}k^{\mu} = 0\):
 \[
-k^{\mu} = (\omega, 0, k, k)
-\]
-and we found that
-\[
+-\omega^2 + k^2 + k^2 = 0
+\;\;\;\Longrightarrow\;\;\;
+\omega^2 = 2\,k^2
+\;\;\;\Longrightarrow\;\;\;
 \omega = \sqrt{2}\,k.
 \]
-Thus, the phase is
-\begin{equation}
-k_{\sigma}x^{\sigma} = -\omega\, t \;+\; k\,y \;+\; k\,z
-= -\sqrt{2}\,k\,t \;+\; k\,y \;+\; k\,z.
-\end{equation}
 
-\textit{Explanation:}
-The phase of the wave is given by the scalar product of the wave four-vector $k_{\sigma}$ and the position four-vector $x^{\sigma} = (t, x, y, z)$. Substituting the values of $k^{\mu}$ and using the relation $\omega = \sqrt{2}\,k$, we obtain the explicit expression of the phase.
 
-We are also given a new coordinate system $(x', y', z')$ related to the original system $(x, y, z)$ by:
-\begin{itemize}
-    \item $x' = x$,
-    \item $z'$ is the propagation direction,
-    \item $y'$ is defined such that $(x', y', z')$ is a right-handed system.
-\end{itemize}
+\paragraph{(ii) Explicit expression for \(C_{\mu \nu}\) in the original system.}
 
-\textbf{Explanation:}
-We are about to perform a rotation of the coordinate system. The propagation direction of the wave, identified by the vector $(0, k, k)$, will become the new $z'$ axis.
-
-The wave propagates in the direction of the spatial part of $k^{\mu}$, which is $(0, k, k)$. To find the unit vector in this direction, we normalize it:
+We have
 \[
-\hat{n}
-= \frac{1}{\sqrt{\,0^2 + k^2 + k^2\,}}\, (0, k, k)
-= \frac{1}{\sqrt{2}\,k}\,(0, k, k)
-= \biggl(0,\;\tfrac{1}{\sqrt{2}},\;\tfrac{1}{\sqrt{2}}\biggr).
+k^{\mu} = (\omega, 0, k, k),
+\quad
+\omega = \sqrt{2}\,k,
 \]
-Thus,
+hence the phase is
 \[
-z' \;=\; \tfrac{1}{\sqrt{2}}\,(\,y + z\,).
+k_{\sigma}\,x^\sigma
+= -\,\omega\,t \;+\; k\,y \;+\; k\,z
+= -\,\sqrt{2}\,k\,t \;+\; k\,y \;+\; k\,z.
 \]
 
-\textbf{Explanation:}
-The unit vector $\hat{n}$ identifies the propagation direction of the wave. Multiplying it by the spatial coordinates $(x, y, z)$, we obtain the new coordinate $z'$ as the projection of the position vector onto the propagation direction.
-
-To find $y'$, we need a vector orthogonal to both $x'$ and $z'$, such that $(x', y', z')$ forms a right-handed system. We can use the cross product:
+We now define a new coordinate system \(\,(x',\,y',\,z')\), where:
 \[
-\hat{y}'
-= \hat{z}' \times \hat{x}'
-= \tfrac{1}{\sqrt{2}}\,(0, 1, 1)
-\;\times\; (1, 0, 0)
-= \tfrac{1}{\sqrt{2}}\,(0, 1, -1).
+  \begin{cases}
+    x' = x, \\
+    z' = \tfrac{1}{\sqrt{2}}(y+z), \\
+    y' = \tfrac{1}{\sqrt{2}}(y - z).
+  \end{cases}
 \]
-Thus,
+This rotation in the \((y,z)\)-plane makes \(\hat{z}'\propto (0,1,1)\) the direction of propagation.
+In TT gauge, for a wave propagating along \(z'\), the only non-zero components in the \emph{primed} frame are
 \[
-y' \;=\; \tfrac{1}{\sqrt{2}}\,(\,y \;-\; z\,).
+C'_{x'x'} = h'_{+},
+\quad
+C'_{y'y'} = -\,h'_{+},
+\quad
+C'_{x'y'} = C'_{y'x'} = h'_{\times},
+\quad
+C'_{t'\mu'} = 0,
+\quad
+C'_{z'\mu'} = 0.
 \]
-
-\textbf{Explanation:}
-The cross product between two unit vectors provides a third vector orthogonal to the first two. The order of the cross product is important to maintain the right-handedness of the coordinate system.
-
-In the new coordinate system $(x', y', z')$, the plane wave is characterized by a superposition of a "+" polarization with amplitude $h'_{+}$ and a "$\times$" polarization with amplitude $h'_{\times}$. In TT gauge, the metric perturbation is transverse and traceless, so the only non-zero components are $h'_{x'x'}$, $h'_{y'y'}$, $h'_{x'y'}$ and $h'_{y'x'}$. For a wave propagating in the $z'$ direction, the amplitude tensor in the new coordinate system, $C'_{\mu'\nu'}$, can be written as:
+The transformation from the new frame \((t',x',y',z')\) back to \((t,x,y,z)\) is given by the matrix
 \[
-C'_{\mu'\nu'}
-=\;
-\begin{pmatrix}
-0 & 0 & 0 & 0\\
-0 & h'_{+} & h'_{\times} & 0\\
-0 & h'_{\times} & -\,h'_{+} & 0\\
-0 & 0 & 0 & 0
-\end{pmatrix}.
+  \Lambda^{\mu'}_{\;\mu}
+  = \frac{\partial x^{\mu'}}{\partial x^{\mu}},
+  \quad
+  \Lambda^{t'}_{\;t} = 1,
+  \quad
+  \Lambda^{x'}_{\;x} = 1,
+  \quad
+  \Lambda^{y'}_{\;y} = \tfrac{1}{\sqrt{2}},
+  \quad
+  \Lambda^{y'}_{\;z} = -\tfrac{1}{\sqrt{2}},
+  \quad
+  \Lambda^{z'}_{\;y} = \tfrac{1}{\sqrt{2}},
+  \quad
+  \Lambda^{z'}_{\;z} = \tfrac{1}{\sqrt{2}},
+  \quad
+  \text{(all other components 0)}.
 \]
-
-\textbf{Explanation:}
-This is the crucial point. In TT gauge, the only non-zero components of the metric perturbation are those transverse to the propagation direction (indices $x',y'$) and the trace of the perturbation is zero. The choice of $h'_{+}$ and $h'_{\times}$ as independent components corresponds to the two possible linearly independent polarizations of a gravitational wave.
-
-To find $C_{\mu\nu}$ in the original coordinate system, we must perform a coordinate transformation. The transformation matrix $\Lambda$ is given by:
-\[
-\Lambda^{\mu'}_{\;\mu}
-= \frac{\partial x^{\mu'}}{\partial x^{\mu}}
-=
-\begin{pmatrix}
-\frac{\partial t'}{\partial t} & \frac{\partial t'}{\partial x} & \frac{\partial t'}{\partial y} & \frac{\partial t'}{\partial z}\\[4pt]
-\frac{\partial x'}{\partial t} & \frac{\partial x'}{\partial x} & \frac{\partial x'}{\partial y} & \frac{\partial x'}{\partial z}\\[4pt]
-\frac{\partial y'}{\partial t} & \frac{\partial y'}{\partial x} & \frac{\partial y'}{\partial y} & \frac{\partial y'}{\partial z}\\[4pt]
-\frac{\partial z'}{\partial t} & \frac{\partial z'}{\partial x} & \frac{\partial z'}{\partial y} & \frac{\partial z'}{\partial z}
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 & 0 & 0 & 0\\
-0 & 1 & 0 & 0\\
-0 & 0 & \tfrac{1}{\sqrt{2}} & -\tfrac{1}{\sqrt{2}}\\
-0 & 0 & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}}
-\end{pmatrix}.
-\]
-
-\textbf{Explanation:}
-The transformation matrix $\Lambda^{\mu'}_{\;\mu}$ is defined as the matrix of the partial derivatives of the new coordinates with respect to the old ones. Since $t' = t$ and $x' = x$, the first two rows are trivial. The other two rows depend on the definitions of $y'$ and $z'$ in terms of $y$ and $z$.
-
-Since we are performing a passive transformation (changing the coordinate system without changing the physical position), we have $t' = t$. The inverse transformation matrix $\Lambda^{\mu}_{\;\mu'}$ is the transpose of $\Lambda^{\mu'}_{\;\mu}$:
-\[
-\Lambda^{\mu}_{\;\mu'}
-= (\Lambda^{\mu'}_{\;\mu})^T
-=
-\begin{pmatrix}
-1 & 0 & 0 & 0\\
-0 & 1 & 0 & 0\\
-0 & 0 & \tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}}\\
-0 & 0 & -\tfrac{1}{\sqrt{2}} & \tfrac{1}{\sqrt{2}}
-\end{pmatrix}.
-\]
-
-\textbf{Explanation:}
-The inverse transformation matrix is obtained by transposing the direct transformation matrix. This is possible because the transformation in question is orthogonal (rotation in a plane).
-
-The amplitude tensor in the original coordinate system is given by:
-\[
-C_{\mu\nu} \;=\;
-\Lambda^{\mu'}_{\;\mu}\,\Lambda^{\nu'}_{\;\nu}\,C'_{\mu'\nu'}.
-\]
-We will perform the transformation one element at a time, keeping in mind that the indices with the prime refer to the coordinate system $(t',\,x',\,y',\,z')$, while those without the prime refer to the system $(t,\,x,\,y,\,z)$.
-
-\begin{align*}
-C_{tt}
-&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;t}\,C'_{\mu'\nu'}
-= \Lambda^{t'}_{\;t}\,\Lambda^{t'}_{\;t}\,C'_{t't'}
-= (1)\,(1)\,(0)
-= 0, \\[6pt]
-C_{tx}
-&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;x}\,C'_{\mu'\nu'}
-= \Lambda^{t'}_{\;t}\,\Lambda^{x'}_{\;x}\,C'_{t'x'}
-= (1)\,(1)\,(0)
-= 0, \\[6pt]
-C_{ty}
-&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;y}\,C'_{\mu'\nu'}
-= \Lambda^{t'}_{\;t}\,\Lambda^{y'}_{\;y}\,C'_{t'y'}
-+ \Lambda^{t'}_{\;t}\,\Lambda^{z'}_{\;y}\,C'_{t'z'}\\
-&= (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
-+ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
-= 0, \\[6pt]
-C_{tz}
-&= \Lambda^{\mu'}_{\;t}\,\Lambda^{\nu'}_{\;z}\,C'_{\mu'\nu'}
-= \Lambda^{t'}_{\;t}\,\Lambda^{y'}_{\;z}\,C'_{t'y'}
-+ \Lambda^{t'}_{\;t}\,\Lambda^{z'}_{\;z}\,C'_{t'z'}\\
-&= (1)\,\bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,(0)
-+ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
-= 0, \\[6pt]
-C_{xx}
-&= \Lambda^{\mu'}_{\;x}\,\Lambda^{\nu'}_{\;x}\,C'_{\mu'\nu'}
-= \Lambda^{x'}_{\;x}\,\Lambda^{x'}_{\;x}\,C'_{x'x'}
-+ \Lambda^{y'}_{\;x}\,\Lambda^{y'}_{\;x}\,C'_{y'y'}
-+ \Lambda^{x'}_{\;x}\,\Lambda^{y'}_{\;x}\,C'_{x'y'}
-+ \Lambda^{y'}_{\;x}\,\Lambda^{x'}_{\;x}\,C'_{y'x'} \\
-&= (1)(1)\,h'_{+} + (0)(0)\,\bigl(-h'_{+}\bigr)
-+ (1)(0)\,h'_{\times} + (0)(1)\,h'_{\times}
-= h'_{+}, \\[6pt]
-C_{xy}
-&= \Lambda^{x'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{x'x'}
-+ \Lambda^{y'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{y'y'}
-+ \Lambda^{x'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{x'y'}
-+ \Lambda^{y'}_{\;x}\,\Lambda^{y'}_{\;y}\,C'_{y'x'} \\
-&= (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{+}
-+ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-h'_{+}\bigr)
-+ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
-+ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
-= \tfrac{1}{\sqrt{2}}\,(\,h'_{+} + h'_{\times}), \\[6pt]
-C_{xz}
-&= \Lambda^{x'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{x'x'}
-+ \Lambda^{y'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{y'y'}
-+ \Lambda^{x'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{x'y'}
-+ \Lambda^{y'}_{\;x}\,\Lambda^{z'}_{\;z}\,C'_{y'x'} \\
-&= (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{+}
-+ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-h'_{+}\bigr)
-+ (1)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
-+ (0)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
-= \tfrac{1}{\sqrt{2}}\,(\,h'_{+} + h'_{\times}), \\[6pt]
-C_{yy}
-&= \Lambda^{\mu'}_{\;y}\,\Lambda^{\nu'}_{\;y}\,C'_{\mu'\nu'}
-= \Lambda^{y'}_{\;y}\,\Lambda^{y'}_{\;y}\,C'_{y'y'}
-+ \Lambda^{z'}_{\;y}\,\Lambda^{z'}_{\;y}\,C'_{z'z'}
-+ \Lambda^{y'}_{\;y}\,\Lambda^{z'}_{\;y}\,C'_{y'z'}
-+ \Lambda^{z'}_{\;y}\,\Lambda^{y'}_{\;y}\,C'_{z'y'} \\
-&= \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\,h'_{+}\bigr)
-+ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
-+ 0 + 0
-= -\tfrac{1}{2}\,h'_{+}, \\[6pt]
-C_{yz}
-&= \Lambda^{y'}_{\;y}\,\Lambda^{z'}_{\;z}\,C'_{y'y'}
-+ \Lambda^{z'}_{\;y}\,\Lambda^{z'}_{\;z}\,C'_{z'z'}
-+ \Lambda^{y'}_{\;y}\,\Lambda^{z'}_{\;z}\,C'_{y'z'}
-+ \Lambda^{z'}_{\;y}\,\Lambda^{y'}_{\;z}\,C'_{z'y'} \\
-&= \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\,h'_{+}\bigr)
-+ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
-+ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
-+ \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,h'_{\times}
-= -\tfrac{1}{2}\,h'_{+}, \\[6pt]
-C_{zz}
-&= \Lambda^{z'}_{\;z}\,\Lambda^{z'}_{\;z}\,C'_{z'z'}
-+ \Lambda^{y'}_{\;z}\,\Lambda^{y'}_{\;z}\,C'_{y'y'}
-+ \Lambda^{z'}_{\;z}\,\Lambda^{y'}_{\;z}\,C'_{z'y'}
-+ \Lambda^{y'}_{\;z}\,\Lambda^{z'}_{\;z}\,C'_{y'z'} \\
-&= \bigl(\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(\tfrac{1}{\sqrt{2}}\bigr)\,(0)
-+ \bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-\tfrac{1}{\sqrt{2}}\bigr)\,\bigl(-h'_{+}\bigr)
-+ 0 + 0
-= -\tfrac{1}{2}\,h'_{+}.
-\end{align*}
-
-\textbf{Explanation:}
-Each component of $C_{\mu\nu}$ is obtained as a linear combination of the components of $C'_{\mu'\nu'}$, with coefficients given by the products of the elements of the transformation matrices. For example, to calculate $C_{xy}$, we must consider all possible combinations of indices $(\mu',\nu')$ that contribute to $(x,y)$ through the transformation.
-
-The other components are zero or related by symmetry.
-
-Thus, the explicit expression for the amplitude tensor $C_{\mu\nu}$ in the original Cartesian system is:
+The \emph{amplitude tensor} in the old coordinates is then
 \[
 C_{\mu\nu}
 \;=\;
-\begin{pmatrix}
-0 & 0 & 0 & 0 \\
-0 & h'_{+}
- & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)
- & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)\\[6pt]
-0 & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)
- & -\tfrac{1}{2}\,h'_{+}
- & -\tfrac{1}{2}\,h'_{+}+\tfrac{1}{2}\,h'_{\times} \\[6pt]
-0 & \tfrac{1}{\sqrt{2}}\bigl(h'_{+} + h'_{\times}\bigr)
- & -\tfrac{1}{2}\,h'_{+}+\tfrac{1}{2}\,h'_{\times}
- & -\tfrac{1}{2}\,h'_{+}
-\end{pmatrix}.
+\Lambda^{\mu'}_{\;\mu}\,\Lambda^{\nu'}_{\;\nu}\,C'_{\mu'\nu'}.
 \]
+Below, we list the \emph{correct} final components (omitting lengthy intermediate sums).  In particular, we stress:
+
+\[
+\boxed{
+\begin{aligned}
+C_{xx} \;&=\; h'_{+},
+\\
+C_{xy} \;&=\; \frac{1}{\sqrt{2}}\,h'_{\times},
+\qquad
+C_{xz} \;=\; -\,\frac{1}{\sqrt{2}}\,h'_{\times},
+\\
+C_{yy} \;&=\; -\,\tfrac12\,h'_{+},
+\qquad
+C_{yz} \;=\; +\,\tfrac12\,h'_{+},
+\qquad
+C_{zz} \;=\; -\,\tfrac12\,h'_{+},
+\\
+&C_{\mu t}=C_{t\mu}=0
+\quad(\text{transverse}),
+\quad
+\text{Trace}[C_{ij}] = 0
+\quad(\text{traceless}).
+\end{aligned}
+}
+\]
+
+Putting everything together in matrix form (with \(\mu,\nu\in\{t,x,y,z\}\)):
+
+\[
+  C_{\mu\nu}
+  =
+  \begin{pmatrix}
+    0 & 0 & 0 & 0\\
+    0 & h'_+
+      & \tfrac{1}{\sqrt{2}}\,h'_{\times}
+      & -\tfrac{1}{\sqrt{2}}\,h'_{\times} \\[6pt]
+    0 & \tfrac{1}{\sqrt{2}}\,h'_{\times}
+      & -\tfrac{1}{2}\,h'_{+}
+      & \tfrac{1}{2}\,h'_{+} \\[6pt]
+    0 & -\tfrac{1}{\sqrt{2}}\,h'_{\times}
+      & \tfrac{1}{2}\,h'_{+}
+      & -\tfrac{1}{2}\,h'_{+}
+  \end{pmatrix}.
+\]
+
+This final \(C_{\mu\nu}\) correctly reflects:
+\begin{itemize}
+  \item Transversality: \(C_{t\mu} = 0\).
+  \item Tracelessness in the spatial block: \(C_{xx}+C_{yy}+C_{zz}=0\).
+  \item Separation of polarizations: the off-diagonal \((x,y)\) and \((x,z)\) entries depend only on \(h'_\times\), while \((y,y)\), \((y,z)\), \((z,z)\) depend only on \(h'_+\).
+\end{itemize}
+
+
+
 
 \section*{Question 18}
 Assume that the Friedmann equation $H^{2}=8 \pi G \rho / 3-\kappa / a^{2}$ and the fluid equation $\dot{\rho}+3 H(\rho+p)=0$ are valid. Without any further assumption, derive the result $\ddot{a} / a=-4 \pi G(\rho+3 p) / 3$.

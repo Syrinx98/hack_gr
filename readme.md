@@ -477,72 +477,47 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
         * $h'_{32} = 0$
         * $h'_{33} = 0$
 
----
-
 ## 17. Gravitational Wave Polarization and Coordinate Transformations
 
-1.  **Relation between $\omega$ and $k$**
+1. **Relation between $\omega$ and $k$**
 
-    *   Given the wave vector $k^{\mu} = (\omega, 0, k, k)$.
-    *   Gravitational waves propagate at the speed of light, hence $k_{\mu}k^{\mu}=0$.
-    *   Using the Minkowski metric $\eta_{\mu\nu} = \text{diag}(-1, +1, +1, +1)$, we have $k_{\mu}=(-\omega, 0, k, k)$.
-    *   The null condition gives:
-        *   $-\omega^2 + k^2 + k^2 = 0$
-        *   $\omega^2 = 2k^2$
-        *   $\omega = \sqrt{2}k$
+   - We start with a wave vector $k^\mu = (\omega,\,0,\,k,\,k)$.
+   - Since gravitational waves propagate at the speed of light in vacuum, we must have $k_\mu\,k^\mu = 0$.
+   - Using the Minkowski metric $\eta_{\mu\nu} = \mathrm{diag}(-1,\,+1,\,+1,\,+1)$, we find
+     $$
+     k_\mu = (-\omega,\,0,\,k,\,k).
+     $$
+   - The null condition $-\omega^2 + k^2 + k^2 = 0$ implies $\omega^2 = 2\,k^2$, hence $\omega = \sqrt{2}\,k$.
 
-2.  **Explicit form of $C_{\mu \nu}$ for + polarization**
+2. **Polarization Tensor in the Rotated Frame**
 
-    *   The polarization tensor $C_{\mu \nu}$ in TT gauge satisfies:
-        *   Symmetry: $C_{\mu \nu} = C_{\nu \mu}$
-        *   Transversality: $k^{\mu} C_{\mu \nu} = 0 \implies C_{0\nu} = -C_{3\nu}$
-        *   Tracelessness: $C^{\mu}_{\mu} = 0 \implies C_{00} = C_{33}, C_{11} = -C_{22}$
-    *   For "+" polarization in the standard TT gauge: $C_{11} = -C_{22} = C_+$ and $C_{12} = C_{21} = 0$, $C_{0\nu} = C_{3\nu} = 0$.
-    *   Explicitly:
-        *   $C_{00} = C_{01} = C_{02} = C_{03} = 0$
-        *   $C_{10} = C_{20} = C_{30} = 0$
-        *   $C_{11} = C_+$
-        *   $C_{12} = C_{21} = 0$
-        *   $C_{13} = C_{31} = 0$
-        *   $C_{22} = -C_+$
-        *   $C_{23} = C_{32} = 0$
-        *   $C_{33} = 0$
+   - To describe the wave propagating along $(0,\,k,\,k)$, define new coordinates $(t',\,x',\,y',\,z')$ by:
+     - $x' = x$,
+     - $z' = \tfrac{1}{\sqrt{2}}\,(y + z)$ (the propagation axis),
+     - $y' = \tfrac{1}{\sqrt{2}}\,(y - z)$ (so that $\{x',\,y',\,z'\}$ is a right-handed system).
+   - In the primed frame (TT gauge) for a wave propagating along $z'$, the non-zero components of the amplitude tensor for the plus and cross polarizations are:
+     - $C'_{x'x'} = h'_{+}$,
+     - $C'_{y'y'} = -\,h'_{+}$,
+     - $C'_{x'y'} = C'_{y'x'} = h'_{\times}$,
+     - all other $C'_{\mu'\nu'} = 0$.
 
-3.  **Coordinate Transformation**
+3. **Coordinate Transformation and Final $C_{\mu\nu}$**
 
-    *   Define a new coordinate system $(x', y', z')$:
-        *   $x = x'$
-        *   $z' = \frac{1}{\sqrt{2}}(y+z)$ (propagation direction)
-        *   $y' = \frac{1}{\sqrt{2}}(y-z)$ (ensures a right-handed system)
-    *   In the new system, the wave is a superposition of "+" and "$\times$" polarizations:
-        *   $C'_{00} = C'_{01} = C'_{02} = C'_{03} = 0$
-        *   $C'_{10} = C'_{20} = C'_{30} = 0$
-        *   $C'_{11} = h'_{+}$
-        *   $C'_{12} = C'_{21} = h'_{\times}$
-        *   $C'_{13} = C'_{31} = 0$
-        *   $C'_{22} = -h'_{+}$
-        *   $C'_{23} = C'_{32} = 0$
-        *   $C'_{33} = 0$
-    *   Transformation matrix:
-        *   $\Lambda^{\mu'}_{\;\mu} = \frac{\partial x^{\mu'}}{\partial x^{\mu}}$
-        *   $\Lambda^{t'}_{\;t} = 1$, $\Lambda^{t'}_{\;x} = \Lambda^{t'}_{\;y} = \Lambda^{t'}_{\;z} = 0$
-        *   $\Lambda^{x'}_{\;t} = 0$, $\Lambda^{x'}_{\;x} = 1$, $\Lambda^{x'}_{\;y} = \Lambda^{x'}_{\;z} = 0$
-        *   $\Lambda^{y'}_{\;t} = 0$, $\Lambda^{y'}_{\;x} = 0$, $\Lambda^{y'}_{\;y} = \frac{1}{\sqrt{2}}$, $\Lambda^{y'}_{\;z} = -\frac{1}{\sqrt{2}}$
-        *   $\Lambda^{z'}_{\;t} = 0$, $\Lambda^{z'}_{\;x} = 0$, $\Lambda^{z'}_{\;y} = \frac{1}{\sqrt{2}}$, $\Lambda^{z'}_{\;z} = \frac{1}{\sqrt{2}}$
-        *   $\Lambda^{\mu}_{\;\mu'} = (\Lambda^{\mu'}_{\;\mu})^T$
-    *   Transform the amplitude tensor:
-        *   $C_{\mu\nu} = \Lambda^{\mu'}_{\;\mu}\,\Lambda^{\nu'}_{\;\nu}\,C'_{\mu'\nu'}$
-    *   Explicitly, calculating each component:
-        *   $C_{tt} = 0$
-        *   $C_{tx} = C_{xt} = 0$
-        *   $C_{ty} = C_{yt} = 0$
-        *   $C_{tz} = C_{zt} = 0$
-        *   $C_{xx} = h'_{+}$
-        *   $C_{xy} = C_{yx} = \frac{1}{\sqrt{2}}(h'_{+} + h'_{\times})$
-        *   $C_{xz} = C_{zx} = \frac{1}{\sqrt{2}}(h'_{+} + h'_{\times})$
-        *   $C_{yy} = -\frac{1}{2}h'_{+}$
-        *   $C_{yz} = C_{zy} = -\frac{1}{2}h'_{+} + \frac{1}{2}h'_{\times}$
-        *   $C_{zz} = -\frac{1}{2}h'_{+}$
+   - The old coordinates $(t,\,x,\,y,\,z)$ are related to the new ones via the transformation matrix $\Lambda^{\mu'}_{\;\mu} = \tfrac{\partial x^{\mu'}}{\partial x^{\mu}}$.
+   - After applying this transformation back to the original system, the non-zero components of $C_{\mu\nu}$ become:
+     - $C_{xx} = h'_{+}$,
+     - $C_{xy} = \tfrac{1}{\sqrt{2}}\,h'_{\times}$,
+     - $C_{xz} = -\,\tfrac{1}{\sqrt{2}}\,h'_{\times}$,
+     - $C_{yy} = -\,\tfrac{1}{2}\,h'_{+}$,
+     - $C_{yz} = \tfrac{1}{2}\,h'_{+}$,
+     - $C_{zz} = -\,\tfrac{1}{2}\,h'_{+}$,
+     - $C_{t\mu} = 0$ for all $\mu$.
+   - These results ensure:
+     - **Transversality**: $k^\mu\,C_{\mu\nu} = 0$, which means $C_{t\mu} = 0$ here.
+     - **Tracelessness**: $C_{xx} + C_{yy} + C_{zz} = 0$ in the spatial part.
+     - **Clear separation of polarizations**: the off-diagonal parts $(xy,\;xz)$ depend only on $h'_{\times}$, and the diagonal parts $(xx,\;yy,\;zz)$ depend only on $h'_+$.
+
+By examining this procedure, one sees explicitly how the $45^\circ$ rotation in the $(y,\,z)$ plane isolates the usual plus and cross polarizations in the original $(t,\,x,\,y,\,z)$ coordinates.
 
 ---
 
@@ -570,8 +545,6 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     *   $\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{4\pi G}{3}(3H(\rho+p) + 3H(\rho+p))$
     *   Since $\dot{\rho} = -3H(\rho + p)$, we get:
     *   $\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}(\rho + 3p)$
-
----
 
 
 ---
