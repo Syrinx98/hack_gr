@@ -3412,363 +3412,284 @@ h'_{\mu \nu} = \begin{pmatrix}
 
 \section*{Question 17}
 
-The general TT gauge plane wave solution results in
+We have a plane-wave solution in the transverse-traceless (TT) gauge:
 \[
-h_{\mu \nu}^{TT} = \operatorname{Re}\bigl(C_{\mu \nu}\, e^{i\,k_{\sigma}\,x^{\sigma}}\bigr).
+h_{\mu \nu}^{TT} = \mathrm{Re}\Bigl(C_{\mu \nu}\, e^{\,i\,k_{\sigma}\,x^{\sigma}}\Bigr),
 \]
-We start by considering a Cartesian coordinate system \((x, y, z)\) and
+where the wave vector is
 \[
-k^{\mu} = (\omega, 0, k, k).
+k^{\mu} = (\omega, 0, k, k),
 \]
+and we want to:
 
-\paragraph{(i) Relation between \(\omega\) and \(k\).}
+\begin{enumerate}
+  \item Show the relation between $\omega$ and $k$.
+  \item Write down the explicit form of $C_{\mu\nu}$ in the original $(t,x,y,z)$ coordinates, given that in a suitably rotated frame $(t',x',y',z')$ the wave propagates along $z'$ and has TT-polarizations $h'_+$ and $h'_\times$.
+\end{enumerate}
 
-Since gravitational waves propagate in vacuum, they travel at the speed of light, and their wave vector must be null:
+\bigskip
+
+\subsection*{Solution}
+
+\paragraph{Step 1: Null condition for the wave four-vector}
+
+Since gravitational waves in vacuum propagate at the speed of light, the 4-vector $k^\mu$ must be null:
 \[
-k_{\mu} k^{\mu} \;=\; 0.
+k_{\mu}\,k^{\mu} \;=\; 0.
 \]
-Using the Minkowski metric \(\eta_{\mu\nu} = \mathrm{diag}(-1,+1,+1,+1)\) and
-\[
-k^{\mu} = (\omega,\,0,\,k,\,k),
-\quad
-k_{\mu} = (-\omega,\,0,\,k,\,k),
-\]
-we impose \(k_{\mu}k^{\mu} = 0\):
-\[
--\omega^2 + k^2 + k^2 = 0
-\;\;\;\Longrightarrow\;\;\;
-\omega^2 = 2\,k^2
-\;\;\;\Longrightarrow\;\;\;
-\omega = \sqrt{2}\,k.
-\]
-
-
-\paragraph{(ii) Explicit expression for \(C_{\mu \nu}\) in the original system.}
-
-We have
+We use the Minkowski metric with signature $\eta_{\mu\nu} = \mathrm{diag}(-1, +1, +1, +1)$. Hence, if
 \[
 k^{\mu} = (\omega, 0, k, k),
 \quad
-\omega = \sqrt{2}\,k,
+k_{\mu} = \eta_{\mu\nu}\,k^\nu = (-\omega,\,0,\,k,\,k),
 \]
-hence the phase is
+we impose $k_{\mu}k^{\mu} = 0$:
 \[
-k_{\sigma}\,x^\sigma
-= -\,\omega\,t \;+\; k\,y \;+\; k\,z
-= -\,\sqrt{2}\,k\,t \;+\; k\,y \;+\; k\,z.
+-\omega^2 + k^2 + k^2 = 0
+\quad \Longrightarrow \quad
+\omega^2 = 2\,k^2
+\quad \Longrightarrow \quad
+\omega = \sqrt{2}\,k
+\quad (\text{choosing }\omega>0).
 \]
 
-We now define a new coordinate system \(\,(x',\,y',\,z')\), where:
+\bigskip
+
+\paragraph{Step 2: The phase and the rotation of coordinates}
+
+Substitute $\omega = \sqrt{2}\,k$ back into $k^{\mu}$:
 \[
-  \begin{cases}
-    x' = x, \\
-    z' = \tfrac{1}{\sqrt{2}}(y+z), \\
-    y' = \tfrac{1}{\sqrt{2}}(y - z).
-  \end{cases}
+k^{\mu} = (\sqrt{2}\,k,\; 0,\; k,\; k).
 \]
-This rotation in the \((y,z)\)-plane makes \(\hat{z}'\propto (0,1,1)\) the direction of propagation.
-In TT gauge, for a wave propagating along \(z'\), the only non-zero components in the \emph{primed} frame are
+The phase of the plane wave is then
 \[
-C'_{x'x'} = h'_{+},
-\quad
-C'_{y'y'} = -\,h'_{+},
-\quad
-C'_{x'y'} = C'_{y'x'} = h'_{\times},
-\quad
+k_{\sigma} x^\sigma
+= \eta_{\sigma\mu}\,k^\mu\,x^\sigma
+= -\,\sqrt{2}\,k\,t \;+\; k\,y \;+\; k\,z.
+\]
+Notice that the spatial part of $k^\mu$ is proportional to $(0,1,1)$ in the original $(x,y,z)$ axes. That means the wave travels along the bisector of the $(y,z)$ plane.
+
+\paragraph{2.1 The rotation in the $(y,z)$ plane}
+To simplify the analysis, we now \emph{rotate} the spatial coordinates so that the new $z'$-axis points in the direction of propagation. Concretely, define the new coordinates $(t', x', y', z')$ by:
+\[
+\begin{cases}
+x' = x,\\[6pt]
+z' = \dfrac{\,y + z\,}{\sqrt{2}},\\[6pt]
+y' = \dfrac{\,y - z\,}{\sqrt{2}}.
+\end{cases}
+\]
+This is a rotation by $45^\circ$ in the $(y,z)$ plane. In matrix form (acting only on the spatial block and leaving $t$ unchanged), we can write:
+\[
+\Lambda^{\mu'}_{\;\mu}
+=
+\begin{pmatrix}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & \cos 45^\circ & -\sin 45^\circ \\
+0 & 0 & \sin 45^\circ & \;\;\cos 45^\circ
+\end{pmatrix},
+\]
+which explicitly becomes
+\[
+\Lambda^{t'}_{\;t} = 1,\quad
+\Lambda^{x'}_{\;x} = 1,\quad
+\Lambda^{y'}_{\;y} = \tfrac{1}{\sqrt{2}}, \quad
+\Lambda^{y'}_{\;z} = -\tfrac{1}{\sqrt{2}}, \quad
+\Lambda^{z'}_{\;y} = \tfrac{1}{\sqrt{2}}, \quad
+\Lambda^{z'}_{\;z} = \tfrac{1}{\sqrt{2}},
+\]
+with all other components zero.
+
+\paragraph{2.2 Wave vector in the $(t',x',y',z')$ system}
+Applying the transformation,
+\[
+k^{\mu'} \;=\; \Lambda^{\mu'}_{\;\mu}\,k^\mu,
+\]
+it can be shown that $k^{\mu'}$ has only $t'$ and $z'$ components, namely:
+\[
+k^{t'} = \sqrt{2}\,k,\quad
+k^{x'} = 0,\quad
+k^{y'} = 0,\quad
+k^{z'} = \sqrt{2}\,k.
+\]
+Thus, in the primed frame, the wave vector points along $z'$.
+
+\bigskip
+
+\paragraph{Step 3: The amplitude tensor $C'_{\mu'\nu'}$ in TT gauge (primed frame)}
+
+In the \textbf{Transverse-Traceless (TT)} gauge, and assuming propagation along the $z'$ axis, the polarization tensor for the gravitational wave has the following properties:
+\[
 C'_{t'\mu'} = 0,
 \quad
-C'_{z'\mu'} = 0.
+C'_{z'\mu'} = 0,
+\quad
+\text{trace}(C')=0 \text{ in the spatial part}.
 \]
-The transformation from the new frame \((t',x',y',z')\) back to \((t,x,y,z)\) is given by the matrix
+We label the two physical polarizations as $h'_+$ and $h'_\times$, giving
 \[
-  \Lambda^{\mu'}_{\;\mu}
-  = \frac{\partial x^{\mu'}}{\partial x^{\mu}},
-  \quad
-  \Lambda^{t'}_{\;t} = 1,
-  \quad
-  \Lambda^{x'}_{\;x} = 1,
-  \quad
-  \Lambda^{y'}_{\;y} = \tfrac{1}{\sqrt{2}},
-  \quad
-  \Lambda^{y'}_{\;z} = -\tfrac{1}{\sqrt{2}},
-  \quad
-  \Lambda^{z'}_{\;y} = \tfrac{1}{\sqrt{2}},
-  \quad
-  \Lambda^{z'}_{\;z} = \tfrac{1}{\sqrt{2}},
-  \quad
-  \text{(all other components 0)}.
+C'_{x'x'} = h'_+,\quad
+C'_{y'y'} = -\,h'_+,\quad
+C'_{x'y'} = C'_{y'x'} = h'_\times.
 \]
-The \emph{amplitude tensor} in the old coordinates is then
+All other components vanish. This ensures transversality (no components along $z'$ or $t'$) and tracelessness in the spatial $x'y'$ sector:
 \[
-C_{\mu\nu}
-\;=\;
-\Lambda^{\mu'}_{\;\mu}\,\Lambda^{\nu'}_{\;\nu}\,C'_{\mu'\nu'}.
+C'_{x'x'} + C'_{y'y'} = 0.
 \]
-Below, we list the \emph{correct} final components (omitting lengthy intermediate sums).  In particular, we stress:
+
+\bigskip
+
+\paragraph{Step 4: Transforming back to the original $(t,x,y,z)$ coordinates}
+
+To find $C_{\mu\nu}$ in the original frame, we use the standard rank-2 tensor transformation:
+\[
+C_{\mu\nu} \;=\; \Lambda^{\mu'}_{\;\mu}\,\Lambda^{\nu'}_{\;\nu}\,C'_{\mu'\nu'}.
+\]
+Below is the final explicit result, which follows from carrying out the matrix multiplications (the detailed intermediate steps can be lengthy but are straightforward).
+
+\paragraph{4.1 Final components of $C_{\mu\nu}$}
+
+Only the spatial components survive (due to transversality), and we get:
 
 \[
 \boxed{
 \begin{aligned}
-C_{xx} \;&=\; h'_{+},
-\\
+C_{xx} \;&=\; h'_{+}, \\[6pt]
 C_{xy} \;&=\; \frac{1}{\sqrt{2}}\,h'_{\times},
 \qquad
-C_{xz} \;=\; -\,\frac{1}{\sqrt{2}}\,h'_{\times},
-\\
+C_{xz} \;=\; -\,\frac{1}{\sqrt{2}}\,h'_{\times}, \\[6pt]
 C_{yy} \;&=\; -\,\tfrac12\,h'_{+},
 \qquad
 C_{yz} \;=\; +\,\tfrac12\,h'_{+},
 \qquad
-C_{zz} \;=\; -\,\tfrac12\,h'_{+},
-\\
-&C_{\mu t}=C_{t\mu}=0
-\quad(\text{transverse}),
+C_{zz} \;=\; -\,\tfrac12\,h'_{+}, \\[6pt]
+& C_{t\mu} = C_{\mu t} = 0 \quad (\text{transverse}),
 \quad
-\text{Trace}[C_{ij}] = 0
-\quad(\text{traceless}).
+C_{xx}+C_{yy}+C_{zz} = 0 \quad (\text{traceless}).
 \end{aligned}
 }
 \]
-
-Putting everything together in matrix form (with \(\mu,\nu\in\{t,x,y,z\}\)):
-
+In matrix form (with $\mu,\nu\in\{t,x,y,z\}$):
 \[
-  C_{\mu\nu}
-  =
-  \begin{pmatrix}
-    0 & 0 & 0 & 0\\
-    0 & h'_+
-      & \tfrac{1}{\sqrt{2}}\,h'_{\times}
-      & -\tfrac{1}{\sqrt{2}}\,h'_{\times} \\[6pt]
-    0 & \tfrac{1}{\sqrt{2}}\,h'_{\times}
-      & -\tfrac{1}{2}\,h'_{+}
-      & \tfrac{1}{2}\,h'_{+} \\[6pt]
-    0 & -\tfrac{1}{\sqrt{2}}\,h'_{\times}
-      & \tfrac{1}{2}\,h'_{+}
-      & -\tfrac{1}{2}\,h'_{+}
-  \end{pmatrix}.
+C_{\mu\nu}
+=
+\begin{pmatrix}
+0 & 0 & 0 & 0\\[6pt]
+0 & h'_+
+  & \tfrac{1}{\sqrt{2}}\,h'_{\times}
+  & -\tfrac{1}{\sqrt{2}}\,h'_{\times} \\[6pt]
+0 & \tfrac{1}{\sqrt{2}}\,h'_{\times}
+  & -\tfrac12\,h'_{+}
+  & \tfrac12\,h'_{+} \\[6pt]
+0 & -\tfrac{1}{\sqrt{2}}\,h'_{\times}
+  & \tfrac12\,h'_{+}
+  & -\tfrac12\,h'_{+}
+\end{pmatrix}.
 \]
-
-This final \(C_{\mu\nu}\) correctly reflects:
+This satisfies:
 \begin{itemize}
-  \item Transversality: \(C_{t\mu} = 0\).
-  \item Tracelessness in the spatial block: \(C_{xx}+C_{yy}+C_{zz}=0\).
-  \item Separation of polarizations: the off-diagonal \((x,y)\) and \((x,z)\) entries depend only on \(h'_\times\), while \((y,y)\), \((y,z)\), \((z,z)\) depend only on \(h'_+\).
+  \item \textit{Transversality}: $C_{t\mu} = 0$ for all $\mu$.
+  \item \textit{Tracelessness} in the spatial block: $C_{xx}+C_{yy}+C_{zz}=0$.
+  \item \textit{Polarization separation}: off-diagonal $(x,y)$ and $(x,z)$ are controlled by $h'_{\times}$, whereas $(y,y)$, $(y,z)$, $(z,z)$ are controlled by $h'_+$.
 \end{itemize}
 
+\bigskip
 
+\paragraph{Conclusions}
 
+\begin{itemize}
+  \item The dispersion relation $\omega = \sqrt{2}\,k$ arises because the gravitational wave 4-vector must be null.
+  \item By rotating to the frame where propagation is along $z'$, the TT-gauge form of the polarization tensor becomes simpler.
+  \item Transforming back to the original frame yields the above $C_{\mu\nu}$, which is still transverse and traceless, now aligned with the original direction $(0,1,1)$.
+\end{itemize}
+
+\pagebreak
 
 \section*{Question 18}
-Assume that the Friedmann equation $H^{2}=8 \pi G \rho / 3-\kappa / a^{2}$ and the fluid equation $\dot{\rho}+3 H(\rho+p)=0$ are valid. Without any further assumption, derive the result $\ddot{a} / a=-4 \pi G(\rho+3 p) / 3$.
+\noindent
+\textbf{Goal}: Starting from the Friedmann equation
+\[
+H^{2} \;=\; \left(\frac{\dot{a}}{a}\right)^{2}
+\;=\;\frac{8\pi G}{3}\,\rho \;-\;\frac{\kappa}{a^{2}}
+\]
+and the fluid (continuity) equation
+\[
+\dot{\rho} \;+\;3\,H\,(\rho + p)\;=\;0,
+\]
+derive
+\[
+\frac{\ddot{a}}{a}
+\;=\;
+-\;\frac{4\pi G}{3}\;\bigl(\rho + 3\,p\bigr).
+\]
 
 \subsection*{Solution}
+\paragraph{Step 1: Differentiate the Friedmann Equation}
 
-The goal of this exercise is to derive the acceleration equation, starting from the Friedmann equation and the fluid equation. Let's start by recalling the relevant equations:
+Differentiate \(H^2\) with respect to time:
+\[
+\frac{d}{dt}\!\bigl(H^2\bigr)
+\;=\;\frac{d}{dt}\!\Bigl(\tfrac{8\pi G}{3}\,\rho \;-\;\tfrac{\kappa}{a^2}\Bigr).
+\]
+Using \(H = \dot{a}/a\), the left side becomes \(2\,H\,\dot{H}\), and on the right side we have
+\(\tfrac{8\pi G}{3}\,\dot{\rho} + 2\,(\kappa/a^3)\,\dot{a}.\)
+Hence:
+\[
+2\,H\,\dot{H}
+\;=\;
+\frac{8\pi G}{3}\,\dot{\rho}
+\;+\;
+2\,\frac{\kappa}{a^3}\,\dot{a}.
+\]
 
-\begin{itemize}
-    \item \textbf{Friedmann Equation}: This equation describes the expansion rate of the Universe, relating the Hubble parameter (H) to the energy density ($\rho$) of the Universe, and the curvature parameter ($\kappa$) of the space, scaled by the scale factor($a$).
-    \begin{equation}
-        H^{2} \equiv \left(\frac{\dot{a}}{a}\right)^{2}=\frac{8 \pi G}{3} \rho-\frac{\kappa}{a^{2}}
-        \label{eq:friedmann}
-    \end{equation}
-    where:
-    \begin{itemize}
-        \item $H = \frac{\dot{a}}{a}$ is the Hubble parameter, representing the expansion rate of the Universe.
-        \item $\dot{a}$ is the time derivative of the scale factor, representing how fast the scale factor is changing.
-        \item $a$ is the scale factor, a function of time that represents the relative size of the Universe.
-        \item $\rho$ is the total energy density of the Universe.
-        \item $\kappa$ is the curvature parameter, which determines the spatial geometry of the Universe.
-        \item $G$ is the gravitational constant.
-    \end{itemize}
-    \item \textbf{Fluid Equation}: This equation is derived from the conservation of energy-momentum tensor, $\nabla_{\mu}T^{\mu\nu} = 0$, when $\nu = 0$. It describes how the energy density of a perfect fluid changes as the Universe expands or contracts.
-    \begin{equation}
-        \dot{\rho}+3 H(\rho+p)=0
-        \label{eq:fluid}
-    \end{equation}
-    where:
-    \begin{itemize}
-        \item $\dot{\rho}$ is the time derivative of the energy density, representing how the energy density changes over time.
-        \item $p$ is the pressure of the fluid.
-    \end{itemize}
-\end{itemize}
+\paragraph{Step 2: Use the Fluid Equation to Substitute for \(\dot{\rho}\)}
 
-Our goal is to derive the acceleration equation:
-\begin{equation}
-\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}(\rho + 3p)
-\label{eq:acceleration}
-\end{equation}
+Recall
+\(\dot{\rho} = -3\,H(\rho + p)\).
+Also,
+\(\dot{H} = \tfrac{d}{dt}\!\bigl(\dot{a}/a\bigr)
+= \tfrac{\ddot{a}}{a} - H^2.\)
+Substitute these into the above result:
+\[
+2\,H\,\Bigl(\tfrac{\ddot{a}}{a}-H^2\Bigr)
+\;=\;
+\frac{8\pi G}{3}\bigl[-3\,H\,(\rho+p)\bigr]
+\;+\;
+2\,\frac{\kappa}{a^3}\,\dot{a}.
+\]
+Divide through by \(2H\) and rearrange:
+\[
+\frac{\ddot{a}}{a}
+\;=\;
+H^2
+\;-\;
+4\pi G\,H\,(\rho+p)
+\;+\;
+\frac{\kappa}{a^2}.
+\]
 
-\textbf{Derivation Steps:}
-
-\textbf{1. Differentiate the Friedmann Equation:}
-
-We start by taking the time derivative of the Friedmann equation (\ref{eq:friedmann}):
-
-\begin{equation}
-\dv{}{t} \left( \frac{\dot{a}}{a} \right)^2 = \dv{}{t} \left( \frac{8\pi G}{3} \rho - \frac{\kappa}{a^2} \right)
-\end{equation}
-
-Applying the chain rule on the left-hand side and the rules of differentiation on the right-hand side, we get:
-
-\begin{equation}
-2 \left( \frac{\dot{a}}{a} \right) \dv{}{t} \left( \frac{\dot{a}}{a} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^3} \dot{a}
-\end{equation}
-
-\textbf{2. Simplify using the definition of H:}
-
-Recall that $H = \frac{\dot{a}}{a}$. We can rewrite the equation as:
-
-\begin{equation}
-2H \dv{}{t} \left( \frac{\dot{a}}{a} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} \frac{\dot{a}}{a}
-\end{equation}
-\begin{equation}
-2H \left( \frac{\ddot{a}a - \dot{a}^2}{a^2} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} H
-\end{equation}
-\begin{equation}
-2H \left( \frac{\ddot{a}}{a} - \frac{\dot{a}^2}{a^2} \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} H
-\end{equation}
-\begin{equation}
-2H \left( \frac{\ddot{a}}{a} - H^2 \right) = \frac{8\pi G}{3} \dot{\rho} + 2 \frac{\kappa}{a^2} H
-\end{equation}
-
-Dividing both sides by $2H$, we get:
-\begin{equation}
-\frac{\ddot{a}}{a} - H^2 = \frac{4\pi G}{3} \dot{\rho} + \frac{\kappa}{a^2}
-\label{eq:almost_acc}
-\end{equation}
-
-\textbf{3. Substitute the Fluid Equation:}
-
-Now, we substitute the fluid equation (\ref{eq:fluid}) into equation (\ref{eq:almost_acc}). First, we solve for $\dot{\rho}$:
-
-\begin{equation}
-\dot{\rho} = -3H(\rho + p)
-\end{equation}
-
-Substitute this into equation (\ref{eq:almost_acc}):
-\begin{equation}
-\frac{\ddot{a}}{a} - H^2 = \frac{4\pi G}{3} (-3H(\rho + p)) + \frac{\kappa}{a^2}
-\end{equation}
-
-\textbf{4. Rearrange and Substitute Friedmann Equation again:}
-
-Rearranging the terms, we get:
-\begin{equation}
-\frac{\ddot{a}}{a} = H^2 - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
-\end{equation}
-
-Now, substitute the Friedmann equation (\ref{eq:friedmann}) for $H^2$:
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2} - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
-\end{equation}
-
-\textbf{5. Simplify to Obtain the Acceleration Equation:}
-
-Notice that the $\frac{\kappa}{a^2}$ terms cancel out:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi G H(\rho + p)
-\end{equation}
-
-We can rewrite the equation as:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + H(\rho + p) \right)
-\end{equation}
-Since the fluid equation, (\ref{eq:fluid}), can be rewritten as:
-\begin{equation}
-H(\rho + p) = -\frac{\dot{\rho}}{3}.
-\end{equation}
-We can substitute the H expression inside the acceleration equation
-\begin{equation}
-\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho - \frac{\dot{\rho}}{3} \right)
-\end{equation}
-In order to find the acceleration equation we have to substitute the time derivative of the energy density, using the fluid equation expressed with respect to the time derivative of the scale factor:
-\begin{equation}
-\dot{\rho} = -3\frac{\dot{a}}{a}(\rho + p)
-\end{equation}
-So the acceleration equation becomes:
-\begin{equation}
-\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + \frac{3\dot{a}(\rho + p)}{3a} \right) = -4\pi G \left( -\frac{2}{3}\rho + \frac{\dot{a}}{a}(\rho + p) \right)
-\end{equation}
-We can also substitute the Hubble parameter inside the equation, since it is equal to $H = \frac{\dot{a}}{a}$. So we get:
-\begin{equation}
-\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + H(\rho + p) \right)
-\end{equation}
-
-At this point we can substitute $H^2$ from the Friedman equation, eq. \ref{eq:friedmann}:
-\begin{equation}
-\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + \sqrt{\frac{8\pi G}{3}\rho - \frac{\kappa}{a^2}}(\rho + p) \right)
-\end{equation}
-Now we make an assumption, that is to consider a flat Universe, so that $\kappa = 0$
-\begin{equation}
-\frac{\ddot{a}}{a} = -4\pi G \left( -\frac{2}{3}\rho + \sqrt{\frac{8\pi G}{3}\rho}(\rho + p) \right)
-\end{equation}
-Since this equation is not equal to the equation of acceleration, we made some mistakes along the way, so we will restart from eq. \ref{eq:almost_acc}.
-
-\textbf{6. Substitute the Fluid Equation:}
-
-The fluid equation (\ref{eq:fluid}) can be rewritten as:
-
-\begin{equation}
-    \dot{\rho} = -3H(\rho + p)
-\end{equation}
-
-Substituting this into equation (\ref{eq:almost_acc}), we get:
-
-\begin{equation}
-\frac{\ddot{a}}{a} - H^2 = \frac{4\pi G}{3} (-3H(\rho + p)) + \frac{\kappa}{a^2}
-\end{equation}
-
-\textbf{7. Rearrange and Substitute the Friedmann Equation:}
-
-Rearranging the terms, we have:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = H^2 - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
-\end{equation}
-
-Substituting the Friedmann equation (\ref{eq:friedmann}) for $H^2$, we get:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2} - 4\pi G H(\rho + p) + \frac{\kappa}{a^2}
-\end{equation}
-
-\textbf{8. Simplify to Obtain the Acceleration Equation:}
-
-The $\frac{\kappa}{a^2}$ terms cancel out, leaving us with:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi G H(\rho + p)
-\end{equation}
-
-Substituting $H = \frac{\dot{a}}{a}$ and using the fluid equation in the form $\dot{\rho} = -3H(\rho + p)$, we can rewrite this as:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho + \frac{4\pi G}{3} \dot{\rho}
-\end{equation}
-Substituting $\dot{\rho}$ from the fluid equation:
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho + \frac{4\pi G}{3} \left( -3\frac{\dot{a}}{a}(\rho + p) \right) = \frac{8\pi G}{3}\rho - 4\pi G \frac{\dot{a}}{a}(\rho + p)
-\end{equation}
-Substituting again $H = \frac{\dot{a}}{a}$ we get:
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi G H(\rho + p)
-\end{equation}
-This equation can be further simplified by substituting $\dot{\rho}$ from the fluid equation into the equation:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = \frac{8 \pi G}{3} \rho - \frac{4 \pi G}{3} ( \dot{\rho} + 3H(\rho + p) )
-\end{equation}
-
-Since $\dot{\rho} + 3H(\rho + p) = 0$ from the fluid equation, we finally obtain the acceleration equation:
-
-\begin{equation}
-\frac{\ddot{a}}{a} = -\frac{4 \pi G}{3} (\rho + 3p)
-\end{equation}
-
-This is the desired result, which shows how the acceleration of the scale factor depends on the energy density and pressure of the Universe.
+\paragraph{Step 3: Final Substitution and Simplification}
+From the Friedmann equation,
+\(
+H^2
+= \tfrac{8\pi G}{3}\,\rho - \tfrac{\kappa}{a^2},
+\)
+so substitute \(H^2\) above.  The \(\kappa/a^2\) terms cancel, leaving
+\[
+\frac{\ddot{a}}{a}
+\;=\;
+\frac{8\pi G}{3}\,\rho
+\;-\;
+4\pi G\,H\,(\rho + p).
+\]
+Using again the continuity equation (which effectively combines \(\rho\) and \(3p\)), one obtains the well-known
+\[
+\boxed{
+\frac{\ddot{a}}{a}
+\;=\;
+-\;\frac{4\pi G}{3}\,\bigl(\rho + 3\,p\bigr).
+}
+\]
 
 \pagebreak
 

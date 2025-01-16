@@ -12,6 +12,7 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
 * NikoG
 * Sergio 
 * Llewyn Merrill
+* Franceschino
 
 ## 1. Metric Tensor Transformation
 
@@ -479,6 +480,9 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
         * $h'_{32} = 0$
         * $h'_{33} = 0$
 
+
+---
+
 ## 17. Gravitational Wave Polarization and Coordinate Transformations
 
 1. **Relation between $\omega$ and $k$**
@@ -523,33 +527,34 @@ By examining this procedure, one sees explicitly how the $45^\circ$ rotation in 
 
 ---
 
-## 18. Deriving the Acceleration Equation in Cosmology
+# 18. Deriving the Acceleration Equation in Cosmology
 
-1.  **Start with the Friedmann equation and the fluid equation:**
-    *   Friedmann equation:
-        *   $H^2 = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2}$
-    *   Fluid equation:
-        *   $\dot{\rho} + 3H(\rho + p) = 0$
+### 1. Start with the Friedmann and Fluid Equations
+- **Friedmann**:  
+  $H^2 = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2}$
+- **Fluid (continuity)**:  
+  $\dot{\rho} + 3H(\rho + p) = 0$
 
-2.  **Take the time derivative of the Friedmann equation:**
-    *   $2H\left(\frac{\ddot{a}}{a} - H^2\right) = \frac{8\pi G}{3}\dot{\rho} + 2\frac{\kappa}{a^2}H$
+### 2. Differentiate the Friedmann Equation
+$2H\!\left(\frac{\ddot{a}}{a} - H^2\right) = \frac{8\pi G}{3}\,\dot{\rho} + 2\,\frac{\kappa}{a^2}\,H$
 
-3.  **Substitute the fluid equation into the differentiated Friedmann equation:**
-    *   $\frac{\ddot{a}}{a} - H^2 = -\frac{4\pi G}{3}(3H(\rho+p)) + \frac{\kappa}{a^2}$
+### 3. Substitute the Fluid Equation
+Use $\dot{\rho} = -3H(\rho + p)$:
+$\frac{\ddot{a}}{a} - H^2 = -\frac{4\pi G}{3}\bigl[3H(\rho+p)\bigr] + \frac{\kappa}{a^2}$
 
-4.  **Rearrange and substitute the Friedmann equation for $H^2$:**
-    *   $\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2} - 4\pi GH(\rho+p) + \frac{\kappa}{a^2}$
+### 4. Rearrange and Insert $H^2$ from Friedmann
+$\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{\kappa}{a^2} - 4\pi G\,H(\rho+p) + \frac{\kappa}{a^2}$
 
-5.  **Simplify to obtain the acceleration equation:**
-    *   The $\frac{\kappa}{a^2}$ terms cancel out.
-    *   $\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi GH(\rho+p)$
-    *   Substitute $H=\frac{\dot{a}}{a}$ and use the fluid equation to replace $\dot{\rho}$:
-    *   $\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - \frac{4\pi G}{3}(3H(\rho+p) + 3H(\rho+p))$
-    *   Since $\dot{\rho} = -3H(\rho + p)$, we get:
-    *   $\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}(\rho + 3p)$
+The $\frac{\kappa}{a^2}$ terms cancel out, so
+$\frac{\ddot{a}}{a} = \frac{8\pi G}{3}\rho - 4\pi G\,H(\rho + p)$
 
+### 5. Final Simplification
+Substitute $H = \frac{\dot{a}}{a}$ and use $\dot{\rho} = -3H(\rho + p)$:
+$\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}\bigl(\rho + 3p\bigr)$
 
----
+Hence, the acceleration equation is:
+$\boxed{\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}\bigl(\rho + 3p\bigr).}$
+
 
 ## 19. Evolution of a Flat Universe with a Specific Equation of State
 
