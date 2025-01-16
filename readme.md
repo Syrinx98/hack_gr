@@ -498,10 +498,10 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
      - $z' = \tfrac{1}{\sqrt{2}}\,(y + z)$ (the propagation axis),
      - $y' = \tfrac{1}{\sqrt{2}}\,(y - z)$ (so that $\{x',\,y',\,z'\}$ is a right-handed system).
    - In the primed frame (TT gauge) for a wave propagating along $z'$, the non-zero components of the amplitude tensor for the plus and cross polarizations are:
-     - $C'_{x'x'} = h'_{+}$,
-     - $C'_{y'y'} = -\,h'_{+}$,
-     - $C'_{x'y'} = C'_{y'x'} = h'_{\times}$,
-     - all other $C'_{\mu'\nu'} = 0$.
+     - $C^{'}_{x'x'} = h'_{+}$,
+     - $C^{'}_{y'y'} = -\,h'_{+}$,
+     - $C^{'}_{x'y'} = C^{'}_{y'x'} = h'_{\times}$,
+     - all other $C^{'}_{\mu'\nu'} = 0$.
 
 3. **Coordinate Transformation and Final $C_{\mu\nu}$**
 
@@ -517,7 +517,7 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
    - These results ensure:
      - **Transversality**: $k^\mu\,C_{\mu\nu} = 0$, which means $C_{t\mu} = 0$ here.
      - **Tracelessness**: $C_{xx} + C_{yy} + C_{zz} = 0$ in the spatial part.
-     - **Clear separation of polarizations**: the off-diagonal parts $(xy,\;xz)$ depend only on $h'_{\times}$, and the diagonal parts $(xx,\;yy,\;zz)$ depend only on $h'_+$.
+     - **Clear separation of polarizations**: the off-diagonal parts $(xy,\;xz)$ depend only on $h'_{\times}$, and the diagonal parts $(xx;yy;zz)$ depend only on $h^{'}_+$.
 
 By examining this procedure, one sees explicitly how the $45^\circ$ rotation in the $(y,\,z)$ plane isolates the usual plus and cross polarizations in the original $(t,\,x,\,y,\,z)$ coordinates.
 
