@@ -735,76 +735,41 @@ Substituting the second approximation into the first, we get:
 \frac{\tau_2}{\tau_1} \approx \frac{1 - \frac{GM_E}{R_E}\left(1 - \frac{h}{R_E}\right)}{1 - \frac{GM_E}{R_E}} = \frac{1 - \frac{GM_E}{R_E} + \frac{GM_Eh}{R_E^2}}{1 - \frac{GM_E}{R_E}}
 \]
 
+At this point we can factor the gravitational potential on both numerator and denominator:
+
+
+\[
+\frac{\tau_2}{\tau_1} \approx \frac
+{\frac{GM_E}{R_E}\left(\frac{R_E}{GM_E} - 1 + \frac{h}{R_E}\right)}
+{\frac{GM_E}{R_E}\left(\frac{R_E}{GM_E} - 1\right)}
+= \frac
+{\left(\frac{R_E}{GM_E} - 1 + \frac{h}{R_E}\right)}
+{\left(\frac{R_E}{GM_E} - 1\right)}
+\]
+
+As you can see from this last expression, the ration between the two proper times is a number very close to one, apart from a term $\frac{h}{R_E}$ at the numerator, having $h \ll R_E$.\\
+
+
 \textbf{Approximation in the Weak Field Limit}
-Since we are in a weak gravitational field, the term \(\frac{GM_E}{R_E}\) is very small (approximately \(6.957 \times 10^{-10}\) as calculated below). Therefore, we can approximate the denominator as:
-\[
-1-\frac{GM_E}{R_E} \approx 1
-\]
-This simplifies our expression to:
+
+Since we are in a weak gravitational field, the term \(\frac{GM_E}{R_E}\) is very small. Let's calculate its value explicitly to demonstrate this.
+
+We will use the following values in SI units:
 
 \[
-\frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E h}{R_E^2}
-\]
-We can further calculate \(\frac{\tau_2}{\tau_1}\) explicitly using SI units:
-\[
-G \approx 6.674 \times 10^{-11} \, \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}}
+G \approx 6.674 \times 10^{-11} \, \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}} \quad \text{(Gravitational constant)}
 \]
 \[
-M_E \approx 5.972 \times 10^{24} \, \mathrm{kg}
+M_E \approx 5.972 \times 10^{24} \, \mathrm{kg} \quad \text{(Earth's mass)}
 \]
 \[
-R_E \approx 6.371 \times 10^6 \, \mathrm{m}
+R_E \approx 6.371 \times 10^6 \, \mathrm{m} \quad \text{(Earth's radius)}
 \]
 \[
-\frac{\tau_2}{\tau_1} \approx 1 + \frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{(6.371 \times 10^6)^2} h \approx 1 + (9.82 \frac{\mathrm{m}}{\mathrm{s^2}}) \frac{h}{c^2}
-\]
-In natural units, \(c=1\), thus:
-\[
-\frac{\tau_2}{\tau_1} \approx 1 + (9.82 \frac{\mathrm{m}}{\mathrm{s^2}})h
-\]
-\textbf{Geometrized Units - Explanation}
-In the calculations above, we used geometrized units for simplification. Let's explain what that means:
-To further simplify this expression, we introduce the concept of geometrized units (also known as natural units). In this system, we set fundamental constants like the speed of light \(c\) and the gravitational constant \(G\) to 1.
-
-\textbf{Setting \(c = 1\)}: This implies that we are measuring distance and time in the same units. For example, we could measure distance in light-seconds or time in meters.
-
-\textbf{Setting \(G = 1\)}: This implies that mass, length, and time are all measured in the same units.
-
-When we set \(c=1\) and \(G=1\), the term \(\frac{GM_E}{R_E}\) becomes dimensionless. Let's see why:
-In SI units, the dimensions of the terms are:
-
-\[
-[G] = \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}}
-\]
-\[
-[M_E] = \mathrm{kg}
-\]
-\[
-[R_E] = \mathrm{m}
+c \approx 2.998 \times 10^8 \, \frac{\mathrm{m}}{\mathrm{s}} \quad \text{(Speed of light)}
 \]
 
-Therefore:
-
-\[
-\left[\frac{GM_E}{R_E}\right] = \frac{\mathrm{m^3}}{\mathrm{kg \cdot s^2}} \cdot \frac{\mathrm{kg}}{\mathrm{m}} = \frac{\mathrm{m^2}}{\mathrm{s^2}}
-\]
-
-This is a velocity squared. In geometrized units, where \(c = 1\) and \(G = 1\), we have:
-
-\[
-[c^2] = 1
-\]
-\[
-[G] = 1
-\]
-
-Since \(c=1\), then \(\left[\frac{m^2}{s^2}\right] = 1\). Thus, \(\frac{GM_E}{R_E}\) becomes dimensionless:
-
-\[
-\left[\frac{GM_E}{R_E}\right] = 1
-\]
-
-We can calculate its approximate numerical value in SI units and then convert it to geometrized units.
+The term we are interested in is $\frac{GM_E}{R_E}$. However, to make it dimensionless, we usually divide it by $c^2$:
 
 \[
 \frac{GM_E}{R_E c^2} \approx \frac{6.674 \times 10^{-11} \cdot 5.972 \times 10^{24}}{6.371 \times 10^6 \cdot (2.998 \times 10^8)^2} \approx 6.957 \times 10^{-10}
@@ -814,20 +779,16 @@ In natural units, \(c = 1\) and \(G = 1\). We can use the previous result to eva
 
 \[ \frac{GM_E}{R_E} \approx 6.957 \times 10^{-10} \]
 
-This is why, in geometrized units, we were able to simplify the denominator \(1 - \frac{GM_E}{R_E}\) to just 1.
+As we can see, this value is indeed very small (much less than 1), confirming that we are in a weak gravitational field. This justifies the approximations we made using the binomial expansion earlier.
 
 \textbf{Final Result}
-We found that:
-\[
-\frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E}{R_E^2} h
-\]
-In geometrized units. Recognizing that \(\frac{GM_E}{R_E^2} = g\) (the acceleration due to gravity at the Earth's surface), and converting back to SI units by reintroducing \(c^2\), we get the final result:
 
 \[
-\frac{\tau_2}{\tau_1} \approx 1 + \frac{gh}{c^2}
+\frac{\tau_2}{\tau_1}
+= \frac
+{\left(\frac{R_E}{GM_E} - 1 + \frac{h}{R_E}\right)}
+{\left(\frac{R_E}{GM_E} - 1\right)}
 \]
-
-where \(g \approx 9.82 \, \mathrm{m/s^2}\) is the acceleration due to gravity in SI units. We can neglect the term of the gravitational potential because we are in a weak gravitational field.
 \pagebreak
 
 
@@ -1334,6 +1295,141 @@ V^\nu\,\bigl(\partial_\mu V_\nu\bigr)
 \]
 \emph{Thus, the covariant derivative of the scalar \(V^\nu V_\nu\) is equal to its ordinary partial derivative, as required. The key steps are renaming the summed indices in one of the two terms and recognizing that the components of the vectors are real scalars that commute.}
 
+
+\paragraph*{(iv) Checking \(\nabla_{\mu}\bigl(V^{\nu} V_{\nu}\bigr)=\partial_{\mu}\bigl(V^{\nu} V_{\nu}\bigr)\) \emph{(with explicit Christoffel symbols)}}
+
+We want to show that for the 2D metric
+\[
+ds^2 \;=\; d\theta^2 \;+\; \sin^2(\theta)\,d\phi^2,
+\]
+the scalar \(V^\nu V_\nu\) satisfies
+\(\nabla_{\mu}\bigl(V^{\nu} V_{\nu}\bigr)=\partial_{\mu}\bigl(V^{\nu} V_{\nu}\bigr)\).
+First, recall the \textbf{only non-zero} Christoffel symbols:
+\[
+\Gamma^\theta_{\phi\phi} \;=\; -\,\sin(\theta)\,\cos(\theta),
+\quad
+\Gamma^\phi_{\theta\phi} \;=\; \Gamma^\phi_{\phi\theta} \;=\; \cot(\theta).
+\]
+We use the definitions:
+\[
+\nabla_\mu V_\nu
+=
+\partial_\mu V_\nu
+-
+\Gamma^\lambda_{\mu\nu}\,V_\lambda,
+\quad
+\nabla_\mu V^\nu
+=
+\partial_\mu V^\nu
++
+\Gamma^\nu_{\mu\lambda}\,V^\lambda.
+\]
+
+\medskip
+
+\noindent
+\textbf{Step 1: Write \(\nabla_\mu\bigl(V^\nu V_\nu\bigr)\) in expanded form.}
+
+Since \(V^\nu V_\nu\) is \(g_{\alpha\beta}V^\alpha V^\beta\), the covariant derivative gives
+\[
+\nabla_\mu \bigl(V^\nu V_\nu\bigr)
+~=~
+V^\nu\,\nabla_\mu V_\nu
+~+~
+V_\nu\,\nabla_\mu V^\nu,
+\]
+using the facts \(\nabla_\mu g_{\alpha\beta} = 0\) and the product rule. Substituting the definitions:
+\[
+\nabla_\mu \bigl(V^\nu V_\nu\bigr)
+=
+V^\nu
+\Bigl(
+   \partial_\mu V_\nu
+   \;-\;
+   \Gamma^\lambda_{\mu\nu}\,V_\lambda
+\Bigr)
+\;+\;
+V_\nu
+\Bigl(
+   \partial_\mu V^\nu
+   \;+\;
+   \Gamma^\nu_{\mu\lambda}\,V^\lambda
+\Bigr).
+\]
+Rearrange:
+\[
+\nabla_\mu (V^\nu V_\nu)
+=
+\underbrace{
+   \Bigl(V^\nu\,\partial_\mu V_\nu + V_\nu\,\partial_\mu V^\nu\Bigr)
+}_{\text{(A)}}
+\;+\;
+\underbrace{
+   \Bigl[-\,V^\nu\,\Gamma^\lambda_{\mu\nu}\,V_\lambda \;+\; V_\nu\,\Gamma^\nu_{\mu\lambda}\,V^\lambda\Bigr]
+}_{\text{(B)}}.
+\]
+
+\begin{itemize}
+\item \(\text{(A)}\) is exactly \(\partial_\mu(V^\nu V_\nu)\).
+\item We must show that \(\text{(B)}\) cancels out \emph{once the explicit Christoffel symbols are included}.
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{Step 2: Check that the connection terms \(\text{(B)}\) vanish with our specific symbols.}
+
+Write
+\[
+\text{(B)}
+=
+-\,V^\nu\,\Gamma^\lambda_{\mu\nu}\,V_\lambda
+\;+\;
+V_\nu\,\Gamma^\nu_{\mu\lambda}\,V^\lambda.
+\]
+Consider two typical cases for \(\mu\):
+
+\paragraph{Case \(\mu = \theta\):}
+
+\begin{itemize}
+\item \(\Gamma^\theta_{\theta\nu} = 0\) for all \(\nu\),
+\(\Gamma^\phi_{\theta\phi} = \cot(\theta)\),
+\(\Gamma^\theta_{\theta\theta} = 0\), \(\Gamma^\phi_{\theta\theta}=0\).
+\item So in \(\text{(B)}\), any term involving \(\Gamma^\lambda_{\theta\nu}\) becomes zero unless \(\lambda=\phi\) and \(\nu=\phi\). But that specific piece also appears with opposite sign in the second sum.
+\end{itemize}
+One finds that all contributions cancel in pairs, so \(\text{(B)}=0\) when \(\mu=\theta\).
+
+\paragraph{Case \(\mu = \phi\):}
+
+\begin{itemize}
+\item \(\Gamma^\theta_{\phi\theta} = 0\), \(\Gamma^\theta_{\phi\phi}=-\sin(\theta)\cos(\theta)\),
+\(\Gamma^\phi_{\phi\theta}=\cot(\theta)\), \(\Gamma^\phi_{\phi\phi} = 0\).
+\item Again, each term \(\Gamma^\lambda_{\phi\nu}\) in the first bracket is “canceled” by a corresponding term \(\Gamma^\nu_{\phi\lambda}\) in the second bracket, once we swap dummy indices.
+\end{itemize}
+Hence \(\text{(B)}=0\) also for \(\mu=\phi\).
+
+In both cases, the detailed index manipulations show that the sum of the two brackets is zero, because \(V_\alpha V^\beta\) are ordinary numbers (they commute), and the sign flips ensure cancellation.
+
+\medskip
+
+\noindent
+\textbf{Step 3: Final conclusion.}
+
+Since \(\text{(B)}=0\) for both \(\mu=\theta\) and \(\mu=\phi\), we have
+\[
+\nabla_\mu \bigl(V^\nu V_\nu\bigr)
+~=~
+\underbrace{V^\nu\,\partial_\mu V_\nu \;+\; V_\nu\,\partial_\mu V^\nu}_{\partial_\mu (V^\nu V_\nu)}
+~=~
+\partial_\mu (V^\nu V_\nu).
+\]
+Thus, including all the explicit non-zero Christoffel symbols, we confirm that
+\[
+\nabla_{\mu}\bigl(V^{\nu} V_{\nu}\bigr)
+=
+\partial_{\mu}\bigl(V^{\nu} V_{\nu}\bigr),
+\]
+as required for a scalar \(V^\nu V_\nu\).
 
 \section*{Question 8}
 
@@ -3663,7 +3759,7 @@ Divide through by \(2H\) and rearrange:
 \;=\;
 H^2
 \;-\;
-4\pi G\,H\,(\rho+p)
+4\pi G\,(\rho+p)
 \;+\;
 \frac{\kappa}{a^2}.
 \]
@@ -3680,7 +3776,7 @@ so substitute \(H^2\) above.  The \(\kappa/a^2\) terms cancel, leaving
 \;=\;
 \frac{8\pi G}{3}\,\rho
 \;-\;
-4\pi G\,H\,(\rho + p).
+4\pi G\,(\rho + p).
 \]
 Using again the continuity equation (which effectively combines \(\rho\) and \(3p\)), one obtains the well-known
 \[

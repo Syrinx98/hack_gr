@@ -126,9 +126,11 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
     * $\frac{\tau_2}{\tau_1} = \frac{\sqrt{1 - \frac{2GM_E}{R_E + h}}}{\sqrt{1 - \frac{2GM_E}{R_E}}}$
 
 5. **Approximation for $h \ll R_E$:**
-    * Using binomial expansion and weak field approximation:
-    * $\frac{\tau_2}{\tau_1} \approx 1 + \frac{GM_E h}{R_E^2}$
-    * $\frac{\tau_2}{\tau_1} \approx 1 + \frac{gh}{c^2}$ (in SI units), where $g = \frac{GM_E}{R_E^2}$
+    * Using binomial expansion:
+    * $\frac{\tau_2}{\tau_1} \approx \frac
+{\left(\frac{R_E}{GM_E} - 1 + \frac{h}{R_E}\right)}
+{\left(\frac{R_E}{GM_E} - 1\right)} $
+    * Where $\frac{GM_E}{R_E} \approx 6.957 \times 10^{-10}$ (calculated using SI units and $c=1$).
 
 ---
 
