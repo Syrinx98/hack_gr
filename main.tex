@@ -3951,153 +3951,228 @@ This shows that the energy density decreases with time as $t^{-2}$.
 
 \pagebreak
 
-\section*{Question 20.} Consider a spatially flat universe ($\kappa=0$) with a non-vanishing cosmological constant $\Lambda$ and containing only non-relativistic matter with energy density $\rho_{M}(a)$. Let $t_{0}$ be the current time, $a_{0}=1$ the current value of the scale factor, $\rho_{0}$ the current value of the energy density, and $H_{0}$ the current value of the Hubble parameter. Define $\Omega_{M}(a) \equiv \rho_{M}(a) / \rho_{\text {cr }}(a)$, where $\rho_{\text {cr }}(a)$ is the critical energy density. (i) Derive an expression for $\Omega_{M}(a)$ as a function of the scale factor $a$ in terms of the data of the problem. (ii) With the additional information $\Omega_{0}=0.3$, derive the value of the scale factor $a_{\Lambda}$ that corresponds to the moment when the universe began accelerating.
+\section*{Exercise 20: Derivation of \(\Omega_M(a)\) and Determination of \(a_\Lambda\)}
+
+In a spatially flat universe with nonzero cosmological constant \(\Lambda\) and non-relativistic matter (with density \(\rho_M\)), the present-day quantities are given as follows:
+\begin{itemize}
+  \item Scale factor: \(a_0=1\).
+  \item Matter density: \(\rho_0\).
+  \item Hubble parameter: \(H_0\).
+  \item Density parameter: \(\Omega_0 = \dfrac{\rho_0}{\rho_{\rm cr,0}}\), where \(\rho_{\rm cr,0} = \dfrac{3H_0^2}{8\pi G}\).
+\end{itemize}
 
 \bigskip
 
-\subsection*{Solution}
+\subsection*{(i) Derivation of \(\Omega_M(a)\)}
 
-\paragraph{(i) Expression for \(\Omega_M(a)\)}
+\subsubsection*{Step 1. Write the basic definitions}
 
-\subparagraph{Initial data}
-\begin{itemize}
-  \item Flat universe \((\kappa = 0)\) with cosmological constant \(\Lambda\) and non-relativistic matter (\(\rho_M \propto a^{-3}\)).
-  \item Present-time quantities: \(a_0 = 1\), \(\rho_0\), \(H_0\), \(\Omega_0 = 0.3\).
-  \item \(\rho_{\text{cr}}(a) = \dfrac{3\,H^2(a)}{8\pi G}\) and \(\Omega_M(a) = \dfrac{\rho_M(a)}{\rho_{\text{cr}}(a)}.\)
-\end{itemize}
-
-\subparagraph{General form of \(\Omega_M(a)\)}
-Since matter density scales as \(a^{-3}\),
+The density of non-relativistic matter scales as:
 \[
 \rho_M(a) = \rho_0\,a^{-3}.
 \]
-Also,
+The critical density at any epoch is defined by:
 \[
-\rho_{\text{cr}}(a) = \frac{3\,H^2(a)}{8\pi G}.
+\rho_{\rm cr}(a) = \frac{3H^2(a)}{8\pi G}.
 \]
-Hence,
+Thus, the matter density parameter is:
 \[
-\Omega_M(a)
-= \frac{\rho_M(a)}{\rho_{\text{cr}}(a)}
-= \frac{\rho_0\,a^{-3}}{\frac{3\,H^2(a)}{8\pi G}}
-= \underbrace{\frac{8\pi G\,\rho_0}{3\,H_0^2}}_{\displaystyle \Omega_0}
-\cdot \frac{H_0^2}{H^2(a)} \cdot \frac{1}{a^3}.
+\Omega_M(a) = \frac{\rho_M(a)}{\rho_{\rm cr}(a)} = \frac{\rho_0\,a^{-3}}{\dfrac{3H^2(a)}{8\pi G}}
+= \frac{8\pi G\,\rho_0}{3H^2(a)}\,a^{-3}.
 \]
 
-\subparagraph{Relation for \(H^2(a)\)}
-From the Friedmann equation (\(\kappa = 0\)) with matter + \(\Lambda\):
+\subsubsection*{Step 2. Express in terms of \(\Omega_0\)}
+
+At the present time \(a=1\), the density parameter is:
 \[
-H^2(a)
-= \frac{8\pi G}{3}\,\rho_0\,a^{-3} + \frac{\Lambda}{3}.
+\Omega_0 = \frac{\rho_0}{\rho_{\rm cr,0}} = \frac{\rho_0}{\frac{3H_0^2}{8\pi G}} = \frac{8\pi G\,\rho_0}{3H_0^2}.
 \]
-At the present time (\(a = 1\)):
+Hence, we have:
 \[
-H_0^2
-= \frac{8\pi G}{3}\,\rho_0 + \frac{\Lambda}{3}
-\;\;\Longrightarrow\;\;
-\frac{\Lambda}{3}
-= H_0^2 - \frac{8\pi G}{3}\,\rho_0
-= H_0^2\bigl(1 - \Omega_0\bigr).
+\frac{8\pi G\,\rho_0}{3} = \Omega_0\,H_0^2.
 \]
-Therefore,
+Thus, the expression for \(\Omega_M(a)\) becomes:
 \[
-H^2(a)
-= H_0^2\,\Omega_0\,a^{-3} + H_0^2\bigl(1-\Omega_0\bigr)
+\Omega_M(a) = \Omega_0\,\frac{H_0^2}{H^2(a)}\,a^{-3}.
+\]
+
+\subsubsection*{Step 3. Determine \(H^2(a)\) using the Friedmann Equation}
+
+In a flat universe with matter and \(\Lambda\), the Friedmann equation is:
+\[
+H^2(a) = \frac{8\pi G}{3}\,\rho_M(a) + \frac{\Lambda}{3}.
+\]
+Since \(\rho_M(a)=\rho_0\,a^{-3}\), we have:
+\[
+H^2(a) = \frac{8\pi G}{3}\,\rho_0\,a^{-3} + \frac{\Lambda}{3}.
+\]
+At \(a=1\):
+\[
+H_0^2 = \frac{8\pi G}{3}\,\rho_0 + \frac{\Lambda}{3}.
+\]
+This allows us to solve for \(\frac{\Lambda}{3}\):
+\[
+\frac{\Lambda}{3} = H_0^2 - \frac{8\pi G}{3}\,\rho_0 = H_0^2\bigl(1-\Omega_0\bigr).
+\]
+Thus, \(H^2(a)\) can be written as:
+\[
+H^2(a) = H_0^2\,\Omega_0\,a^{-3} + H_0^2(1-\Omega_0)
 = H_0^2\Bigl[\Omega_0\,a^{-3} + 1 - \Omega_0\Bigr].
 \]
 
-\subparagraph{Final form of \(\Omega_M(a)\)}
-Substitute back into \(\Omega_M(a)\):
-\[
-\Omega_M(a)
-= \Omega_0 \,\frac{H_0^2}{H_0^2\,\bigl[\Omega_0\,a^{-3} + 1 - \Omega_0\bigr]}\,\frac{1}{a^3}
-= \frac{\Omega_0\,a^{-3}}{\Omega_0\,a^{-3} + 1 - \Omega_0}.
-\]
-\[
-\boxed{
-\Omega_M(a)
-= \frac{\Omega_0\,a^{-3}}{\Omega_0\,a^{-3} + 1 - \Omega_0}.
-}
-\]
+\subsubsection*{Step 4. Substitute \(H^2(a)\) Back into \(\Omega_M(a)\)}
 
-\paragraph{(ii) The moment the Universe started accelerating}
-
-Acceleration \(\ddot{a} > 0\) is obtained from:
+Plug the expression for \(H^2(a)\) into the formula for \(\Omega_M(a)\):
 \[
-\frac{\ddot{a}}{a}
-= -\frac{4\pi G}{3}\,\bigl(\rho + 3p\bigr) + \frac{\Lambda}{3}.
+\Omega_M(a) = \Omega_0\,\frac{H_0^2}{H_0^2\Bigl[\Omega_0\,a^{-3} + (1-\Omega_0)\Bigr]}\,a^{-3}.
 \]
-\begin{itemize}
-  \item For non-relativistic matter, \(p_M = 0\).
-  \item For the cosmological constant, \(p_\Lambda = -\rho_\Lambda\).
-\end{itemize}
-
-Thus:
+Cancel \(H_0^2\) in numerator and denominator:
 \[
-\rho + 3p
-= \rho_M + \rho_\Lambda + 3\,(p_M + p_\Lambda)
-= \rho_M + \rho_\Lambda + 3\,(0 - \rho_\Lambda)
-= \rho_M - 2\rho_\Lambda.
+\Omega_M(a)= \frac{\Omega_0\,a^{-3}}{\Omega_0\,a^{-3}+1-\Omega_0}.
 \]
-Hence,
+This is our final result for part (i):
 \[
-\frac{\ddot{a}}{a}
-= -\frac{4\pi G}{3}\,\bigl(\rho_M - 2\rho_\Lambda\bigr).
-\]
-The Universe starts accelerating (\(\ddot{a} > 0\)) when:
-\[
-\rho_M - 2\rho_\Lambda < 0
-\;\;\Longrightarrow\;\;
-\rho_M < 2\,\rho_\Lambda.
-\]
-
-\subparagraph{Insert the values}
-\[
-\rho_M(a) = \rho_0\,a^{-3},
-\quad
-\rho_\Lambda = \frac{\Lambda}{8\pi G}
-= \frac{3\,H_0^2\,(1-\Omega_0)}{8\pi G}.
-\]
-One can show that
-\(\rho_\Lambda = \rho_{\text{cr},0}\,(1-\Omega_0) = \dfrac{\rho_0}{\Omega_0}\,(1-\Omega_0).\)
-
-The inequality \(\rho_M(a) < 2\,\rho_\Lambda\) becomes:
-\[
-\rho_0\,a^{-3}
-< 2 \,\frac{\rho_0}{\Omega_0}\,(1-\Omega_0)
-\;\;\Longrightarrow\;\;
-a^3
-> \frac{\Omega_0}{2\,(1-\Omega_0)}.
-\]
-Therefore:
-\[
-a_\Lambda
-= \biggl(\frac{\Omega_0}{2\,(1-\Omega_0)}\biggr)^{\frac{1}{3}}.
-\]
-
-\subparagraph{With \(\Omega_0 = 0.3\)}
-\[
-a_\Lambda
-= \Bigl(\frac{0.3}{2\,(1-0.3)}\Bigr)^{\frac{1}{3}}
-= \Bigl(\frac{0.3}{1.4}\Bigr)^{\frac{1}{3}}
-= \Bigl(\frac{3}{14}\Bigr)^{\frac{1}{3}}
-\approx 0.60.
-\]
-\[
-\boxed{ a_\Lambda \approx 0.60. }
+\boxed{\Omega_M(a) = \frac{\Omega_0\,a^{-3}}{\Omega_0\,a^{-3} + 1 - \Omega_0}.}
 \]
 
 \bigskip
 
-\noindent
-\textbf{Conclusions:}
+\subsection*{(ii) Determination of \(a_\Lambda\) (When the Universe Starts Accelerating)}
+
+\subsubsection*{Step 1. Acceleration Condition}
+
+The acceleration equation is:
+\[
+\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}\Bigl( \rho_M + 3p \Bigr) + \frac{\Lambda}{3}.
+\]
+For non-relativistic matter \(p_M = 0\) and the cosmological constant has \(p_\Lambda = -\rho_\Lambda\) with \(\rho_\Lambda = \dfrac{\Lambda}{8\pi G}\). Hence,
+\[
+\rho + 3p = \rho_M + \rho_\Lambda + 3\,(0 - \rho_\Lambda) = \rho_M - 2\rho_\Lambda.
+\]
+Thus,
+\[
+\frac{\ddot{a}}{a} = -\frac{4\pi G}{3}\Bigl( \rho_M - 2\rho_\Lambda \Bigr).
+\]
+To have acceleration (\(\ddot{a}>0\)), we require:
+\[
+\rho_M - 2\rho_\Lambda < 0 \quad \Longrightarrow \quad \rho_M < 2\rho_\Lambda.
+\]
+
+\subsubsection*{Step 2. Expressing in Terms of \(\Omega\)}
+
+We define the dimensionless density parameters:
+\[
+\Omega_M(a) = \frac{\rho_M(a)}{\rho_{\rm cr}(a)}, \qquad \Omega_\Lambda(a) = \frac{\rho_\Lambda}{\rho_{\rm cr}(a)}.
+\]
+For a flat universe,
+\[
+\Omega_M(a) + \Omega_\Lambda(a) = 1 \quad \Longrightarrow \quad \Omega_\Lambda(a)=1-\Omega_M(a).
+\]
+Dividing the acceleration condition \(\rho_M < 2\rho_\Lambda\) by \(\rho_{\rm cr}(a)\):
+\[
+\Omega_M(a) < 2\,\Omega_\Lambda(a) = 2\bigl[1-\Omega_M(a)\bigr].
+\]
+Solving:
+\[
+\begin{aligned}
+\Omega_M(a) &< 2 - 2\Omega_M(a),\\[1mm]
+3\Omega_M(a) &< 2,\\[1mm]
+\Omega_M(a) &< \frac{2}{3}.
+\end{aligned}
+\]
+Thus, the universe starts accelerating when
+\[
+\boxed{\Omega_M(a) < \frac{2}{3}.}
+\]
+The critical moment is when
+\[
+\boxed{\Omega_M(a_\Lambda) = \frac{2}{3}.}
+\]
+
+\subsubsection*{Step 3. Using the Result from Part (i)}
+
+We obtained in part (i):
+\[
+\Omega_M(a)= \frac{\Omega_0\,a^{-3}}{\Omega_0\,a^{-3}+1-\Omega_0}.
+\]
+Setting the critical condition for acceleration:
+\[
+\frac{\Omega_0\,a_\Lambda^{-3}}{\Omega_0\,a_\Lambda^{-3}+1-\Omega_0} = \frac{2}{3}.
+\]
+
+\paragraph{Algebraic Steps:}
 \begin{enumerate}
-    \item \(\displaystyle \Omega_M(a)
-    = \frac{\Omega_0\,a^{-3}}
-    {\Omega_0\,a^{-3} + 1 - \Omega_0}.\)
-    \item \(\displaystyle a_\Lambda
-    = \biggl(\frac{\Omega_0}{2\,(1-\Omega_0)}\biggr)^{\!\frac{1}{3}}
-    \quad(\Omega_0=0.3 \;\Rightarrow\; a_\Lambda \approx 0.60).\)
+    \item Multiply both sides by the denominator:
+    \[
+    \Omega_0\,a_\Lambda^{-3} = \frac{2}{3}\Bigl[\Omega_0\,a_\Lambda^{-3} + 1 - \Omega_0\Bigr].
+    \]
+    \item Distribute \(\frac{2}{3}\):
+    \[
+    \Omega_0\,a_\Lambda^{-3} = \frac{2}{3}\,\Omega_0\,a_\Lambda^{-3} + \frac{2}{3}(1-\Omega_0).
+    \]
+    \item Bring the term \(\frac{2}{3}\,\Omega_0\,a_\Lambda^{-3}\) to the left:
+    \[
+    \Omega_0\,a_\Lambda^{-3} - \frac{2}{3}\,\Omega_0\,a_\Lambda^{-3} = \frac{2}{3}(1-\Omega_0).
+    \]
+    \item Factor the left side:
+    \[
+    \Omega_0\,a_\Lambda^{-3}\Bigl(1-\frac{2}{3}\Bigr) = \frac{2}{3}(1-\Omega_0).
+    \]
+    \item Since \(1-\frac{2}{3} = \frac{1}{3}\):
+    \[
+    \frac{1}{3}\,\Omega_0\,a_\Lambda^{-3} = \frac{2}{3}(1-\Omega_0).
+    \]
+    \item Multiply both sides by \(3\):
+    \[
+    \Omega_0\,a_\Lambda^{-3} = 2(1-\Omega_0).
+    \]
+    \item Solve for \(a_\Lambda^{-3}\):
+    \[
+    a_\Lambda^{-3} = \frac{2(1-\Omega_0)}{\Omega_0}.
+    \]
+    \item Invert to obtain \(a_\Lambda^3\):
+    \[
+    a_\Lambda^3 = \frac{\Omega_0}{2(1-\Omega_0)}.
+    \]
+    \item Finally, solve for \(a_\Lambda\):
+    \[
+    \boxed{a_\Lambda = \left(\frac{\Omega_0}{2(1-\Omega_0)}\right)^{\frac{1}{3}}.}
+    \]
 \end{enumerate}
 
+\subsubsection*{Step 4. Numerical Evaluation for \(\Omega_0 = 0.3\)}
+
+Substitute \(\Omega_0 = 0.3\) into the expression:
+\[
+a_\Lambda = \left(\frac{0.3}{2(1-0.3)}\right)^{\frac{1}{3}}
+= \left(\frac{0.3}{2 \times 0.7}\right)^{\frac{1}{3}}
+= \left(\frac{0.3}{1.4}\right)^{\frac{1}{3}}
+= \left(\frac{3}{14}\right)^{\frac{1}{3}}.
+\]
+Since
+\[
+\frac{3}{14} \approx 0.2143,
+\]
+we find
+\[
+a_\Lambda \approx 0.60.
+\]
+
+\bigskip
+
+\noindent\textbf{Conclusion:}
+\begin{itemize}
+    \item The matter density parameter is given by:
+          \[
+          \boxed{\Omega_M(a) = \frac{\Omega_0\,a^{-3}}{\Omega_0\,a^{-3} + 1 - \Omega_0}.}
+          \]
+    \item The universe starts accelerating when \(\Omega_M(a) < \frac{2}{3}\). The critical point is defined by:
+          \[
+          \Omega_M(a_\Lambda)=\frac{2}{3}.
+          \]
+          Using the expression for \(\Omega_M(a)\), we have
+          \[
+          \boxed{a_\Lambda = \left(\frac{\Omega_0}{2(1-\Omega_0)}\right)^{\frac{1}{3}}, \quad\text{and for}\; \Omega_0 = 0.3,\quad a_\Lambda \approx 0.60.}
+          \]
+\end{itemize}
 \end{document}

@@ -13,6 +13,7 @@ Thank for all the contibutors in the telegram group (year 2024/2025):
 * Sergio 
 * Llewyn Merrill
 * Franceschino
+* Alvise Casonato
 
 ## 1. Metric Tensor Transformation
 
